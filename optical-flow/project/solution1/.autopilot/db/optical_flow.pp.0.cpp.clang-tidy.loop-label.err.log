@@ -1,0 +1,4 @@
+7 warnings and 9 errors generated.
+Error while processing /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp.
+clang-tidy applied 66 of 66 suggested fixes.
+Suppressed 7 warnings (7 with check filters).

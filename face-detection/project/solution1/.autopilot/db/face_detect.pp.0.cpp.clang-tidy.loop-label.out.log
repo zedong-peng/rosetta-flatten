@@ -1,0 +1,50 @@
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:1347:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:1347:7: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:2321:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:2321:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:2335:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:2335:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:2349:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:2349:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:3960:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:3960:7: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:8581:5: warning: Added loop label VITIS_LOOP_2805_1:   [xilinx-label-all-loops]
+    for( j = 0; j < IMAGE_WIDTH; j++){
+    ^~~
+    VITIS_LOOP_2805_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:8581:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:8586:7: warning: Added loop label VITIS_LOOP_2810_2:   [xilinx-label-all-loops]
+      for ( i = 0; i < RESULT_SIZE; i++){
+      ^~~
+      VITIS_LOOP_2810_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:8586:7: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:8648:4: warning: Added loop label VITIS_LOOP_2872_3:   [xilinx-label-all-loops]
+   for ( i = 0; i < RESULT_SIZE; i++){
+   ^~~
+   VITIS_LOOP_2872_3: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:8648:4: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:9114:4: warning: Added loop label VITIS_LOOP_3294_1:   [xilinx-label-all-loops]
+   for ( k = 0; k < 12; k++ ){
+   ^~~
+   VITIS_LOOP_3294_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:9114:4: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:9241:3: warning: Added loop label VITIS_LOOP_3401_1:   [xilinx-label-all-loops]
+  for ( i = 0 ; i < (32 >> 1) ; i++ )
+  ^~~
+  VITIS_LOOP_3401_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp:9241:3: note: FIX-IT applied suggested code changes

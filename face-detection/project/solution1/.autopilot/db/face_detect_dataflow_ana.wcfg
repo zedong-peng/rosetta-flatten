@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="face_detect.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_face_detect_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect//AESL_inst_face_detect_activity">
+         <obj_property name="label">AESL_inst_face_detect_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_face_detect_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_face_detect_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect//AESL_inst_face_detect_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect//AESL_inst_face_detect_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect//AESL_inst_face_detect_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity">
+            <obj_property name="label">grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity">
+            <obj_property name="label">grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity">
+            <obj_property name="label">grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity">
+            <obj_property name="label">grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_fu_310_activity">
+            <obj_property name="label">grp_processImage_fu_310_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_processImage_fu_310_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_fu_310_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_fu_310_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_fu_310_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_fu_310_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/grp_processImage_Pipeline_Initialize2x_fu_12809_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x_fu_12809_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x_fu_12809_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x_fu_12809_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/grp_processImage_Pipeline_Initialize2x_fu_12809_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/grp_processImage_Pipeline_Initialize2x_fu_12809_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/grp_processImage_Pipeline_Initialize2x_fu_12809_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/grp_processImage_Pipeline_Initialize2x6_fu_12815_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x6_fu_12815_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x6_fu_12815_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x6_fu_12815_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/grp_processImage_Pipeline_Initialize2x6_fu_12815_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/grp_processImage_Pipeline_Initialize2x6_fu_12815_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/grp_processImage_Pipeline_Initialize2x6_fu_12815_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/grp_processImage_Pipeline_Initialize2x7_fu_12821_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x7_fu_12821_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x7_fu_12821_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x7_fu_12821_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/grp_processImage_Pipeline_Initialize2x7_fu_12821_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/grp_processImage_Pipeline_Initialize2x7_fu_12821_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/grp_processImage_Pipeline_Initialize2x7_fu_12821_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/grp_processImage_Pipeline_Initialize2x8_fu_12827_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x8_fu_12827_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x8_fu_12827_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x8_fu_12827_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/grp_processImage_Pipeline_Initialize2x8_fu_12827_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/grp_processImage_Pipeline_Initialize2x8_fu_12827_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/grp_processImage_Pipeline_Initialize2x8_fu_12827_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/grp_processImage_Pipeline_Initialize2x9_fu_12833_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x9_fu_12833_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x9_fu_12833_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x9_fu_12833_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/grp_processImage_Pipeline_Initialize2x9_fu_12833_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/grp_processImage_Pipeline_Initialize2x9_fu_12833_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/grp_processImage_Pipeline_Initialize2x9_fu_12833_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/grp_processImage_Pipeline_Initialize2x10_fu_12839_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x10_fu_12839_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x10_fu_12839_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x10_fu_12839_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/grp_processImage_Pipeline_Initialize2x10_fu_12839_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/grp_processImage_Pipeline_Initialize2x10_fu_12839_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/grp_processImage_Pipeline_Initialize2x10_fu_12839_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/grp_processImage_Pipeline_Initialize2x11_fu_12845_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x11_fu_12845_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x11_fu_12845_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x11_fu_12845_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/grp_processImage_Pipeline_Initialize2x11_fu_12845_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/grp_processImage_Pipeline_Initialize2x11_fu_12845_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/grp_processImage_Pipeline_Initialize2x11_fu_12845_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/grp_processImage_Pipeline_Initialize2x12_fu_12851_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x12_fu_12851_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x12_fu_12851_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x12_fu_12851_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/grp_processImage_Pipeline_Initialize2x12_fu_12851_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/grp_processImage_Pipeline_Initialize2x12_fu_12851_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/grp_processImage_Pipeline_Initialize2x12_fu_12851_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/grp_processImage_Pipeline_Initialize2x13_fu_12857_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x13_fu_12857_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x13_fu_12857_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x13_fu_12857_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/grp_processImage_Pipeline_Initialize2x13_fu_12857_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/grp_processImage_Pipeline_Initialize2x13_fu_12857_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/grp_processImage_Pipeline_Initialize2x13_fu_12857_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/grp_processImage_Pipeline_Initialize2x14_fu_12863_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x14_fu_12863_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x14_fu_12863_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x14_fu_12863_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/grp_processImage_Pipeline_Initialize2x14_fu_12863_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/grp_processImage_Pipeline_Initialize2x14_fu_12863_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/grp_processImage_Pipeline_Initialize2x14_fu_12863_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/grp_processImage_Pipeline_Initialize2x15_fu_12869_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x15_fu_12869_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x15_fu_12869_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x15_fu_12869_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/grp_processImage_Pipeline_Initialize2x15_fu_12869_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/grp_processImage_Pipeline_Initialize2x15_fu_12869_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/grp_processImage_Pipeline_Initialize2x15_fu_12869_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/grp_processImage_Pipeline_Initialize2x16_fu_12875_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x16_fu_12875_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x16_fu_12875_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x16_fu_12875_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/grp_processImage_Pipeline_Initialize2x16_fu_12875_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/grp_processImage_Pipeline_Initialize2x16_fu_12875_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/grp_processImage_Pipeline_Initialize2x16_fu_12875_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/grp_processImage_Pipeline_Initialize2x17_fu_12881_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x17_fu_12881_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x17_fu_12881_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x17_fu_12881_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/grp_processImage_Pipeline_Initialize2x17_fu_12881_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/grp_processImage_Pipeline_Initialize2x17_fu_12881_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/grp_processImage_Pipeline_Initialize2x17_fu_12881_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/grp_processImage_Pipeline_Initialize2x18_fu_12887_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x18_fu_12887_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x18_fu_12887_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x18_fu_12887_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/grp_processImage_Pipeline_Initialize2x18_fu_12887_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/grp_processImage_Pipeline_Initialize2x18_fu_12887_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/grp_processImage_Pipeline_Initialize2x18_fu_12887_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/grp_processImage_Pipeline_Initialize2x19_fu_12893_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x19_fu_12893_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x19_fu_12893_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x19_fu_12893_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/grp_processImage_Pipeline_Initialize2x19_fu_12893_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/grp_processImage_Pipeline_Initialize2x19_fu_12893_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/grp_processImage_Pipeline_Initialize2x19_fu_12893_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/grp_processImage_Pipeline_Initialize2x20_fu_12899_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x20_fu_12899_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x20_fu_12899_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x20_fu_12899_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/grp_processImage_Pipeline_Initialize2x20_fu_12899_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/grp_processImage_Pipeline_Initialize2x20_fu_12899_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/grp_processImage_Pipeline_Initialize2x20_fu_12899_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/grp_processImage_Pipeline_Initialize2x21_fu_12905_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x21_fu_12905_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x21_fu_12905_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x21_fu_12905_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/grp_processImage_Pipeline_Initialize2x21_fu_12905_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/grp_processImage_Pipeline_Initialize2x21_fu_12905_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/grp_processImage_Pipeline_Initialize2x21_fu_12905_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/grp_processImage_Pipeline_Initialize2x22_fu_12911_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x22_fu_12911_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x22_fu_12911_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x22_fu_12911_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/grp_processImage_Pipeline_Initialize2x22_fu_12911_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/grp_processImage_Pipeline_Initialize2x22_fu_12911_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/grp_processImage_Pipeline_Initialize2x22_fu_12911_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/grp_processImage_Pipeline_Initialize2x23_fu_12917_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x23_fu_12917_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x23_fu_12917_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x23_fu_12917_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/grp_processImage_Pipeline_Initialize2x23_fu_12917_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/grp_processImage_Pipeline_Initialize2x23_fu_12917_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/grp_processImage_Pipeline_Initialize2x23_fu_12917_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/grp_processImage_Pipeline_Initialize2x24_fu_12923_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x24_fu_12923_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x24_fu_12923_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x24_fu_12923_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/grp_processImage_Pipeline_Initialize2x24_fu_12923_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/grp_processImage_Pipeline_Initialize2x24_fu_12923_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/grp_processImage_Pipeline_Initialize2x24_fu_12923_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/grp_processImage_Pipeline_Initialize2x25_fu_12929_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x25_fu_12929_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x25_fu_12929_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x25_fu_12929_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/grp_processImage_Pipeline_Initialize2x25_fu_12929_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/grp_processImage_Pipeline_Initialize2x25_fu_12929_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/grp_processImage_Pipeline_Initialize2x25_fu_12929_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/grp_processImage_Pipeline_Initialize2x26_fu_12935_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x26_fu_12935_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x26_fu_12935_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x26_fu_12935_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/grp_processImage_Pipeline_Initialize2x26_fu_12935_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/grp_processImage_Pipeline_Initialize2x26_fu_12935_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/grp_processImage_Pipeline_Initialize2x26_fu_12935_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/grp_processImage_Pipeline_Initialize2x27_fu_12941_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x27_fu_12941_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x27_fu_12941_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x27_fu_12941_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/grp_processImage_Pipeline_Initialize2x27_fu_12941_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/grp_processImage_Pipeline_Initialize2x27_fu_12941_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/grp_processImage_Pipeline_Initialize2x27_fu_12941_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/grp_processImage_Pipeline_Initialize2x28_fu_12947_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Initialize2x28_fu_12947_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x28_fu_12947_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x28_fu_12947_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/grp_processImage_Pipeline_Initialize2x28_fu_12947_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/grp_processImage_Pipeline_Initialize2x28_fu_12947_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/grp_processImage_Pipeline_Initialize2x28_fu_12947_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/grp_processImage_Pipeline_SetIIu_fu_12953_activity">
+               <obj_property name="label">grp_processImage_Pipeline_SetIIu_fu_12953_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_SetIIu_fu_12953_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_SetIIu_fu_12953_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/grp_processImage_Pipeline_SetIIu_fu_12953_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/grp_processImage_Pipeline_SetIIu_fu_12953_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/grp_processImage_Pipeline_SetIIu_fu_12953_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/grp_int_sqrt_fu_14857_activity">
+               <obj_property name="label">grp_int_sqrt_fu_14857_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_int_sqrt_fu_14857_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_int_sqrt_fu_14857_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/grp_int_sqrt_fu_14857_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/grp_int_sqrt_fu_14857_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/grp_int_sqrt_fu_14857_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/grp_processImage_Pipeline_Filters_fu_14863_activity">
+               <obj_property name="label">grp_processImage_Pipeline_Filters_fu_14863_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_processImage_Pipeline_Filters_fu_14863_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_processImage_Pipeline_Filters_fu_14863_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/grp_processImage_Pipeline_Filters_fu_14863_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/grp_processImage_Pipeline_Filters_fu_14863_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/grp_processImage_Pipeline_Filters_fu_14863_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect//AESL_inst_face_detect_activity">
+      <obj_property name="ElementShortName">AESL_inst_face_detect_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_face_detect_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_face_detect_group">
+      <obj_property name="label">AESL_inst_face_detect</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity">
+         <obj_property name="ElementShortName">grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity">
+         <obj_property name="ElementShortName">grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity">
+         <obj_property name="ElementShortName">grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity">
+         <obj_property name="ElementShortName">grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_fu_310_activity">
+         <obj_property name="ElementShortName">grp_processImage_fu_310_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_processImage_fu_310_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_face_detect_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_group">
+         <obj_property name="label">grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2805_1_fu_262/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_group">
+         <obj_property name="label">grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2810_2_fu_271/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_group">
+         <obj_property name="label">grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_VITIS_LOOP_2872_3_fu_283/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_group">
+         <obj_property name="label">grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_face_detect_Pipeline_imageScalerL1_imageScalerL1_1_fu_299/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_processImage_fu_310_group">
+         <obj_property name="label">grp_processImage_fu_310</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/grp_processImage_Pipeline_Initialize2x_fu_12809_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x_fu_12809_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x_fu_12809_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/grp_processImage_Pipeline_Initialize2x6_fu_12815_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x6_fu_12815_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x6_fu_12815_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/grp_processImage_Pipeline_Initialize2x7_fu_12821_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x7_fu_12821_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x7_fu_12821_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/grp_processImage_Pipeline_Initialize2x8_fu_12827_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x8_fu_12827_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x8_fu_12827_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/grp_processImage_Pipeline_Initialize2x9_fu_12833_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x9_fu_12833_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x9_fu_12833_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/grp_processImage_Pipeline_Initialize2x10_fu_12839_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x10_fu_12839_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x10_fu_12839_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/grp_processImage_Pipeline_Initialize2x11_fu_12845_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x11_fu_12845_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x11_fu_12845_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/grp_processImage_Pipeline_Initialize2x12_fu_12851_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x12_fu_12851_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x12_fu_12851_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/grp_processImage_Pipeline_Initialize2x13_fu_12857_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x13_fu_12857_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x13_fu_12857_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/grp_processImage_Pipeline_Initialize2x14_fu_12863_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x14_fu_12863_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x14_fu_12863_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/grp_processImage_Pipeline_Initialize2x15_fu_12869_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x15_fu_12869_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x15_fu_12869_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/grp_processImage_Pipeline_Initialize2x16_fu_12875_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x16_fu_12875_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x16_fu_12875_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/grp_processImage_Pipeline_Initialize2x17_fu_12881_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x17_fu_12881_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x17_fu_12881_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/grp_processImage_Pipeline_Initialize2x18_fu_12887_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x18_fu_12887_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x18_fu_12887_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/grp_processImage_Pipeline_Initialize2x19_fu_12893_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x19_fu_12893_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x19_fu_12893_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/grp_processImage_Pipeline_Initialize2x20_fu_12899_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x20_fu_12899_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x20_fu_12899_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/grp_processImage_Pipeline_Initialize2x21_fu_12905_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x21_fu_12905_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x21_fu_12905_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/grp_processImage_Pipeline_Initialize2x22_fu_12911_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x22_fu_12911_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x22_fu_12911_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/grp_processImage_Pipeline_Initialize2x23_fu_12917_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x23_fu_12917_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x23_fu_12917_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/grp_processImage_Pipeline_Initialize2x24_fu_12923_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x24_fu_12923_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x24_fu_12923_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/grp_processImage_Pipeline_Initialize2x25_fu_12929_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x25_fu_12929_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x25_fu_12929_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/grp_processImage_Pipeline_Initialize2x26_fu_12935_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x26_fu_12935_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x26_fu_12935_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/grp_processImage_Pipeline_Initialize2x27_fu_12941_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x27_fu_12941_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x27_fu_12941_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/grp_processImage_Pipeline_Initialize2x28_fu_12947_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Initialize2x28_fu_12947_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Initialize2x28_fu_12947_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/grp_processImage_Pipeline_SetIIu_fu_12953_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_SetIIu_fu_12953_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_SetIIu_fu_12953_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/grp_int_sqrt_fu_14857_activity">
+            <obj_property name="ElementShortName">grp_int_sqrt_fu_14857_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_int_sqrt_fu_14857_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/grp_processImage_Pipeline_Filters_fu_14863_activity">
+            <obj_property name="ElementShortName">grp_processImage_Pipeline_Filters_fu_14863_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_processImage_Pipeline_Filters_fu_14863_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_fu_310_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x_fu_12809_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x_fu_12809</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x_fu_12809_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x_fu_12809/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x6_fu_12815_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x6_fu_12815</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x6_fu_12815_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x6_fu_12815/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x7_fu_12821_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x7_fu_12821</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x7_fu_12821_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x7_fu_12821/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x8_fu_12827_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x8_fu_12827</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x8_fu_12827_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x8_fu_12827/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x9_fu_12833_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x9_fu_12833</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x9_fu_12833_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x9_fu_12833/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x10_fu_12839_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x10_fu_12839</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x10_fu_12839_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x10_fu_12839/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x11_fu_12845_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x11_fu_12845</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x11_fu_12845_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x11_fu_12845/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x12_fu_12851_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x12_fu_12851</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x12_fu_12851_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x12_fu_12851/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x13_fu_12857_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x13_fu_12857</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x13_fu_12857_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x13_fu_12857/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x14_fu_12863_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x14_fu_12863</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x14_fu_12863_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x14_fu_12863/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x15_fu_12869_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x15_fu_12869</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x15_fu_12869_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x15_fu_12869/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x16_fu_12875_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x16_fu_12875</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x16_fu_12875_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x16_fu_12875/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x17_fu_12881_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x17_fu_12881</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x17_fu_12881_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x17_fu_12881/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x18_fu_12887_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x18_fu_12887</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x18_fu_12887_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x18_fu_12887/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x19_fu_12893_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x19_fu_12893</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x19_fu_12893_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x19_fu_12893/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x20_fu_12899_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x20_fu_12899</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x20_fu_12899_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x20_fu_12899/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x21_fu_12905_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x21_fu_12905</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x21_fu_12905_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x21_fu_12905/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x22_fu_12911_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x22_fu_12911</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x22_fu_12911_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x22_fu_12911/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x23_fu_12917_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x23_fu_12917</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x23_fu_12917_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x23_fu_12917/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x24_fu_12923_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x24_fu_12923</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x24_fu_12923_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x24_fu_12923/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x25_fu_12929_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x25_fu_12929</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x25_fu_12929_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x25_fu_12929/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x26_fu_12935_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x26_fu_12935</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x26_fu_12935_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x26_fu_12935/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x27_fu_12941_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x27_fu_12941</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x27_fu_12941_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x27_fu_12941/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x28_fu_12947_group">
+            <obj_property name="label">grp_processImage_Pipeline_Initialize2x28_fu_12947</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Initialize2x28_fu_12947_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Initialize2x28_fu_12947/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_SetIIu_fu_12953_group">
+            <obj_property name="label">grp_processImage_Pipeline_SetIIu_fu_12953</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_SetIIu_fu_12953_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_SetIIu_fu_12953/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_int_sqrt_fu_14857_group">
+            <obj_property name="label">grp_int_sqrt_fu_14857</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_int_sqrt_fu_14857_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_int_sqrt_fu_14857/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_processImage_Pipeline_Filters_fu_14863_group">
+            <obj_property name="label">grp_processImage_Pipeline_Filters_fu_14863</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_processImage_Pipeline_Filters_fu_14863_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_face_detect_top/AESL_inst_face_detect/grp_processImage_fu_310/grp_processImage_Pipeline_Filters_fu_14863/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

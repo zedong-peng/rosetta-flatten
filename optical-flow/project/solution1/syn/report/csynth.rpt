@@ -1,0 +1,682 @@
+
+
+================================================================
+== Synthesis Summary Report of 'optical_flow'
+================================================================
++ General Information: 
+    * Date:           Fri Dec 13 11:13:02 2024
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        project
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+--------+----------+----------+----------+-------------+------------+-----+
+    |                     Modules                     | Issue|      | Latency |  Latency  | Iteration|         |  Trip  |          |          |          |             |            |     |
+    |                     & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval|  Count | Pipelined|   BRAM   |    DSP   |      FF     |     LUT    | URAM|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+--------+----------+----------+----------+-------------+------------+-----+
+    |+ optical_flow*                                  |     -|  0.02|  2685018|  2.685e+07|         -|  2684932|       -|  dataflow|  114 (2%)|  189 (2%)|  25638 (~0%)|  25219 (1%)|    -|
+    | + Loop_FRAMES_CP_OUTER_proc1                    |     -|  2.50|   446466|  4.465e+06|         -|   446466|       -|        no|         -|         -|     43 (~0%)|   266 (~0%)|    -|
+    |  o FRAMES_CP_OUTER_FRAMES_CP_INNER              |     -|  7.30|   446464|  4.465e+06|         2|        1|  446464|       yes|         -|         -|            -|           -|    -|
+    | + gradient_xy_calc                              |     -|  0.24|   449391|  4.494e+06|         -|   449391|       -|        no|   8 (~0%)|   6 (~0%)|    467 (~0%)|  1076 (~0%)|    -|
+    |  o GRAD_XY_OUTER_GRAD_XY_INNER                  |     -|  7.30|   449389|  4.494e+06|         3|        1|  449388|       yes|         -|         -|            -|           -|    -|
+    | + gradient_z_calc                               |     -|  0.72|   446467|  4.465e+06|         -|   446467|       -|        no|         -|   3 (~0%)|     46 (~0%)|   390 (~0%)|    -|
+    |  o GRAD_Z_OUTER_GRAD_Z_INNER                    |     -|  7.30|   446465|  4.465e+06|         3|        1|  446464|       yes|         -|         -|            -|           -|    -|
+    | + gradient_weight_y                             |     -|  0.02|   449539|  4.495e+06|         -|   449539|       -|        no|  36 (~0%)|  42 (~0%)|    711 (~0%)|  1927 (~0%)|    -|
+    |  o GRAD_WEIGHT_Y_OUTER_GRAD_WEIGHT_Y_INNER      |     -|  7.30|   449537|  4.495e+06|         3|        1|  449536|       yes|         -|         -|            -|           -|    -|
+    | + gradient_weight_x                             |     -|  0.27|   447775|  4.478e+06|         -|   447775|       -|        no|         -|  42 (~0%)|   1002 (~0%)|  1823 (~0%)|    -|
+    |  o GRAD_WEIGHT_X_OUTER_GRAD_WEIGHT_X_INNER      |     -|  7.30|   447773|  4.478e+06|         3|        1|  447772|       yes|         -|         -|            -|           -|    -|
+    | + outer_product                                 |     -|  5.57|   446469|  4.465e+06|         -|   446469|       -|        no|         -|   6 (~0%)|     29 (~0%)|   129 (~0%)|    -|
+    |  o OUTER_OUTER_OUTER_INNER                      |     -|  7.30|   446467|  4.465e+06|         5|        1|  446464|       yes|         -|         -|            -|           -|    -|
+    | + tensor_weight_y                               |     -|  0.94|  2684931|  2.685e+07|         -|  2684931|       -|        no|  32 (~0%)|  36 (~0%)|    659 (~0%)|  1983 (~0%)|    -|
+    |  o TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER  |    II|  7.30|  2684929|  2.685e+07|         8|        6|  447488|       yes|         -|         -|            -|           -|    -|
+    | + tensor_weight_x                               |     -|  0.57|   446903|  4.469e+06|         -|   446903|       -|        no|         -|  36 (~0%)|    615 (~0%)|  1555 (~0%)|    -|
+    |  o TENSOR_WEIGHT_X_OUTER_TENSOR_WEIGHT_X_INNER  |     -|  7.30|   446901|  4.469e+06|         2|        1|  446900|       yes|         -|         -|            -|           -|    -|
+    | + flow_calc                                     |     -|  0.76|   446540|  4.465e+06|         -|   446540|       -|        no|         -|  18 (~0%)|  19107 (~0%)|  14074 (1%)|    -|
+    |  o FLOW_OUTER_FLOW_INNER                        |     -|  7.30|   446538|  4.465e+06|        76|        1|  446464|       yes|         -|         -|            -|           -|    -|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+--------+----------+----------+----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+----------+
+| Interface        | Bitwidth |
++------------------+----------+
+| frames_address0  | 19       |
+| frames_address1  | 19       |
+| frames_d0        | 64       |
+| frames_d1        | 64       |
+| frames_q0        | 64       |
+| frames_q1        | 64       |
+| outputs_address0 | 19       |
+| outputs_address1 | 19       |
+| outputs_d0       | 64       |
+| outputs_d1       | 64       |
+| outputs_q0       | 64       |
+| outputs_q1       | 64       |
++------------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------+
+| Argument | Direction | Datatype     |
++----------+-----------+--------------+
+| frames   | in        | ap_uint<64>* |
+| outputs  | out       | pointer      |
++----------+-----------+--------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| frames   | frames_address0  | port    | offset   |
+| frames   | frames_ce0       | port    |          |
+| frames   | frames_d0        | port    |          |
+| frames   | frames_q0        | port    |          |
+| frames   | frames_we0       | port    |          |
+| frames   | frames_address1  | port    | offset   |
+| frames   | frames_ce1       | port    |          |
+| frames   | frames_d1        | port    |          |
+| frames   | frames_q1        | port    |          |
+| frames   | frames_we1       | port    |          |
+| outputs  | outputs_address0 | port    | offset   |
+| outputs  | outputs_ce0      | port    |          |
+| outputs  | outputs_d0       | port    |          |
+| outputs  | outputs_q0       | port    |          |
+| outputs  | outputs_we0      | port    |          |
+| outputs  | outputs_address1 | port    | offset   |
+| outputs  | outputs_ce1      | port    |          |
+| outputs  | outputs_d1       | port    |          |
+| outputs  | outputs_q1       | port    |          |
+| outputs  | outputs_we1      | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                          | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++-------------------------------+-----+--------+--------------+-----+--------+---------+
+| + optical_flow                | 189 |        |              |     |        |         |
+|  + Loop_FRAMES_CP_OUTER_proc1 | 0   |        |              |     |        |         |
+|    add_ln451_1_fu_164_p2      | -   |        | add_ln451_1  | add | fabric | 0       |
+|    add_ln451_fu_176_p2        | -   |        | add_ln451    | add | fabric | 0       |
+|    add_ln458_fu_216_p2        | -   |        | add_ln458    | add | fabric | 0       |
+|    add_ln453_fu_227_p2        | -   |        | add_ln453    | add | fabric | 0       |
+|  + gradient_xy_calc           | 6   |        |              |     |        |         |
+|    add_ln40_1_fu_400_p2       | -   |        | add_ln40_1   | add | fabric | 0       |
+|    add_ln40_fu_409_p2         | -   |        | add_ln40     | add | fabric | 0       |
+|    tmp_i_fu_750_p2            | -   |        | tmp_i        | sub | fabric | 0       |
+|    tmp17_i_fu_768_p2          | -   |        | tmp17_i      | sub | fabric | 0       |
+|    x_grad_V_fu_782_p2         | -   |        | x_grad_V     | add | fabric | 0       |
+|    tmp20_i_fu_792_p2          | -   |        | tmp20_i      | sub | fabric | 0       |
+|    tmp23_i_fu_806_p2          | -   |        | tmp23_i      | sub | fabric | 0       |
+|    y_grad_V_fu_824_p2         | -   |        | y_grad_V     | add | fabric | 0       |
+|    mul_32s_34ns_65_1_1_U8     | 3   |        | mul_ln1303   | mul | auto   | 0       |
+|    sub_ln1303_fu_981_p2       | -   |        | sub_ln1303   | sub | fabric | 0       |
+|    sub_ln1303_2_fu_1022_p2    | -   |        | sub_ln1303_2 | sub | fabric | 0       |
+|    mul_32s_34ns_65_1_1_U7     | 3   |        | mul_ln1303_1 | mul | auto   | 0       |
+|    sub_ln1303_3_fu_848_p2     | -   |        | sub_ln1303_3 | sub | fabric | 0       |
+|    sub_ln1303_4_fu_898_p2     | -   |        | sub_ln1303_4 | sub | fabric | 0       |
+|    add_ln42_fu_583_p2         | -   |        | add_ln42     | add | fabric | 0       |
+|  + gradient_z_calc            | 3   |        |              |     |        |         |
+|    add_ln116_fu_115_p2        | -   |        | add_ln116    | add | fabric | 0       |
+|    sub_ln841_fu_142_p2        | -   |        | sub_ln841    | sub | fabric | 0       |
+|    mul_32s_34ns_65_1_1_U14    | 3   |        | mul_ln1303   | mul | auto   | 0       |
+|    sub_ln1303_fu_193_p2       | -   |        | sub_ln1303   | sub | fabric | 0       |
+|    sub_ln1303_1_fu_234_p2     | -   |        | sub_ln1303_1 | sub | fabric | 0       |
+|  + gradient_weight_y          | 42  |        |              |     |        |         |
+|    add_ln139_1_fu_650_p2      | -   |        | add_ln139_1  | add | fabric | 0       |
+|    add_ln139_fu_659_p2        | -   |        | add_ln139    | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U20    | 2   |        | r_V_103      | mul | auto   | 0       |
+|    mul_32s_17ns_49_1_1_U21    | 2   |        | r_V_107      | mul | auto   | 0       |
+|    mul_32s_17ns_49_1_1_U22    | 2   |        | r_V_111      | mul | auto   | 0       |
+|    mul_32s_18ns_50_1_1_U23    | 2   |        | r_V_120      | mul | auto   | 0       |
+|    ret_V_fu_866_p2            | -   |        | ret_V        | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U24    | 2   |        | r_V_122      | mul | auto   | 0       |
+|    ret_V_23_fu_916_p2         | -   |        | ret_V_23     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U25    | 2   |        | r_V_124      | mul | auto   | 0       |
+|    ret_V_24_fu_966_p2         | -   |        | ret_V_24     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U26    | 2   |        | r_V_126      | mul | auto   | 0       |
+|    ret_V_25_fu_1008_p2        | -   |        | ret_V_25     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U27    | 2   |        | r_V_128      | mul | auto   | 0       |
+|    ret_V_26_fu_1046_p2        | -   |        | ret_V_26     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U28    | 2   |        | r_V_130      | mul | auto   | 0       |
+|    ret_V_27_fu_1084_p2        | -   |        | ret_V_27     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U29    | 2   |        | r_V_132      | mul | auto   | 0       |
+|    ret_V_28_fu_1118_p2        | -   |        | ret_V_28     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U30    | 2   |        | r_V_134      | mul | auto   | 0       |
+|    ret_V_29_fu_1144_p2        | -   |        | ret_V_29     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U31    | 2   |        | r_V_136      | mul | auto   | 0       |
+|    ret_V_30_fu_1170_p2        | -   |        | ret_V_30     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U32    | 2   |        | r_V_138      | mul | auto   | 0       |
+|    ret_V_31_fu_1220_p2        | -   |        | ret_V_31     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U33    | 2   |        | r_V_140      | mul | auto   | 0       |
+|    ret_V_32_fu_1257_p2        | -   |        | ret_V_32     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U34    | 2   |        | r_V_142      | mul | auto   | 0       |
+|    ret_V_33_fu_1294_p2        | -   |        | ret_V_33     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U35    | 2   |        | r_V_144      | mul | auto   | 0       |
+|    ret_V_34_fu_1331_p2        | -   |        | ret_V_34     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U36    | 2   |        | r_V_146      | mul | auto   | 0       |
+|    ret_V_35_fu_1368_p2        | -   |        | ret_V_35     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U37    | 2   |        | r_V_148      | mul | auto   | 0       |
+|    ret_V_36_fu_1405_p2        | -   |        | ret_V_36     | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U38    | 2   |        | r_V_149      | mul | auto   | 0       |
+|    ret_V_37_fu_1443_p2        | -   |        | ret_V_37     | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U39    | 2   |        | r_V_150      | mul | auto   | 0       |
+|    ret_V_38_fu_1474_p2        | -   |        | ret_V_38     | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U40    | 2   |        | r_V_151      | mul | auto   | 0       |
+|    ret_V_39_fu_1505_p2        | -   |        | ret_V_39     | add | fabric | 0       |
+|    add_ln141_fu_763_p2        | -   |        | add_ln141    | add | fabric | 0       |
+|  + gradient_weight_x          | 42  |        |              |     |        |         |
+|    add_ln193_fu_270_p2        | -   |        | add_ln193    | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U51    | 2   |        | r_V_154      | mul | auto   | 0       |
+|    mul_32s_17ns_49_1_1_U52    | 2   |        | r_V_156      | mul | auto   | 0       |
+|    mul_32s_17ns_49_1_1_U53    | 2   |        | r_V_158      | mul | auto   | 0       |
+|    mul_32s_18ns_50_1_1_U54    | 2   |        | r_V_161      | mul | auto   | 0       |
+|    ret_V_fu_477_p2            | -   |        | ret_V        | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U55    | 2   |        | r_V_163      | mul | auto   | 0       |
+|    ret_V_40_fu_527_p2         | -   |        | ret_V_40     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U56    | 2   |        | r_V_165      | mul | auto   | 0       |
+|    ret_V_41_fu_577_p2         | -   |        | ret_V_41     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U57    | 2   |        | r_V_167      | mul | auto   | 0       |
+|    ret_V_42_fu_619_p2         | -   |        | ret_V_42     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U58    | 2   |        | r_V_169      | mul | auto   | 0       |
+|    ret_V_43_fu_657_p2         | -   |        | ret_V_43     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U59    | 2   |        | r_V_171      | mul | auto   | 0       |
+|    ret_V_44_fu_695_p2         | -   |        | ret_V_44     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U60    | 2   |        | r_V_173      | mul | auto   | 0       |
+|    ret_V_45_fu_729_p2         | -   |        | ret_V_45     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U61    | 2   |        | r_V_175      | mul | auto   | 0       |
+|    ret_V_46_fu_763_p2         | -   |        | ret_V_46     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U62    | 2   |        | r_V_177      | mul | auto   | 0       |
+|    ret_V_47_fu_797_p2         | -   |        | ret_V_47     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U63    | 2   |        | r_V_179      | mul | auto   | 0       |
+|    ret_V_48_fu_835_p2         | -   |        | ret_V_48     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U64    | 2   |        | r_V_181      | mul | auto   | 0       |
+|    ret_V_49_fu_865_p2         | -   |        | ret_V_49     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U65    | 2   |        | r_V_183      | mul | auto   | 0       |
+|    ret_V_50_fu_895_p2         | -   |        | ret_V_50     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U66    | 2   |        | r_V_185      | mul | auto   | 0       |
+|    ret_V_51_fu_1035_p2        | -   |        | ret_V_51     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U67    | 2   |        | r_V_187      | mul | auto   | 0       |
+|    ret_V_52_fu_1072_p2        | -   |        | ret_V_52     | add | fabric | 0       |
+|    mul_32s_18ns_50_1_1_U68    | 2   |        | r_V_189      | mul | auto   | 0       |
+|    ret_V_53_fu_1109_p2        | -   |        | ret_V_53     | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U69    | 2   |        | r_V_191      | mul | auto   | 0       |
+|    ret_V_54_fu_1147_p2        | -   |        | ret_V_54     | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U70    | 2   |        | r_V_193      | mul | auto   | 0       |
+|    ret_V_55_fu_1178_p2        | -   |        | ret_V_55     | add | fabric | 0       |
+|    mul_32s_17ns_49_1_1_U71    | 2   |        | r_V_195      | mul | auto   | 0       |
+|    ret_V_56_fu_1209_p2        | -   |        | ret_V_56     | add | fabric | 0       |
+|    add_ln195_fu_325_p2        | -   |        | add_ln195    | add | fabric | 0       |
+|  + outer_product              | 6   |        |              |     |        |         |
+|    add_ln238_fu_107_p2        | -   |        | add_ln238    | add | fabric | 0       |
+|    mul_mul_18s_18s_36_4_1_U78 | 1   |        | r_V_95       | mul | dsp48  | 3       |
+|    mul_mul_18s_18s_36_4_1_U79 | 1   |        | r_V_97       | mul | dsp48  | 3       |
+|    mul_mul_18s_18s_36_4_1_U80 | 1   |        | r_V_98       | mul | dsp48  | 3       |
+|    mul_mul_18s_18s_36_4_1_U81 | 1   |        | r_V_99       | mul | dsp48  | 3       |
+|    mul_mul_18s_18s_36_4_1_U82 | 1   |        | r_V_100      | mul | dsp48  | 3       |
+|    mul_mul_18s_18s_36_4_1_U83 | 1   |        | r_V_101      | mul | dsp48  | 3       |
+|  + tensor_weight_y            | 36  |        |              |     |        |         |
+|    add_ln265_1_fu_388_p2      | -   |        | add_ln265_1  | add | fabric | 0       |
+|    add_ln265_fu_397_p2        | -   |        | add_ln265    | add | fabric | 0       |
+|    sub_ln911_fu_513_p2        | -   |        | sub_ln911    | sub | fabric | 0       |
+|    add_ln911_fu_612_p2        | -   |        | add_ln911    | add | fabric | 0       |
+|    add_ln911_1_fu_711_p2      | -   |        | add_ln911_1  | add | fabric | 0       |
+|    add_ln911_2_fu_810_p2      | -   |        | add_ln911_2  | add | fabric | 0       |
+|    add_ln911_3_fu_909_p2      | -   |        | add_ln911_3  | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U104   | 2   |        | r_V_1        | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U89    | 2   |        | r_V_3        | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U92    | 2   |        | r_V_5        | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U95    | 2   |        | r_V_7        | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U98    | 2   |        | r_V_9        | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U101   | 2   |        | r_V_11       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U105   | 2   |        | r_V_13       | mul | auto   | 0       |
+|    ret_V_fu_1132_p2           | -   |        | ret_V        | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U90    | 2   |        | r_V_15       | mul | auto   | 0       |
+|    ret_V_1_fu_661_p2          | -   |        | ret_V_1      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U93    | 2   |        | r_V_17       | mul | auto   | 0       |
+|    ret_V_2_fu_760_p2          | -   |        | ret_V_2      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U96    | 2   |        | r_V_19       | mul | auto   | 0       |
+|    ret_V_3_fu_859_p2          | -   |        | ret_V_3      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U99    | 2   |        | r_V_21       | mul | auto   | 0       |
+|    ret_V_4_fu_958_p2          | -   |        | ret_V_4      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U102   | 2   |        | r_V_23       | mul | auto   | 0       |
+|    ret_V_5_fu_1046_p2         | -   |        | ret_V_5      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U106   | 2   |        | r_V_25       | mul | auto   | 0       |
+|    ret_V_6_fu_1166_p2         | -   |        | ret_V_6      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U91    | 2   |        | r_V_27       | mul | auto   | 0       |
+|    ret_V_7_fu_695_p2          | -   |        | ret_V_7      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U94    | 2   |        | r_V_29       | mul | auto   | 0       |
+|    ret_V_8_fu_794_p2          | -   |        | ret_V_8      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U97    | 2   |        | r_V_31       | mul | auto   | 0       |
+|    ret_V_9_fu_893_p2          | -   |        | ret_V_9      | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U100   | 2   |        | r_V_33       | mul | auto   | 0       |
+|    ret_V_10_fu_992_p2         | -   |        | ret_V_10     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U103   | 2   |        | r_V_35       | mul | auto   | 0       |
+|    ret_V_11_fu_1080_p2        | -   |        | ret_V_11     | add | fabric | 0       |
+|    add_ln267_fu_525_p2        | -   |        | add_ln267    | add | fabric | 0       |
+|  + tensor_weight_x            | 36  |        |              |     |        |         |
+|    add_ln316_fu_244_p2        | -   |        | add_ln316    | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U110   | 2   |        | r_V_59       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U111   | 2   |        | r_V_61       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U112   | 2   |        | r_V_63       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U113   | 2   |        | r_V_65       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U114   | 2   |        | r_V_67       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U115   | 2   |        | r_V_69       | mul | auto   | 0       |
+|    mul_32s_19ns_51_1_1_U116   | 2   |        | r_V_72       | mul | auto   | 0       |
+|    ret_V_fu_599_p2            | -   |        | ret_V        | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U117   | 2   |        | r_V_74       | mul | auto   | 0       |
+|    ret_V_12_fu_633_p2         | -   |        | ret_V_12     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U118   | 2   |        | r_V_76       | mul | auto   | 0       |
+|    ret_V_13_fu_667_p2         | -   |        | ret_V_13     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U119   | 2   |        | r_V_78       | mul | auto   | 0       |
+|    ret_V_14_fu_701_p2         | -   |        | ret_V_14     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U120   | 2   |        | r_V_80       | mul | auto   | 0       |
+|    ret_V_15_fu_735_p2         | -   |        | ret_V_15     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U121   | 2   |        | r_V_82       | mul | auto   | 0       |
+|    ret_V_16_fu_769_p2         | -   |        | ret_V_16     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U122   | 2   |        | r_V_84       | mul | auto   | 0       |
+|    ret_V_17_fu_803_p2         | -   |        | ret_V_17     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U123   | 2   |        | r_V_86       | mul | auto   | 0       |
+|    ret_V_18_fu_829_p2         | -   |        | ret_V_18     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U124   | 2   |        | r_V_88       | mul | auto   | 0       |
+|    ret_V_19_fu_855_p2         | -   |        | ret_V_19     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U125   | 2   |        | r_V_90       | mul | auto   | 0       |
+|    ret_V_20_fu_881_p2         | -   |        | ret_V_20     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U126   | 2   |        | r_V_92       | mul | auto   | 0       |
+|    ret_V_21_fu_907_p2         | -   |        | ret_V_21     | add | fabric | 0       |
+|    mul_32s_19ns_51_1_1_U127   | 2   |        | r_V_94       | mul | auto   | 0       |
+|    ret_V_22_fu_933_p2         | -   |        | ret_V_22     | add | fabric | 0       |
+|    add_ln318_fu_309_p2        | -   |        | add_ln318    | add | fabric | 0       |
+|  + flow_calc                  | 18  |        |              |     |        |         |
+|    add_ln361_1_fu_179_p2      | -   |        | add_ln361_1  | add | fabric | 0       |
+|    add_ln361_fu_224_p2        | -   |        | add_ln361    | add | fabric | 0       |
+|    add_ln397_fu_300_p2        | -   |        | add_ln397    | add | fabric | 0       |
+|    mul_35s_35s_70_1_1_U130    | 3   |        | r_V_196      | mul | auto   | 0       |
+|    mul_35s_35s_70_1_1_U131    | 3   |        | r_V_198      | mul | auto   | 0       |
+|    ret_V_fu_453_p2            | -   |        | ret_V        | sub | fabric | 0       |
+|    mul_35s_35s_70_1_1_U132    | 3   |        | r_V_200      | mul | auto   | 0       |
+|    mul_35s_35s_70_1_1_U133    | 3   |        | r_V_202      | mul | auto   | 0       |
+|    ret_V_57_fu_489_p2         | -   |        | ret_V_57     | sub | fabric | 0       |
+|    mul_35s_35s_70_1_1_U134    | 3   |        | r_V_203      | mul | auto   | 0       |
+|    mul_35s_35s_70_1_1_U135    | 3   |        | r_V_204      | mul | auto   | 0       |
+|    ret_V_58_fu_525_p2         | -   |        | ret_V_58     | sub | fabric | 0       |
+|    add_ln363_fu_571_p2        | -   |        | add_ln363    | add | fabric | 0       |
++-------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------+---------+------+---------+
+| Name                                                                  | BRAM | URAM | Pragma | Variable                                                         | Storage | Impl | Latency |
++-----------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------+---------+------+---------+
+| + optical_flow                                                        | 114  | 0    |        |                                                                  |         |      |         |
+|  + gradient_xy_calc                                                   | 8    | 0    |        |                                                                  |         |      |         |
+|    gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_3_U | 2    | -    |        | gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_3 | ram_s2p | auto | 1       |
+|    gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_2_U | 2    | -    |        | gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_2 | ram_s2p | auto | 1       |
+|    gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_1_U | 2    | -    |        | gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_1 | ram_s2p | auto | 1       |
+|    gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_U   | 2    | -    |        | gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf   | ram_s2p | auto | 1       |
+|  + gradient_weight_y                                                  | 36   | 0    |        |                                                                  |         |      |         |
+|    buf_val_x_V_U                                                      | 2    | -    | yes    | buf_val_x_V                                                      | ram_s2p | bram | 1       |
+|    buf_val_x_V_1_U                                                    | 2    | -    | yes    | buf_val_x_V_1                                                    | ram_s2p | bram | 1       |
+|    buf_val_x_V_2_U                                                    | 2    | -    | yes    | buf_val_x_V_2                                                    | ram_s2p | bram | 1       |
+|    buf_val_x_V_3_U                                                    | 2    | -    | yes    | buf_val_x_V_3                                                    | ram_s2p | bram | 1       |
+|    buf_val_x_V_4_U                                                    | 2    | -    | yes    | buf_val_x_V_4                                                    | ram_s2p | bram | 1       |
+|    buf_val_x_V_5_U                                                    | 2    | -    | yes    | buf_val_x_V_5                                                    | ram_s2p | bram | 1       |
+|    buf_val_y_V_U                                                      | 2    | -    | yes    | buf_val_y_V                                                      | ram_s2p | bram | 1       |
+|    buf_val_y_V_1_U                                                    | 2    | -    | yes    | buf_val_y_V_1                                                    | ram_s2p | bram | 1       |
+|    buf_val_y_V_2_U                                                    | 2    | -    | yes    | buf_val_y_V_2                                                    | ram_s2p | bram | 1       |
+|    buf_val_y_V_3_U                                                    | 2    | -    | yes    | buf_val_y_V_3                                                    | ram_s2p | bram | 1       |
+|    buf_val_y_V_4_U                                                    | 2    | -    | yes    | buf_val_y_V_4                                                    | ram_s2p | bram | 1       |
+|    buf_val_y_V_5_U                                                    | 2    | -    | yes    | buf_val_y_V_5                                                    | ram_s2p | bram | 1       |
+|    buf_val_z_V_U                                                      | 2    | -    | yes    | buf_val_z_V                                                      | ram_s2p | bram | 1       |
+|    buf_val_z_V_1_U                                                    | 2    | -    | yes    | buf_val_z_V_1                                                    | ram_s2p | bram | 1       |
+|    buf_val_z_V_2_U                                                    | 2    | -    | yes    | buf_val_z_V_2                                                    | ram_s2p | bram | 1       |
+|    buf_val_z_V_3_U                                                    | 2    | -    | yes    | buf_val_z_V_3                                                    | ram_s2p | bram | 1       |
+|    buf_val_z_V_4_U                                                    | 2    | -    | yes    | buf_val_z_V_4                                                    | ram_s2p | bram | 1       |
+|    buf_val_z_V_5_U                                                    | 2    | -    | yes    | buf_val_z_V_5                                                    | ram_s2p | bram | 1       |
+|  + tensor_weight_y                                                    | 32   | 0    |        |                                                                  |         |      |         |
+|    buf_val_val_V_U                                                    | 16   | -    | yes    | buf_val_val_V                                                    | ram_s2p | bram | 1       |
+|    buf_val_val_V_1_U                                                  | 16   | -    | yes    | buf_val_val_V_1                                                  | ram_s2p | bram | 1       |
++-----------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++-----------+----------+-----------------------------------------+-------------------------------------------------+
+| Type      | Options  | Location                                | Messages                                        |
++-----------+----------+-----------------------------------------+-------------------------------------------------+
+| data_pack | variable | optical_flow.cpp:272 in tensor_weight_y | the pragma is not supported and will be ignored |
+| data_pack | variable | optical_flow.cpp:273 in tensor_weight_y | the pragma is not supported and will be ignored |
+| data_pack | variable | optical_flow.cpp:407 in optical_flow    | the pragma is not supported and will be ignored |
+| data_pack | variable | optical_flow.cpp:424 in optical_flow    | the pragma is not supported and will be ignored |
+| data_pack | variable | optical_flow.cpp:427 in optical_flow    | the pragma is not supported and will be ignored |
+| data_pack | variable | optical_flow.cpp:430 in optical_flow    | the pragma is not supported and will be ignored |
++-----------+----------+-----------------------------------------+-------------------------------------------------+
+
+* Pragmas with Warnings
++---------------+------------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type          | Options                                  | Location                                                                           | Messages                                                                                                                                                                           |
++---------------+------------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| array_reshape | variable=val factor=RESHAPE_FACTOR dim=1 | ./xf_video_mem.hpp:795 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'factor' in '#pragma HLS array_reshape' is ignored                                                                                                                                 |
+| dataflow      |                                          | optical_flow.cpp:409 in optical_flow                                               | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++---------------+------------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------------+
+| Type            | Options                                          | Location                                                                           |
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------------+
+| inline          |                                                  | ./xf_structs.hpp:245 in scalar<n, t>                                               |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_structs.hpp:246 in scalar<n, t>, val                                          |
+| inline          |                                                  | ./xf_structs.hpp:252 in scalar<n, t>                                               |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_structs.hpp:253 in scalar<n, t>, val                                          |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_structs.hpp:260 in scalar<n, t>, val                                          |
+| inline          |                                                  | ./xf_structs.hpp:261 in scalar<n, t>                                               |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_structs.hpp:269 in scalar<n, t>, val                                          |
+| inline          |                                                  | ./xf_structs.hpp:270 in scalar<n, t>                                               |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_structs.hpp:279 in scalar<n, t>, val                                          |
+| inline          |                                                  | ./xf_structs.hpp:280 in scalar<n, t>                                               |
+| inline          |                                                  | ./xf_structs.hpp:305 in operator=                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:308 in operator=                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:310 in operator=                                                  |
+| inline          |                                                  | ./xf_structs.hpp:319 in operator+                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:323 in operator+                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:325 in operator+                                                  |
+| inline          |                                                  | ./xf_structs.hpp:335 in operator+                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:339 in operator+                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:341 in operator+                                                  |
+| inline          |                                                  | ./xf_structs.hpp:351 in operator-                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:355 in operator-                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:357 in operator-                                                  |
+| inline          |                                                  | ./xf_structs.hpp:367 in operator-                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:371 in operator-                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:373 in operator-                                                  |
+| inline          |                                                  | ./xf_structs.hpp:383 in operator*                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:387 in operator*                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:389 in operator*                                                  |
+| inline          |                                                  | ./xf_structs.hpp:399 in operator*                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:403 in operator*                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:405 in operator*                                                  |
+| inline          |                                                  | ./xf_structs.hpp:415 in operator/                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:419 in operator/                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:421 in operator/                                                  |
+| inline          |                                                  | ./xf_structs.hpp:431 in operator/                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:435 in operator/                                                  |
+| unroll          | factor=1                                         | ./xf_structs.hpp:437 in operator/                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:521 in copydata                                                   |
+| inline          |                                                  | ./xf_structs.hpp:594 in type                                                       |
+| inline          |                                                  | ./xf_structs.hpp:602 in depth                                                      |
+| inline          |                                                  | ./xf_structs.hpp:609 in channels                                                   |
+| inline          |                                                  | ./xf_structs.hpp:617 in init                                                       |
+| inline          |                                                  | ./xf_structs.hpp:664 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                  | ./xf_structs.hpp:673 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                  | ./xf_structs.hpp:682 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                  | ./xf_structs.hpp:691 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                  | ./xf_structs.hpp:718 in copyto                                                     |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:730 in copyto                                                     |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:732 in copyto                                                     |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:734 in copyto                                                     |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:737 in copyto                                                     |
+| inline          |                                                  | ./xf_structs.hpp:756 in copyfrom                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:776 in copyfrom                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:778 in copyfrom                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:781 in copyfrom                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:783 in copyfrom                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:838 in convertto                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:840 in convertto                                                  |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:849 in convertto                                                  |
+| bind_op         | variable=mul_rows_cols op=mul impl=dsp latency=2 | ./xf_structs.hpp:970 in addrbound, mul_rows_cols                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1004 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                              | ./xf_structs.hpp:1006 in axi2axistream                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1007 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1019 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                              | ./xf_structs.hpp:1021 in axi2axistream                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1022 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1041 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=ROWS                                   | ./xf_structs.hpp:1043 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1046 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=COLS_ADDRBOUND                         | ./xf_structs.hpp:1048 in axi2axistream                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1049 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1080 in axistream2matstream                                       |
+| loop_tripcount  | min=1 max=LOOPBOUND                              | ./xf_structs.hpp:1082 in axistream2matstream                                       |
+| pipeline        |                                                  | ./xf_structs.hpp:1083 in axistream2matstream                                       |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1125 in matstream2mat                                             |
+| loop_tripcount  | min=1 max=LOOPBOUND                              | ./xf_structs.hpp:1127 in matstream2mat                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1128 in matstream2mat                                             |
+| dataflow        |                                                  | ./xf_structs.hpp:1140 in axistream2mat                                             |
+| dataflow        |                                                  | ./xf_structs.hpp:1153 in axistream2mat                                             |
+| dataflow        |                                                  | ./xf_structs.hpp:1168 in axi2mat                                                   |
+| dataflow        |                                                  | ./xf_structs.hpp:1191 in axi2mat                                                   |
+| dataflow        |                                                  | ./xf_structs.hpp:1203 in axi2mat                                                   |
+| dataflow        |                                                  | ./xf_structs.hpp:1226 in axi2mat                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1299 in mat2matstream                                             |
+| loop_tripcount  | min=1 max=LOOPBOUND                              | ./xf_structs.hpp:1301 in mat2matstream                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1302 in mat2matstream                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1330 in matstream2axistream                                       |
+| loop_tripcount  | min=1 max=ROWS                                   | ./xf_structs.hpp:1332 in matstream2axistream                                       |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1336 in matstream2axistream                                       |
+| loop_tripcount  | min=1 max=COLS_BOUND_PER_NPC                     | ./xf_structs.hpp:1338 in matstream2axistream                                       |
+| pipeline        |                                                  | ./xf_structs.hpp:1339 in matstream2axistream                                       |
+| dataflow        |                                                  | ./xf_structs.hpp:1381 in mat2axistream                                             |
+| dataflow        |                                                  | ./xf_structs.hpp:1394 in mat2axistream                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1410 in axistream2axi                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                              | ./xf_structs.hpp:1412 in axistream2axi                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1413 in axistream2axi                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1426 in axistream2axi                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                              | ./xf_structs.hpp:1428 in axistream2axi                                             |
+| pipeline        |                                                  | ./xf_structs.hpp:1429 in axistream2axi                                             |
+| dataflow        |                                                  | ./xf_structs.hpp:1443 in mat2axi                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1462 in mat2axi                                                   |
+| dataflow        |                                                  | ./xf_structs.hpp:1471 in mat2axi                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1491 in mat2axi                                                   |
+| dataflow        |                                                  | ./xf_structs.hpp:1503 in mat2axi                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1522 in mat2axi                                                   |
+| dataflow        |                                                  | ./xf_structs.hpp:1534 in mat2axi                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_structs.hpp:1553 in mat2axi                                                   |
+| inline          | OFF                                              | ./xf_utility.hpp:35 in ptr2xfmat                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:40 in ptr2xfmat                                                   |
+| pipeline        |                                                  | ./xf_utility.hpp:41 in ptr2xfmat                                                   |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:42 in ptr2xfmat                                                   |
+| inline          | OFF                                              | ./xf_utility.hpp:54 in xfmat2ptr                                                   |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:60 in xfmat2ptr                                                   |
+| pipeline        |                                                  | ./xf_utility.hpp:61 in xfmat2ptr                                                   |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:62 in xfmat2ptr                                                   |
+| inline          | OFF                                              | ./xf_utility.hpp:83 in xfduplicatemat_ptrmat                                       |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:89 in xfduplicatemat_ptrmat                                       |
+| pipeline        |                                                  | ./xf_utility.hpp:90 in xfduplicatemat_ptrmat                                       |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:91 in xfduplicatemat_ptrmat                                       |
+| inline          | OFF                                              | ./xf_utility.hpp:117 in xfduplicatemat_ptrmat2                                     |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:123 in xfduplicatemat_ptrmat2                                     |
+| pipeline        |                                                  | ./xf_utility.hpp:124 in xfduplicatemat_ptrmat2                                     |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:125 in xfduplicatemat_ptrmat2                                     |
+| inline          | OFF                                              | ./xf_utility.hpp:152 in xfduplicatemat_ptr_mat_axi                                 |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:158 in xfduplicatemat_ptr_mat_axi                                 |
+| pipeline        |                                                  | ./xf_utility.hpp:159 in xfduplicatemat_ptr_mat_axi                                 |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:160 in xfduplicatemat_ptr_mat_axi                                 |
+| inline          | OFF                                              | ./xf_utility.hpp:181 in xfmat2axi_strm                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:187 in xfmat2axi_strm                                             |
+| pipeline        |                                                  | ./xf_utility.hpp:188 in xfmat2axi_strm                                             |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:189 in xfmat2axi_strm                                             |
+| inline          | OFF                                              | ./xf_utility.hpp:206 in axi_strm2xfmat                                             |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:212 in axi_strm2xfmat                                             |
+| pipeline        |                                                  | ./xf_utility.hpp:213 in axi_strm2xfmat                                             |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:214 in axi_strm2xfmat                                             |
+| inline          | OFF                                              | ./xf_utility.hpp:230 in xfduplicatemat_ptr_axi                                     |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:236 in xfduplicatemat_ptr_axi                                     |
+| pipeline        |                                                  | ./xf_utility.hpp:237 in xfduplicatemat_ptr_axi                                     |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT            | ./xf_utility.hpp:238 in xfduplicatemat_ptr_axi                                     |
+| inline          | OFF                                              | ./xf_utility.hpp:260 in xfsetborder                                                |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:272 in xfsetborder                                                |
+| unroll          | factor=1                                         | ./xf_utility.hpp:273 in xfsetborder                                                |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:275 in xfsetborder                                                |
+| unroll          | factor=1                                         | ./xf_utility.hpp:276 in xfsetborder                                                |
+| inline          |                                                  | ./xf_utility.hpp:331 in xfpackpixels                                               |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:336 in xfpackpixels                                               |
+| unroll          | factor=1                                         | ./xf_utility.hpp:338 in xfpackpixels                                               |
+| inline          | off                                              | ./xf_utility.hpp:350 in xfextractpixels                                            |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:358 in xfextractpixels                                            |
+| unroll          | factor=1                                         | ./xf_utility.hpp:360 in xfextractpixels                                            |
+| inline          |                                                  | ./xf_utility.hpp:383 in xfextractdata                                              |
+| inline          |                                                  | ./xf_utility.hpp:403 in xfcopydata                                                 |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:410 in xfcopydata                                                 |
+| loop_tripcount  | min=6 max=6                                      | ./xf_utility.hpp:412 in xfcopydata                                                 |
+| unroll          | factor=1                                         | ./xf_utility.hpp:413 in xfcopydata                                                 |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:482 in xfduplicatestream                                          |
+| loop_tripcount  | min=IN_BH max=IN_BH                              | ./xf_utility.hpp:484 in xfduplicatestream                                          |
+| loop_flatten    | off                                              | ./xf_utility.hpp:485 in xfduplicatestream                                          |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:488 in xfduplicatestream                                          |
+| pipeline        |                                                  | ./xf_utility.hpp:490 in xfduplicatestream                                          |
+| loop_tripcount  | min=IN_BW max=IN_BW                              | ./xf_utility.hpp:491 in xfduplicatestream                                          |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:515 in array2hlsstrm                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                              | ./xf_utility.hpp:517 in array2hlsstrm                                              |
+| pipeline        |                                                  | ./xf_utility.hpp:518 in array2hlsstrm                                              |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:558 in hlsstrm2xfmat                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                              | ./xf_utility.hpp:560 in hlsstrm2xfmat                                              |
+| pipeline        |                                                  | ./xf_utility.hpp:561 in hlsstrm2xfmat                                              |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:641 in axistrm2hlsstrm                                            |
+| loop_tripcount  | min=1 max=TRIPCOUNT                              | ./xf_utility.hpp:643 in axistrm2hlsstrm                                            |
+| pipeline        |                                                  | ./xf_utility.hpp:644 in axistrm2hlsstrm                                            |
+| dataflow        |                                                  | ./xf_utility.hpp:655 in axistrm2xfmat                                              |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:710 in xfmat2hlsstrm                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                              | ./xf_utility.hpp:712 in xfmat2hlsstrm                                              |
+| pipeline        |                                                  | ./xf_utility.hpp:713 in xfmat2hlsstrm                                              |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:757 in hlsstrm2array                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                              | ./xf_utility.hpp:759 in hlsstrm2array                                              |
+| pipeline        |                                                  | ./xf_utility.hpp:760 in hlsstrm2array                                              |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_utility.hpp:809 in hlsstrm2axistrm                                            |
+| loop_tripcount  | min=1 max=TRIPCOUNT                              | ./xf_utility.hpp:811 in hlsstrm2axistrm                                            |
+| pipeline        |                                                  | ./xf_utility.hpp:812 in hlsstrm2axistrm                                            |
+| dataflow        |                                                  | ./xf_utility.hpp:824 in xfmat2axistrm                                              |
+| inline          |                                                  | ./xf_video_mem.hpp:46 in window<rows, cols, t>                                     |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_video_mem.hpp:47 in window<rows, cols, t>, val                                |
+| array_partition | variable=val type=cyclic factor=8 dim=2          | ./xf_video_mem.hpp:48 in window<rows, cols, t>, val                                |
+| inline          |                                                  | ./xf_video_mem.hpp:112 in shift_pixels_left                                        |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:123 in shift_pixels_left                                        |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:125 in shift_pixels_left                                        |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:128 in shift_pixels_left                                        |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:130 in shift_pixels_left                                        |
+| inline          |                                                  | ./xf_video_mem.hpp:160 in shift_pixels_right                                       |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:171 in shift_pixels_right                                       |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:173 in shift_pixels_right                                       |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:176 in shift_pixels_right                                       |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:178 in shift_pixels_right                                       |
+| inline          |                                                  | ./xf_video_mem.hpp:208 in shift_pixels_up                                          |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:219 in shift_pixels_up                                          |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:221 in shift_pixels_up                                          |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:224 in shift_pixels_up                                          |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:226 in shift_pixels_up                                          |
+| inline          |                                                  | ./xf_video_mem.hpp:256 in shift_pixels_down                                        |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:267 in shift_pixels_down                                        |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:269 in shift_pixels_down                                        |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:272 in shift_pixels_down                                        |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:274 in shift_pixels_down                                        |
+| inline          |                                                  | ./xf_video_mem.hpp:303 in insert_pixel                                             |
+| inline          |                                                  | ./xf_video_mem.hpp:338 in insert_row                                               |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:349 in insert_row                                               |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:351 in insert_row                                               |
+| inline          |                                                  | ./xf_video_mem.hpp:380 in insert_top_row                                           |
+| inline          |                                                  | ./xf_video_mem.hpp:415 in insert_bottom_row                                        |
+| inline          |                                                  | ./xf_video_mem.hpp:450 in insert_col                                               |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:461 in insert_col                                               |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:463 in insert_col                                               |
+| inline          |                                                  | ./xf_video_mem.hpp:492 in insert_left_col                                          |
+| inline          |                                                  | ./xf_video_mem.hpp:527 in insert_right_col                                         |
+| inline          |                                                  | ./xf_video_mem.hpp:562 in getval                                                   |
+| inline          |                                                  | ./xf_video_mem.hpp:574 in operator()                                               |
+| inline          |                                                  | ./xf_video_mem.hpp:615 in shift_left                                               |
+| inline          |                                                  | ./xf_video_mem.hpp:628 in shift_right                                              |
+| inline          |                                                  | ./xf_video_mem.hpp:641 in shift_up                                                 |
+| inline          |                                                  | ./xf_video_mem.hpp:654 in shift_down                                               |
+| inline          |                                                  | ./xf_video_mem.hpp:667 in insert                                                   |
+| inline          |                                                  | ./xf_video_mem.hpp:680 in insert_top                                               |
+| inline          |                                                  | ./xf_video_mem.hpp:693 in insert_bottom                                            |
+| inline          |                                                  | ./xf_video_mem.hpp:706 in insert_left                                              |
+| inline          |                                                  | ./xf_video_mem.hpp:719 in insert_right                                             |
+| inline          |                                                  | ./xf_video_mem.hpp:736 in linebuffer<rows, cols, t, mem_type, reshape_factor>      |
+| dependence      | variable=val inter false                         | ./xf_video_mem.hpp:737 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| dependence      | variable=val intra false                         | ./xf_video_mem.hpp:738 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_1P impl=BRAM               | ./xf_video_mem.hpp:747 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_1P impl=URAM               | ./xf_video_mem.hpp:752 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_2P impl=BRAM               | ./xf_video_mem.hpp:757 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_2P impl=URAM               | ./xf_video_mem.hpp:762 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_S2P impl=BRAM              | ./xf_video_mem.hpp:767 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_S2P impl=URAM              | ./xf_video_mem.hpp:772 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_T2P impl=BRAM              | ./xf_video_mem.hpp:777 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_T2P impl=URAM              | ./xf_video_mem.hpp:782 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| array_partition | variable=val type=cyclic factor=8 dim=1          | ./xf_video_mem.hpp:791 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| inline          |                                                  | ./xf_video_mem.hpp:849 in shift_pixels_down                                        |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:861 in shift_pixels_down                                        |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:863 in shift_pixels_down                                        |
+| inline          |                                                  | ./xf_video_mem.hpp:895 in shift_pixels_up                                          |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:907 in shift_pixels_up                                          |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:909 in shift_pixels_up                                          |
+| inline          |                                                  | ./xf_video_mem.hpp:940 in insert_bottom_row                                        |
+| inline          |                                                  | ./xf_video_mem.hpp:975 in insert_top_row                                           |
+| inline          |                                                  | ./xf_video_mem.hpp:1010 in get_col                                                 |
+| loop_tripcount  | min=1 max=1024                                   | ./xf_video_mem.hpp:1015 in get_col                                                 |
+| unroll          | factor=1                                         | ./xf_video_mem.hpp:1017 in get_col                                                 |
+| inline          |                                                  | ./xf_video_mem.hpp:1028 in getval                                                  |
+| inline          |                                                  | ./xf_video_mem.hpp:1039 in operator()                                              |
+| inline          |                                                  | ./xf_video_mem.hpp:1051 in shift_down                                              |
+| inline          |                                                  | ./xf_video_mem.hpp:1063 in shift_up                                                |
+| inline          |                                                  | ./xf_video_mem.hpp:1075 in insert_bottom                                           |
+| inline          |                                                  | ./xf_video_mem.hpp:1087 in insert_top                                              |
+| array_partition | variable=buf complete dim=1                      | optical_flow.cpp:29 in gradient_xy_calc, buf                                       |
+| array_partition | variable=smallbuf complete dim=0                 | optical_flow.cpp:33 in gradient_xy_calc, smallbuf                                  |
+| pipeline        | II=1                                             | optical_flow.cpp:44 in gradient_xy_calc                                            |
+| pipeline        | II=1                                             | optical_flow.cpp:120 in gradient_z_calc                                            |
+| pipeline        | II=1                                             | optical_flow.cpp:143 in gradient_weight_y                                          |
+| dependence      | variable=buf inter false                         | optical_flow.cpp:144 in gradient_weight_y, buf                                     |
+| pipeline        | II=1                                             | optical_flow.cpp:197 in gradient_weight_x                                          |
+| pipeline        | II=1                                             | optical_flow.cpp:242 in outer_product                                              |
+| pipeline        | II=1                                             | optical_flow.cpp:269 in tensor_weight_y                                            |
+| pipeline        | II=1                                             | optical_flow.cpp:320 in tensor_weight_x                                            |
+| pipeline        | II=1                                             | optical_flow.cpp:365 in flow_calc                                                  |
+| stream          | variable=gradient_x depth=default_depth          | optical_flow.cpp:413 in optical_flow, gradient_x                                   |
+| stream          | variable=gradient_y depth=default_depth          | optical_flow.cpp:415 in optical_flow, gradient_y                                   |
+| stream          | variable=gradient_z depth=max_width*4            | optical_flow.cpp:417 in optical_flow, gradient_z                                   |
+| stream          | variable=y_filtered depth=default_depth          | optical_flow.cpp:419 in optical_flow, y_filtered                                   |
+| stream          | variable=filtered_gradient depth=default_depth   | optical_flow.cpp:421 in optical_flow, filtered_gradient                            |
+| stream          | variable=out_product depth=default_depth         | optical_flow.cpp:423 in optical_flow, out_product                                  |
+| stream          | variable=tensor_y depth=default_depth            | optical_flow.cpp:426 in optical_flow, tensor_y                                     |
+| stream          | variable=tensor depth=default_depth              | optical_flow.cpp:429 in optical_flow, tensor                                       |
+| stream          | variable=frame1_a depth=default_depth            | optical_flow.cpp:434 in optical_flow, frame1_a                                     |
+| stream          | variable=frame2_a depth=default_depth            | optical_flow.cpp:436 in optical_flow, frame2_a                                     |
+| stream          | variable=frame4_a depth=default_depth            | optical_flow.cpp:438 in optical_flow, frame4_a                                     |
+| stream          | variable=frame5_a depth=default_depth            | optical_flow.cpp:440 in optical_flow, frame5_a                                     |
+| stream          | variable=frame3_a depth=default_depth            | optical_flow.cpp:444 in optical_flow, frame3_a                                     |
+| pipeline        | II=1                                             | optical_flow.cpp:455 in optical_flow                                               |
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------------+
+
+

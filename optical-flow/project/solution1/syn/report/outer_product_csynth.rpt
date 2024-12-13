@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'outer_product'
+================================================================
+* Date:           Fri Dec 13 11:12:59 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.728 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   446469|   446469|  4.465 ms|  4.465 ms|  446469|  446469|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                           |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |         Loop Name         |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- OUTER_OUTER_OUTER_INNER  |   446467|   446467|         5|          1|          1|  446464|       yes|
+        +---------------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     6|        -|        -|    -|
+|Expression           |        -|     -|        0|       48|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       81|    -|
+|Register             |        -|     -|       29|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     6|       29|      129|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    +----------------------------+------------------------+-----------+
+    |          Instance          |         Module         | Expression|
+    +----------------------------+------------------------+-----------+
+    |mul_mul_18s_18s_36_4_1_U78  |mul_mul_18s_18s_36_4_1  |    i0 * i0|
+    |mul_mul_18s_18s_36_4_1_U79  |mul_mul_18s_18s_36_4_1  |    i0 * i0|
+    |mul_mul_18s_18s_36_4_1_U80  |mul_mul_18s_18s_36_4_1  |    i0 * i0|
+    |mul_mul_18s_18s_36_4_1_U81  |mul_mul_18s_18s_36_4_1  |    i0 * i1|
+    |mul_mul_18s_18s_36_4_1_U82  |mul_mul_18s_18s_36_4_1  |    i0 * i1|
+    |mul_mul_18s_18s_36_4_1_U83  |mul_mul_18s_18s_36_4_1  |    i0 * i1|
+    +----------------------------+------------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln238_fu_107_p2               |         +|   0|  0|  26|          19|           1|
+    |ap_condition_145                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln238_fu_101_p2              |      icmp|   0|  0|  14|          19|          18|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  48|          42|          24|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|   19|         38|
+    |filtered_gradient_x_V_blk_n           |   9|          2|    1|          2|
+    |filtered_gradient_y_V_blk_n           |   9|          2|    1|          2|
+    |filtered_gradient_z_V_blk_n           |   9|          2|    1|          2|
+    |indvar_flatten_fu_64                  |   9|          2|   19|         38|
+    |out_product_blk_n                     |   9|          2|    1|          2|
+    |real_start                            |   9|          2|    1|          2|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  81|         18|   45|         90|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |indvar_flatten_fu_64              |  19|   0|   19|          0|
+    |start_once_reg                    |   1|   0|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             |  29|   0|   29|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+-----------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++--------------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|          outer_product|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|          outer_product|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|          outer_product|  return value|
+|start_full_n                          |   in|    1|  ap_ctrl_hs|          outer_product|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|          outer_product|  return value|
+|ap_continue                           |   in|    1|  ap_ctrl_hs|          outer_product|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|          outer_product|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|          outer_product|  return value|
+|start_out                             |  out|    1|  ap_ctrl_hs|          outer_product|  return value|
+|start_write                           |  out|    1|  ap_ctrl_hs|          outer_product|  return value|
+|filtered_gradient_x_V_dout            |   in|   32|     ap_fifo|  filtered_gradient_x_V|       pointer|
+|filtered_gradient_x_V_num_data_valid  |   in|   11|     ap_fifo|  filtered_gradient_x_V|       pointer|
+|filtered_gradient_x_V_fifo_cap        |   in|   11|     ap_fifo|  filtered_gradient_x_V|       pointer|
+|filtered_gradient_x_V_empty_n         |   in|    1|     ap_fifo|  filtered_gradient_x_V|       pointer|
+|filtered_gradient_x_V_read            |  out|    1|     ap_fifo|  filtered_gradient_x_V|       pointer|
+|filtered_gradient_y_V_dout            |   in|   32|     ap_fifo|  filtered_gradient_y_V|       pointer|
+|filtered_gradient_y_V_num_data_valid  |   in|   11|     ap_fifo|  filtered_gradient_y_V|       pointer|
+|filtered_gradient_y_V_fifo_cap        |   in|   11|     ap_fifo|  filtered_gradient_y_V|       pointer|
+|filtered_gradient_y_V_empty_n         |   in|    1|     ap_fifo|  filtered_gradient_y_V|       pointer|
+|filtered_gradient_y_V_read            |  out|    1|     ap_fifo|  filtered_gradient_y_V|       pointer|
+|filtered_gradient_z_V_dout            |   in|   32|     ap_fifo|  filtered_gradient_z_V|       pointer|
+|filtered_gradient_z_V_num_data_valid  |   in|   11|     ap_fifo|  filtered_gradient_z_V|       pointer|
+|filtered_gradient_z_V_fifo_cap        |   in|   11|     ap_fifo|  filtered_gradient_z_V|       pointer|
+|filtered_gradient_z_V_empty_n         |   in|    1|     ap_fifo|  filtered_gradient_z_V|       pointer|
+|filtered_gradient_z_V_read            |  out|    1|     ap_fifo|  filtered_gradient_z_V|       pointer|
+|out_product_din                       |  out|  192|     ap_fifo|            out_product|       pointer|
+|out_product_num_data_valid            |   in|   11|     ap_fifo|            out_product|       pointer|
+|out_product_fifo_cap                  |   in|   11|     ap_fifo|            out_product|       pointer|
+|out_product_full_n                    |   in|    1|     ap_fifo|            out_product|       pointer|
+|out_product_write                     |  out|    1|     ap_fifo|            out_product|       pointer|
++--------------------------------------+-----+-----+------------+-----------------------+--------------+
+

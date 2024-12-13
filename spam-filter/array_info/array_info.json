@@ -1,0 +1,73 @@
+[
+
+    {
+        "array_name": "param",
+        "dimensions": 1,
+        "line_per_dimension": [
+            116
+        ],
+        "size_per_dimension": [
+            1024
+        ]
+    },
+    {
+        "array_name": "feature",
+        "dimensions": 1,
+        "line_per_dimension": [
+            116
+        ],
+        "size_per_dimension": [
+            1024
+        ]
+    },
+    {
+        "array_name": "grad",
+        "dimensions": 1,
+        "line_per_dimension": [
+            172
+        ],
+        "size_per_dimension": [
+            1024
+        ]
+    },
+    {
+        "array_name": "feature",
+        "dimensions": 1,
+        "line_per_dimension": [
+            172
+        ],
+        "size_per_dimension": [
+            1024
+        ]
+    },
+    {
+        "array_name": "grad",
+        "dimensions": 1,
+        "line_per_dimension": [
+            190
+        ],
+        "size_per_dimension": [
+            1024
+        ]
+    },
+    {
+        "array_name": "param",
+        "dimensions": 1,
+        "line_per_dimension": [
+            190
+        ],
+        "size_per_dimension": [
+            1024
+        ]
+    },
+    {
+        "array_name": "label_local",
+        "dimensions": 1,
+        "line_per_dimension": [
+            256
+        ],
+        "size_per_dimension": [
+            4500
+        ]
+    }
+]

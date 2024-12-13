@@ -1,0 +1,775 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5528" msg_severity="WARNING" msg_loc="face_detect.cpp:985:23" msg_body="'Ap_stable' in '#pragma HLS INTERFACE' is deprecated, use 'Stable Pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="face_detect.cpp:3058:11" msg_body="unused parameter 'pt'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="face_detect.cpp:3326:7" msg_body="unused parameter 'w_id'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_bank" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_offset" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data0" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data1" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:99:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data2" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:139:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data3" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:175:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data4" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data5" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:248:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data6" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:283:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data7" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:319:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data8" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:332:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data9" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:371:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data10" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:403:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data11" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:442:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data12" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:479:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data13" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:514:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data14" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:549:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data15" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:586:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data16" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:621:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data17" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:657:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data18" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:693:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data19" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:728:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data20" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:765:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data21" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:796:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data22" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:832:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data23" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:864:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data24" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:897:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data25" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:929:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data26" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:958:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data27" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:984:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:985:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_stable port=aa" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:988:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bank complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:990:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=offset complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:992:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=offset_for_banks complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:994:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=data_from_banks complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:999:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1007:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1057:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_all_data" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1065:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier0" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1097:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1129:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1161:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1193:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier4" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1225:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier5" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1257:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier6" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1289:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier7" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1321:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier8" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1354:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier9" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1386:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier10" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1418:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier11" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1450:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier12" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1482:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier13" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1514:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier14" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1546:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier15" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1578:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier16" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1610:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier17" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1642:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier18" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1674:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier19" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier20" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier21" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1770:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier22" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1802:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier23" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1834:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier24" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1866:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier25" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1898:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier26" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1930:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier27" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1962:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier28" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:1994:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier29" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2026:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier30" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2058:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier31" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2090:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier32" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier33" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier34" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier35" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2218:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier36" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2250:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier37" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2282:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier38" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2314:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier39" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2346:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier40" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2378:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier41" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2410:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier42" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2442:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier43" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2474:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier44" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2506:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier45" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2538:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier46" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2570:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier47" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2602:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier48" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2634:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier49" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2666:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier50" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2698:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="classifier51" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/run_hls.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="face_detect" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=face_detect" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2895:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2905:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=L complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2909:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=I complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2913:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=II complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2917:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=SI complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2921:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=SII complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2926:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2929:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2942:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2945:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2954:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2969:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=200 max=200" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2971:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=266 max=266" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2990:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:2992:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3005:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3014:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="processImage" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3064:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3079:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=coord complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3082:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s0 complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3085:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s1 complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3088:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s2 complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3094:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=values complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3098:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=addr_list complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3102:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=enable_list complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3105:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_II complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3108:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3110:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cascadeClassifier" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3332:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="weakClassifier" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3385:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="imageScaler" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="face_detect.cpp:3403:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="int_sqrt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1000:12" msg_body="Inlining function 'get_bank(ap_uint&lt;10&gt;)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_bank(ap_uint&lt;10&gt;)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1052:25" msg_body="Inlining function 'get_data27(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data27(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1051:25" msg_body="Inlining function 'get_data26(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data26(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1050:25" msg_body="Inlining function 'get_data25(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data25(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1049:25" msg_body="Inlining function 'get_data24(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data24(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1048:25" msg_body="Inlining function 'get_data23(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data23(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1047:25" msg_body="Inlining function 'get_data22(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data22(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1046:25" msg_body="Inlining function 'get_data21(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data21(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1045:25" msg_body="Inlining function 'get_data20(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data20(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1044:25" msg_body="Inlining function 'get_data19(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data19(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1043:25" msg_body="Inlining function 'get_data18(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data18(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1042:25" msg_body="Inlining function 'get_data17(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data17(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1041:25" msg_body="Inlining function 'get_data16(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data16(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1040:25" msg_body="Inlining function 'get_data15(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data15(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1039:25" msg_body="Inlining function 'get_data14(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data14(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1038:25" msg_body="Inlining function 'get_data13(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data13(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1037:25" msg_body="Inlining function 'get_data12(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data12(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1036:25" msg_body="Inlining function 'get_data11(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data11(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1035:25" msg_body="Inlining function 'get_data10(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data10(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1034:25" msg_body="Inlining function 'get_data9(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data9(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1033:25" msg_body="Inlining function 'get_data8(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data8(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1032:25" msg_body="Inlining function 'get_data7(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data7(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1031:25" msg_body="Inlining function 'get_data6(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data6(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1030:25" msg_body="Inlining function 'get_data5(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data5(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1029:25" msg_body="Inlining function 'get_data4(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data4(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1028:25" msg_body="Inlining function 'get_data3(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data3(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1027:25" msg_body="Inlining function 'get_data2(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data2(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1026:25" msg_body="Inlining function 'get_data1(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data1(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1025:25" msg_body="Inlining function 'get_data0(int, ap_uint&lt;18&gt;*)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_data0(int, ap_uint&lt;18&gt;*)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:1001:17" msg_body="Inlining function 'get_offset(ap_uint&lt;10&gt;)' into 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)'">
+        <args Callee="get_offset(ap_uint&lt;10&gt;)" Caller="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:3301:13" msg_body="Inlining function 'weakClassifier(int, ap_uint&lt;18&gt;*, int, int)' into 'cascadeClassifier(MyPoint, ap_uint&lt;18&gt; (*) [25], ap_uint&lt;26&gt; (*) [2])'">
+        <args Callee="weakClassifier(int, ap_uint&lt;18&gt;*, int, int)" Caller="cascadeClassifier(MyPoint, ap_uint&lt;18&gt; (*) [25], ap_uint&lt;26&gt; (*) [2])"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:3292:9" msg_body="Inlining function 'get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)' into 'cascadeClassifier(MyPoint, ap_uint&lt;18&gt; (*) [25], ap_uint&lt;26&gt; (*) [2])'">
+        <args Callee="get_all_data(ap_uint&lt;18&gt;*, ap_uint&lt;10&gt;*, ap_uint&lt;18&gt;*)" Caller="cascadeClassifier(MyPoint, ap_uint&lt;18&gt; (*) [25], ap_uint&lt;26&gt; (*) [2])"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="face_detect.cpp:3028:22" msg_body="Inlining function 'cascadeClassifier(MyPoint, ap_uint&lt;18&gt; (*) [25], ap_uint&lt;26&gt; (*) [2])' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="cascadeClassifier(MyPoint, ap_uint&lt;18&gt; (*) [25], ap_uint&lt;26&gt; (*) [2])" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'SetIj' (face_detect.cpp:2989:14) in function 'processImage' completely with a factor of 49">
+        <args Factor="49" LoopLoc="face_detect.cpp:2989:14" LoopName="SetIj"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'SetIi' (face_detect.cpp:2991:9) in function 'processImage' completely with a factor of 25">
+        <args Factor="25" LoopLoc="face_detect.cpp:2991:9" LoopName="SetIi"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'Ilast' (face_detect.cpp:3004:14) in function 'processImage' completely with a factor of 24">
+        <args Factor="24" LoopLoc="face_detect.cpp:3004:14" LoopName="Ilast"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'LineBuf' (face_detect.cpp:3013:16) in function 'processImage' completely with a factor of 23">
+        <args Factor="23" LoopLoc="face_detect.cpp:3013:16" LoopName="LineBuf"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'COPY_LOOP1' (face_detect.cpp:3107:14) in function 'processImage' completely with a factor of 25">
+        <args Factor="25" LoopLoc="face_detect.cpp:3107:14" LoopName="COPY_LOOP1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'COPY_LOOP2' (face_detect.cpp:3109:14) in function 'processImage' completely with a factor of 25">
+        <args Factor="25" LoopLoc="face_detect.cpp:3109:14" LoopName="COPY_LOOP2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'COMPUTE_BANK_AND_OFFSET' (face_detect.cpp:997:3) in function 'processImage' completely with a factor of 12">
+        <args Factor="12" LoopLoc="face_detect.cpp:997:3" LoopName="COMPUTE_BANK_AND_OFFSET"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'ASSIGN_OFFSET_FOR_BANKS' (face_detect.cpp:1005:3) in function 'processImage' completely with a factor of 28">
+        <args Factor="28" LoopLoc="face_detect.cpp:1005:3" LoopName="ASSIGN_OFFSET_FOR_BANKS"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'CHOOSE_DATA' (face_detect.cpp:1055:3) in function 'processImage' completely with a factor of 12">
+        <args Factor="12" LoopLoc="face_detect.cpp:1055:3" LoopName="CHOOSE_DATA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'Initialize2y' (face_detect.cpp:2953:3) in function 'processImage' completely with a factor of 24">
+        <args Factor="24" LoopLoc="face_detect.cpp:2953:3" LoopName="Initialize2y"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'Initialize1i' (face_detect.cpp:2941:3) in function 'processImage' completely with a factor of 25">
+        <args Factor="25" LoopLoc="face_detect.cpp:2941:3" LoopName="Initialize1i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'Initialize1j' (face_detect.cpp:2944:5) in function 'processImage' completely with a factor of 50">
+        <args Factor="50" LoopLoc="face_detect.cpp:2944:5" LoopName="Initialize1j"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'Initialize0u' (face_detect.cpp:2925:3) in function 'processImage' completely with a factor of 25">
+        <args Factor="25" LoopLoc="face_detect.cpp:2925:3" LoopName="Initialize0u"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Unrolling loop 'Initailize0v' (face_detect.cpp:2928:5) in function 'processImage' completely with a factor of 25">
+        <args Factor="25" LoopLoc="face_detect.cpp:2928:5" LoopName="Initailize0v"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="face_detect.cpp:3397:0" msg_body="Unrolling loop 'VITIS_LOOP_3401_1' (face_detect.cpp:3401:22) in function 'int_sqrt' completely with a factor of 16">
+        <args Factor="16" LoopLoc="face_detect.cpp:3401:22" LoopName="VITIS_LOOP_3401_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::fp_struct(double)' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::fp_struct(double)" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::mantissa() const' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::mantissa() const" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::expv() const' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::expv() const" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::__signbit() const' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::__signbit() const" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0" msg_body="Inlining function 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)' into 'int generic_cast_IEEE754&lt;int, double&gt;(double, bool)'">
+        <args Callee="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)" Caller="int generic_cast_IEEE754&lt;int, double&gt;(double, bool)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:55:0" msg_body="Inlining function 'int generic_cast_IEEE754&lt;int, double&gt;(double, bool)' into '__hls_fptosi_double_i32'">
+        <args Callee="int generic_cast_IEEE754&lt;int, double&gt;(double, bool)" Caller="__hls_fptosi_double_i32"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2773:0" msg_body="Inlining function '__hls_fptosi_double_i32' into 'myRound(float)'">
+        <args Callee="__hls_fptosi_double_i32" Caller="myRound(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::fp_struct(float)' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::fp_struct(float)" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::mantissa() const' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::mantissa() const" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::expv() const' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::expv() const" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::__signbit() const' into 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::__signbit() const" Caller="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0" msg_body="Inlining function 'int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)' into 'int generic_cast_IEEE754&lt;int, float&gt;(float, bool)'">
+        <args Callee="int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)" Caller="int generic_cast_IEEE754&lt;int, float&gt;(float, bool)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0" msg_body="Inlining function 'int generic_cast_IEEE754&lt;int, float&gt;(float, bool)' into '__hls_fptosi_float_i32'">
+        <args Callee="int generic_cast_IEEE754&lt;int, float&gt;(float, bool)" Caller="__hls_fptosi_float_i32"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier0(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier0(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier1(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier1(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier2(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier2(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier3(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier3(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier4(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier4(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier5(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier5(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier6(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier6(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier7(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier7(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier8(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier8(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier9(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier9(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier10(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier10(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier11(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier11(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier12(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier12(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier13(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier13(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier14(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier14(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier15(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier15(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier16(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier16(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier17(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier17(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier18(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier18(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier19(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier19(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier20(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier20(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier21(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier21(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier22(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier22(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier23(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier23(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier24(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier24(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier25(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier25(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier26(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier26(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier27(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier27(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier28(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier28(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier29(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier29(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier30(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier30(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier31(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier31(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier32(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier32(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier33(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier33(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier34(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier34(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier35(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier35(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier36(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier36(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier37(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier37(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier38(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier38(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier39(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier39(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier40(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier40(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier41(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier41(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier42(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier42(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier43(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier43(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier44(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier44(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier45(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier45(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier46(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier46(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier47(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier47(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier48(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier48(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier49(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier49(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier50(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier50(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'classifier51(ap_uint&lt;18&gt; (*) [25], int)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="classifier51(ap_uint&lt;18&gt; (*) [25], int)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2894:0" msg_body="Inlining function 'myRound(float)' into 'processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)'">
+        <args Callee="myRound(float)" Caller="processImage(float, int, int, int*, int*, int*, int*, int*, unsigned char (*) [320], MySize)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2792:0" msg_body="Inlining function 'myRound(float)' into 'face_detect(unsigned char*, int*, int*, int*, int*, int*)'">
+        <args Callee="myRound(float)" Caller="face_detect(unsigned char*, int*, int*, int*, int*, int*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2792:0" msg_body="Inlining function '__hls_fptosi_float_i32' into 'face_detect(unsigned char*, int*, int*, int*, int*, int*)'">
+        <args Callee="__hls_fptosi_float_i32" Caller="face_detect(unsigned char*, int*, int*, int*, int*, int*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="face_detect.cpp:2792:0" msg_body="Inlining function 'imageScaler(int, int, unsigned char (*) [320], int, int, unsigned char (*) [320])' into 'face_detect(unsigned char*, int*, int*, int*, int*, int*)'">
+        <args Callee="imageScaler(int, int, unsigned char (*) [320], int, int, unsigned char (*) [320])" Caller="face_detect(unsigned char*, int*, int*, int*, int*, int*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:2908:0" msg_body="Applying array_partition to '_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE1I': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE1I"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:2912:0" msg_body="Applying array_partition to '_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE2II': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE2II"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:2916:0" msg_body="Applying array_partition to '_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE2SI': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE2SI"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:2920:0" msg_body="Applying array_partition to '_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE3SII': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZ12processImagefiiPiS_S_S_S_PA320_h6MySizeE3SII"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:3078:0" msg_body="Applying array_partition to '_ZZ17cascadeClassifier7MyPointPA25_7ap_uintILi18EEPA2_S0_ILi26EEE5coord': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ17cascadeClassifier7MyPointPA25_7ap_uintILi18EEPA2_S0_ILi26EEE5coord"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:993:11" msg_body="Applying array_partition to 'data_from_banks.i.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="data_from_banks.i.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:3093:11" msg_body="Applying array_partition to 'values.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="values.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:3097:11" msg_body="Applying array_partition to 'addr_list.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="addr_list.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:3101:6" msg_body="Applying array_partition to 'enable_list.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="enable_list.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:3104:11" msg_body="Applying array_partition to '_II.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_II.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="face_detect.cpp:2904:17" msg_body="Applying array_partition to 'L': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="L"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="face_detect.cpp:1058:14" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+</xilinx:hls_fe_msgs>
+

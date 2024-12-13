@@ -1,0 +1,808 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'zedongpeng' on host 'u' (Linux_x86_64 version 5.15.0-60-generic) on Fri Dec 13 13:10:51 CST 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/BNN'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset project 
+INFO: [HLS 200-10] Opening and resetting project '/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/BNN/project'.
+INFO: [HLS 200-1510] Running: set_top top 
+INFO: [HLS 200-1510] Running: add_files Accel.cpp 
+INFO: [HLS 200-10] Adding design file 'Accel.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution '/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/BNN/project/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 45453
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.03 seconds; current allocated memory: 751.312 MB.
+INFO: [HLS 200-10] Analyzing design file 'Accel.cpp' ... 
+WARNING: [HLS 207-5529] 'factor' in '#pragma HLS array_reshape' is ignored (./xf_video_mem.hpp:795:47)
+WARNING: [HLS 207-5292] unused parameter 'src' (./xf_structs.hpp:527:30)
+WARNING: [HLS 207-5292] unused parameter '_data' (./xf_structs.hpp:538:30)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:551:14)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:562:20)
+WARNING: [HLS 207-5292] unused parameter 'stride' (./xf_structs.hpp:1061:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:1251:102)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:1566:34)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:95:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:96:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:97:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:98:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:99:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:100:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./Accel.h:101:9)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:203:21)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:228:21)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:597:21)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:727:21)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:729:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:730:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:731:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:783:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:800:23)
+WARNING: [HLS 207-4615] the argument to '__builtin_assume' has side effects that will be discarded (Accel.cpp:801:23)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 9.69 seconds. CPU system time: 0.85 seconds. Elapsed time: 10.55 seconds; current allocated memory: 758.789 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_373_13' (Accel.cpp:373:24) in function 'bin_conv' completely with a factor of 64 (Accel.cpp:194:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_385_15' (Accel.cpp:385:24) in function 'bin_conv' completely with a factor of 64 (Accel.cpp:194:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_241_3' (Accel.cpp:241:23) in function 'bin_conv' completely with a factor of 64 (Accel.cpp:194:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_231_1' (Accel.cpp:231:21) in function 'bin_conv' completely with a factor of 8 (Accel.cpp:194:0)
+INFO: [HLS 214-178] Inlining function 'void load_kh<ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<64> const*, ap_uint<16>)' into 'fp_conv(ap_int<64> (*) [2341], ap_int<64>*, ap_int<64> (*) [2][1024], ap_uint<1>, ap_uint<1>, ap_uint<16>, ap_uint<16>, unsigned int)' (Accel.cpp:467:0)
+INFO: [HLS 214-178] Inlining function 'conv3x3b(ap_int<2> const (*) [3][10], ap_int<1> const (*) [3], ap_uint<4>, ap_uint<10>)' into 'conv_word(ap_int<2> const (*) [3][10], ap_int<1> const (*) [3], ap_int<5>*)' (Accel.cpp:81:0)
+INFO: [HLS 214-178] Inlining function 'conv_word(ap_int<2> const (*) [3][10], ap_int<1> const (*) [3], ap_int<5>*)' into 'process_word(ap_int<2> const (*) [10], ap_int<2> const (*) [10], bool const*, bool const*, ap_int<2> (*) [3][10], ap_int<1> const (*) [3], ap_int<5>*, ap_uint<3>, ap_uint<6>, ap_uint<10>)' (Accel.cpp:104:0)
+INFO: [HLS 214-178] Inlining function 'encode_bit(ap_int<1> const&)' into 'bin_conv(ap_int<64> (*) [2341], ap_int<16>, ap_int<64> (*) [2][1024], ap_uint<1>, ap_uint<1>, unsigned int, ap_uint<16>, ap_uint<1>, ap_uint<2>, ap_uint<2>)' (Accel.cpp:194:0)
+INFO: [HLS 214-178] Inlining function 'void load_kh<ap_int<16> >(ap_int<16>&, ap_int<64> const*, ap_uint<16>)' into 'top(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<16>, ap_uint<3>, ap_uint<1>, ap_uint<2>, ap_uint<2>)' (Accel.cpp:714:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.65 seconds. CPU system time: 0.76 seconds. Elapsed time: 6.4 seconds; current allocated memory: 759.055 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 759.055 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 785.652 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:628: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 821.613 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_113_1' (Accel.cpp:113) in function 'process_word' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_83_2' (Accel.cpp:83) in function 'process_word' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_142_4' (Accel.cpp:142) in function 'process_word' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'PROLOG_COLS' (Accel.cpp:487) in function 'fp_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_LOAD_WTS' in function 'fp_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_CONV_COLS' (Accel.cpp:516) in function 'fp_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_OUTPUT' in function 'fp_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_DENSE_I' (Accel.cpp:614) in function 'bin_dense' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_CONVOLVER_LOAD' (Accel.cpp:316) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_340_10' (Accel.cpp:340) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_348_11' (Accel.cpp:348) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_WT_WORDS' (Accel.cpp:277) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_LOAD_WTS' (Accel.cpp:299) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_ACC_PHASES_I' (Accel.cpp:381) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_BATCH_NORM' (Accel.cpp:402) in function 'bin_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_DMEM_I' (Accel.cpp:752) in function 'top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_WT_I' (Accel.cpp:773) in function 'top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_KH_I' (Accel.cpp:779) in function 'top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_DMEM_O' (Accel.cpp:752) in function 'top' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_CONV_COLS' (Accel.cpp:516) in function 'fp_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_DENSE_I' (Accel.cpp:614) in function 'bin_dense' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_LOAD_WTS' (Accel.cpp:299) in function 'bin_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_CONVOLVER_LOAD' (Accel.cpp:316) in function 'bin_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_348_11' (Accel.cpp:348) in function 'bin_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_ACC_PHASES_I' (Accel.cpp:381) in function 'bin_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_BATCH_NORM' (Accel.cpp:402) in function 'bin_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_113_1' (Accel.cpp:113) in function 'process_word' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_83_2' (Accel.cpp:83) in function 'process_word' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_142_4' (Accel.cpp:142) in function 'process_word' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_522_2' (Accel.cpp:527) in function 'fp_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_531_3' (Accel.cpp:531) in function 'fp_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_532_4' in function 'fp_conv' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_537_5' (Accel.cpp:537) in function 'fp_conv' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_557_7' (Accel.cpp:556) in function 'fp_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_558_8' (Accel.cpp:556) in function 'fp_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_559_9' (Accel.cpp:556) in function 'fp_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_621_1' (Accel.cpp:621) in function 'bin_dense' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_641_2' (Accel.cpp:614) in function 'bin_dense' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_300_4' (Accel.cpp:300) in function 'bin_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_301_5' in function 'bin_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_318_6' (Accel.cpp:318) in function 'bin_conv' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_319_7' in function 'bin_conv' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_352_12' (Accel.cpp:351) in function 'bin_conv' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_381_14' (Accel.cpp:381) in function 'bin_conv' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_411_16' (Accel.cpp:406) in function 'bin_conv' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_421_17' in function 'bin_conv' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_426_18' in function 'bin_conv' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_117_2' (Accel.cpp:117) in function 'process_word' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_124_3' (Accel.cpp:124) in function 'process_word' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_63_1' (Accel.cpp:63) in function 'process_word' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_64_2' in function 'process_word' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_148_5' (Accel.cpp:148) in function 'process_word' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_155_6' (Accel.cpp:155) in function 'process_word' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_164_7' (Accel.cpp:164) in function 'process_word' completely with a factor of 8.
+INFO: [XFORM 203-102] Partitioning array 'win.V' (Accel.cpp:472) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'lbuf.V' (Accel.cpp:473) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.0' (Accel.cpp:472) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.1' (Accel.cpp:472) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.2' (Accel.cpp:472) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.0.0' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.0.1' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.0.2' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.1.0' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.1.1' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.1.2' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.2.0' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.2.1' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'win.V.2.2' (Accel.cpp:472) automatically.
+INFO: [XFORM 203-102] Partitioning array 'fixed_temp.V' (Accel.cpp:211) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sum_m.V' (Accel.cpp:600) automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'wtbuf.V' (Accel.cpp:475) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'wt_word_buffer.V' (Accel.cpp:269) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'wtbuf.V' (Accel.cpp:475) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_word_buffer.V' (Accel.cpp:269) in dimension 1 completely.
+INFO: [XFORM 203-102] Partitioning array 'conv_params_m.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_params_m.1' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_params_m.2' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'line_buffer' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_params.V' (Accel.cpp:209) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_params.V.0' (Accel.cpp:209) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_params.V.1' (Accel.cpp:209) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_params.V.2' (Accel.cpp:209) in dimension 2 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[0][0]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[0][1]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[0][2]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[1][0]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[1][1]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[1][2]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[2][0]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[2][1]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_params.V[2][2]' (Accel.cpp:209) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[0][0]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[0][1]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[0][2]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[1][0]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[1][1]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[1][2]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[2][0]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[2][1]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_params.V[2][2]' (Accel.cpp:209) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:752:11) to (Accel.cpp:843:16) in function 'top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (Accel.cpp:121:55) in function 'process_word'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:125:9) to (Accel.cpp:128:65) in function 'process_word'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (Accel.cpp:152:45) in function 'process_word'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:152:43) to (Accel.cpp:142:21) in function 'process_word'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:156:9) to (Accel.cpp:159:56) in function 'process_word'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:516:14) to (Accel.cpp:546:15) in function 'fp_conv'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:647:9) to (Accel.cpp:608:3) in function 'bin_dense'... converting 14 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Accel.cpp:361:11) to (Accel.cpp:266:5) in function 'bin_conv'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'process_word' (Accel.cpp:65:45)...8 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'fp_conv' (Accel.cpp:80:23)...26 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bin_dense' (Accel.cpp:602:3)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.21 seconds; current allocated memory: 881.094 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_82_1' (Accel.cpp:82:36) in function 'process_word'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_RESET_LINEBUFFERS' (Accel.cpp:486:18) in function 'fp_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_CONV_ROWS' (Accel.cpp:513:34) in function 'fp_conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'LOOP_FP_CONV_O' (Accel.cpp:482:16) in function 'fp_conv' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'LOOP_DENSE_O' (Accel.cpp:602:13) in function 'bin_dense' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_339_9' (Accel.cpp:339:40) in function 'bin_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_338_8' (Accel.cpp:338:38) in function 'bin_conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'LOOP_WORDS_IN_PHASE' (Accel.cpp:258:16) in function 'bin_conv' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'LOOP_PHASES' (Accel.cpp:258:16) in function 'bin_conv' the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'LOOP_ACC_PHASES' (Accel.cpp:372:19) in function 'bin_conv' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:758:69)
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:761:53)
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:763:49)
+INFO: [HLS 200-472] Inferring partial write operation for 'wt_mem.V' (Accel.cpp:774:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'kh_mem.V' (Accel.cpp:780:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.2' (Accel.cpp:118:46)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.2' (Accel.cpp:120:44)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.2' (Accel.cpp:125:46)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.2' (Accel.cpp:127:44)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.2' (Accel.cpp:121:53)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_out_buffer_m' (Accel.cpp:84:45)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.0' (Accel.cpp:149:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.0' (Accel.cpp:151:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.0' (Accel.cpp:156:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.0' (Accel.cpp:158:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.0' (Accel.cpp:152:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.1' (Accel.cpp:165:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.1' (Accel.cpp:168:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buffer_m.1' (Accel.cpp:169:41)
+INFO: [HLS 200-472] Inferring partial write operation for 'lbuf.V[0]' (Accel.cpp:490:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'lbuf.V[1]' (Accel.cpp:492:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'lbuf.V[0]' (Accel.cpp:548:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'lbuf.V[1]' (Accel.cpp:550:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'outwords.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:580:54)
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:686:57)
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:694:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'lb' (Accel.cpp:234:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'rb' (Accel.cpp:235:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'fixed_buffer.V' (Accel.cpp:243:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'word_buffer.V' (Accel.cpp:320:42)
+INFO: [HLS 200-472] Inferring partial write operation for 'word_buffer.V' (Accel.cpp:322:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'word_buffer.V' (Accel.cpp:324:47)
+INFO: [HLS 200-472] Inferring partial write operation for 'old_word_buffer.V' (Accel.cpp:341:42)
+INFO: [HLS 200-472] Inferring partial write operation for 'fixed_buffer.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'fixed_buffer.V' (Accel.cpp:387:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'dmem.V' (Accel.cpp:451:46)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.81 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.9 seconds; current allocated memory: 1.108 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_Pipeline_LOOP_DMEM_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_DMEM_I'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LOOP_DMEM_I'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.109 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_Pipeline_LOOP_WT_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_WT_I'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LOOP_WT_I'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.109 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_Pipeline_LOOP_KH_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_KH_I'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LOOP_KH_I'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.109 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_LOOP_WT_WORDS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_WT_WORDS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LOOP_WT_WORDS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_LOOP_LOAD_WTS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_LOAD_WTS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'LOOP_LOAD_WTS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.111 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.111 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_CONVOLVER_LOAD'.
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' (loop 'LOOP_CONVOLVER_LOAD'): Unable to schedule 'store' operation ('word_buffer_V_addr_1_write_ln324', Accel.cpp:324) of constant 0 on array 'word_buffer_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'word_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' (loop 'LOOP_CONVOLVER_LOAD'): Unable to schedule 'store' operation ('word_buffer_V_addr_3_write_ln320', Accel.cpp:320) of variable 'select_ln50_1', Accel.cpp:50 on array 'word_buffer_V' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'word_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' (loop 'LOOP_CONVOLVER_LOAD'): Unable to schedule 'store' operation ('word_buffer_V_addr_5_write_ln320', Accel.cpp:320) of variable 'select_ln50_3', Accel.cpp:50 on array 'word_buffer_V' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'word_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' (loop 'LOOP_CONVOLVER_LOAD'): Unable to schedule 'store' operation ('word_buffer_V_addr_7_write_ln320', Accel.cpp:320) of variable 'select_ln50_5', Accel.cpp:50 on array 'word_buffer_V' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'word_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' (loop 'LOOP_CONVOLVER_LOAD'): Unable to schedule 'store' operation ('word_buffer_V_addr_69_write_ln322', Accel.cpp:322) of variable 'select_ln50_47', Accel.cpp:50 on array 'word_buffer_V' due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array 'word_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' (loop 'LOOP_CONVOLVER_LOAD'): Unable to schedule 'store' operation ('word_buffer_V_addr_77_write_ln320', Accel.cpp:320) of variable 'select_ln50_62', Accel.cpp:50 on array 'word_buffer_V' due to limited memory ports (II = 39). Please consider using a memory core with more ports or partitioning the array 'word_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 40, Depth = 40, loop 'LOOP_CONVOLVER_LOAD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.03 seconds. CPU system time: 0 seconds. Elapsed time: 1.03 seconds; current allocated memory: 1.114 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.114 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_word_Pipeline_VITIS_LOOP_113_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'old_word_buffer_m'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_113_1'.
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_113_1' (loop 'VITIS_LOOP_113_1'): Unable to schedule 'load' operation ('word_buffer_m_load_2', Accel.cpp:125) on array 'word_buffer_m' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_113_1' (loop 'VITIS_LOOP_113_1'): Unable to schedule 'load' operation ('word_buffer_m_load_17', Accel.cpp:125) on array 'word_buffer_m' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_113_1' (loop 'VITIS_LOOP_113_1'): Unable to schedule 'load' operation ('word_buffer_m_load_19', Accel.cpp:125) on array 'word_buffer_m' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_113_1' (loop 'VITIS_LOOP_113_1'): Unable to schedule 'load' operation ('word_buffer_m_load_21', Accel.cpp:125) on array 'word_buffer_m' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 8, loop 'VITIS_LOOP_113_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.73 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.74 seconds; current allocated memory: 1.116 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.116 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_word_Pipeline_VITIS_LOOP_82_1_VITIS_LOOP_83_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_82_1_VITIS_LOOP_83_2'.
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_82_1_VITIS_LOOP_83_2' (loop 'VITIS_LOOP_82_1_VITIS_LOOP_83_2'): Unable to schedule 'load' operation ('line_buffer_m_0_load_1', Accel.cpp:65) on array 'line_buffer_m_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'line_buffer_m_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_82_1_VITIS_LOOP_83_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.116 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.116 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_word_Pipeline_VITIS_LOOP_142_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'old_word_buffer_m'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_142_4'.
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_142_4' (loop 'VITIS_LOOP_142_4'): Unable to schedule 'load' operation ('word_buffer_m_load_1', Accel.cpp:149) on array 'word_buffer_m' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_142_4' (loop 'VITIS_LOOP_142_4'): Unable to schedule 'load' operation ('word_buffer_m_load_4', Accel.cpp:149) on array 'word_buffer_m' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_142_4' (loop 'VITIS_LOOP_142_4'): Unable to schedule 'load' operation ('word_buffer_m_load_9', Accel.cpp:149) on array 'word_buffer_m' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_142_4' (loop 'VITIS_LOOP_142_4'): Unable to schedule 'load' operation ('word_buffer_m_load_11', Accel.cpp:149) on array 'word_buffer_m' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_142_4' (loop 'VITIS_LOOP_142_4'): Unable to schedule 'load' operation ('word_buffer_m_load_17', Accel.cpp:165) on array 'word_buffer_m' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'process_word_Pipeline_VITIS_LOOP_142_4' (loop 'VITIS_LOOP_142_4'): Unable to schedule 'load' operation ('word_buffer_m_load_3', Accel.cpp:151) on array 'word_buffer_m' due to limited memory ports (II = 9). Please consider using a memory core with more ports or partitioning the array 'word_buffer_m'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 10, Depth = 17, loop 'VITIS_LOOP_142_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0 seconds. Elapsed time: 0.55 seconds; current allocated memory: 1.119 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.119 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_word' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.119 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.119 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'old_word_buffer_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.120 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.120 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_VITIS_LOOP_348_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'fixed_buffer_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_348_11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_348_11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.120 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.120 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_LOOP_ACC_PHASES_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'fixed_buffer_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_ACC_PHASES_I'.
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_ACC_PHASES_I' (loop 'LOOP_ACC_PHASES_I'): Unable to schedule 'load' operation ('fixed_buffer_V_load_79') on array 'fixed_buffer_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'fixed_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_ACC_PHASES_I' (loop 'LOOP_ACC_PHASES_I'): Unable to schedule 'load' operation ('fixed_buffer_V_load_96') on array 'fixed_buffer_V' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'fixed_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_ACC_PHASES_I' (loop 'LOOP_ACC_PHASES_I'): Unable to schedule 'load' operation ('fixed_buffer_V_load_113') on array 'fixed_buffer_V' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'fixed_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 5, loop 'LOOP_ACC_PHASES_I'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.65 seconds. CPU system time: 0 seconds. Elapsed time: 0.65 seconds; current allocated memory: 1.125 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.125 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv_Pipeline_LOOP_BATCH_NORM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'fixed_buffer_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_BATCH_NORM'.
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_BATCH_NORM' (loop 'LOOP_BATCH_NORM'): Unable to schedule 'load' operation ('fixed_buffer_V_load_16') on array 'fixed_buffer_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'fixed_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_BATCH_NORM' (loop 'LOOP_BATCH_NORM'): Unable to schedule 'load' operation ('fixed_buffer_V_load_33') on array 'fixed_buffer_V' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'fixed_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'bin_conv_Pipeline_LOOP_BATCH_NORM' (loop 'LOOP_BATCH_NORM'): Unable to schedule 'load' operation ('fixed_buffer_V_load_50') on array 'fixed_buffer_V' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'fixed_buffer_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 6, loop 'LOOP_BATCH_NORM'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.23 seconds; current allocated memory: 1.131 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.57 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.58 seconds; current allocated memory: 1.131 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln1789) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln186) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'fixed_buffer_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.83 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.84 seconds; current allocated memory: 1.138 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.63 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.65 seconds; current allocated memory: 1.138 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fp_conv_Pipeline_LOOP_RESET_LINEBUFFERS_PROLOG_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_RESET_LINEBUFFERS_PROLOG_COLS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LOOP_RESET_LINEBUFFERS_PROLOG_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.02 seconds. CPU system time: 0 seconds. Elapsed time: 2.02 seconds; current allocated memory: 1.138 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.138 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fp_conv_Pipeline_LOOP_LOAD_WTS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_LOAD_WTS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'LOOP_LOAD_WTS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.138 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.138 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fp_conv_Pipeline_LOOP_CONV_ROWS_LOOP_CONV_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_CONV_ROWS_LOOP_CONV_COLS'.
+WARNING: [HLS 200-880] The II Violation in module 'fp_conv_Pipeline_LOOP_CONV_ROWS_LOOP_CONV_COLS' (loop 'LOOP_CONV_ROWS_LOOP_CONV_COLS'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('outwords_V_addr_write_ln809') of variable '__Result__' on array 'outwords_V' and 'load' operation ('__Val2__') on array 'outwords_V'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'fp_conv_Pipeline_LOOP_CONV_ROWS_LOOP_CONV_COLS' (loop 'LOOP_CONV_ROWS_LOOP_CONV_COLS'): Unable to schedule 'load' operation ('lbuf_V_1_load_4', Accel.cpp:548) on array 'lbuf_V_1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'lbuf_V_1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 6, loop 'LOOP_CONV_ROWS_LOOP_CONV_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.140 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.140 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fp_conv_Pipeline_LOOP_OUTPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_OUTPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LOOP_OUTPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.141 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fp_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.141 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_dense_Pipeline_LOOP_DENSE_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_DENSE_I'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'LOOP_DENSE_I'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.57 seconds. CPU system time: 0 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.143 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bin_dense' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln837) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.145 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.145 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_Pipeline_LOOP_DMEM_O' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=ret_V_6) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_DMEM_O'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'LOOP_DMEM_O'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.146 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.146 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.147 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.82 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.83 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_Pipeline_LOOP_DMEM_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'top_Pipeline_LOOP_DMEM_I' pipeline 'LOOP_DMEM_I' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_Pipeline_LOOP_DMEM_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.22 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_Pipeline_LOOP_WT_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'top_Pipeline_LOOP_WT_I' pipeline 'LOOP_WT_I' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_Pipeline_LOOP_WT_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_Pipeline_LOOP_KH_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'top_Pipeline_LOOP_KH_I' pipeline 'LOOP_KH_I' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_Pipeline_LOOP_KH_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_LOOP_WT_WORDS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bin_conv_Pipeline_LOOP_WT_WORDS' pipeline 'LOOP_WT_WORDS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_LOOP_WT_WORDS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_LOOP_LOAD_WTS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_LOOP_LOAD_WTS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_LOOP_CONVOLVER_LOAD'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_word_Pipeline_VITIS_LOOP_113_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'process_word_Pipeline_VITIS_LOOP_113_1' pipeline 'VITIS_LOOP_113_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_word_Pipeline_VITIS_LOOP_113_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.13 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_word_Pipeline_VITIS_LOOP_82_1_VITIS_LOOP_83_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'process_word_Pipeline_VITIS_LOOP_82_1_VITIS_LOOP_83_2' pipeline 'VITIS_LOOP_82_1_VITIS_LOOP_83_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_word_Pipeline_VITIS_LOOP_82_1_VITIS_LOOP_83_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.169 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_word_Pipeline_VITIS_LOOP_142_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'process_word_Pipeline_VITIS_LOOP_142_4' pipeline 'VITIS_LOOP_142_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_word_Pipeline_VITIS_LOOP_142_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_word' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_word'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.178 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bin_conv_Pipeline_VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10' pipeline 'VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_VITIS_LOOP_338_8_VITIS_LOOP_339_9_VITIS_LOOP_340_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.179 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_VITIS_LOOP_348_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bin_conv_Pipeline_VITIS_LOOP_348_11' pipeline 'VITIS_LOOP_348_11' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_VITIS_LOOP_348_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.181 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_LOOP_ACC_PHASES_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bin_conv_Pipeline_LOOP_ACC_PHASES_I' pipeline 'LOOP_ACC_PHASES_I' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_LOOP_ACC_PHASES_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv_Pipeline_LOOP_BATCH_NORM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'outword_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bin_conv_Pipeline_LOOP_BATCH_NORM' pipeline 'LOOP_BATCH_NORM' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv_Pipeline_LOOP_BATCH_NORM'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.24 seconds; current allocated memory: 1.201 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'wt_addr_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wt_offset_V' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_5ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_14s_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_conv'.
+INFO: [RTMG 210-278] Implementing memory 'top_bin_conv_line_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_bin_conv_fixed_buffer_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_bin_conv_old_word_buffer_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_bin_conv_conv_out_buffer_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_bin_conv_lb_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.22 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.26 seconds; current allocated memory: 1.223 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fp_conv_Pipeline_LOOP_RESET_LINEBUFFERS_PROLOG_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fp_conv_Pipeline_LOOP_RESET_LINEBUFFERS_PROLOG_COLS' pipeline 'LOOP_RESET_LINEBUFFERS_PROLOG_COLS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fp_conv_Pipeline_LOOP_RESET_LINEBUFFERS_PROLOG_COLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.15 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.18 seconds; current allocated memory: 1.240 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fp_conv_Pipeline_LOOP_LOAD_WTS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fp_conv_Pipeline_LOOP_LOAD_WTS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.241 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fp_conv_Pipeline_LOOP_CONV_ROWS_LOOP_CONV_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fp_conv_Pipeline_LOOP_CONV_ROWS_LOOP_CONV_COLS' pipeline 'LOOP_CONV_ROWS_LOOP_CONV_COLS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fp_conv_Pipeline_LOOP_CONV_ROWS_LOOP_CONV_COLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.242 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fp_conv_Pipeline_LOOP_OUTPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fp_conv_Pipeline_LOOP_OUTPUT' pipeline 'LOOP_OUTPUT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fp_conv_Pipeline_LOOP_OUTPUT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.91 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.248 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fp_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fp_conv'.
+INFO: [RTMG 210-278] Implementing memory 'top_fp_conv_lbuf_V_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_fp_conv_outwords_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.250 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_dense_Pipeline_LOOP_DENSE_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bin_dense_Pipeline_LOOP_DENSE_I' pipeline 'LOOP_DENSE_I' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_dense_Pipeline_LOOP_DENSE_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.76 seconds. CPU system time: 0 seconds. Elapsed time: 0.76 seconds; current allocated memory: 1.257 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bin_dense' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_20s_16s_28s_34_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bin_dense'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.264 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_Pipeline_LOOP_DMEM_O' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'top_Pipeline_LOOP_DMEM_O' pipeline 'LOOP_DMEM_O' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_5ns_10ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_Pipeline_LOOP_DMEM_O'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.268 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/wt_i' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/kh_i' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/dmem_i' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/dmem_o' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/n_inputs' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/n_outputs' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_words' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/output_words' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/layer_mode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/dmem_mode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/width_mode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/norm_mode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'kh_index_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'o_index_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top'.
+INFO: [RTMG 210-278] Implementing memory 'top_dmem_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_wt_mem_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_kh_mem_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.270 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4.68 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.72 seconds; current allocated memory: 1.272 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.5 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.53 seconds; current allocated memory: 1.287 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for top.
+INFO: [VLOG 209-307] Generating Verilog RTL for top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.82 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 59.25 seconds. CPU system time: 2.24 seconds. Elapsed time: 61.51 seconds; current allocated memory: 568.234 MB.
+INFO: [HLS 200-1510] Running: close_solution 
+INFO: [HLS 200-112] Total CPU user time: 61.42 seconds. Total CPU system time: 2.65 seconds. Total elapsed time: 73.94 seconds; peak allocated memory: 1.289 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Dec 13 13:12:05 2024...

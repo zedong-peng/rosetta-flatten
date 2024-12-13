@@ -1,0 +1,22 @@
+[
+    {
+        "array_name": "training_set",
+        "dimensions": 1,
+        "line_per_dimension": [
+            193
+        ],
+        "size_per_dimension": [
+            18000
+        ]
+    },
+    {
+        "array_name": "test_set",
+        "dimensions": 1,
+        "line_per_dimension": [
+            198
+        ],
+        "size_per_dimension": [
+            2000
+        ]
+    }
+]

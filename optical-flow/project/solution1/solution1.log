@@ -1,0 +1,594 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.04 seconds; current allocated memory: 754.266 MB.
+INFO: [HLS 200-10] Analyzing design file 'optical_flow.cpp' ... 
+WARNING: [HLS 207-5529] 'factor' in '#pragma HLS array_reshape' is ignored (./xf_video_mem.hpp:795:47)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (optical_flow.cpp:272:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (optical_flow.cpp:273:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (optical_flow.cpp:407:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (optical_flow.cpp:424:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (optical_flow.cpp:427:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (optical_flow.cpp:430:9)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:412:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:414:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:416:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:418:20)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:420:20)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:422:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:425:18)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:428:18)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:433:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:435:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:437:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:439:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:443:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:445:17)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (optical_flow.cpp:450:19)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (optical_flow.cpp:409:9)
+WARNING: [HLS 200-471] Dataflow form checks found 16 issue(s) in file optical_flow.cpp
+WARNING: [HLS 207-1017] unknown pragma ignored (./optical_flow.h:20:9)
+WARNING: [HLS 207-5292] unused parameter 'src' (./xf_structs.hpp:527:30)
+WARNING: [HLS 207-5292] unused parameter '_data' (./xf_structs.hpp:538:30)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:551:14)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:562:20)
+WARNING: [HLS 207-5292] unused parameter 'stride' (./xf_structs.hpp:1061:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:1251:102)
+WARNING: [HLS 207-5292] unused parameter 'index' (./xf_structs.hpp:1566:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 7.67 seconds. CPU system time: 0.79 seconds. Elapsed time: 8.46 seconds; current allocated memory: 762.219 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::Window()' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:36:30)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::getval(int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:93:28)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::getval(int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:92:28)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:82:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:81:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:80:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:79:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:78:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::shift_pixels_left()' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:77:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:73:18)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::shift_pixels_left()' into 'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])' (optical_flow.cpp:70:16)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::LineBuffer()' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:136:46)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::getval(int, int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:175:24)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::getval(int, int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:174:24)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::getval(int, int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:173:24)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::insert_bottom_row(gradient_t, int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:162:13)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::shift_pixels_up(int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:157:13)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::insert_bottom_row(gradient_t, int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:153:13)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::shift_pixels_up(int)' into 'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:148:13)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 7, gradient_t>::Window()' into 'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:191:34)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 7, gradient_t>::getval(int, int)' into 'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:222:24)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 7, gradient_t>::getval(int, int)' into 'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:221:24)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 7, gradient_t>::getval(int, int)' into 'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:220:24)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 7, gradient_t>::insert_pixel(gradient_t, int, int)' into 'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:210:11)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 7, gradient_t>::shift_pixels_left()' into 'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])' (optical_flow.cpp:198:6)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::LineBuffer()' into 'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:263:43)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::getval(int, int)' into 'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:294:21)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::insert_bottom_row(outer_t, int)' into 'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:284:11)
+INFO: [HLS 214-131] Inlining function 'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::shift_pixels_up(int)' into 'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:274:6)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 3, tensor_t>::Window()' into 'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:313:32)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 3, tensor_t>::getval(int, int)' into 'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:341:21)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 3, tensor_t>::insert_pixel(tensor_t, int, int)' into 'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:332:11)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Window<1, 3, tensor_t>::shift_pixels_left()' into 'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])' (optical_flow.cpp:321:6)
+INFO: [HLS 214-377] Adding 'buf' into disaggregation list because there's array-partition pragma applied on the struct field (./xf_video_mem.hpp:48:9)
+INFO: [HLS 214-377] Adding 'buf' into disaggregation list because there's array-partition pragma applied on the struct field (./xf_video_mem.hpp:47:9)
+INFO: [HLS 214-377] Adding 'buf' into disaggregation list because there's array-partition pragma applied on the struct field (./xf_video_mem.hpp:791:9)
+INFO: [HLS 214-377] Adding 'window' into disaggregation list because there's array-partition pragma applied on the struct field (./xf_video_mem.hpp:48:9)
+INFO: [HLS 214-377] Adding 'window' into disaggregation list because there's array-partition pragma applied on the struct field (./xf_video_mem.hpp:47:9)
+INFO: [HLS 214-210] Disaggregating variable 'window' (optical_flow.cpp:36:30)
+INFO: [HLS 214-210] Disaggregating variable 'buf' (optical_flow.cpp:136:46)
+INFO: [HLS 214-210] Disaggregating variable 'buf' (optical_flow.cpp:191:34)
+INFO: [HLS 214-210] Disaggregating variable 'buf' (optical_flow.cpp:263:43)
+INFO: [HLS 214-210] Disaggregating variable 'buf' (optical_flow.cpp:313:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_122_1' is marked as complete unroll implied by the pipeline pragma (./xf_video_mem.hpp:122:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_127_2' is marked as complete unroll implied by the pipeline pragma (./xf_video_mem.hpp:127:20)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_X_TMP_INIT' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:329:35)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_X_ACC_INIT' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:335:33)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_X_TMP_OUTER' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:339:36)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_X_TMP_INNER' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:342:38)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_906_1' is marked as complete unroll implied by the pipeline pragma (./xf_video_mem.hpp:906:23)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_Y_TMP_INIT' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:281:35)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_Y_ACC_INIT' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:287:33)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_Y_TMP_OUTER' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:292:36)
+INFO: [HLS 214-291] Loop 'TENSOR_WEIGHT_Y_TMP_INNER' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:296:38)
+INFO: [HLS 214-291] Loop 'GRAD_WEIGHT_X_ACC' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:218:28)
+INFO: [HLS 214-291] Loop 'GRAD_WEIGHT_Y_ACC' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:171:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_46_1' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:46:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_62_3' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:62:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_56_2' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:56:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_72_4' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:72:26)
+INFO: [HLS 214-291] Loop 'GRAD_XY_XYGRAD' is marked as complete unroll implied by the pipeline pragma (optical_flow.cpp:90:25)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_122_1' (./xf_video_mem.hpp:122:23) in function 'tensor_weight_x' completely with a factor of 1 (optical_flow.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_127_2' (./xf_video_mem.hpp:127:20) in function 'tensor_weight_x' completely with a factor of 2 (optical_flow.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_X_TMP_INIT' (optical_flow.cpp:329:35) in function 'tensor_weight_x' completely with a factor of 6 (optical_flow.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_X_ACC_INIT' (optical_flow.cpp:335:33) in function 'tensor_weight_x' completely with a factor of 6 (optical_flow.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_X_TMP_OUTER' (optical_flow.cpp:339:36) in function 'tensor_weight_x' completely with a factor of 3 (optical_flow.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_X_TMP_INNER' (optical_flow.cpp:342:38) in function 'tensor_weight_x' completely with a factor of 6 (optical_flow.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_906_1' (./xf_video_mem.hpp:906:23) in function 'tensor_weight_y' completely with a factor of 2 (optical_flow.cpp:262:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_Y_TMP_INIT' (optical_flow.cpp:281:35) in function 'tensor_weight_y' completely with a factor of 6 (optical_flow.cpp:262:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_Y_ACC_INIT' (optical_flow.cpp:287:33) in function 'tensor_weight_y' completely with a factor of 6 (optical_flow.cpp:262:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_Y_TMP_OUTER' (optical_flow.cpp:292:36) in function 'tensor_weight_y' completely with a factor of 3 (optical_flow.cpp:262:0)
+INFO: [HLS 214-186] Unrolling loop 'TENSOR_WEIGHT_Y_TMP_INNER' (optical_flow.cpp:296:38) in function 'tensor_weight_y' completely with a factor of 6 (optical_flow.cpp:262:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_122_1' (./xf_video_mem.hpp:122:23) in function 'gradient_weight_x' completely with a factor of 1 (optical_flow.cpp:190:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_127_2' (./xf_video_mem.hpp:127:20) in function 'gradient_weight_x' completely with a factor of 6 (optical_flow.cpp:190:0)
+INFO: [HLS 214-186] Unrolling loop 'GRAD_WEIGHT_X_ACC' (optical_flow.cpp:218:28) in function 'gradient_weight_x' completely with a factor of 7 (optical_flow.cpp:190:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_906_1' (./xf_video_mem.hpp:906:23) in function 'gradient_weight_y' completely with a factor of 6 (optical_flow.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'GRAD_WEIGHT_Y_ACC' (optical_flow.cpp:171:28) in function 'gradient_weight_y' completely with a factor of 7 (optical_flow.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_46_1' (optical_flow.cpp:46:19) in function 'gradient_xy_calc' completely with a factor of 4 (optical_flow.cpp:26:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_62_3' (optical_flow.cpp:62:26) in function 'gradient_xy_calc' completely with a factor of 4 (optical_flow.cpp:26:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_56_2' (optical_flow.cpp:56:26) in function 'gradient_xy_calc' completely with a factor of 4 (optical_flow.cpp:26:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_122_1' (./xf_video_mem.hpp:122:23) in function 'gradient_xy_calc' completely with a factor of 5 (optical_flow.cpp:26:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_127_2' (./xf_video_mem.hpp:127:20) in function 'gradient_xy_calc' completely with a factor of 4 (optical_flow.cpp:26:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_72_4' (optical_flow.cpp:72:26) in function 'gradient_xy_calc' completely with a factor of 5 (optical_flow.cpp:26:0)
+INFO: [HLS 214-186] Unrolling loop 'GRAD_XY_XYGRAD' (optical_flow.cpp:90:25) in function 'gradient_xy_calc' completely with a factor of 5 (optical_flow.cpp:26:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (optical_flow.cpp:47:21)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_E3buf': Complete partitioning on dimension 1. (optical_flow.cpp:28:0)
+INFO: [HLS 214-248] Applying array_partition to 'buf.x': Cyclic partitioning with factor 8 on dimension 1. (optical_flow.cpp:136:46)
+INFO: [HLS 214-248] Applying array_partition to 'buf.y': Cyclic partitioning with factor 8 on dimension 1. (optical_flow.cpp:136:46)
+INFO: [HLS 214-248] Applying array_partition to 'buf.z': Cyclic partitioning with factor 8 on dimension 1. (optical_flow.cpp:136:46)
+INFO: [HLS 214-248] Applying array_partition to 'buf': Cyclic partitioning with factor 8 on dimension 1. (optical_flow.cpp:263:43)
+INFO: [HLS 214-241] Aggregating bram variable 'outputs' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'frames' with compact=bit mode in 64-bits
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame1_a' (optical_flow.cpp:433:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame2_a' (optical_flow.cpp:435:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame3_a' (optical_flow.cpp:443:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame4_a' (optical_flow.cpp:437:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame5_a' (optical_flow.cpp:439:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10gradient_x' (optical_flow.cpp:412:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10gradient_y' (optical_flow.cpp:414:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10gradient_z' (optical_flow.cpp:416:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10y_filtered.x' (optical_flow.cpp:418:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10y_filtered.y' (optical_flow.cpp:418:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10y_filtered.z' (optical_flow.cpp:418:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE17filtered_gradient.x' (optical_flow.cpp:420:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE17filtered_gradient.y' (optical_flow.cpp:420:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE17filtered_gradient.z' (optical_flow.cpp:420:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE11out_product' (optical_flow.cpp:422:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8tensor_y' (optical_flow.cpp:425:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '_ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE6tensor' (optical_flow.cpp:428:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.66 seconds. CPU system time: 0.79 seconds. Elapsed time: 5.46 seconds; current allocated memory: 762.691 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 762.691 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 780.754 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-120] /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 812.762 MB.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'gradient_xy_calc(ap_fixed<17, 9, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024])buf.5' in function 'gradient_xy_calc' (optical_flow.cpp:47:23).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'gradient_xy_calc(ap_fixed<17, 9, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024])buf.6' in function 'gradient_xy_calc' (optical_flow.cpp:47:23).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'gradient_xy_calc(ap_fixed<17, 9, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024])buf.7' in function 'gradient_xy_calc' (optical_flow.cpp:47:23).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'gradient_xy_calc(ap_fixed<17, 9, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024], ap_fixed<32, 13, 5, 3, 0> (*) [1024])buf.8' in function 'gradient_xy_calc' (optical_flow.cpp:47:23).
+INFO: [XFORM 203-721] Changing loop 'Loop_FRAMES_CP_OUTER_proc' (optical_flow.cpp:453) to a process function for dataflow in function 'optical_flow'.
+INFO: [XFORM 203-712] Applying dataflow to function 'optical_flow' (optical_flow.cpp:404:1), detected/extracted 9 process function(s): 
+	 'Loop_FRAMES_CP_OUTER_proc1'
+	 'gradient_xy_calc'
+	 'gradient_z_calc'
+	 'gradient_weight_y'
+	 'gradient_weight_x'
+	 'outer_product'
+	 'tensor_weight_y'
+	 'tensor_weight_x'
+	 'flow_calc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (optical_flow.cpp:271:10) to (optical_flow.cpp:302:10) in function 'tensor_weight_y'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (optical_flow.cpp:322:16) to (optical_flow.cpp:348:10) in function 'tensor_weight_x'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'gradient_xy_calc' (optical_flow.cpp:29:7)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'flow_calc' (optical_flow.cpp:361:7)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.57 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.58 seconds; current allocated memory: 864.223 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'TENSOR_WEIGHT_Y_OUTER' (optical_flow.cpp:265:34) in function 'tensor_weight_y'.
+INFO: [XFORM 203-541] Flattening a loop nest 'TENSOR_WEIGHT_X_OUTER' (optical_flow.cpp:316:34) in function 'tensor_weight_x'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTER_OUTER' (optical_flow.cpp:238:24) in function 'outer_product'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GRAD_Z_OUTER' (optical_flow.cpp:116:25) in function 'gradient_z_calc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GRAD_XY_OUTER' (optical_flow.cpp:40:26) in function 'gradient_xy_calc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GRAD_WEIGHT_Y_OUTER' (optical_flow.cpp:139:32) in function 'gradient_weight_y'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+WARNING: [HLS 200-1946] Dependence pragma (optical_flow.cpp:144:9) in loop 'GRAD_WEIGHT_Y_INNER' may become invalid because the loop was flattened with the outer loop 'GRAD_WEIGHT_Y_OUTER'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GRAD_WEIGHT_X_OUTER' (optical_flow.cpp:193:32) in function 'gradient_weight_x'.
+INFO: [XFORM 203-541] Flattening a loop nest 'FLOW_OUTER' (optical_flow.cpp:361:23) in function 'flow_calc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'FRAMES_CP_OUTER' (optical_flow.cpp:453:31) in function 'Loop_FRAMES_CP_OUTER_proc1'.
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.val.val.V.1' (./xf_video_mem.hpp:950:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.val.val.V' (./xf_video_mem.hpp:911:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'gradient_xy_calc(ap_fixed (*)[1024],ap_fixed (*)[1024],ap_fixed (*)[1024])buf.3' (optical_flow.cpp:63:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'gradient_xy_calc(ap_fixed (*)[1024],ap_fixed (*)[1024],ap_fixed (*)[1024])buf' (optical_flow.cpp:64:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'gradient_xy_calc(ap_fixed (*)[1024],ap_fixed (*)[1024],ap_fixed (*)[1024])buf.3' (optical_flow.cpp:57:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'gradient_xy_calc(ap_fixed (*)[1024],ap_fixed (*)[1024],ap_fixed (*)[1024])buf' (optical_flow.cpp:58:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.val.x.V.5' (./xf_video_mem.hpp:950:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf.val.x.V' (./xf_video_mem.hpp:911:14)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.val.V.1' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.val.V' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.val.V.1' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.val.V' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.val.V.1' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.val.V' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.val.V.1' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.val.V' (optical_flow.cpp:263).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.x.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.y.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'buf.val.z.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.x.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.y.V' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.5' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.4' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.3' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.2' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V.1' (optical_flow.cpp:136).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.val.z.V' (optical_flow.cpp:136).
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.55 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.62 seconds; current allocated memory: 953.402 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'optical_flow' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_FRAMES_CP_OUTER_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FRAMES_CP_OUTER_FRAMES_CP_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'FRAMES_CP_OUTER_FRAMES_CP_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.11 seconds; current allocated memory: 955.578 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 955.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gradient_xy_calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'GRAD_XY_OUTER_GRAD_XY_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'GRAD_XY_OUTER_GRAD_XY_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 957.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 957.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gradient_z_calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'GRAD_Z_OUTER_GRAD_Z_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'GRAD_Z_OUTER_GRAD_Z_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 957.656 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 957.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gradient_weight_y' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'GRAD_WEIGHT_Y_OUTER_GRAD_WEIGHT_Y_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'GRAD_WEIGHT_Y_OUTER_GRAD_WEIGHT_Y_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 959.625 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_x_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_x_V_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_x_V_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_x_V_3' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_x_V_4' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_x_V_5' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_y_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_y_V_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_y_V_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_y_V_3' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_y_V_4' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_y_V_5' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_z_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_z_V_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_z_V_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_z_V_3' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_z_V_4' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_z_V_5' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 959.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gradient_weight_x' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'GRAD_WEIGHT_X_OUTER_GRAD_WEIGHT_X_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'GRAD_WEIGHT_X_OUTER_GRAD_WEIGHT_X_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.52 seconds. CPU system time: 0 seconds. Elapsed time: 0.52 seconds; current allocated memory: 961.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 961.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'outer_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_101) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_100) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_99) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_98) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_95) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'OUTER_OUTER_OUTER_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'OUTER_OUTER_OUTER_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 961.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 961.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tensor_weight_y' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'.
+WARNING: [HLS 200-885] The II Violation in module 'tensor_weight_y' (loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'): Unable to schedule 'load' operation ('tmp.val.V', ./xf_video_mem.hpp:911) on array 'buf.val.val.V', optical_flow.cpp:263 due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'buf_val_val_V_1'.
+WARNING: [HLS 200-885] The II Violation in module 'tensor_weight_y' (loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'): Unable to schedule 'load' operation ('tmp.val.V', ./xf_video_mem.hpp:911) on array 'buf.val.val.V', optical_flow.cpp:263 due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'buf_val_val_V_1'.
+WARNING: [HLS 200-885] The II Violation in module 'tensor_weight_y' (loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'): Unable to schedule 'load' operation ('tmp.val.V', ./xf_video_mem.hpp:911) on array 'buf.val.val.V', optical_flow.cpp:263 due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'buf_val_val_V_1'.
+WARNING: [HLS 200-885] The II Violation in module 'tensor_weight_y' (loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'): Unable to schedule 'load' operation ('tmp.val.V', ./xf_video_mem.hpp:911) on array 'buf.val.val.V', optical_flow.cpp:263 due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'buf_val_val_V_1'.
+WARNING: [HLS 200-885] The II Violation in module 'tensor_weight_y' (loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'): Unable to schedule 'load' operation ('tmp.val.V', ./xf_video_mem.hpp:911) on array 'buf.val.val.V', optical_flow.cpp:263 due to limited memory ports (II = 5). Please consider using a memory core with more ports or partitioning the array 'buf_val_val_V_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 8, loop 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 963.570 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_val_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_val_val_V_1' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 963.570 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tensor_weight_x' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'TENSOR_WEIGHT_X_OUTER_TENSOR_WEIGHT_X_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'TENSOR_WEIGHT_X_OUTER_TENSOR_WEIGHT_X_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 964.812 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 964.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'flow_calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FLOW_OUTER_FLOW_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 76, loop 'FLOW_OUTER_FLOW_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 965.902 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 965.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'optical_flow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 966.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 966.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_FRAMES_CP_OUTER_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_FRAMES_CP_OUTER_proc1' pipeline 'FRAMES_CP_OUTER_FRAMES_CP_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_FRAMES_CP_OUTER_proc1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.87 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 966.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gradient_xy_calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_3_RAM_AUTO_1R1W' to 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_bbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_2_RAM_AUTO_1R1W' to 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_bcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_1_RAM_AUTO_1R1W' to 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_bdEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_buf_RAM_AUTO_1R1W' to 'gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_beOg' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gradient_xy_calc' pipeline 'GRAD_XY_OUTER_GRAD_XY_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_65_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gradient_xy_calc'.
+INFO: [RTMG 210-278] Implementing memory 'optical_flow_gradient_xy_calc_gradient_xy_calc_ap_fixed_1024_ap_fixed_1024_ap_fixed_1024_bbkb' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 969.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gradient_z_calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gradient_z_calc' pipeline 'GRAD_Z_OUTER_GRAD_Z_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_65_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gradient_z_calc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 972.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gradient_weight_y' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gradient_weight_y' pipeline 'GRAD_WEIGHT_Y_OUTER_GRAD_WEIGHT_Y_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_17ns_49_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_18ns_50_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_19ns_51_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gradient_weight_y'.
+INFO: [RTMG 210-278] Implementing memory 'optical_flow_gradient_weight_y_buf_val_x_V_RAM_S2P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 975.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gradient_weight_x' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gradient_weight_x' pipeline 'GRAD_WEIGHT_X_OUTER_GRAD_WEIGHT_X_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_17ns_49_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_18ns_50_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_19ns_51_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gradient_weight_x'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.98 seconds. CPU system time: 0 seconds. Elapsed time: 0.99 seconds; current allocated memory: 980.949 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'outer_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'outer_product' pipeline 'OUTER_OUTER_OUTER_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_18s_18s_36_4_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'outer_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 984.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tensor_weight_y' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tensor_weight_y' pipeline 'TENSOR_WEIGHT_Y_OUTER_TENSOR_WEIGHT_Y_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_19ns_51_1_1': 18 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tensor_weight_y'.
+INFO: [RTMG 210-278] Implementing memory 'optical_flow_tensor_weight_y_buf_val_val_V_RAM_S2P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 987.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tensor_weight_x' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tensor_weight_x' pipeline 'TENSOR_WEIGHT_X_OUTER_TENSOR_WEIGHT_X_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_19ns_51_1_1': 18 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tensor_weight_x'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.66 seconds; current allocated memory: 991.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'flow_calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'buf_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'buf_V' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'flow_calc' pipeline 'FLOW_OUTER_FLOW_INNER' pipeline type 'loop pipeline'
+INFO: [HLS 200-1552] Enabling free running pipeline (frp) architecture on pipeline 'FLOW_OUTER_FLOW_INNER' in module 'flow_calc'. Estimated max control fanout for pipeline is 18794.
+INFO: [RTGEN 206-100] Generating core module 'mul_35s_35s_70_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_70ns_62s_70_74_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'flow_calc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1012.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'optical_flow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'optical_flow/frames' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'optical_flow/outputs' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'optical_flow' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'optical_flow'.
+INFO: [RTMG 210-285] Implementing FIFO 'frame1_a_V_U(optical_flow_fifo_w17_d1024_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'frame2_a_V_U(optical_flow_fifo_w17_d1024_A)' using Vivado Default RAMs.

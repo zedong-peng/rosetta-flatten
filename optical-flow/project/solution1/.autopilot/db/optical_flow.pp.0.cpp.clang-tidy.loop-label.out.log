@@ -1,0 +1,357 @@
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:1349:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:1349:7: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:2323:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:2323:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:2337:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:2337:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:2351:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:2351:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:3950:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:3950:7: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18663:2: warning: Added loop label VITIS_LOOP_307_1:   [xilinx-label-all-loops]
+ for (int k = 0; k < N; k++) {
+ ^~~
+ VITIS_LOOP_307_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18663:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18678:5: warning: Added loop label VITIS_LOOP_322_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_322_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18678:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18694:5: warning: Added loop label VITIS_LOOP_338_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_338_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18694:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18710:5: warning: Added loop label VITIS_LOOP_354_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_354_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18710:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18726:5: warning: Added loop label VITIS_LOOP_370_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_370_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18726:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18742:5: warning: Added loop label VITIS_LOOP_386_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_386_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18742:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18758:5: warning: Added loop label VITIS_LOOP_402_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_402_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18758:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18774:5: warning: Added loop label VITIS_LOOP_418_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_418_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18774:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18790:5: warning: Added loop label VITIS_LOOP_434_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_434_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18790:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18868:9: warning: Added loop label VITIS_LOOP_520_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < (rows * ((cols + NPC - 1) >> xfNPixelsPerCycle<NPC>::datashift)); ++i) {
+        ^~~
+        VITIS_LOOP_520_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:18868:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19077:5: warning: Added loop label VITIS_LOOP_729_1:   [xilinx-label-all-loops]
+    for (int r = 0; r < rows; r++) {
+    ^~~
+    VITIS_LOOP_729_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19077:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19079:2: warning: Added loop label VITIS_LOOP_731_2:   [xilinx-label-all-loops]
+ for (int c = 0; c < packcols; c++) {
+ ^~~
+ VITIS_LOOP_731_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19079:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19081:2: warning: Added loop label VITIS_LOOP_733_3:   [xilinx-label-all-loops]
+ for (int p = 0; p < nppc; p++) {
+ ^~~
+ VITIS_LOOP_733_3: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19081:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19084:17: warning: Added loop label VITIS_LOOP_736_4:   [xilinx-label-all-loops]
+                for (int ch = 0; ch < DataType<T, NPPC>::channel; ch++) {
+                ^~~
+                VITIS_LOOP_736_4: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19084:17: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19123:5: warning: Added loop label VITIS_LOOP_775_1:   [xilinx-label-all-loops]
+    for (int r = 0; r < rows; r++) {
+    ^~~
+    VITIS_LOOP_775_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19123:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19125:2: warning: Added loop label VITIS_LOOP_777_2:   [xilinx-label-all-loops]
+ for (int c = 0; c < cols; c++) {
+ ^~~
+ VITIS_LOOP_777_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19125:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19128:13: warning: Added loop label VITIS_LOOP_780_3:   [xilinx-label-all-loops]
+            for (int ch = 0; ch < DataType<T, NPPC>::channel; ch++) {
+            ^~~
+            VITIS_LOOP_780_3: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19128:13: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19130:2: warning: Added loop label VITIS_LOOP_782_4:   [xilinx-label-all-loops]
+ for (int b = 0; b < cv_nbytes; ++b) {
+ ^~~
+ VITIS_LOOP_782_4: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19130:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19185:5: warning: Added loop label VITIS_LOOP_837_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < rows; i++) {
+    ^~~
+    VITIS_LOOP_837_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19185:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19187:2: warning: Added loop label VITIS_LOOP_839_2:   [xilinx-label-all-loops]
+ for (int j = 0; j<cols>> (xfNPixelsPerCycle<NPPC>::datashift); j++) {
+ ^~~
+ VITIS_LOOP_839_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19187:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19196:13: warning: Added loop label VITIS_LOOP_848_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < (1 << (xfNPixelsPerCycle<NPPC>::datashift)); k++) {
+            ^~~
+            VITIS_LOOP_848_3: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19196:13: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19310:9: error: Invalid Directive: for current device, mul + dsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=mul_rows_cols op=mul impl=dsp latency=2
+        ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19385:2: warning: Added loop label VITIS_LOOP_1045_1:   [xilinx-label-all-loops]
+ for (c = 0; c < cols_addrbound; c++) {
+ ^~~
+ VITIS_LOOP_1045_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19385:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19801:13: warning: Added loop label VITIS_LOOP_1461_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1461_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19801:13: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19830:13: warning: Added loop label VITIS_LOOP_1490_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1490_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19830:13: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19861:13: warning: Added loop label VITIS_LOOP_1521_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1521_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19861:13: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19892:13: warning: Added loop label VITIS_LOOP_1552_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1552_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:19892:13: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20431:5: warning: Added loop label VITIS_LOOP_122_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_122_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20431:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20436:2: warning: Added loop label VITIS_LOOP_127_2:   [xilinx-label-all-loops]
+ for (j = 0; j < COLS - 1; j++) {
+ ^~~
+ VITIS_LOOP_127_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20436:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20464:5: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_170_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20464:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20469:2: warning: Added loop label VITIS_LOOP_175_2:   [xilinx-label-all-loops]
+ for (j = COLS - 1; j > 0; j--) {
+ ^~~
+ VITIS_LOOP_175_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20469:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20497:5: warning: Added loop label VITIS_LOOP_218_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS - 1; i++) {
+    ^~~
+    VITIS_LOOP_218_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20497:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20502:2: warning: Added loop label VITIS_LOOP_223_2:   [xilinx-label-all-loops]
+ for (j = 0; j < COLS; j++) {
+ ^~~
+ VITIS_LOOP_223_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20502:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20530:5: warning: Added loop label VITIS_LOOP_266_1:   [xilinx-label-all-loops]
+    for (i = ROWS - 1; i > 0; i--) {
+    ^~~
+    VITIS_LOOP_266_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20530:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20535:2: warning: Added loop label VITIS_LOOP_271_2:   [xilinx-label-all-loops]
+ for (j = 0; j < COLS; j++) {
+ ^~~
+ VITIS_LOOP_271_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20535:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20582:5: warning: Added loop label VITIS_LOOP_348_1:   [xilinx-label-all-loops]
+    for (j = 0; j < COLS; j++) {
+    ^~~
+    VITIS_LOOP_348_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20582:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20646:5: warning: Added loop label VITIS_LOOP_460_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_460_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20646:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20844:44: error: Invalid Directive: for current device, RAM_1P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_1P impl=BRAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20849:44: error: Invalid Directive: for current device, RAM_1P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_1P impl=URAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20854:44: error: Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_2P impl=BRAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20859:44: error: Invalid Directive: for current device, RAM_2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_2P impl=URAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20864:44: error: Invalid Directive: for current device, RAM_S2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_S2P impl=BRAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20869:44: error: Invalid Directive: for current device, RAM_S2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_S2P impl=URAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20874:44: error: Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_T2P impl=BRAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20879:44: error: Invalid Directive: for current device, RAM_T2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_T2P impl=URAM
+                                           ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20935:5: warning: Added loop label VITIS_LOOP_860_1:   [xilinx-label-all-loops]
+    for (i = ROWS - 1; i > 0; i--) {
+    ^~~
+    VITIS_LOOP_860_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20935:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20962:5: warning: Added loop label VITIS_LOOP_906_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS - 1; i++) {
+    ^~~
+    VITIS_LOOP_906_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:20962:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21019:5: warning: Added loop label VITIS_LOOP_1014_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_1014_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21019:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21116:5: warning: Added loop label VITIS_LOOP_39_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_39_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21116:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21136:5: warning: Added loop label VITIS_LOOP_59_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_59_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21136:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21165:5: warning: Added loop label VITIS_LOOP_88_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_88_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21165:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21199:5: warning: Added loop label VITIS_LOOP_122_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_122_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21199:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21234:5: warning: Added loop label VITIS_LOOP_157_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_157_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21234:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21263:5: warning: Added loop label VITIS_LOOP_186_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_186_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21263:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21288:5: warning: Added loop label VITIS_LOOP_211_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_211_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21288:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21312:5: warning: Added loop label VITIS_LOOP_235_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_235_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21312:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21348:5: warning: Added loop label VITIS_LOOP_271_1:   [xilinx-label-all-loops]
+    for (uint16_t r = 0; r < K_ROWS; r++) {
+    ^~~
+    VITIS_LOOP_271_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21348:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21351:2: warning: Added loop label VITIS_LOOP_274_2:   [xilinx-label-all-loops]
+ for (uint16_t c = 0; c < K_COLS; c++) {
+ ^~~
+ VITIS_LOOP_274_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21351:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21412:5: warning: Added loop label VITIS_LOOP_335_1:   [xilinx-label-all-loops]
+    for (ap_int<9> i = 0; i < loopIter; i++) {
+    ^~~
+    VITIS_LOOP_335_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21412:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21486:5: warning: Added loop label VITIS_LOOP_409_1:   [xilinx-label-all-loops]
+    for (i = 0; i < 6; i++, ind++) {
+    ^~~
+    VITIS_LOOP_409_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21486:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21558:5: warning: Added loop label VITIS_LOOP_481_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < imheight; i++) {
+    ^~~
+    VITIS_LOOP_481_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21558:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21564:2: warning: Added loop label VITIS_LOOP_487_2:   [xilinx-label-all-loops]
+ for (int j = 0; j < (imwidth >> NPC); j++) {
+ ^~~
+ VITIS_LOOP_487_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21564:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21591:9: warning: Added loop label VITIS_LOOP_514_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_514_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21591:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21699:9: warning: Added loop label VITIS_LOOP_640_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_640_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21699:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21815:9: warning: Added loop label VITIS_LOOP_756_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_756_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21815:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21848:9: warning: Added loop label VITIS_LOOP_808_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_808_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21848:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21950:2: warning: Added loop label VITIS_LOOP_46_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 4; i ++ )
+ ^~~
+ VITIS_LOOP_46_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21950:2: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21960:9: warning: Added loop label VITIS_LOOP_56_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < 4; i ++ )
+        ^~~
+        VITIS_LOOP_56_2: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21960:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21966:9: warning: Added loop label VITIS_LOOP_62_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < 4; i ++ )
+        ^~~
+        VITIS_LOOP_62_3: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21966:9: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21976:9: warning: Added loop label VITIS_LOOP_72_4:   [xilinx-label-all-loops]
+        for (int i = 0; i < 5; i ++ )
+        ^~~
+        VITIS_LOOP_72_4: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp:21976:9: note: FIX-IT applied suggested code changes

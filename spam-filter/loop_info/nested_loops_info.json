@@ -1,0 +1,44 @@
+[
+    {
+        "total_nesting_levels": 2,
+        "line_per_level": [
+            125,
+            128
+        ],
+        "tripcount_per_level": [
+            32,
+            32
+        ]
+    },
+    {
+        "total_nesting_levels": 1,
+        "line_per_level": [
+            178,
+            180
+        ],
+        "tripcount_per_level": [
+            32,
+            32
+        ]
+    },
+    {
+        "total_nesting_levels": 1,
+        "line_per_level": [
+            197,
+            199
+        ],
+        "tripcount_per_level": [
+            32,
+            32
+        ]
+    },
+    {
+        "total_nesting_levels": 1,
+        "line_per_level": [
+            264
+        ],
+        "tripcount_per_level": [
+            256
+        ]
+    }
+]

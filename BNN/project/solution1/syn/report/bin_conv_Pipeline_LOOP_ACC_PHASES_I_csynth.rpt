@@ -1,0 +1,658 @@
+
+
+================================================================
+== Vitis HLS Report for 'bin_conv_Pipeline_LOOP_ACC_PHASES_I'
+================================================================
+* Date:           Fri Dec 13 13:11:49 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.335 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max    | min |  max |   Type  |
+    +---------+---------+----------+-----------+-----+------+---------+
+    |      130|     2050|  1.300 us|  20.500 us|  130|  2050|       no|
+    +---------+---------+----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- LOOP_ACC_PHASES_I  |      128|     2048|         5|          4|          1|  32 ~ 512|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     1936|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|     1072|    -|
+|Register             |        -|     -|      787|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      787|     3008|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------+----------+----+---+----+------------+------------+
+    |add_i705_fu_2451_p2           |         +|   0|  0|  12|           5|           5|
+    |fixed_temp_V_0_3_fu_2854_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_10_3_fu_2914_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_11_3_fu_2920_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_12_3_fu_2926_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_13_3_fu_2932_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_14_3_fu_2938_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_15_3_fu_2944_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_16_3_fu_3238_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_17_3_fu_3244_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_18_3_fu_3250_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_19_3_fu_3256_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_1_3_fu_2860_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_20_3_fu_3262_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_21_3_fu_3268_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_22_3_fu_3274_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_23_3_fu_3280_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_24_3_fu_3286_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_25_3_fu_3292_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_26_3_fu_3298_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_27_3_fu_3304_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_28_3_fu_3310_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_29_3_fu_3316_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_2_3_fu_2866_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_30_3_fu_3322_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_31_3_fu_3328_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_32_3_fu_3622_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_33_3_fu_3628_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_34_3_fu_3634_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_35_3_fu_3640_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_36_3_fu_3646_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_37_3_fu_3652_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_38_3_fu_3658_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_39_3_fu_3664_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_3_3_fu_2872_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_40_3_fu_3670_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_41_3_fu_3676_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_42_3_fu_3682_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_43_3_fu_3688_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_44_3_fu_3694_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_45_3_fu_3700_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_46_3_fu_3706_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_47_3_fu_3712_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_48_3_fu_3846_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_49_3_fu_3852_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_4_3_fu_2878_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_50_3_fu_3858_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_51_3_fu_3864_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_52_3_fu_3870_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_53_3_fu_3876_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_54_3_fu_3882_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_55_3_fu_3888_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_56_3_fu_3894_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_57_3_fu_3900_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_58_3_fu_3906_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_59_3_fu_3912_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_5_3_fu_2884_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_60_3_fu_3918_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_61_3_fu_3924_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_62_3_fu_3930_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_63_3_fu_3936_p2  |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_6_3_fu_2890_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_7_3_fu_2896_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_8_3_fu_2902_p2   |         +|   0|  0|  19|          12|          12|
+    |fixed_temp_V_9_3_fu_2908_p2   |         +|   0|  0|  19|          12|          12|
+    |i_V_10_fu_2635_p2             |         +|   0|  0|  13|           6|           6|
+    |or_ln840_10_fu_2580_p2        |        or|   0|  0|  11|          11|           4|
+    |or_ln840_11_fu_2591_p2        |        or|   0|  0|  11|          11|           4|
+    |or_ln840_12_fu_2602_p2        |        or|   0|  0|  11|          11|           4|
+    |or_ln840_13_fu_2613_p2        |        or|   0|  0|  11|          11|           4|
+    |or_ln840_14_fu_2624_p2        |        or|   0|  0|  11|          11|           4|
+    |or_ln840_15_fu_2694_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_16_fu_2704_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_17_fu_2714_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_18_fu_2724_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_19_fu_2734_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_1_fu_2481_p2         |        or|   0|  0|  11|          11|           2|
+    |or_ln840_20_fu_2744_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_21_fu_2754_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_22_fu_2764_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_23_fu_2774_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_24_fu_2784_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_25_fu_2794_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_26_fu_2804_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_27_fu_2814_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_28_fu_2824_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_29_fu_2834_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_2_fu_2492_p2         |        or|   0|  0|  11|          11|           2|
+    |or_ln840_30_fu_2844_p2        |        or|   0|  0|  11|          11|           5|
+    |or_ln840_31_fu_3078_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_32_fu_3088_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_33_fu_3098_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_34_fu_3108_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_35_fu_3118_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_36_fu_3128_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_37_fu_3138_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_38_fu_3148_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_39_fu_3158_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_3_fu_2503_p2         |        or|   0|  0|  11|          11|           3|
+    |or_ln840_40_fu_3168_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_41_fu_3178_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_42_fu_3188_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_43_fu_3198_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_44_fu_3208_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_45_fu_3218_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_46_fu_3228_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_47_fu_3462_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_48_fu_3472_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_49_fu_3482_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_4_fu_2514_p2         |        or|   0|  0|  11|          11|           3|
+    |or_ln840_50_fu_3492_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_51_fu_3502_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_52_fu_3512_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_53_fu_3522_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_54_fu_3532_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_55_fu_3542_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_56_fu_3552_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_57_fu_3562_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_58_fu_3572_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_59_fu_3582_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_5_fu_2525_p2         |        or|   0|  0|  11|          11|           3|
+    |or_ln840_60_fu_3592_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_61_fu_3602_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_62_fu_3612_p2        |        or|   0|  0|  11|          11|           6|
+    |or_ln840_6_fu_2536_p2         |        or|   0|  0|  11|          11|           3|
+    |or_ln840_7_fu_2547_p2         |        or|   0|  0|  11|          11|           4|
+    |or_ln840_8_fu_2558_p2         |        or|   0|  0|  11|          11|           4|
+    |or_ln840_9_fu_2569_p2         |        or|   0|  0|  11|          11|           4|
+    |or_ln840_fu_2470_p2           |        or|   0|  0|  11|          11|           1|
+    |ap_enable_pp0                 |       xor|   0|  0|   2|           1|           2|
+    +------------------------------+----------+----+---+----+------------+------------+
+    |Total                         |          |   0|  0|1936|        1473|        1102|
+    +------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  26|          5|    1|          5|
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_V         |   9|          2|    6|         12|
+    |fixed_buffer_V_address0      |  26|          5|   11|         55|
+    |fixed_buffer_V_address1      |  26|          5|   11|         55|
+    |fixed_buffer_V_address10     |  26|          5|   11|         55|
+    |fixed_buffer_V_address11     |  26|          5|   11|         55|
+    |fixed_buffer_V_address12     |  26|          5|   11|         55|
+    |fixed_buffer_V_address13     |  26|          5|   11|         55|
+    |fixed_buffer_V_address14     |  26|          5|   11|         55|
+    |fixed_buffer_V_address15     |  26|          5|   11|         55|
+    |fixed_buffer_V_address2      |  26|          5|   11|         55|
+    |fixed_buffer_V_address3      |  26|          5|   11|         55|
+    |fixed_buffer_V_address4      |  26|          5|   11|         55|
+    |fixed_buffer_V_address5      |  26|          5|   11|         55|
+    |fixed_buffer_V_address6      |  26|          5|   11|         55|
+    |fixed_buffer_V_address7      |  26|          5|   11|         55|
+    |fixed_buffer_V_address8      |  26|          5|   11|         55|
+    |fixed_buffer_V_address9      |  26|          5|   11|         55|
+    |fixed_temp_V_0_2_fu_430      |   9|          2|   12|         24|
+    |fixed_temp_V_10_2_fu_470     |   9|          2|   12|         24|
+    |fixed_temp_V_11_2_fu_474     |   9|          2|   12|         24|
+    |fixed_temp_V_12_2_fu_478     |   9|          2|   12|         24|
+    |fixed_temp_V_13_2_fu_482     |   9|          2|   12|         24|
+    |fixed_temp_V_14_2_fu_486     |   9|          2|   12|         24|
+    |fixed_temp_V_15_2_fu_490     |   9|          2|   12|         24|
+    |fixed_temp_V_16_2_fu_494     |   9|          2|   12|         24|
+    |fixed_temp_V_17_2_fu_498     |   9|          2|   12|         24|
+    |fixed_temp_V_18_2_fu_502     |   9|          2|   12|         24|
+    |fixed_temp_V_19_2_fu_506     |   9|          2|   12|         24|
+    |fixed_temp_V_1_2_fu_434      |   9|          2|   12|         24|
+    |fixed_temp_V_20_2_fu_510     |   9|          2|   12|         24|
+    |fixed_temp_V_21_2_fu_514     |   9|          2|   12|         24|
+    |fixed_temp_V_22_2_fu_518     |   9|          2|   12|         24|
+    |fixed_temp_V_23_2_fu_522     |   9|          2|   12|         24|
+    |fixed_temp_V_24_2_fu_526     |   9|          2|   12|         24|
+    |fixed_temp_V_25_2_fu_530     |   9|          2|   12|         24|
+    |fixed_temp_V_26_2_fu_534     |   9|          2|   12|         24|
+    |fixed_temp_V_27_2_fu_538     |   9|          2|   12|         24|
+    |fixed_temp_V_28_2_fu_542     |   9|          2|   12|         24|
+    |fixed_temp_V_29_2_fu_546     |   9|          2|   12|         24|
+    |fixed_temp_V_2_2_fu_438      |   9|          2|   12|         24|
+    |fixed_temp_V_30_2_fu_550     |   9|          2|   12|         24|
+    |fixed_temp_V_31_2_fu_554     |   9|          2|   12|         24|
+    |fixed_temp_V_32_2_fu_558     |   9|          2|   12|         24|
+    |fixed_temp_V_33_2_fu_562     |   9|          2|   12|         24|
+    |fixed_temp_V_34_2_fu_566     |   9|          2|   12|         24|
+    |fixed_temp_V_35_2_fu_570     |   9|          2|   12|         24|
+    |fixed_temp_V_36_2_fu_574     |   9|          2|   12|         24|
+    |fixed_temp_V_37_2_fu_578     |   9|          2|   12|         24|
+    |fixed_temp_V_38_2_fu_582     |   9|          2|   12|         24|
+    |fixed_temp_V_39_2_fu_586     |   9|          2|   12|         24|
+    |fixed_temp_V_3_2_fu_442      |   9|          2|   12|         24|
+    |fixed_temp_V_40_2_fu_590     |   9|          2|   12|         24|
+    |fixed_temp_V_41_2_fu_594     |   9|          2|   12|         24|
+    |fixed_temp_V_42_2_fu_598     |   9|          2|   12|         24|
+    |fixed_temp_V_43_2_fu_602     |   9|          2|   12|         24|
+    |fixed_temp_V_44_2_fu_606     |   9|          2|   12|         24|
+    |fixed_temp_V_45_2_fu_610     |   9|          2|   12|         24|
+    |fixed_temp_V_46_2_fu_614     |   9|          2|   12|         24|
+    |fixed_temp_V_47_2_fu_618     |   9|          2|   12|         24|
+    |fixed_temp_V_48_2_fu_622     |   9|          2|   12|         24|
+    |fixed_temp_V_49_2_fu_626     |   9|          2|   12|         24|
+    |fixed_temp_V_4_2_fu_446      |   9|          2|   12|         24|
+    |fixed_temp_V_50_2_fu_630     |   9|          2|   12|         24|
+    |fixed_temp_V_51_2_fu_634     |   9|          2|   12|         24|
+    |fixed_temp_V_52_2_fu_638     |   9|          2|   12|         24|
+    |fixed_temp_V_53_2_fu_642     |   9|          2|   12|         24|
+    |fixed_temp_V_54_2_fu_646     |   9|          2|   12|         24|
+    |fixed_temp_V_55_2_fu_650     |   9|          2|   12|         24|
+    |fixed_temp_V_56_2_fu_654     |   9|          2|   12|         24|
+    |fixed_temp_V_57_2_fu_658     |   9|          2|   12|         24|
+    |fixed_temp_V_58_2_fu_662     |   9|          2|   12|         24|
+    |fixed_temp_V_59_2_fu_666     |   9|          2|   12|         24|
+    |fixed_temp_V_5_2_fu_450      |   9|          2|   12|         24|
+    |fixed_temp_V_60_2_fu_670     |   9|          2|   12|         24|
+    |fixed_temp_V_61_2_fu_674     |   9|          2|   12|         24|
+    |fixed_temp_V_62_2_fu_678     |   9|          2|   12|         24|
+    |fixed_temp_V_63_2_fu_682     |   9|          2|   12|         24|
+    |fixed_temp_V_6_2_fu_454      |   9|          2|   12|         24|
+    |fixed_temp_V_7_2_fu_458      |   9|          2|   12|         24|
+    |fixed_temp_V_8_2_fu_462      |   9|          2|   12|         24|
+    |fixed_temp_V_9_2_fu_466      |   9|          2|   12|         24|
+    |i_V_8_fu_426                 |   9|          2|    6|         12|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |1072|        225|  961|       2453|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   4|   0|    4|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |fixed_temp_V_0_2_fu_430      |  12|   0|   12|          0|
+    |fixed_temp_V_10_2_fu_470     |  12|   0|   12|          0|
+    |fixed_temp_V_11_2_fu_474     |  12|   0|   12|          0|
+    |fixed_temp_V_12_2_fu_478     |  12|   0|   12|          0|
+    |fixed_temp_V_13_2_fu_482     |  12|   0|   12|          0|
+    |fixed_temp_V_14_2_fu_486     |  12|   0|   12|          0|
+    |fixed_temp_V_15_2_fu_490     |  12|   0|   12|          0|
+    |fixed_temp_V_16_2_fu_494     |  12|   0|   12|          0|
+    |fixed_temp_V_17_2_fu_498     |  12|   0|   12|          0|
+    |fixed_temp_V_18_2_fu_502     |  12|   0|   12|          0|
+    |fixed_temp_V_19_2_fu_506     |  12|   0|   12|          0|
+    |fixed_temp_V_1_2_fu_434      |  12|   0|   12|          0|
+    |fixed_temp_V_20_2_fu_510     |  12|   0|   12|          0|
+    |fixed_temp_V_21_2_fu_514     |  12|   0|   12|          0|
+    |fixed_temp_V_22_2_fu_518     |  12|   0|   12|          0|
+    |fixed_temp_V_23_2_fu_522     |  12|   0|   12|          0|
+    |fixed_temp_V_24_2_fu_526     |  12|   0|   12|          0|
+    |fixed_temp_V_25_2_fu_530     |  12|   0|   12|          0|
+    |fixed_temp_V_26_2_fu_534     |  12|   0|   12|          0|
+    |fixed_temp_V_27_2_fu_538     |  12|   0|   12|          0|
+    |fixed_temp_V_28_2_fu_542     |  12|   0|   12|          0|
+    |fixed_temp_V_29_2_fu_546     |  12|   0|   12|          0|
+    |fixed_temp_V_2_2_fu_438      |  12|   0|   12|          0|
+    |fixed_temp_V_30_2_fu_550     |  12|   0|   12|          0|
+    |fixed_temp_V_31_2_fu_554     |  12|   0|   12|          0|
+    |fixed_temp_V_32_2_fu_558     |  12|   0|   12|          0|
+    |fixed_temp_V_33_2_fu_562     |  12|   0|   12|          0|
+    |fixed_temp_V_34_2_fu_566     |  12|   0|   12|          0|
+    |fixed_temp_V_35_2_fu_570     |  12|   0|   12|          0|
+    |fixed_temp_V_36_2_fu_574     |  12|   0|   12|          0|
+    |fixed_temp_V_37_2_fu_578     |  12|   0|   12|          0|
+    |fixed_temp_V_38_2_fu_582     |  12|   0|   12|          0|
+    |fixed_temp_V_39_2_fu_586     |  12|   0|   12|          0|
+    |fixed_temp_V_3_2_fu_442      |  12|   0|   12|          0|
+    |fixed_temp_V_40_2_fu_590     |  12|   0|   12|          0|
+    |fixed_temp_V_41_2_fu_594     |  12|   0|   12|          0|
+    |fixed_temp_V_42_2_fu_598     |  12|   0|   12|          0|
+    |fixed_temp_V_43_2_fu_602     |  12|   0|   12|          0|
+    |fixed_temp_V_44_2_fu_606     |  12|   0|   12|          0|
+    |fixed_temp_V_45_2_fu_610     |  12|   0|   12|          0|
+    |fixed_temp_V_46_2_fu_614     |  12|   0|   12|          0|
+    |fixed_temp_V_47_2_fu_618     |  12|   0|   12|          0|
+    |fixed_temp_V_48_2_fu_622     |  12|   0|   12|          0|
+    |fixed_temp_V_49_2_fu_626     |  12|   0|   12|          0|
+    |fixed_temp_V_4_2_fu_446      |  12|   0|   12|          0|
+    |fixed_temp_V_50_2_fu_630     |  12|   0|   12|          0|
+    |fixed_temp_V_51_2_fu_634     |  12|   0|   12|          0|
+    |fixed_temp_V_52_2_fu_638     |  12|   0|   12|          0|
+    |fixed_temp_V_53_2_fu_642     |  12|   0|   12|          0|
+    |fixed_temp_V_54_2_fu_646     |  12|   0|   12|          0|
+    |fixed_temp_V_55_2_fu_650     |  12|   0|   12|          0|
+    |fixed_temp_V_56_2_fu_654     |  12|   0|   12|          0|
+    |fixed_temp_V_57_2_fu_658     |  12|   0|   12|          0|
+    |fixed_temp_V_58_2_fu_662     |  12|   0|   12|          0|
+    |fixed_temp_V_59_2_fu_666     |  12|   0|   12|          0|
+    |fixed_temp_V_5_2_fu_450      |  12|   0|   12|          0|
+    |fixed_temp_V_60_2_fu_670     |  12|   0|   12|          0|
+    |fixed_temp_V_61_2_fu_674     |  12|   0|   12|          0|
+    |fixed_temp_V_62_2_fu_678     |  12|   0|   12|          0|
+    |fixed_temp_V_63_2_fu_682     |  12|   0|   12|          0|
+    |fixed_temp_V_6_2_fu_454      |  12|   0|   12|          0|
+    |fixed_temp_V_7_2_fu_458      |  12|   0|   12|          0|
+    |fixed_temp_V_8_2_fu_462      |  12|   0|   12|          0|
+    |fixed_temp_V_9_2_fu_466      |  12|   0|   12|          0|
+    |i_V_8_fu_426                 |   6|   0|    6|          0|
+    |tmp_reg_4797                 |   1|   0|    1|          0|
+    |tmp_s_reg_4801               |   5|   0|   11|          6|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 787|   0|  793|          6|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+-------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++------------------------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  bin_conv_Pipeline_LOOP_ACC_PHASES_I|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  bin_conv_Pipeline_LOOP_ACC_PHASES_I|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  bin_conv_Pipeline_LOOP_ACC_PHASES_I|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  bin_conv_Pipeline_LOOP_ACC_PHASES_I|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  bin_conv_Pipeline_LOOP_ACC_PHASES_I|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  bin_conv_Pipeline_LOOP_ACC_PHASES_I|  return value|
+|fixed_temp_V_63               |   in|   12|     ap_none|                      fixed_temp_V_63|        scalar|
+|fixed_temp_V_62               |   in|   12|     ap_none|                      fixed_temp_V_62|        scalar|
+|fixed_temp_V_61               |   in|   12|     ap_none|                      fixed_temp_V_61|        scalar|
+|fixed_temp_V_60               |   in|   12|     ap_none|                      fixed_temp_V_60|        scalar|
+|fixed_temp_V_59               |   in|   12|     ap_none|                      fixed_temp_V_59|        scalar|
+|fixed_temp_V_58               |   in|   12|     ap_none|                      fixed_temp_V_58|        scalar|
+|fixed_temp_V_57               |   in|   12|     ap_none|                      fixed_temp_V_57|        scalar|
+|fixed_temp_V_56               |   in|   12|     ap_none|                      fixed_temp_V_56|        scalar|
+|fixed_temp_V_55               |   in|   12|     ap_none|                      fixed_temp_V_55|        scalar|
+|fixed_temp_V_54               |   in|   12|     ap_none|                      fixed_temp_V_54|        scalar|
+|fixed_temp_V_53               |   in|   12|     ap_none|                      fixed_temp_V_53|        scalar|
+|fixed_temp_V_52               |   in|   12|     ap_none|                      fixed_temp_V_52|        scalar|
+|fixed_temp_V_51               |   in|   12|     ap_none|                      fixed_temp_V_51|        scalar|
+|fixed_temp_V_50               |   in|   12|     ap_none|                      fixed_temp_V_50|        scalar|
+|fixed_temp_V_49               |   in|   12|     ap_none|                      fixed_temp_V_49|        scalar|
+|fixed_temp_V_48               |   in|   12|     ap_none|                      fixed_temp_V_48|        scalar|
+|fixed_temp_V_47               |   in|   12|     ap_none|                      fixed_temp_V_47|        scalar|
+|fixed_temp_V_46               |   in|   12|     ap_none|                      fixed_temp_V_46|        scalar|
+|fixed_temp_V_45               |   in|   12|     ap_none|                      fixed_temp_V_45|        scalar|
+|fixed_temp_V_44               |   in|   12|     ap_none|                      fixed_temp_V_44|        scalar|
+|fixed_temp_V_43               |   in|   12|     ap_none|                      fixed_temp_V_43|        scalar|
+|fixed_temp_V_42               |   in|   12|     ap_none|                      fixed_temp_V_42|        scalar|
+|fixed_temp_V_41               |   in|   12|     ap_none|                      fixed_temp_V_41|        scalar|
+|fixed_temp_V_40               |   in|   12|     ap_none|                      fixed_temp_V_40|        scalar|
+|fixed_temp_V_39               |   in|   12|     ap_none|                      fixed_temp_V_39|        scalar|
+|fixed_temp_V_38               |   in|   12|     ap_none|                      fixed_temp_V_38|        scalar|
+|fixed_temp_V_37               |   in|   12|     ap_none|                      fixed_temp_V_37|        scalar|
+|fixed_temp_V_36               |   in|   12|     ap_none|                      fixed_temp_V_36|        scalar|
+|fixed_temp_V_35               |   in|   12|     ap_none|                      fixed_temp_V_35|        scalar|
+|fixed_temp_V_34               |   in|   12|     ap_none|                      fixed_temp_V_34|        scalar|
+|fixed_temp_V_33               |   in|   12|     ap_none|                      fixed_temp_V_33|        scalar|
+|fixed_temp_V_32               |   in|   12|     ap_none|                      fixed_temp_V_32|        scalar|
+|fixed_temp_V_31               |   in|   12|     ap_none|                      fixed_temp_V_31|        scalar|
+|fixed_temp_V_30               |   in|   12|     ap_none|                      fixed_temp_V_30|        scalar|
+|fixed_temp_V_29               |   in|   12|     ap_none|                      fixed_temp_V_29|        scalar|
+|fixed_temp_V_28               |   in|   12|     ap_none|                      fixed_temp_V_28|        scalar|
+|fixed_temp_V_27               |   in|   12|     ap_none|                      fixed_temp_V_27|        scalar|
+|fixed_temp_V_26               |   in|   12|     ap_none|                      fixed_temp_V_26|        scalar|
+|fixed_temp_V_25               |   in|   12|     ap_none|                      fixed_temp_V_25|        scalar|
+|fixed_temp_V_24               |   in|   12|     ap_none|                      fixed_temp_V_24|        scalar|
+|fixed_temp_V_23               |   in|   12|     ap_none|                      fixed_temp_V_23|        scalar|
+|fixed_temp_V_22               |   in|   12|     ap_none|                      fixed_temp_V_22|        scalar|
+|fixed_temp_V_21               |   in|   12|     ap_none|                      fixed_temp_V_21|        scalar|
+|fixed_temp_V_20               |   in|   12|     ap_none|                      fixed_temp_V_20|        scalar|
+|fixed_temp_V_19               |   in|   12|     ap_none|                      fixed_temp_V_19|        scalar|
+|fixed_temp_V_18               |   in|   12|     ap_none|                      fixed_temp_V_18|        scalar|
+|fixed_temp_V_17               |   in|   12|     ap_none|                      fixed_temp_V_17|        scalar|
+|fixed_temp_V_16               |   in|   12|     ap_none|                      fixed_temp_V_16|        scalar|
+|fixed_temp_V_15               |   in|   12|     ap_none|                      fixed_temp_V_15|        scalar|
+|fixed_temp_V_14               |   in|   12|     ap_none|                      fixed_temp_V_14|        scalar|
+|fixed_temp_V_13               |   in|   12|     ap_none|                      fixed_temp_V_13|        scalar|
+|fixed_temp_V_12               |   in|   12|     ap_none|                      fixed_temp_V_12|        scalar|
+|fixed_temp_V_11               |   in|   12|     ap_none|                      fixed_temp_V_11|        scalar|
+|fixed_temp_V_10               |   in|   12|     ap_none|                      fixed_temp_V_10|        scalar|
+|fixed_temp_V_9                |   in|   12|     ap_none|                       fixed_temp_V_9|        scalar|
+|fixed_temp_V_8                |   in|   12|     ap_none|                       fixed_temp_V_8|        scalar|
+|fixed_temp_V_7                |   in|   12|     ap_none|                       fixed_temp_V_7|        scalar|
+|fixed_temp_V_6                |   in|   12|     ap_none|                       fixed_temp_V_6|        scalar|
+|fixed_temp_V_5                |   in|   12|     ap_none|                       fixed_temp_V_5|        scalar|
+|fixed_temp_V_4                |   in|   12|     ap_none|                       fixed_temp_V_4|        scalar|
+|fixed_temp_V_3                |   in|   12|     ap_none|                       fixed_temp_V_3|        scalar|
+|fixed_temp_V_2                |   in|   12|     ap_none|                       fixed_temp_V_2|        scalar|
+|fixed_temp_V_1                |   in|   12|     ap_none|                       fixed_temp_V_1|        scalar|
+|fixed_temp_V_0                |   in|   12|     ap_none|                       fixed_temp_V_0|        scalar|
+|zext_ln372                    |   in|    5|     ap_none|                           zext_ln372|        scalar|
+|w_V                           |   in|    5|     ap_none|                                  w_V|        scalar|
+|fixed_buffer_V_address0       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce0            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q0             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address1       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce1            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q1             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address2       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce2            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q2             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address3       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce3            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q3             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address4       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce4            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q4             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address5       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce5            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q5             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address6       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce6            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q6             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address7       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce7            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q7             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address8       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce8            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q8             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address9       |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce9            |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q9             |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address10      |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce10           |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q10            |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address11      |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce11           |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q11            |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address12      |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce12           |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q12            |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address13      |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce13           |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q13            |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address14      |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce14           |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q14            |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_address15      |  out|   11|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_ce15           |  out|    1|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_buffer_V_q15            |   in|   12|   ap_memory|                       fixed_buffer_V|         array|
+|fixed_temp_V_63_0_out         |  out|   12|      ap_vld|                fixed_temp_V_63_0_out|       pointer|
+|fixed_temp_V_63_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_63_0_out|       pointer|
+|fixed_temp_V_62_0_out         |  out|   12|      ap_vld|                fixed_temp_V_62_0_out|       pointer|
+|fixed_temp_V_62_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_62_0_out|       pointer|
+|fixed_temp_V_61_0_out         |  out|   12|      ap_vld|                fixed_temp_V_61_0_out|       pointer|
+|fixed_temp_V_61_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_61_0_out|       pointer|
+|fixed_temp_V_60_0_out         |  out|   12|      ap_vld|                fixed_temp_V_60_0_out|       pointer|
+|fixed_temp_V_60_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_60_0_out|       pointer|
+|fixed_temp_V_59_0_out         |  out|   12|      ap_vld|                fixed_temp_V_59_0_out|       pointer|
+|fixed_temp_V_59_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_59_0_out|       pointer|
+|fixed_temp_V_58_0_out         |  out|   12|      ap_vld|                fixed_temp_V_58_0_out|       pointer|
+|fixed_temp_V_58_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_58_0_out|       pointer|
+|fixed_temp_V_57_0_out         |  out|   12|      ap_vld|                fixed_temp_V_57_0_out|       pointer|
+|fixed_temp_V_57_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_57_0_out|       pointer|
+|fixed_temp_V_56_0_out         |  out|   12|      ap_vld|                fixed_temp_V_56_0_out|       pointer|
+|fixed_temp_V_56_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_56_0_out|       pointer|
+|fixed_temp_V_55_0_out         |  out|   12|      ap_vld|                fixed_temp_V_55_0_out|       pointer|
+|fixed_temp_V_55_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_55_0_out|       pointer|
+|fixed_temp_V_54_0_out         |  out|   12|      ap_vld|                fixed_temp_V_54_0_out|       pointer|
+|fixed_temp_V_54_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_54_0_out|       pointer|
+|fixed_temp_V_53_0_out         |  out|   12|      ap_vld|                fixed_temp_V_53_0_out|       pointer|
+|fixed_temp_V_53_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_53_0_out|       pointer|
+|fixed_temp_V_52_0_out         |  out|   12|      ap_vld|                fixed_temp_V_52_0_out|       pointer|
+|fixed_temp_V_52_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_52_0_out|       pointer|
+|fixed_temp_V_51_0_out         |  out|   12|      ap_vld|                fixed_temp_V_51_0_out|       pointer|
+|fixed_temp_V_51_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_51_0_out|       pointer|
+|fixed_temp_V_50_0_out         |  out|   12|      ap_vld|                fixed_temp_V_50_0_out|       pointer|
+|fixed_temp_V_50_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_50_0_out|       pointer|
+|fixed_temp_V_49_0_out         |  out|   12|      ap_vld|                fixed_temp_V_49_0_out|       pointer|
+|fixed_temp_V_49_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_49_0_out|       pointer|
+|fixed_temp_V_48_0_out         |  out|   12|      ap_vld|                fixed_temp_V_48_0_out|       pointer|
+|fixed_temp_V_48_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_48_0_out|       pointer|
+|fixed_temp_V_47_0_out         |  out|   12|      ap_vld|                fixed_temp_V_47_0_out|       pointer|
+|fixed_temp_V_47_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_47_0_out|       pointer|
+|fixed_temp_V_46_0_out         |  out|   12|      ap_vld|                fixed_temp_V_46_0_out|       pointer|
+|fixed_temp_V_46_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_46_0_out|       pointer|
+|fixed_temp_V_45_0_out         |  out|   12|      ap_vld|                fixed_temp_V_45_0_out|       pointer|
+|fixed_temp_V_45_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_45_0_out|       pointer|
+|fixed_temp_V_44_0_out         |  out|   12|      ap_vld|                fixed_temp_V_44_0_out|       pointer|
+|fixed_temp_V_44_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_44_0_out|       pointer|
+|fixed_temp_V_43_0_out         |  out|   12|      ap_vld|                fixed_temp_V_43_0_out|       pointer|
+|fixed_temp_V_43_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_43_0_out|       pointer|
+|fixed_temp_V_42_0_out         |  out|   12|      ap_vld|                fixed_temp_V_42_0_out|       pointer|
+|fixed_temp_V_42_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_42_0_out|       pointer|
+|fixed_temp_V_41_0_out         |  out|   12|      ap_vld|                fixed_temp_V_41_0_out|       pointer|
+|fixed_temp_V_41_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_41_0_out|       pointer|
+|fixed_temp_V_40_0_out         |  out|   12|      ap_vld|                fixed_temp_V_40_0_out|       pointer|
+|fixed_temp_V_40_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_40_0_out|       pointer|
+|fixed_temp_V_39_0_out         |  out|   12|      ap_vld|                fixed_temp_V_39_0_out|       pointer|
+|fixed_temp_V_39_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_39_0_out|       pointer|
+|fixed_temp_V_38_0_out         |  out|   12|      ap_vld|                fixed_temp_V_38_0_out|       pointer|
+|fixed_temp_V_38_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_38_0_out|       pointer|
+|fixed_temp_V_37_0_out         |  out|   12|      ap_vld|                fixed_temp_V_37_0_out|       pointer|
+|fixed_temp_V_37_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_37_0_out|       pointer|
+|fixed_temp_V_36_0_out         |  out|   12|      ap_vld|                fixed_temp_V_36_0_out|       pointer|
+|fixed_temp_V_36_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_36_0_out|       pointer|
+|fixed_temp_V_35_0_out         |  out|   12|      ap_vld|                fixed_temp_V_35_0_out|       pointer|
+|fixed_temp_V_35_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_35_0_out|       pointer|
+|fixed_temp_V_34_0_out         |  out|   12|      ap_vld|                fixed_temp_V_34_0_out|       pointer|
+|fixed_temp_V_34_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_34_0_out|       pointer|
+|fixed_temp_V_33_0_out         |  out|   12|      ap_vld|                fixed_temp_V_33_0_out|       pointer|
+|fixed_temp_V_33_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_33_0_out|       pointer|
+|fixed_temp_V_32_0_out         |  out|   12|      ap_vld|                fixed_temp_V_32_0_out|       pointer|
+|fixed_temp_V_32_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_32_0_out|       pointer|
+|fixed_temp_V_31_0_out         |  out|   12|      ap_vld|                fixed_temp_V_31_0_out|       pointer|
+|fixed_temp_V_31_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_31_0_out|       pointer|
+|fixed_temp_V_30_0_out         |  out|   12|      ap_vld|                fixed_temp_V_30_0_out|       pointer|
+|fixed_temp_V_30_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_30_0_out|       pointer|
+|fixed_temp_V_29_0_out         |  out|   12|      ap_vld|                fixed_temp_V_29_0_out|       pointer|
+|fixed_temp_V_29_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_29_0_out|       pointer|
+|fixed_temp_V_28_0_out         |  out|   12|      ap_vld|                fixed_temp_V_28_0_out|       pointer|
+|fixed_temp_V_28_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_28_0_out|       pointer|
+|fixed_temp_V_27_0_out         |  out|   12|      ap_vld|                fixed_temp_V_27_0_out|       pointer|
+|fixed_temp_V_27_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_27_0_out|       pointer|
+|fixed_temp_V_26_0_out         |  out|   12|      ap_vld|                fixed_temp_V_26_0_out|       pointer|
+|fixed_temp_V_26_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_26_0_out|       pointer|
+|fixed_temp_V_25_0_out         |  out|   12|      ap_vld|                fixed_temp_V_25_0_out|       pointer|
+|fixed_temp_V_25_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_25_0_out|       pointer|
+|fixed_temp_V_24_0_out         |  out|   12|      ap_vld|                fixed_temp_V_24_0_out|       pointer|
+|fixed_temp_V_24_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_24_0_out|       pointer|
+|fixed_temp_V_23_0_out         |  out|   12|      ap_vld|                fixed_temp_V_23_0_out|       pointer|
+|fixed_temp_V_23_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_23_0_out|       pointer|
+|fixed_temp_V_22_0_out         |  out|   12|      ap_vld|                fixed_temp_V_22_0_out|       pointer|
+|fixed_temp_V_22_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_22_0_out|       pointer|
+|fixed_temp_V_21_0_out         |  out|   12|      ap_vld|                fixed_temp_V_21_0_out|       pointer|
+|fixed_temp_V_21_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_21_0_out|       pointer|
+|fixed_temp_V_20_0_out         |  out|   12|      ap_vld|                fixed_temp_V_20_0_out|       pointer|
+|fixed_temp_V_20_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_20_0_out|       pointer|
+|fixed_temp_V_19_0_out         |  out|   12|      ap_vld|                fixed_temp_V_19_0_out|       pointer|
+|fixed_temp_V_19_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_19_0_out|       pointer|
+|fixed_temp_V_18_0_out         |  out|   12|      ap_vld|                fixed_temp_V_18_0_out|       pointer|
+|fixed_temp_V_18_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_18_0_out|       pointer|
+|fixed_temp_V_17_0_out         |  out|   12|      ap_vld|                fixed_temp_V_17_0_out|       pointer|
+|fixed_temp_V_17_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_17_0_out|       pointer|
+|fixed_temp_V_16_0_out         |  out|   12|      ap_vld|                fixed_temp_V_16_0_out|       pointer|
+|fixed_temp_V_16_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_16_0_out|       pointer|
+|fixed_temp_V_15_0_out         |  out|   12|      ap_vld|                fixed_temp_V_15_0_out|       pointer|
+|fixed_temp_V_15_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_15_0_out|       pointer|
+|fixed_temp_V_14_0_out         |  out|   12|      ap_vld|                fixed_temp_V_14_0_out|       pointer|
+|fixed_temp_V_14_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_14_0_out|       pointer|
+|fixed_temp_V_13_0_out         |  out|   12|      ap_vld|                fixed_temp_V_13_0_out|       pointer|
+|fixed_temp_V_13_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_13_0_out|       pointer|
+|fixed_temp_V_12_0_out         |  out|   12|      ap_vld|                fixed_temp_V_12_0_out|       pointer|
+|fixed_temp_V_12_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_12_0_out|       pointer|
+|fixed_temp_V_11_0_out         |  out|   12|      ap_vld|                fixed_temp_V_11_0_out|       pointer|
+|fixed_temp_V_11_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_11_0_out|       pointer|
+|fixed_temp_V_10_0_out         |  out|   12|      ap_vld|                fixed_temp_V_10_0_out|       pointer|
+|fixed_temp_V_10_0_out_ap_vld  |  out|    1|      ap_vld|                fixed_temp_V_10_0_out|       pointer|
+|fixed_temp_V_9_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_9_0_out|       pointer|
+|fixed_temp_V_9_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_9_0_out|       pointer|
+|fixed_temp_V_8_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_8_0_out|       pointer|
+|fixed_temp_V_8_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_8_0_out|       pointer|
+|fixed_temp_V_7_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_7_0_out|       pointer|
+|fixed_temp_V_7_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_7_0_out|       pointer|
+|fixed_temp_V_6_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_6_0_out|       pointer|
+|fixed_temp_V_6_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_6_0_out|       pointer|
+|fixed_temp_V_5_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_5_0_out|       pointer|
+|fixed_temp_V_5_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_5_0_out|       pointer|
+|fixed_temp_V_4_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_4_0_out|       pointer|
+|fixed_temp_V_4_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_4_0_out|       pointer|
+|fixed_temp_V_3_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_3_0_out|       pointer|
+|fixed_temp_V_3_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_3_0_out|       pointer|
+|fixed_temp_V_2_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_2_0_out|       pointer|
+|fixed_temp_V_2_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_2_0_out|       pointer|
+|fixed_temp_V_1_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_1_0_out|       pointer|
+|fixed_temp_V_1_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_1_0_out|       pointer|
+|fixed_temp_V_0_0_out          |  out|   12|      ap_vld|                 fixed_temp_V_0_0_out|       pointer|
+|fixed_temp_V_0_0_out_ap_vld   |  out|    1|      ap_vld|                 fixed_temp_V_0_0_out|       pointer|
++------------------------------+-----+-----+------------+-------------------------------------+--------------+
+

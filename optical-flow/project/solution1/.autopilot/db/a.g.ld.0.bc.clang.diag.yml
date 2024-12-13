@@ -1,0 +1,1852 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 36, Column: 30 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::Window()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 44, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 93, Column: 28 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 560, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 92, Column: 28 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 560, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 82, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 81, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 80, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 79, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 78, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 77, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::shift_pixels_left()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 73, Column: 18 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::insert_pixel(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 70, Column: 16 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<5, 5, ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::shift_pixels_left()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_xy_calc(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 136, Column: 46 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::LineBuffer()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 734, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 175, Column: 24 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 1026, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 174, Column: 24 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 1026, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 173, Column: 24 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 1026, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 162, Column: 13 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::insert_bottom_row(gradient_t, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 938, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 157, Column: 13 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::shift_pixels_up(int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 893, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 153, Column: 13 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::insert_bottom_row(gradient_t, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 938, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 148, Column: 13 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<7, 1024, gradient_t, (_ramtype)6, 1>::shift_pixels_up(int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 893, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_y(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 191, Column: 34 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 7, gradient_t>::Window()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 44, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 222, Column: 24 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 7, gradient_t>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 560, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 221, Column: 24 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 7, gradient_t>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 560, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 220, Column: 24 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 7, gradient_t>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 560, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 210, Column: 11 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 7, gradient_t>::insert_pixel(gradient_t, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 198, Column: 6 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 7, gradient_t>::shift_pixels_left()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gradient_weight_x(gradient_t (*) [1024], gradient_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 263, Column: 43 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::LineBuffer()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 734, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 294, Column: 21 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 1026, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 284, Column: 11 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::insert_bottom_row(outer_t, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 938, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 274, Column: 6 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::LineBuffer<3, 1024, outer_t, (_ramtype)6, 1>::shift_pixels_up(int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 893, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_y(outer_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 313, Column: 32 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 3, tensor_t>::Window()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 44, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 341, Column: 21 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 3, tensor_t>::getval(int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 560, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 332, Column: 11 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 3, tensor_t>::insert_pixel(tensor_t, int, int)'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 301, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: optical_flow.cpp, Line: 321, Column: 6 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Window<1, 3, tensor_t>::shift_pixels_left()'
+    DebugLoc:        { File: ./xf_video_mem.hpp, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tensor_weight_x(tensor_t (*) [1024], tensor_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 48, Column: 9 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Adding '''
+  - Name:            buf
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 47, Column: 9 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Adding '''
+  - Name:            buf
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 791, Column: 9 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Adding '''
+  - Name:            buf
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 48, Column: 9 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Adding '''
+  - Name:            buf
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 47, Column: 9 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Adding '''
+  - Name:            buf
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 791, Column: 9 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Adding '''
+  - Name:            buf
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 48, Column: 9 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Adding '''
+  - Name:            window
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 47, Column: 9 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Adding '''
+  - Name:            window
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: optical_flow.cpp, Line: 36, Column: 30 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            window
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: optical_flow.cpp, Line: 136, Column: 46 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            buf
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: optical_flow.cpp, Line: 191, Column: 34 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            buf
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: optical_flow.cpp, Line: 263, Column: 43 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            buf
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: optical_flow.cpp, Line: 313, Column: 32 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            buf
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 122, Column: 23 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 127, Column: 20 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 329, Column: 35 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_INIT
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 335, Column: 33 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_X_ACC_INIT
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 339, Column: 36 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_OUTER
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 342, Column: 38 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_INNER
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 906, Column: 23 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_906_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 281, Column: 35 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_INIT
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 287, Column: 33 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_ACC_INIT
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 292, Column: 36 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_OUTER
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 296, Column: 38 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_INNER
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 122, Column: 23 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 127, Column: 20 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 218, Column: 28 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        GRAD_WEIGHT_X_ACC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 906, Column: 23 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_906_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 906, Column: 23 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_906_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 171, Column: 28 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        GRAD_WEIGHT_Y_ACC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 46, Column: 19 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_46_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 62, Column: 26 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_62_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 56, Column: 26 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_56_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 122, Column: 23 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 127, Column: 20 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 122, Column: 23 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./xf_video_mem.hpp, Line: 127, Column: 20 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 72, Column: 26 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_72_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 90, Column: 25 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        GRAD_XY_XYGRAD
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:122:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_INIT
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:329:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_X_ACC_INIT
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:335:33'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_OUTER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:339:36'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_INNER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:342:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_INNER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:342:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 312, Column: 0 }
+Function:        _Z15tensor_weight_xPA1024_8tensor_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_X_TMP_INNER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:342:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_906_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:906:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_INIT
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:281:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_ACC_INIT
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:287:33'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_OUTER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:292:36'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_INNER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:296:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_INNER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:296:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 262, Column: 0 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TENSOR_WEIGHT_Y_TMP_INNER
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:296:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          tensor_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:122:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 190, Column: 0 }
+Function:        _Z17gradient_weight_xPA1024_10gradient_tS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        GRAD_WEIGHT_X_ACC
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:218:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_weight_x
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_906_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:906:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_906_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:906:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 135, Column: 0 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        GRAD_WEIGHT_Y_ACC
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:171:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_weight_y
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_46_1
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:46:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_62_3
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:62:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_56_2
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:56:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:122:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_122_1
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:122:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_2
+  - String:          ''' ('
+  - LoopLoc:         './xf_video_mem.hpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_72_4
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:72:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: optical_flow.cpp, Line: 26, Column: 0 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        GRAD_XY_XYGRAD
+  - String:          ''' ('
+  - LoopLoc:         'optical_flow.cpp:90:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gradient_xy_calc
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: optical_flow.cpp, Line: 28, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_E3buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: optical_flow.cpp, Line: 136, Column: 46 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buf.x
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: optical_flow.cpp, Line: 136, Column: 46 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buf.y
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: optical_flow.cpp, Line: 136, Column: 46 }
+Function:        _Z17gradient_weight_yPA1024_8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_PA1024_10gradient_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buf.z
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: optical_flow.cpp, Line: 263, Column: 43 }
+Function:        _Z15tensor_weight_yPA1024_7outer_tPA1024_8tensor_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_optical_flow_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            outputs
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_optical_flow_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            frames
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: optical_flow.cpp, Line: 397, Column: 23 }
+Function:        _Z9flow_calcPA1024_8tensor_tPA1024_10velocity_t
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '4'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '8'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.end42.store.21
+  - String:          ' '
+  - ArrayName:       outputs
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'flow_calc(tensor_t (*) [1024], velocity_t (*) [1024])'
+    DebugLoc:        { File: optical_flow.cpp, Line: 359, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: optical_flow.cpp, Line: 47, Column: 21 }
+Function:        _Z16gradient_xy_calcPA1024_8ap_fixedILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1024_S_ILi32ELi13ELS0_5ELS1_3ELi0EES7_
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 433, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame1_a
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 435, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame2_a
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 443, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame3_a
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 437, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame4_a
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 439, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8frame5_a
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 412, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10gradient_x
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 414, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10gradient_y
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 416, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10gradient_z
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 418, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10y_filtered.x
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 418, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10y_filtered.y
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 418, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE10y_filtered.z
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 420, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE17filtered_gradient.x
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 420, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE17filtered_gradient.y
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 420, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE17filtered_gradient.z
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 422, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE11out_product
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 425, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE8tensor_y
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: optical_flow.cpp, Line: 428, Column: 0 }
+Function:        _Z12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_t
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            _ZZ12optical_flowPA1024_7ap_uintILi64EEPA1024_10velocity_tE6tensor
+  - String:          ''''
+...

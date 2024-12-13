@@ -1,0 +1,42 @@
+[
+    {
+        "array_name": "result_x",
+        "dimensions": 1,
+        "line_per_dimension": [
+            2792
+        ],
+        "size_per_dimension": [
+            100
+        ]
+    },
+    {
+        "array_name": "result_y",
+        "dimensions": 1,
+        "line_per_dimension": [
+            2792
+        ],
+        "size_per_dimension": [
+            100
+        ]
+    },
+    {
+        "array_name": "result_w",
+        "dimensions": 1,
+        "line_per_dimension": [
+            2792
+        ],
+        "size_per_dimension": [
+            100
+        ]
+    },
+    {
+        "array_name": "result_h",
+        "dimensions": 1,
+        "line_per_dimension": [
+            2792
+        ],
+        "size_per_dimension": [
+            100
+        ]
+    }
+]

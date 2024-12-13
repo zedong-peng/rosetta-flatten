@@ -1,0 +1,94 @@
+---
+MainSourceFile:  /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          52697
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          260077
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          260516
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          260956
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          523136
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2805_1:  '
+    FileOffset:      2805
+    FilePath:        face_detect.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          943980
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2805_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2810_2:  '
+    FileOffset:      2810
+    FilePath:        face_detect.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          944116
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2810_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2872_3:  '
+    FileOffset:      2872
+    FilePath:        face_detect.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          945484
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2872_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3294_1:  '
+    FileOffset:      3294
+    FilePath:        face_detect.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          1035752
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3294_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3401_1:  '
+    FileOffset:      3401
+    FilePath:        face_detect.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/face-detection/project/solution1/.autopilot/db/face_detect.pp.0.cpp
+        Offset:          1112923
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3401_1: '
+...

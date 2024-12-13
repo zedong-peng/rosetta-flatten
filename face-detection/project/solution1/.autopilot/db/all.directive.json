@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "face_detect",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/data\/zedongpeng\/HLSBatchProcessor\/data\/kernels\/rosetta_flatten\/face-detection\/run_hls.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "face_detect"
+              }]
+          }
+        }]
+    }]}

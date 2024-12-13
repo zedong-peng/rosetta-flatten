@@ -1,0 +1,643 @@
+---
+MainSourceFile:  /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          52574
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          259954
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          260393
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          260833
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          522560
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1222831
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_322_1:  '
+    FileOffset:      322
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1223080
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_322_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_338_1:  '
+    FileOffset:      338
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1223365
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_338_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_354_1:  '
+    FileOffset:      354
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1223646
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_354_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_370_1:  '
+    FileOffset:      370
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1223931
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_370_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_386_1:  '
+    FileOffset:      386
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1224212
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_386_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_402_1:  '
+    FileOffset:      402
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1224497
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_402_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_418_1:  '
+    FileOffset:      418
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1224778
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_418_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_434_1:  '
+    FileOffset:      434
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1225063
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_434_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_520_1:  '
+    FileOffset:      520
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1226658
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_520_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_729_1:  '
+    FileOffset:      729
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1232261
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_729_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_731_2:  '
+    FileOffset:      731
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1232337
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_731_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_733_3:  '
+    FileOffset:      733
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1232417
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_733_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_736_4:  '
+    FileOffset:      736
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1232527
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_736_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_775_1:  '
+    FileOffset:      775
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1233772
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_775_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_777_2:  '
+    FileOffset:      777
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1233848
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_777_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_780_3:  '
+    FileOffset:      780
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1233968
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_780_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_782_4:  '
+    FileOffset:      782
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1234069
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_782_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_837_1:  '
+    FileOffset:      837
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1235822
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_837_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_839_2:  '
+    FileOffset:      839
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1235898
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_839_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_848_3:  '
+    FileOffset:      848
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1236356
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_848_3: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
+    FileOffset:      970
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1045_1:  '
+    FileOffset:      1045
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1244074
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1045_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1461_1:  '
+    FileOffset:      1461
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1259973
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1461_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1490_1:  '
+    FileOffset:      1490
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1261078
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1490_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1521_1:  '
+    FileOffset:      1521
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1262316
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1521_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1552_1:  '
+    FileOffset:      1552
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1263530
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1552_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_122_1:  '
+    FileOffset:      122
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1279436
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_122_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_2:  '
+    FileOffset:      127
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1279538
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_1:  '
+    FileOffset:      170
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1279863
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_175_2:  '
+    FileOffset:      175
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1279965
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_175_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_218_1:  '
+    FileOffset:      218
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1280287
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_218_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_2:  '
+    FileOffset:      223
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1280393
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_1:  '
+    FileOffset:      266
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1280713
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_271_2:  '
+    FileOffset:      271
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1280819
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_271_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_348_1:  '
+    FileOffset:      348
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1281442
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_348_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_460_1:  '
+    FileOffset:      460
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1282142
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_460_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_1P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      747
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_1P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      752
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      757
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      762
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_S2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      767
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_S2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      772
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      777
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      782
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_860_1:  '
+    FileOffset:      860
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1286676
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_860_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_906_1:  '
+    FileOffset:      906
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1287138
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_906_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1014_1:  '
+    FileOffset:      1014
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1288270
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1014_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_1:  '
+    FileOffset:      39
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1290367
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_1:  '
+    FileOffset:      59
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1290978
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_88_1:  '
+    FileOffset:      88
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1291780
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_88_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_122_1:  '
+    FileOffset:      122
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1292841
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_122_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_157_1:  '
+    FileOffset:      157
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1293883
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_157_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_186_1:  '
+    FileOffset:      186
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1294681
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_186_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_211_1:  '
+    FileOffset:      211
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1295370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_235_1:  '
+    FileOffset:      235
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1296118
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_235_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_271_1:  '
+    FileOffset:      271
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1297023
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_271_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_274_2:  '
+    FileOffset:      274
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1297134
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_274_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_335_1:  '
+    FileOffset:      335
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1299245
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_335_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_409_1:  '
+    FileOffset:      409
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1302504
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_409_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_481_1:  '
+    FileOffset:      481
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1304393
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_481_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_487_2:  '
+    FileOffset:      487
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1304551
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_487_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_514_1:  '
+    FileOffset:      514
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1305250
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_514_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_640_1:  '
+    FileOffset:      640
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1309437
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_640_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_756_1:  '
+    FileOffset:      756
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1314193
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_756_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_808_1:  '
+    FileOffset:      808
+    FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1315365
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_808_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_46_1:  '
+    FileOffset:      46
+    FilePath:        optical_flow.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1318913
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_46_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_56_2:  '
+    FileOffset:      56
+    FilePath:        optical_flow.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1319174
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_56_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_62_3:  '
+    FileOffset:      62
+    FilePath:        optical_flow.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1319323
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_62_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_72_4:  '
+    FileOffset:      72
+    FilePath:        optical_flow.cpp
+    Replacements:    
+      - FilePath:        /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/optical-flow/project/solution1/.autopilot/db/optical_flow.pp.0.cpp
+        Offset:          1319522
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_72_4: '
+...
