@@ -3,7 +3,7 @@
         "array_name": "kh_i",
         "dimensions": 1,
         "line_per_dimension": [
-            709
+            714
         ],
         "size_per_dimension": [
             64
@@ -13,7 +13,7 @@
         "array_name": "wt_i",
         "dimensions": 1,
         "line_per_dimension": [
-            709
+            714
         ],
         "size_per_dimension": [
             4682
@@ -23,7 +23,7 @@
         "array_name": "dmem_i",
         "dimensions": 1,
         "line_per_dimension": [
-            709
+            714
         ],
         "size_per_dimension": [
             2048
@@ -33,7 +33,7 @@
         "array_name": "dmem_o",
         "dimensions": 1,
         "line_per_dimension": [
-            709
+            714
         ],
         "size_per_dimension": [
             128

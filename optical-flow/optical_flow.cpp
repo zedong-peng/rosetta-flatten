@@ -284,7 +284,7 @@ void tensor_weight_y(outer_t outer[MAX_HEIGHT][MAX_WIDTH],
       buf.insert_bottom_row(tmp,c);
 
       tensor_t acc;
-      TENSOR_WEIGHT_Y_ACC_INIT: for(int k =0; k<6; k++)
+       v: for(int k =0; k<6; k++)
         acc.val[k] = 0;
      
       if (r >= 2 && r < MAX_HEIGHT) 

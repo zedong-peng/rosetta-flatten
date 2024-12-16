@@ -5,25 +5,25 @@
             266
         ],
         "tripcount_per_level": [
-            16
+            32
         ]
     },
     {
         "total_nesting_levels": 1,
         "line_per_level": [
-            482
+            317
         ],
         "tripcount_per_level": [
-            16
+            32
         ]
     },
     {
         "total_nesting_levels": 1,
         "line_per_level": [
-            617
+            362
         ],
         "tripcount_per_level": [
-            16
+            32
         ]
     }
 ]
