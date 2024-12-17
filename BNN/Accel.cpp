@@ -250,7 +250,7 @@ void bin_conv(
   // ---------------------------------------------------------------------
   LOOP_PHASES:
   for (ap_uint<10> p = 0; p < n_phases; p += images_per_phase) {
-  # pragma HLS loop_tripcount min=8 max=64
+  #pragma HLS loop_tripcount min=8 max=64
     DB(3, printf ("=== PHASE %d ===\n", p.to_int()) );
 
     // wrd = which word in the current image
@@ -264,7 +264,7 @@ void bin_conv(
     // is WORDS_PER_PHASE + images_per_phase
     LOOP_WORDS_IN_PHASE:
     for (ap_uint<8> count = 0; count < WORDS_PER_PHASE+images_per_phase; ++count) {
-      // First word of an image
+    #pragma HLS loop_tripcount min=576 max=768
       if (wrd == 0) {
         Word wt_word_buffer[CONVOLVERS];
 
@@ -480,7 +480,7 @@ void fp_conv(
   // Parallelized across m, better for HLS
   LOOP_FP_CONV_O:
   for (IdxType n = 0; n < N; ++n) {
-
+  #pragma HLS loop_tripcount min=8 max=32
     // clear linebuffers for each new output map
     LOOP_RESET_LINEBUFFERS:
     for (IdxType m = 0; m < M; ++m) {

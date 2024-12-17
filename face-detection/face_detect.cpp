@@ -3227,7 +3227,7 @@ int cascadeClassifier
 
   Stages: for ( i = 3; i < 25; i++ ){
     Filters: for ( j = 0; j < stages_array[i] ; j++ ){
-
+    #pragma HLS loop_tripcount min=8 max=32
 
       if ( j == 0 ) {
         stage_sum = 0; s=0;
