@@ -1,0 +1,111 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_knn" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:98:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:104:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=min_distance_list complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:107:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=label_list complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:110:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=vote_list complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:124:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:144:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:162:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="knn_vote" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/run_hls.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=DigitRec" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=knn_set complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:229:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="digitrec.cpp:255:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DigitRec" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="digitrec.cpp:244:9" msg_body="Inlining function 'update_knn(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;, int*)' into 'DigitRec(ap_uint&lt;256&gt;*, ap_uint&lt;256&gt;*, unsigned char*, int)'">
+        <args Callee="update_knn(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;, int*)" Caller="DigitRec(ap_uint&lt;256&gt;*, ap_uint&lt;256&gt;*, unsigned char*, int)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="digitrec.cpp:248:26" msg_body="Inlining function 'knn_vote(int*)' into 'DigitRec(ap_uint&lt;256&gt;*, ap_uint&lt;256&gt;*, unsigned char*, int)'">
+        <args Callee="knn_vote(int*)" Caller="DigitRec(ap_uint&lt;256&gt;*, ap_uint&lt;256&gt;*, unsigned char*, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="digitrec.cpp:136:29" msg_body="Loop 'INSERTION_SORT_INNER' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="INSERTION_SORT_INNER"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="digitrec.cpp:142:15" msg_body="Loop 'INSERT' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="INSERT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Unrolling loop 'SET_KNN_SET' (digitrec.cpp:227:18) in function 'DigitRec' completely with a factor of 120">
+        <args Factor="120" LoopLoc="digitrec.cpp:227:18" LoopName="SET_KNN_SET"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Unrolling loop 'INIT_1' (digitrec.cpp:115:11) in function 'DigitRec' completely with a factor of 3">
+        <args Factor="3" LoopLoc="digitrec.cpp:115:11" LoopName="INIT_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Unrolling loop 'INIT_2' (digitrec.cpp:122:11) in function 'DigitRec' completely with a factor of 10">
+        <args Factor="10" LoopLoc="digitrec.cpp:122:11" LoopName="INIT_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Unrolling loop 'INSERTION_SORT_INNER' (digitrec.cpp:136:29) in function 'DigitRec' completely with a factor of 3">
+        <args Factor="3" LoopLoc="digitrec.cpp:136:29" LoopName="INSERTION_SORT_INNER"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Unrolling loop 'INSERT' (digitrec.cpp:142:15) in function 'DigitRec' completely with a factor of 3">
+        <args Factor="3" LoopLoc="digitrec.cpp:142:15" LoopName="INSERT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Unrolling loop 'VOTE' (digitrec.cpp:170:9) in function 'DigitRec' completely with a factor of 10">
+        <args Factor="10" LoopLoc="digitrec.cpp:170:9" LoopName="VOTE"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="digitrec.cpp:187:0" msg_body="Inlining function 'popcount(ap_uint&lt;256&gt;)' into 'DigitRec(ap_uint&lt;256&gt;*, ap_uint&lt;256&gt;*, unsigned char*, int)'">
+        <args Callee="popcount(ap_uint&lt;256&gt;)" Caller="DigitRec(ap_uint&lt;256&gt;*, ap_uint&lt;256&gt;*, unsigned char*, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="digitrec.cpp:106:6" msg_body="Applying array_partition to 'label_list.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="label_list.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="digitrec.cpp:109:6" msg_body="Applying array_partition to 'vote_list.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="vote_list.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="digitrec.cpp:190:7" msg_body="Applying array_partition to 'knn_set': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="knn_set"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

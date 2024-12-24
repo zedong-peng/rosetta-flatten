@@ -1,0 +1,820 @@
+<stg><name>rasterization2</name>
+
+
+<trans_list>
+
+<trans id="37" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="38" from="1" to="3">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="0"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="40" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:0 %triangle_2d_same_z_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_z
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_z_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:1 %triangle_2d_same_y2_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_y2
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_y2_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:2 %triangle_2d_same_x2_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_x2
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_x2_read"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:3 %triangle_2d_same_y1_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_y1
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_y1_read"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:4 %triangle_2d_same_x1_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_x1
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_x1_read"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:5 %triangle_2d_same_y0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_y0
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_y0_read"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:6 %triangle_2d_same_x0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_same_x0
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_x0_read"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+entry:7 %p_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read4
+
+]]></Node>
+<StgValue><ssdm name="p_read"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:8 %p_read_4 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read3
+
+]]></Node>
+<StgValue><ssdm name="p_read_4"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:9 %p_read_5 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read2
+
+]]></Node>
+<StgValue><ssdm name="p_read_5"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+entry:10 %p_read_6 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read1
+
+]]></Node>
+<StgValue><ssdm name="p_read_6"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="2" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+entry:11 %flag_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %flag
+
+]]></Node>
+<StgValue><ssdm name="flag_read"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="16" op_0_bw="64">
+<![CDATA[
+entry:12 %i_V_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="i_V_loc"/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="1" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+entry:13 %icmp_ln184 = icmp_eq  i2 %flag_read, i2 0
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln184"/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+entry:14 %br_ln184 = br i1 %icmp_ln184, void %return, void %RAST2
+
+]]></Node>
+<StgValue><ssdm name="br_ln184"/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="9" op_0_bw="8">
+<![CDATA[
+RAST2:0 %triangle_2d_same_y1_cast = zext i8 %triangle_2d_same_y1_read
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_y1_cast"/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="9" op_0_bw="8">
+<![CDATA[
+RAST2:1 %triangle_2d_same_y0_cast = zext i8 %triangle_2d_same_y0_read
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_y0_cast"/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+RAST2:2 %ret_V_27 = sub i9 %triangle_2d_same_y1_cast, i9 %triangle_2d_same_y0_cast
+
+]]></Node>
+<StgValue><ssdm name="ret_V_27"/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="36" bw="9" op_0_bw="8">
+<![CDATA[
+RAST2:3 %triangle_2d_same_x1_cast = zext i8 %triangle_2d_same_x1_read
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_x1_cast"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="9" op_0_bw="8">
+<![CDATA[
+RAST2:4 %triangle_2d_same_x0_cast = zext i8 %triangle_2d_same_x0_read
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_x0_cast"/></StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+RAST2:5 %ret_V_30 = sub i9 %triangle_2d_same_x1_cast, i9 %triangle_2d_same_x0_cast
+
+]]></Node>
+<StgValue><ssdm name="ret_V_30"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="9" op_0_bw="8">
+<![CDATA[
+RAST2:6 %triangle_2d_same_y2_cast = zext i8 %triangle_2d_same_y2_read
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_y2_cast"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+RAST2:7 %ret_V_33 = sub i9 %triangle_2d_same_y2_cast, i9 %triangle_2d_same_y1_cast
+
+]]></Node>
+<StgValue><ssdm name="ret_V_33"/></StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="41" bw="9" op_0_bw="8">
+<![CDATA[
+RAST2:8 %triangle_2d_same_x2_cast = zext i8 %triangle_2d_same_x2_read
+
+]]></Node>
+<StgValue><ssdm name="triangle_2d_same_x2_cast"/></StgValue>
+</operation>
+
+<operation id="28" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="42" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+RAST2:9 %ret_V_36 = sub i9 %triangle_2d_same_x2_cast, i9 %triangle_2d_same_x1_cast
+
+]]></Node>
+<StgValue><ssdm name="ret_V_36"/></StgValue>
+</operation>
+
+<operation id="29" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+RAST2:10 %ret_V_39 = sub i9 %triangle_2d_same_y0_cast, i9 %triangle_2d_same_y2_cast
+
+]]></Node>
+<StgValue><ssdm name="ret_V_39"/></StgValue>
+</operation>
+
+<operation id="30" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="9" op_0_bw="9" op_1_bw="9">
+<![CDATA[
+RAST2:11 %ret_V_42 = sub i9 %triangle_2d_same_x0_cast, i9 %triangle_2d_same_x2_cast
+
+]]></Node>
+<StgValue><ssdm name="ret_V_42"/></StgValue>
+</operation>
+
+<operation id="31" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="9" op_7_bw="8" op_8_bw="9" op_9_bw="8" op_10_bw="9" op_11_bw="8" op_12_bw="9" op_13_bw="8" op_14_bw="9" op_15_bw="8" op_16_bw="9" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="6" op_22_bw="16">
+<![CDATA[
+RAST2:12 %call_ln0 = call void @rasterization2_Pipeline_RAST2, i16 %p_read, i8 %p_read_4, i8 %p_read_6, i8 %p_read_5, i8 %triangle_2d_same_x0_read, i9 %ret_V_27, i8 %triangle_2d_same_y0_read, i9 %ret_V_30, i8 %triangle_2d_same_x1_read, i9 %ret_V_33, i8 %triangle_2d_same_y1_read, i9 %ret_V_36, i8 %triangle_2d_same_x2_read, i9 %ret_V_39, i8 %triangle_2d_same_y2_read, i9 %ret_V_42, i8 %fragment2_x, i8 %fragment2_y, i8 %fragment2_z, i8 %triangle_2d_same_z_read, i6 %fragment2_color, i16 %i_V_loc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="32" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="9" op_7_bw="8" op_8_bw="9" op_9_bw="8" op_10_bw="9" op_11_bw="8" op_12_bw="9" op_13_bw="8" op_14_bw="9" op_15_bw="8" op_16_bw="9" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="6" op_22_bw="16">
+<![CDATA[
+RAST2:12 %call_ln0 = call void @rasterization2_Pipeline_RAST2, i16 %p_read, i8 %p_read_4, i8 %p_read_6, i8 %p_read_5, i8 %triangle_2d_same_x0_read, i9 %ret_V_27, i8 %triangle_2d_same_y0_read, i9 %ret_V_30, i8 %triangle_2d_same_x1_read, i9 %ret_V_33, i8 %triangle_2d_same_y1_read, i9 %ret_V_36, i8 %triangle_2d_same_x2_read, i9 %ret_V_39, i8 %triangle_2d_same_y2_read, i9 %ret_V_42, i8 %fragment2_x, i8 %fragment2_y, i8 %fragment2_z, i8 %triangle_2d_same_z_read, i6 %fragment2_color, i16 %i_V_loc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="33" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="16" op_0_bw="16" op_1_bw="0">
+<![CDATA[
+RAST2:13 %i_V_loc_load = load i16 %i_V_loc
+
+]]></Node>
+<StgValue><ssdm name="i_V_loc_load"/></StgValue>
+</operation>
+
+<operation id="34" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="0" op_0_bw="0">
+<![CDATA[
+RAST2:14 %br_ln0 = br void %return
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+
+<operation id="35" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="16" op_0_bw="16" op_1_bw="0" op_2_bw="16" op_3_bw="0">
+<![CDATA[
+return:0 %agg_result_0 = phi i16 %i_V_loc_load, void %RAST2, i16 0, void %entry
+
+]]></Node>
+<StgValue><ssdm name="agg_result_0"/></StgValue>
+</operation>
+
+<operation id="36" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="50" bw="0" op_0_bw="16">
+<![CDATA[
+return:1 %ret_ln208 = ret i16 %agg_result_0
+
+]]></Node>
+<StgValue><ssdm name="ret_ln208"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="41" name="flag" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="flag"/></StgValue>
+</port>
+<port id="42" name="p_read1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read1"/></StgValue>
+</port>
+<port id="43" name="p_read2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read2"/></StgValue>
+</port>
+<port id="44" name="p_read3" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read3"/></StgValue>
+</port>
+<port id="45" name="p_read4" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read4"/></StgValue>
+</port>
+<port id="46" name="triangle_2d_same_x0" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_x0"/></StgValue>
+</port>
+<port id="47" name="triangle_2d_same_y0" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_y0"/></StgValue>
+</port>
+<port id="48" name="triangle_2d_same_x1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_x1"/></StgValue>
+</port>
+<port id="49" name="triangle_2d_same_y1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_y1"/></StgValue>
+</port>
+<port id="50" name="triangle_2d_same_x2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_x2"/></StgValue>
+</port>
+<port id="51" name="triangle_2d_same_y2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_y2"/></StgValue>
+</port>
+<port id="52" name="triangle_2d_same_z" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="triangle_2d_same_z"/></StgValue>
+</port>
+<port id="53" name="fragment2_x" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="fragment2_x"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="54" name="fragment2_y" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="fragment2_y"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="55" name="fragment2_z" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="fragment2_z"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="56" name="fragment2_color" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="fragment2_color"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="58" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_z_read" fromId="57" toId="4">
+</dataflow>
+<dataflow id="59" from="triangle_2d_same_z" to="triangle_2d_same_z_read" fromId="52" toId="4">
+</dataflow>
+<dataflow id="60" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_y2_read" fromId="57" toId="5">
+</dataflow>
+<dataflow id="61" from="triangle_2d_same_y2" to="triangle_2d_same_y2_read" fromId="51" toId="5">
+</dataflow>
+<dataflow id="62" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_x2_read" fromId="57" toId="6">
+</dataflow>
+<dataflow id="63" from="triangle_2d_same_x2" to="triangle_2d_same_x2_read" fromId="50" toId="6">
+</dataflow>
+<dataflow id="64" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_y1_read" fromId="57" toId="7">
+</dataflow>
+<dataflow id="65" from="triangle_2d_same_y1" to="triangle_2d_same_y1_read" fromId="49" toId="7">
+</dataflow>
+<dataflow id="66" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_x1_read" fromId="57" toId="8">
+</dataflow>
+<dataflow id="67" from="triangle_2d_same_x1" to="triangle_2d_same_x1_read" fromId="48" toId="8">
+</dataflow>
+<dataflow id="68" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_y0_read" fromId="57" toId="9">
+</dataflow>
+<dataflow id="69" from="triangle_2d_same_y0" to="triangle_2d_same_y0_read" fromId="47" toId="9">
+</dataflow>
+<dataflow id="70" from="_ssdm_op_Read.ap_auto.i8" to="triangle_2d_same_x0_read" fromId="57" toId="10">
+</dataflow>
+<dataflow id="71" from="triangle_2d_same_x0" to="triangle_2d_same_x0_read" fromId="46" toId="10">
+</dataflow>
+<dataflow id="73" from="_ssdm_op_Read.ap_auto.i16" to="p_read" fromId="72" toId="11">
+</dataflow>
+<dataflow id="74" from="p_read4" to="p_read" fromId="45" toId="11">
+</dataflow>
+<dataflow id="75" from="_ssdm_op_Read.ap_auto.i8" to="p_read_4" fromId="57" toId="12">
+</dataflow>
+<dataflow id="76" from="p_read3" to="p_read_4" fromId="44" toId="12">
+</dataflow>
+<dataflow id="77" from="_ssdm_op_Read.ap_auto.i8" to="p_read_5" fromId="57" toId="13">
+</dataflow>
+<dataflow id="78" from="p_read2" to="p_read_5" fromId="43" toId="13">
+</dataflow>
+<dataflow id="79" from="_ssdm_op_Read.ap_auto.i8" to="p_read_6" fromId="57" toId="14">
+</dataflow>
+<dataflow id="80" from="p_read1" to="p_read_6" fromId="42" toId="14">
+</dataflow>
+<dataflow id="82" from="_ssdm_op_Read.ap_auto.i2" to="flag_read" fromId="81" toId="15">
+</dataflow>
+<dataflow id="83" from="flag" to="flag_read" fromId="41" toId="15">
+</dataflow>
+<dataflow id="85" from="StgValue_84" to="i_V_loc" fromId="84" toId="16">
+</dataflow>
+<dataflow id="86" from="flag_read" to="icmp_ln184" fromId="15" toId="17">
+</dataflow>
+<dataflow id="88" from="StgValue_87" to="icmp_ln184" fromId="87" toId="17">
+</dataflow>
+<dataflow id="89" from="icmp_ln184" to="br_ln184" fromId="17" toId="18">
+</dataflow>
+<dataflow id="90" from="triangle_2d_same_y1_read" to="triangle_2d_same_y1_cast" fromId="7" toId="19">
+</dataflow>
+<dataflow id="91" from="triangle_2d_same_y0_read" to="triangle_2d_same_y0_cast" fromId="9" toId="20">
+</dataflow>
+<dataflow id="92" from="triangle_2d_same_y1_cast" to="ret_V_27" fromId="19" toId="21">
+</dataflow>
+<dataflow id="93" from="triangle_2d_same_y0_cast" to="ret_V_27" fromId="20" toId="21">
+</dataflow>
+<dataflow id="94" from="triangle_2d_same_x1_read" to="triangle_2d_same_x1_cast" fromId="8" toId="22">
+</dataflow>
+<dataflow id="95" from="triangle_2d_same_x0_read" to="triangle_2d_same_x0_cast" fromId="10" toId="23">
+</dataflow>
+<dataflow id="96" from="triangle_2d_same_x1_cast" to="ret_V_30" fromId="22" toId="24">
+</dataflow>
+<dataflow id="97" from="triangle_2d_same_x0_cast" to="ret_V_30" fromId="23" toId="24">
+</dataflow>
+<dataflow id="98" from="triangle_2d_same_y2_read" to="triangle_2d_same_y2_cast" fromId="5" toId="25">
+</dataflow>
+<dataflow id="99" from="triangle_2d_same_y2_cast" to="ret_V_33" fromId="25" toId="26">
+</dataflow>
+<dataflow id="100" from="triangle_2d_same_y1_cast" to="ret_V_33" fromId="19" toId="26">
+</dataflow>
+<dataflow id="101" from="triangle_2d_same_x2_read" to="triangle_2d_same_x2_cast" fromId="6" toId="27">
+</dataflow>
+<dataflow id="102" from="triangle_2d_same_x2_cast" to="ret_V_36" fromId="27" toId="28">
+</dataflow>
+<dataflow id="103" from="triangle_2d_same_x1_cast" to="ret_V_36" fromId="22" toId="28">
+</dataflow>
+<dataflow id="104" from="triangle_2d_same_y0_cast" to="ret_V_39" fromId="20" toId="29">
+</dataflow>
+<dataflow id="105" from="triangle_2d_same_y2_cast" to="ret_V_39" fromId="25" toId="29">
+</dataflow>
+<dataflow id="106" from="triangle_2d_same_x0_cast" to="ret_V_42" fromId="23" toId="30">
+</dataflow>
+<dataflow id="107" from="triangle_2d_same_x2_cast" to="ret_V_42" fromId="27" toId="30">
+</dataflow>
+<dataflow id="109" from="rasterization2_Pipeline_RAST2" to="call_ln0" fromId="108" toId="31">
+</dataflow>
+<dataflow id="110" from="p_read" to="call_ln0" fromId="11" toId="31">
+</dataflow>
+<dataflow id="111" from="p_read_4" to="call_ln0" fromId="12" toId="31">
+</dataflow>
+<dataflow id="112" from="p_read_6" to="call_ln0" fromId="14" toId="31">
+</dataflow>
+<dataflow id="113" from="p_read_5" to="call_ln0" fromId="13" toId="31">
+</dataflow>
+<dataflow id="114" from="triangle_2d_same_x0_read" to="call_ln0" fromId="10" toId="31">
+</dataflow>
+<dataflow id="115" from="ret_V_27" to="call_ln0" fromId="21" toId="31">
+</dataflow>
+<dataflow id="116" from="triangle_2d_same_y0_read" to="call_ln0" fromId="9" toId="31">
+</dataflow>
+<dataflow id="117" from="ret_V_30" to="call_ln0" fromId="24" toId="31">
+</dataflow>
+<dataflow id="118" from="triangle_2d_same_x1_read" to="call_ln0" fromId="8" toId="31">
+</dataflow>
+<dataflow id="119" from="ret_V_33" to="call_ln0" fromId="26" toId="31">
+</dataflow>
+<dataflow id="120" from="triangle_2d_same_y1_read" to="call_ln0" fromId="7" toId="31">
+</dataflow>
+<dataflow id="121" from="ret_V_36" to="call_ln0" fromId="28" toId="31">
+</dataflow>
+<dataflow id="122" from="triangle_2d_same_x2_read" to="call_ln0" fromId="6" toId="31">
+</dataflow>
+<dataflow id="123" from="ret_V_39" to="call_ln0" fromId="29" toId="31">
+</dataflow>
+<dataflow id="124" from="triangle_2d_same_y2_read" to="call_ln0" fromId="5" toId="31">
+</dataflow>
+<dataflow id="125" from="ret_V_42" to="call_ln0" fromId="30" toId="31">
+</dataflow>
+<dataflow id="126" from="fragment2_x" to="call_ln0" fromId="53" toId="31">
+</dataflow>
+<dataflow id="127" from="fragment2_y" to="call_ln0" fromId="54" toId="31">
+</dataflow>
+<dataflow id="128" from="fragment2_z" to="call_ln0" fromId="55" toId="31">
+</dataflow>
+<dataflow id="129" from="triangle_2d_same_z_read" to="call_ln0" fromId="4" toId="31">
+</dataflow>
+<dataflow id="130" from="fragment2_color" to="call_ln0" fromId="56" toId="31">
+</dataflow>
+<dataflow id="131" from="i_V_loc" to="call_ln0" fromId="16" toId="31">
+</dataflow>
+<dataflow id="132" from="rasterization2_Pipeline_RAST2" to="call_ln0" fromId="108" toId="32">
+</dataflow>
+<dataflow id="133" from="p_read" to="call_ln0" fromId="11" toId="32">
+</dataflow>
+<dataflow id="134" from="p_read_4" to="call_ln0" fromId="12" toId="32">
+</dataflow>
+<dataflow id="135" from="p_read_6" to="call_ln0" fromId="14" toId="32">
+</dataflow>
+<dataflow id="136" from="p_read_5" to="call_ln0" fromId="13" toId="32">
+</dataflow>
+<dataflow id="137" from="triangle_2d_same_x0_read" to="call_ln0" fromId="10" toId="32">
+</dataflow>
+<dataflow id="138" from="ret_V_27" to="call_ln0" fromId="21" toId="32">
+</dataflow>
+<dataflow id="139" from="triangle_2d_same_y0_read" to="call_ln0" fromId="9" toId="32">
+</dataflow>
+<dataflow id="140" from="ret_V_30" to="call_ln0" fromId="24" toId="32">
+</dataflow>
+<dataflow id="141" from="triangle_2d_same_x1_read" to="call_ln0" fromId="8" toId="32">
+</dataflow>
+<dataflow id="142" from="ret_V_33" to="call_ln0" fromId="26" toId="32">
+</dataflow>
+<dataflow id="143" from="triangle_2d_same_y1_read" to="call_ln0" fromId="7" toId="32">
+</dataflow>
+<dataflow id="144" from="ret_V_36" to="call_ln0" fromId="28" toId="32">
+</dataflow>
+<dataflow id="145" from="triangle_2d_same_x2_read" to="call_ln0" fromId="6" toId="32">
+</dataflow>
+<dataflow id="146" from="ret_V_39" to="call_ln0" fromId="29" toId="32">
+</dataflow>
+<dataflow id="147" from="triangle_2d_same_y2_read" to="call_ln0" fromId="5" toId="32">
+</dataflow>
+<dataflow id="148" from="ret_V_42" to="call_ln0" fromId="30" toId="32">
+</dataflow>
+<dataflow id="149" from="fragment2_x" to="call_ln0" fromId="53" toId="32">
+</dataflow>
+<dataflow id="150" from="fragment2_y" to="call_ln0" fromId="54" toId="32">
+</dataflow>
+<dataflow id="151" from="fragment2_z" to="call_ln0" fromId="55" toId="32">
+</dataflow>
+<dataflow id="152" from="triangle_2d_same_z_read" to="call_ln0" fromId="4" toId="32">
+</dataflow>
+<dataflow id="153" from="fragment2_color" to="call_ln0" fromId="56" toId="32">
+</dataflow>
+<dataflow id="154" from="i_V_loc" to="call_ln0" fromId="16" toId="32">
+</dataflow>
+<dataflow id="155" from="i_V_loc" to="i_V_loc_load" fromId="16" toId="33">
+</dataflow>
+<dataflow id="156" from="i_V_loc_load" to="agg_result_0" fromId="33" toId="35">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="1"/>
+</and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="157" from="br_ln0" to="agg_result_0" fromId="34" toId="35">
+</dataflow>
+<dataflow id="159" from="StgValue_158" to="agg_result_0" fromId="158" toId="35">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln184" val="0"/>
+</and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="160" from="br_ln184" to="agg_result_0" fromId="18" toId="35">
+</dataflow>
+<dataflow id="161" from="agg_result_0" to="ret_ln208" fromId="35" toId="36">
+</dataflow>
+<dataflow id="162" from="icmp_ln184" to="StgValue_1" fromId="17" toId="1">
+</dataflow>
+<dataflow id="163" from="icmp_ln184" to="StgValue_3" fromId="17" toId="3">
+</dataflow>
+</dataflows>
+
+
+</stg>

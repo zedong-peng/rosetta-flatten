@@ -1,0 +1,30 @@
+<pragmas>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="1126" pragmaType="inline" parentfunction="ap_int_base<256, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="779" pragmaType="inline" parentfunction="ap_bit_ref<256, false>::operator bool() const" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="774" pragmaType="inline" parentfunction="ap_bit_ref<256, false>::ap_bit_ref(ap_int_base<256, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="digitrec.cpp" line="62" pragmaType="inline" parentfunction="update_knn" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="1499" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, false>::logic operator^<256, false, 256, false>(ap_int_base<256, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="214" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi256ELb0EEC2EDq256_j" off="0" region="0" recursive="0"/>
+<pragma file="digitrec.cpp" line="98" pragmaType="inline" parentfunction="knn_vote" off="0" region="0" recursive="0"/>
+<pragma file="digitrec.cpp" line="172" pragmaType="unroll" parentfunction="knn_vote" factor="-1" skip_exit_check="0"/>
+<pragma file="digitrec.cpp" line="162" pragmaType="pipeline" parentfunction="knn_vote" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="digitrec.cpp" line="134" pragmaType="pipeline" parentfunction="knn_vote" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="digitrec.cpp" line="138" pragmaType="unroll" parentfunction="knn_vote" factor="-1" skip_exit_check="0"/>
+<pragma file="digitrec.cpp" line="144" pragmaType="unroll" parentfunction="knn_vote" factor="-1" skip_exit_check="0"/>
+<pragma file="digitrec.cpp" line="124" pragmaType="unroll" parentfunction="knn_vote" factor="-1" skip_exit_check="0"/>
+<pragma file="digitrec.cpp" line="117" pragmaType="unroll" parentfunction="knn_vote" factor="-1" skip_exit_check="0"/>
+<pragma file="digitrec.cpp" line="104" pragmaType="array_partition" parentfunction="knn_vote" dim="0" factor="0" mode="complete" dynamic="0" variable="min_distance_list"/>
+<pragma file="digitrec.cpp" line="107" pragmaType="array_partition" parentfunction="knn_vote" dim="0" factor="0" mode="complete" dynamic="0" variable="label_list"/>
+<pragma file="digitrec.cpp" line="110" pragmaType="array_partition" parentfunction="knn_vote" dim="0" factor="0" mode="complete" dynamic="0" variable="vote_list"/>
+<pragma file="digitrec.cpp" line="206" pragmaType="pipeline" parentfunction="DigitRec" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="digitrec.cpp" line="255" pragmaType="pipeline" parentfunction="DigitRec" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="digitrec.cpp" line="229" pragmaType="unroll" parentfunction="DigitRec" factor="-1" skip_exit_check="0"/>
+<pragma file="digitrec.cpp" line="217" pragmaType="pipeline" parentfunction="DigitRec" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="digitrec.cpp" line="213" pragmaType="pipeline" parentfunction="DigitRec" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="digitrec.cpp" line="191" pragmaType="array_partition" parentfunction="DigitRec" dim="0" factor="0" mode="complete" dynamic="0" variable="knn_set"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="175" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<256, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+</pragmas>

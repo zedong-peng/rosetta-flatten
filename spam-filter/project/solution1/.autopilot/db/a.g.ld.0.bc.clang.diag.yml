@@ -1,0 +1,115 @@
+--- !Passed
+Pass:            reflow-pragma-conflict-handle
+Name:            FunctionPragmaConflictWarn
+DebugLoc:        { File: sgd.cpp, Line: 101, Column: 0 }
+Function:        _Z9read_dataP7ap_uintILi512EEP8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'In function '''
+  - Function:        'read_data(ap_uint<512>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 101, Column: 0 }
+  - String:          ''', '
+  - String:          'Pragma conflict happens on '''
+  - String:          INLINE
+  - String:          ''' and '
+  - String:          DATAFLOW
+  - String:          ' pragmas: '
+  - String:          Inline into dataflow region may break the canonical form
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 163, Column: 12 }
+Function:        _Z7Sigmoid8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'useLUT(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: sgd.cpp, Line: 138, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Sigmoid(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: sgd.cpp, Line: 154, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 238, Column: 3 }
+Function:        _Z7computeP8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EE7ap_uintILi8EEPS_ILi16ELi4ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'updateParameter(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: sgd.cpp, Line: 190, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 224, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 236, Column: 3 }
+Function:        _Z7computeP8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EE7ap_uintILi8EEPS_ILi16ELi4ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'computeGradient(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: sgd.cpp, Line: 172, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 224, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 234, Column: 22 }
+Function:        _Z7computeP8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EE7ap_uintILi8EEPS_ILi16ELi4ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Sigmoid(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: sgd.cpp, Line: 154, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 224, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 232, Column: 21 }
+Function:        _Z7computeP8ap_fixedILi32ELi13EL9ap_q_mode5EL9ap_o_mode3ELi0EE7ap_uintILi8EEPS_ILi16ELi4ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dotProduct(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 224, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 286, Column: 5 }
+Function:        _Z5SgdLRP7ap_uintILi512EEPS_ILi32EES1_bb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'streamOut(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<512>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 206, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'SgdLR(ap_uint<512>*, ap_uint<32>*, ap_uint<512>*, bool, bool)'
+    DebugLoc:        { File: sgd.cpp, Line: 249, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sgd.cpp, Line: 280, Column: 5 }
+Function:        _Z5SgdLRP7ap_uintILi512EEPS_ILi32EES1_bb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'read_data(ap_uint<512>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: sgd.cpp, Line: 101, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'SgdLR(ap_uint<512>*, ap_uint<32>*, ap_uint<512>*, bool, bool)'
+    DebugLoc:        { File: sgd.cpp, Line: 249, Column: 0 }
+  - String:          ''''
+...

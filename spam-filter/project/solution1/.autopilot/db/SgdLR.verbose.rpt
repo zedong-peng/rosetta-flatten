@@ -1,0 +1,712 @@
+
+
+================================================================
+== Vitis HLS Report for 'SgdLR'
+================================================================
+* Date:           Tue Dec 17 15:07:17 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.541 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+    |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |  13897126|  13899894|  0.139 sec|  0.139 sec|  13897127|  13899895|       no|
+    +----------+----------+-----------+-----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------+---------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+        |                                     |                           |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+        |               Instance              |           Module          |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+        +-------------------------------------+---------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+        |grp_SgdLR_Pipeline_LABEL_CP_fu_56    |SgdLR_Pipeline_LABEL_CP    |      2252|      2252|  22.520 us|  22.520 us|      2252|      2252|       no|
+        |grp_dataflow_parent_loop_proc_fu_64  |dataflow_parent_loop_proc  |  13897123|  13897123|  0.139 sec|  0.139 sec|  13897123|  13897123|       no|
+        |grp_SgdLR_Pipeline_STREAM_OUT_fu_78  |SgdLR_Pipeline_STREAM_OUT  |       514|       514|   5.140 us|   5.140 us|       514|       514|       no|
+        +-------------------------------------+---------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        6|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        6|     6|     1570|     3984|    0|
+|Memory               |        6|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|      157|    -|
+|Register             |        -|     -|       11|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       12|     6|     1581|     4147|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------+---------------------------+---------+----+------+------+-----+
+    |               Instance              |           Module          | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------+---------------------------+---------+----+------+------+-----+
+    |grp_SgdLR_Pipeline_LABEL_CP_fu_56    |SgdLR_Pipeline_LABEL_CP    |        0|   0|    55|   194|    0|
+    |grp_SgdLR_Pipeline_STREAM_OUT_fu_78  |SgdLR_Pipeline_STREAM_OUT  |        0|   0|   480|   378|    0|
+    |grp_dataflow_parent_loop_proc_fu_64  |dataflow_parent_loop_proc  |        6|   6|  1035|  3412|    0|
+    +-------------------------------------+---------------------------+---------+----+------+------+-----+
+    |Total                                |                           |        6|   6|  1570|  3984|    0|
+    +-------------------------------------+---------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |      Memory     |            Module           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |label_local_V_U  |label_local_V_RAM_AUTO_1R1W  |        4|  0|   0|    0|  4500|    8|     1|        36000|
+    |theta_local_V_U  |theta_local_V_RAM_AUTO_1R1W  |        2|  0|   0|    0|  1024|   32|     1|        32768|
+    +-----------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total            |                             |        6|  0|   0|    0|  5524|   40|     2|        68768|
+    +-----------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                     Variable Name                    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state6_on_subcall_done                       |       and|   0|  0|   2|           1|           1|
+    |ap_sync_grp_dataflow_parent_loop_proc_fu_64_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_dataflow_parent_loop_proc_fu_64_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                 |          |   0|  0|   6|           3|           3|
+    +------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  37|          7|    1|          7|
+    |label_local_V_address0  |  14|          3|   13|         39|
+    |label_local_V_ce0       |  14|          3|    1|          3|
+    |label_local_V_ce1       |   9|          2|    1|          2|
+    |label_local_V_we0       |   9|          2|    1|          2|
+    |label_local_V_we1       |   9|          2|    1|          2|
+    |theta_local_V_address0  |  14|          3|   10|         30|
+    |theta_local_V_address1  |  14|          3|   10|         30|
+    |theta_local_V_ce0       |  14|          3|    1|          3|
+    |theta_local_V_ce1       |  14|          3|    1|          3|
+    |theta_local_V_we0       |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 157|         33|   41|        123|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------+---+----+-----+-----------+
+    |                           Name                           | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                 |  6|   0|    6|          0|
+    |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_64_ap_done   |  1|   0|    1|          0|
+    |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_64_ap_ready  |  1|   0|    1|          0|
+    |grp_SgdLR_Pipeline_LABEL_CP_fu_56_ap_start_reg            |  1|   0|    1|          0|
+    |grp_SgdLR_Pipeline_STREAM_OUT_fu_78_ap_start_reg          |  1|   0|    1|          0|
+    |grp_dataflow_parent_loop_proc_fu_64_ap_start_reg          |  1|   0|    1|          0|
+    +----------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                     | 11|   0|   11|          0|
+    +----------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------+-----+-----+------------+--------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|         SgdLR|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|         SgdLR|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|         SgdLR|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|         SgdLR|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|         SgdLR|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|         SgdLR|  return value|
+|data_address0     |  out|   18|   ap_memory|          data|         array|
+|data_ce0          |  out|    1|   ap_memory|          data|         array|
+|data_q0           |   in|  512|   ap_memory|          data|         array|
+|label_r_address0  |  out|   11|   ap_memory|       label_r|         array|
+|label_r_ce0       |  out|    1|   ap_memory|       label_r|         array|
+|label_r_q0        |   in|   32|   ap_memory|       label_r|         array|
+|theta_address0    |  out|    6|   ap_memory|         theta|         array|
+|theta_ce0         |  out|    1|   ap_memory|         theta|         array|
+|theta_we0         |  out|    1|   ap_memory|         theta|         array|
+|theta_d0          |  out|  512|   ap_memory|         theta|         array|
+|readLabels        |   in|    1|     ap_none|    readLabels|        scalar|
+|writeOutput       |   in|    1|     ap_none|   writeOutput|        scalar|
++------------------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 3 
+2 --> 3 
+3 --> 4 
+4 --> 5 6 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%spectopmodule_ln244 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_4" [sgd.cpp:244]   --->   Operation 7 'spectopmodule' 'spectopmodule_ln244' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %data, void @empty_10, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %data"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %label_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %label_r"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %theta, void @empty_10, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %theta"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %readLabels"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %readLabels, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %writeOutput"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %writeOutput, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%writeOutput_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %writeOutput" [sgd.cpp:247]   --->   Operation 18 'read' 'writeOutput_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%readLabels_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %readLabels" [sgd.cpp:247]   --->   Operation 19 'read' 'readLabels_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln260 = br i1 %readLabels_read, void %TRAINING_INST, void %LABEL_CP_INNER.preheader" [sgd.cpp:260]   --->   Operation 20 'br' 'br_ln260' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln0 = call void @SgdLR_Pipeline_LABEL_CP, i32 %label_r, i8 %label_local_V"   --->   Operation 21 'call' 'call_ln0' <Predicate = (readLabels_read)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln0 = call void @SgdLR_Pipeline_LABEL_CP, i32 %label_r, i8 %label_local_V"   --->   Operation 22 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln0 = br void %TRAINING_INST"   --->   Operation 23 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln0 = call void @dataflow_parent_loop_proc, i512 %data, i16 %training_instance_V, i32 %theta_local_V, i10 %lut_V, i8 %label_local_V"   --->   Operation 24 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dataflow_parent_loop_proc, i512 %data, i16 %training_instance_V, i32 %theta_local_V, i10 %lut_V, i8 %label_local_V"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln285 = br i1 %writeOutput_read, void %if.end44, void %for.body.i.preheader" [sgd.cpp:285]   --->   Operation 26 'br' 'br_ln285' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 27 [2/2] (0.00ns)   --->   "%call_ln0 = call void @SgdLR_Pipeline_STREAM_OUT, i512 %theta, i32 %theta_local_V"   --->   Operation 27 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 28 [1/2] (0.00ns)   --->   "%call_ln0 = call void @SgdLR_Pipeline_STREAM_OUT, i512 %theta, i32 %theta_local_V"   --->   Operation 28 'call' 'call_ln0' <Predicate = (writeOutput_read)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end44"   --->   Operation 29 'br' 'br_ln0' <Predicate = (writeOutput_read)> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln287 = ret" [sgd.cpp:287]   --->   Operation 30 'ret' 'ret_ln287' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ data]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ label_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ theta]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ readLabels]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ writeOutput]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ label_local_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[20]; IO mode=ap_memory:ce=0
+Port [ training_instance_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ theta_local_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ lut_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+spectopmodule_ln244 (spectopmodule) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+writeOutput_read    (read         ) [ 0011111]
+readLabels_read     (read         ) [ 0100000]
+br_ln260            (br           ) [ 0000000]
+call_ln0            (call         ) [ 0000000]
+br_ln0              (br           ) [ 0000000]
+call_ln0            (call         ) [ 0000000]
+br_ln285            (br           ) [ 0000000]
+call_ln0            (call         ) [ 0000000]
+br_ln0              (br           ) [ 0000000]
+ret_ln287           (ret          ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="data">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="label_r">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="label_r"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="theta">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="theta"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="readLabels">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="readLabels"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="writeOutput">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="writeOutput"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="label_local_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="label_local_V"/><MemPortTyVec>2 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="training_instance_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="training_instance_V"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="theta_local_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="theta_local_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="lut_V">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="lut_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_10"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="SgdLR_Pipeline_LABEL_CP"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dataflow_parent_loop_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="SgdLR_Pipeline_STREAM_OUT"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="writeOutput_read_read_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="1" slack="0"/>
+<pin id="46" dir="0" index="1" bw="1" slack="0"/>
+<pin id="47" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="writeOutput_read/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="readLabels_read_read_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="1" slack="0"/>
+<pin id="52" dir="0" index="1" bw="1" slack="0"/>
+<pin id="53" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="readLabels_read/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="grp_SgdLR_Pipeline_LABEL_CP_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="0" slack="0"/>
+<pin id="58" dir="0" index="1" bw="32" slack="0"/>
+<pin id="59" dir="0" index="2" bw="8" slack="0"/>
+<pin id="60" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="grp_dataflow_parent_loop_proc_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="0" slack="0"/>
+<pin id="66" dir="0" index="1" bw="512" slack="0"/>
+<pin id="67" dir="0" index="2" bw="16" slack="0"/>
+<pin id="68" dir="0" index="3" bw="32" slack="0"/>
+<pin id="69" dir="0" index="4" bw="10" slack="0"/>
+<pin id="70" dir="0" index="5" bw="8" slack="0"/>
+<pin id="71" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/3 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="grp_SgdLR_Pipeline_STREAM_OUT_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="0" slack="0"/>
+<pin id="80" dir="0" index="1" bw="512" slack="0"/>
+<pin id="81" dir="0" index="2" bw="32" slack="0"/>
+<pin id="82" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/5 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1005" name="writeOutput_read_reg_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="1" slack="3"/>
+<pin id="88" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="writeOutput_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="48"><net_src comp="36" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="49"><net_src comp="8" pin="0"/><net_sink comp="44" pin=1"/></net>
+
+<net id="54"><net_src comp="36" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="6" pin="0"/><net_sink comp="50" pin=1"/></net>
+
+<net id="61"><net_src comp="38" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="62"><net_src comp="2" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="63"><net_src comp="10" pin="0"/><net_sink comp="56" pin=2"/></net>
+
+<net id="72"><net_src comp="40" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="73"><net_src comp="0" pin="0"/><net_sink comp="64" pin=1"/></net>
+
+<net id="74"><net_src comp="12" pin="0"/><net_sink comp="64" pin=2"/></net>
+
+<net id="75"><net_src comp="14" pin="0"/><net_sink comp="64" pin=3"/></net>
+
+<net id="76"><net_src comp="16" pin="0"/><net_sink comp="64" pin=4"/></net>
+
+<net id="77"><net_src comp="10" pin="0"/><net_sink comp="64" pin=5"/></net>
+
+<net id="83"><net_src comp="42" pin="0"/><net_sink comp="78" pin=0"/></net>
+
+<net id="84"><net_src comp="4" pin="0"/><net_sink comp="78" pin=1"/></net>
+
+<net id="85"><net_src comp="14" pin="0"/><net_sink comp="78" pin=2"/></net>
+
+<net id="89"><net_src comp="44" pin="2"/><net_sink comp="86" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: theta | {5 6 }
+	Port: label_local_V | {1 2 }
+	Port: training_instance_V | {3 4 }
+	Port: theta_local_V | {3 4 }
+ - Input state : 
+	Port: SgdLR : data | {3 4 }
+	Port: SgdLR : label_r | {1 2 }
+	Port: SgdLR : readLabels | {1 }
+	Port: SgdLR : writeOutput | {1 }
+	Port: SgdLR : label_local_V | {3 4 }
+	Port: SgdLR : training_instance_V | {3 4 }
+	Port: SgdLR : theta_local_V | {3 4 5 6 }
+	Port: SgdLR : lut_V | {3 4 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|           Functional Unit           |   BRAM  |   DSP   |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|-------------------------------------|---------|---------|---------|---------|---------|---------|
+|          |  grp_SgdLR_Pipeline_LABEL_CP_fu_56  |    0    |    0    |  1.935  |    63   |    74   |    0    |
+|   call   | grp_dataflow_parent_loop_proc_fu_64 |    2    |    6    |  4.644  |   1012  |   2971  |    0    |
+|          | grp_SgdLR_Pipeline_STREAM_OUT_fu_78 |    0    |    0    |  0.986  |   633   |   154   |    0    |
+|----------|-------------------------------------|---------|---------|---------|---------|---------|---------|
+|   read   |     writeOutput_read_read_fu_44     |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |      readLabels_read_read_fu_50     |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|-------------------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                                     |    2    |    6    |  7.565  |   1708  |   3199  |    0    |
+|----------|-------------------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
++-------------------+--------+--------+--------+--------+
+|                   |  BRAM  |   FF   |   LUT  |  URAM  |
++-------------------+--------+--------+--------+--------+
+|   label_local_V   |    4   |    0   |    0   |    0   |
+|       lut_V       |    2   |    0   |    0   |    -   |
+|   theta_local_V   |    2   |    0   |    0   |    0   |
+|training_instance_V|    1   |    0   |    0   |    0   |
++-------------------+--------+--------+--------+--------+
+|       Total       |    9   |    0   |    0   |    0   |
++-------------------+--------+--------+--------+--------+
+
+* Register list:
++-----------------------+--------+
+|                       |   FF   |
++-----------------------+--------+
+|writeOutput_read_reg_86|    1   |
++-----------------------+--------+
+|         Total         |    1   |
++-----------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    2   |    6   |    7   |  1708  |  3199  |    0   |
+|   Memory  |    9   |    -   |    -   |    0   |    0   |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    1   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   11   |    6   |    7   |  1709  |  3199  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

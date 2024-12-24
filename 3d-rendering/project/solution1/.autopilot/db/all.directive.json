@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "rendering",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/data\/zedongpeng\/HLSBatchProcessor\/data\/kernels\/rosetta_flatten\/3d-rendering\/run_hls.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "rendering"
+              }]
+          }
+        }]
+    }]}

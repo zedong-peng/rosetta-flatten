@@ -1,0 +1,572 @@
+
+
+================================================================
+== Vitis HLS Report for 'rendering'
+================================================================
+* Date:           Tue Dec 17 15:07:05 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.051 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+----------+------------+-------+------------+---------+
+    |   Latency (cycles)   |   Latency (absolute)  |      Interval      | Pipeline|
+    |   min   |     max    |    min   |     max    |  min  |     max    |   Type  |
+    +---------+------------+----------+------------+-------+------------+---------+
+    |    86612|  1046938124|  0.866 ms|  10.469 sec|  86613|  1046938125|       no|
+    +---------+------------+----------+------------+-------+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+------------+-------------+-----------+-----------+------+----------+
+        |             |   Latency (cycles)   |  Iteration  |  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |     max    |   Latency   |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+------------+-------------+-----------+-----------+------+----------+
+        |- TRIANGLES  |    70224|  1046921736|  22 ~ 327983|          -|          -|  3192|        no|
+        +-------------+---------+------------+-------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 11 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 2 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%rhs = alloca i32 1"   --->   Operation 12 'alloca' 'rhs' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x0_V_1 = alloca i32 1"   --->   Operation 13 'alloca' 'triangle_2ds_same_x0_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y0_V_1 = alloca i32 1"   --->   Operation 14 'alloca' 'triangle_2ds_same_y0_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x1_V_1 = alloca i32 1"   --->   Operation 15 'alloca' 'triangle_2ds_same_x1_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y1_V_1 = alloca i32 1"   --->   Operation 16 'alloca' 'triangle_2ds_same_y1_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x2_V_1 = alloca i32 1"   --->   Operation 17 'alloca' 'triangle_2ds_same_x2_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y2_V_1 = alloca i32 1"   --->   Operation 18 'alloca' 'triangle_2ds_same_y2_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%triangle_2ds_same_z_V_1 = alloca i32 1"   --->   Operation 19 'alloca' 'triangle_2ds_same_z_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%max_min_V_0_1 = alloca i32 1"   --->   Operation 20 'alloca' 'max_min_V_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%max_min_V_1_1 = alloca i32 1"   --->   Operation 21 'alloca' 'max_min_V_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%max_min_V_2_1 = alloca i32 1"   --->   Operation 22 'alloca' 'max_min_V_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%max_min_V_3_1 = alloca i32 1"   --->   Operation 23 'alloca' 'max_min_V_3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%max_min_V_4_1 = alloca i32 1"   --->   Operation 24 'alloca' 'max_min_V_4_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%max_index_V_0_1 = alloca i32 1"   --->   Operation 25 'alloca' 'max_index_V_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%spectopmodule_ln295 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_4" [rendering.cpp:295]   --->   Operation 26 'spectopmodule' 'spectopmodule_ln295' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_r, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %input_r"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %output_r"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%fragment_x_V = alloca i64 1" [rendering.cpp:303]   --->   Operation 31 'alloca' 'fragment_x_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%fragment_y_V = alloca i64 1" [rendering.cpp:303]   --->   Operation 32 'alloca' 'fragment_y_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%fragment_z_V = alloca i64 1" [rendering.cpp:303]   --->   Operation 33 'alloca' 'fragment_z_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%fragment_color_V = alloca i64 1" [rendering.cpp:303]   --->   Operation 34 'alloca' 'fragment_color_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%pixels_x_V = alloca i64 1" [rendering.cpp:306]   --->   Operation 35 'alloca' 'pixels_x_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%pixels_y_V = alloca i64 1" [rendering.cpp:306]   --->   Operation 36 'alloca' 'pixels_y_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%pixels_color_V = alloca i64 1" [rendering.cpp:306]   --->   Operation 37 'alloca' 'pixels_color_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%frame_buffer_0 = alloca i64 1"   --->   Operation 38 'alloca' 'frame_buffer_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%frame_buffer_1 = alloca i64 1"   --->   Operation 39 'alloca' 'frame_buffer_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%frame_buffer_2 = alloca i64 1"   --->   Operation 40 'alloca' 'frame_buffer_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%frame_buffer_3 = alloca i64 1"   --->   Operation 41 'alloca' 'frame_buffer_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%frame_buffer_4 = alloca i64 1"   --->   Operation 42 'alloca' 'frame_buffer_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%frame_buffer_5 = alloca i64 1"   --->   Operation 43 'alloca' 'frame_buffer_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%frame_buffer_6 = alloca i64 1"   --->   Operation 44 'alloca' 'frame_buffer_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%frame_buffer_7 = alloca i64 1"   --->   Operation 45 'alloca' 'frame_buffer_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%frame_buffer_8 = alloca i64 1"   --->   Operation 46 'alloca' 'frame_buffer_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%frame_buffer_9 = alloca i64 1"   --->   Operation 47 'alloca' 'frame_buffer_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%frame_buffer_10 = alloca i64 1"   --->   Operation 48 'alloca' 'frame_buffer_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%frame_buffer_11 = alloca i64 1"   --->   Operation 49 'alloca' 'frame_buffer_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%frame_buffer_12 = alloca i64 1"   --->   Operation 50 'alloca' 'frame_buffer_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%frame_buffer_13 = alloca i64 1"   --->   Operation 51 'alloca' 'frame_buffer_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%frame_buffer_14 = alloca i64 1"   --->   Operation 52 'alloca' 'frame_buffer_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%frame_buffer_15 = alloca i64 1"   --->   Operation 53 'alloca' 'frame_buffer_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%frame_buffer_16 = alloca i64 1"   --->   Operation 54 'alloca' 'frame_buffer_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%frame_buffer_17 = alloca i64 1"   --->   Operation 55 'alloca' 'frame_buffer_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%frame_buffer_18 = alloca i64 1"   --->   Operation 56 'alloca' 'frame_buffer_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%frame_buffer_19 = alloca i64 1"   --->   Operation 57 'alloca' 'frame_buffer_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%frame_buffer_20 = alloca i64 1"   --->   Operation 58 'alloca' 'frame_buffer_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%frame_buffer_21 = alloca i64 1"   --->   Operation 59 'alloca' 'frame_buffer_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%frame_buffer_22 = alloca i64 1"   --->   Operation 60 'alloca' 'frame_buffer_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%frame_buffer_23 = alloca i64 1"   --->   Operation 61 'alloca' 'frame_buffer_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%frame_buffer_24 = alloca i64 1"   --->   Operation 62 'alloca' 'frame_buffer_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%frame_buffer_25 = alloca i64 1"   --->   Operation 63 'alloca' 'frame_buffer_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%frame_buffer_26 = alloca i64 1"   --->   Operation 64 'alloca' 'frame_buffer_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%frame_buffer_27 = alloca i64 1"   --->   Operation 65 'alloca' 'frame_buffer_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%frame_buffer_28 = alloca i64 1"   --->   Operation 66 'alloca' 'frame_buffer_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%frame_buffer_29 = alloca i64 1"   --->   Operation 67 'alloca' 'frame_buffer_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%frame_buffer_30 = alloca i64 1"   --->   Operation 68 'alloca' 'frame_buffer_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%frame_buffer_31 = alloca i64 1"   --->   Operation 69 'alloca' 'frame_buffer_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%frame_buffer_32 = alloca i64 1"   --->   Operation 70 'alloca' 'frame_buffer_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%frame_buffer_33 = alloca i64 1"   --->   Operation 71 'alloca' 'frame_buffer_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%frame_buffer_34 = alloca i64 1"   --->   Operation 72 'alloca' 'frame_buffer_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%frame_buffer_35 = alloca i64 1"   --->   Operation 73 'alloca' 'frame_buffer_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%frame_buffer_36 = alloca i64 1"   --->   Operation 74 'alloca' 'frame_buffer_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%frame_buffer_37 = alloca i64 1"   --->   Operation 75 'alloca' 'frame_buffer_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%frame_buffer_38 = alloca i64 1"   --->   Operation 76 'alloca' 'frame_buffer_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%frame_buffer_39 = alloca i64 1"   --->   Operation 77 'alloca' 'frame_buffer_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%frame_buffer_40 = alloca i64 1"   --->   Operation 78 'alloca' 'frame_buffer_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%frame_buffer_41 = alloca i64 1"   --->   Operation 79 'alloca' 'frame_buffer_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%frame_buffer_42 = alloca i64 1"   --->   Operation 80 'alloca' 'frame_buffer_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%frame_buffer_43 = alloca i64 1"   --->   Operation 81 'alloca' 'frame_buffer_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%frame_buffer_44 = alloca i64 1"   --->   Operation 82 'alloca' 'frame_buffer_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%frame_buffer_45 = alloca i64 1"   --->   Operation 83 'alloca' 'frame_buffer_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%frame_buffer_46 = alloca i64 1"   --->   Operation 84 'alloca' 'frame_buffer_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%frame_buffer_47 = alloca i64 1"   --->   Operation 85 'alloca' 'frame_buffer_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%frame_buffer_48 = alloca i64 1"   --->   Operation 86 'alloca' 'frame_buffer_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%frame_buffer_49 = alloca i64 1"   --->   Operation 87 'alloca' 'frame_buffer_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%frame_buffer_50 = alloca i64 1"   --->   Operation 88 'alloca' 'frame_buffer_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%frame_buffer_51 = alloca i64 1"   --->   Operation 89 'alloca' 'frame_buffer_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%frame_buffer_52 = alloca i64 1"   --->   Operation 90 'alloca' 'frame_buffer_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%frame_buffer_53 = alloca i64 1"   --->   Operation 91 'alloca' 'frame_buffer_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%frame_buffer_54 = alloca i64 1"   --->   Operation 92 'alloca' 'frame_buffer_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%frame_buffer_55 = alloca i64 1"   --->   Operation 93 'alloca' 'frame_buffer_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%frame_buffer_56 = alloca i64 1"   --->   Operation 94 'alloca' 'frame_buffer_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%frame_buffer_57 = alloca i64 1"   --->   Operation 95 'alloca' 'frame_buffer_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%frame_buffer_58 = alloca i64 1"   --->   Operation 96 'alloca' 'frame_buffer_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%frame_buffer_59 = alloca i64 1"   --->   Operation 97 'alloca' 'frame_buffer_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%frame_buffer_60 = alloca i64 1"   --->   Operation 98 'alloca' 'frame_buffer_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%frame_buffer_61 = alloca i64 1"   --->   Operation 99 'alloca' 'frame_buffer_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%frame_buffer_62 = alloca i64 1"   --->   Operation 100 'alloca' 'frame_buffer_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%frame_buffer_63 = alloca i64 1"   --->   Operation 101 'alloca' 'frame_buffer_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%frame_buffer_64 = alloca i64 1"   --->   Operation 102 'alloca' 'frame_buffer_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%frame_buffer_65 = alloca i64 1"   --->   Operation 103 'alloca' 'frame_buffer_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%frame_buffer_66 = alloca i64 1"   --->   Operation 104 'alloca' 'frame_buffer_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%frame_buffer_67 = alloca i64 1"   --->   Operation 105 'alloca' 'frame_buffer_67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%frame_buffer_68 = alloca i64 1"   --->   Operation 106 'alloca' 'frame_buffer_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%frame_buffer_69 = alloca i64 1"   --->   Operation 107 'alloca' 'frame_buffer_69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%frame_buffer_70 = alloca i64 1"   --->   Operation 108 'alloca' 'frame_buffer_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%frame_buffer_71 = alloca i64 1"   --->   Operation 109 'alloca' 'frame_buffer_71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%frame_buffer_72 = alloca i64 1"   --->   Operation 110 'alloca' 'frame_buffer_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%frame_buffer_73 = alloca i64 1"   --->   Operation 111 'alloca' 'frame_buffer_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%frame_buffer_74 = alloca i64 1"   --->   Operation 112 'alloca' 'frame_buffer_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%frame_buffer_75 = alloca i64 1"   --->   Operation 113 'alloca' 'frame_buffer_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%frame_buffer_76 = alloca i64 1"   --->   Operation 114 'alloca' 'frame_buffer_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%frame_buffer_77 = alloca i64 1"   --->   Operation 115 'alloca' 'frame_buffer_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%frame_buffer_78 = alloca i64 1"   --->   Operation 116 'alloca' 'frame_buffer_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%frame_buffer_79 = alloca i64 1"   --->   Operation 117 'alloca' 'frame_buffer_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%frame_buffer_80 = alloca i64 1"   --->   Operation 118 'alloca' 'frame_buffer_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%frame_buffer_81 = alloca i64 1"   --->   Operation 119 'alloca' 'frame_buffer_81' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%frame_buffer_82 = alloca i64 1"   --->   Operation 120 'alloca' 'frame_buffer_82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%frame_buffer_83 = alloca i64 1"   --->   Operation 121 'alloca' 'frame_buffer_83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%frame_buffer_84 = alloca i64 1"   --->   Operation 122 'alloca' 'frame_buffer_84' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%frame_buffer_85 = alloca i64 1"   --->   Operation 123 'alloca' 'frame_buffer_85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%frame_buffer_86 = alloca i64 1"   --->   Operation 124 'alloca' 'frame_buffer_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%frame_buffer_87 = alloca i64 1"   --->   Operation 125 'alloca' 'frame_buffer_87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%frame_buffer_88 = alloca i64 1"   --->   Operation 126 'alloca' 'frame_buffer_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%frame_buffer_89 = alloca i64 1"   --->   Operation 127 'alloca' 'frame_buffer_89' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%frame_buffer_90 = alloca i64 1"   --->   Operation 128 'alloca' 'frame_buffer_90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%frame_buffer_91 = alloca i64 1"   --->   Operation 129 'alloca' 'frame_buffer_91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%frame_buffer_92 = alloca i64 1"   --->   Operation 130 'alloca' 'frame_buffer_92' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%frame_buffer_93 = alloca i64 1"   --->   Operation 131 'alloca' 'frame_buffer_93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%frame_buffer_94 = alloca i64 1"   --->   Operation 132 'alloca' 'frame_buffer_94' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%frame_buffer_95 = alloca i64 1"   --->   Operation 133 'alloca' 'frame_buffer_95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%frame_buffer_96 = alloca i64 1"   --->   Operation 134 'alloca' 'frame_buffer_96' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%frame_buffer_97 = alloca i64 1"   --->   Operation 135 'alloca' 'frame_buffer_97' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%frame_buffer_98 = alloca i64 1"   --->   Operation 136 'alloca' 'frame_buffer_98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%frame_buffer_99 = alloca i64 1"   --->   Operation 137 'alloca' 'frame_buffer_99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%frame_buffer_100 = alloca i64 1"   --->   Operation 138 'alloca' 'frame_buffer_100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%frame_buffer_101 = alloca i64 1"   --->   Operation 139 'alloca' 'frame_buffer_101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%frame_buffer_102 = alloca i64 1"   --->   Operation 140 'alloca' 'frame_buffer_102' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%frame_buffer_103 = alloca i64 1"   --->   Operation 141 'alloca' 'frame_buffer_103' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%frame_buffer_104 = alloca i64 1"   --->   Operation 142 'alloca' 'frame_buffer_104' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%frame_buffer_105 = alloca i64 1"   --->   Operation 143 'alloca' 'frame_buffer_105' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%frame_buffer_106 = alloca i64 1"   --->   Operation 144 'alloca' 'frame_buffer_106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%frame_buffer_107 = alloca i64 1"   --->   Operation 145 'alloca' 'frame_buffer_107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%frame_buffer_108 = alloca i64 1"   --->   Operation 146 'alloca' 'frame_buffer_108' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%frame_buffer_109 = alloca i64 1"   --->   Operation 147 'alloca' 'frame_buffer_109' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%frame_buffer_110 = alloca i64 1"   --->   Operation 148 'alloca' 'frame_buffer_110' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%frame_buffer_111 = alloca i64 1"   --->   Operation 149 'alloca' 'frame_buffer_111' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%frame_buffer_112 = alloca i64 1"   --->   Operation 150 'alloca' 'frame_buffer_112' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%frame_buffer_113 = alloca i64 1"   --->   Operation 151 'alloca' 'frame_buffer_113' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%frame_buffer_114 = alloca i64 1"   --->   Operation 152 'alloca' 'frame_buffer_114' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%frame_buffer_115 = alloca i64 1"   --->   Operation 153 'alloca' 'frame_buffer_115' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%frame_buffer_116 = alloca i64 1"   --->   Operation 154 'alloca' 'frame_buffer_116' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%frame_buffer_117 = alloca i64 1"   --->   Operation 155 'alloca' 'frame_buffer_117' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%frame_buffer_118 = alloca i64 1"   --->   Operation 156 'alloca' 'frame_buffer_118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%frame_buffer_119 = alloca i64 1"   --->   Operation 157 'alloca' 'frame_buffer_119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%frame_buffer_120 = alloca i64 1"   --->   Operation 158 'alloca' 'frame_buffer_120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%frame_buffer_121 = alloca i64 1"   --->   Operation 159 'alloca' 'frame_buffer_121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%frame_buffer_122 = alloca i64 1"   --->   Operation 160 'alloca' 'frame_buffer_122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%frame_buffer_123 = alloca i64 1"   --->   Operation 161 'alloca' 'frame_buffer_123' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%frame_buffer_124 = alloca i64 1"   --->   Operation 162 'alloca' 'frame_buffer_124' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%frame_buffer_125 = alloca i64 1"   --->   Operation 163 'alloca' 'frame_buffer_125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%frame_buffer_126 = alloca i64 1"   --->   Operation 164 'alloca' 'frame_buffer_126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%frame_buffer_127 = alloca i64 1"   --->   Operation 165 'alloca' 'frame_buffer_127' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%frame_buffer_128 = alloca i64 1"   --->   Operation 166 'alloca' 'frame_buffer_128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%frame_buffer_129 = alloca i64 1"   --->   Operation 167 'alloca' 'frame_buffer_129' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%frame_buffer_130 = alloca i64 1"   --->   Operation 168 'alloca' 'frame_buffer_130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%frame_buffer_131 = alloca i64 1"   --->   Operation 169 'alloca' 'frame_buffer_131' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%frame_buffer_132 = alloca i64 1"   --->   Operation 170 'alloca' 'frame_buffer_132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%frame_buffer_133 = alloca i64 1"   --->   Operation 171 'alloca' 'frame_buffer_133' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%frame_buffer_134 = alloca i64 1"   --->   Operation 172 'alloca' 'frame_buffer_134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%frame_buffer_135 = alloca i64 1"   --->   Operation 173 'alloca' 'frame_buffer_135' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%frame_buffer_136 = alloca i64 1"   --->   Operation 174 'alloca' 'frame_buffer_136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%frame_buffer_137 = alloca i64 1"   --->   Operation 175 'alloca' 'frame_buffer_137' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%frame_buffer_138 = alloca i64 1"   --->   Operation 176 'alloca' 'frame_buffer_138' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%frame_buffer_139 = alloca i64 1"   --->   Operation 177 'alloca' 'frame_buffer_139' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%frame_buffer_140 = alloca i64 1"   --->   Operation 178 'alloca' 'frame_buffer_140' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%frame_buffer_141 = alloca i64 1"   --->   Operation 179 'alloca' 'frame_buffer_141' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%frame_buffer_142 = alloca i64 1"   --->   Operation 180 'alloca' 'frame_buffer_142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%frame_buffer_143 = alloca i64 1"   --->   Operation 181 'alloca' 'frame_buffer_143' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%frame_buffer_144 = alloca i64 1"   --->   Operation 182 'alloca' 'frame_buffer_144' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%frame_buffer_145 = alloca i64 1"   --->   Operation 183 'alloca' 'frame_buffer_145' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%frame_buffer_146 = alloca i64 1"   --->   Operation 184 'alloca' 'frame_buffer_146' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%frame_buffer_147 = alloca i64 1"   --->   Operation 185 'alloca' 'frame_buffer_147' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%frame_buffer_148 = alloca i64 1"   --->   Operation 186 'alloca' 'frame_buffer_148' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%frame_buffer_149 = alloca i64 1"   --->   Operation 187 'alloca' 'frame_buffer_149' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%frame_buffer_150 = alloca i64 1"   --->   Operation 188 'alloca' 'frame_buffer_150' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%frame_buffer_151 = alloca i64 1"   --->   Operation 189 'alloca' 'frame_buffer_151' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%frame_buffer_152 = alloca i64 1"   --->   Operation 190 'alloca' 'frame_buffer_152' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%frame_buffer_153 = alloca i64 1"   --->   Operation 191 'alloca' 'frame_buffer_153' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%frame_buffer_154 = alloca i64 1"   --->   Operation 192 'alloca' 'frame_buffer_154' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%frame_buffer_155 = alloca i64 1"   --->   Operation 193 'alloca' 'frame_buffer_155' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%frame_buffer_156 = alloca i64 1"   --->   Operation 194 'alloca' 'frame_buffer_156' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%frame_buffer_157 = alloca i64 1"   --->   Operation 195 'alloca' 'frame_buffer_157' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%frame_buffer_158 = alloca i64 1"   --->   Operation 196 'alloca' 'frame_buffer_158' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%frame_buffer_159 = alloca i64 1"   --->   Operation 197 'alloca' 'frame_buffer_159' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%frame_buffer_160 = alloca i64 1"   --->   Operation 198 'alloca' 'frame_buffer_160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%frame_buffer_161 = alloca i64 1"   --->   Operation 199 'alloca' 'frame_buffer_161' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%frame_buffer_162 = alloca i64 1"   --->   Operation 200 'alloca' 'frame_buffer_162' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%frame_buffer_163 = alloca i64 1"   --->   Operation 201 'alloca' 'frame_buffer_163' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%frame_buffer_164 = alloca i64 1"   --->   Operation 202 'alloca' 'frame_buffer_164' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%frame_buffer_165 = alloca i64 1"   --->   Operation 203 'alloca' 'frame_buffer_165' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%frame_buffer_166 = alloca i64 1"   --->   Operation 204 'alloca' 'frame_buffer_166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%frame_buffer_167 = alloca i64 1"   --->   Operation 205 'alloca' 'frame_buffer_167' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%frame_buffer_168 = alloca i64 1"   --->   Operation 206 'alloca' 'frame_buffer_168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%frame_buffer_169 = alloca i64 1"   --->   Operation 207 'alloca' 'frame_buffer_169' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%frame_buffer_170 = alloca i64 1"   --->   Operation 208 'alloca' 'frame_buffer_170' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%frame_buffer_171 = alloca i64 1"   --->   Operation 209 'alloca' 'frame_buffer_171' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%frame_buffer_172 = alloca i64 1"   --->   Operation 210 'alloca' 'frame_buffer_172' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%frame_buffer_173 = alloca i64 1"   --->   Operation 211 'alloca' 'frame_buffer_173' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%frame_buffer_174 = alloca i64 1"   --->   Operation 212 'alloca' 'frame_buffer_174' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%frame_buffer_175 = alloca i64 1"   --->   Operation 213 'alloca' 'frame_buffer_175' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%frame_buffer_176 = alloca i64 1"   --->   Operation 214 'alloca' 'frame_buffer_176' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%frame_buffer_177 = alloca i64 1"   --->   Operation 215 'alloca' 'frame_buffer_177' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%frame_buffer_178 = alloca i64 1"   --->   Operation 216 'alloca' 'frame_buffer_178' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%frame_buffer_179 = alloca i64 1"   --->   Operation 217 'alloca' 'frame_buffer_179' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%frame_buffer_180 = alloca i64 1"   --->   Operation 218 'alloca' 'frame_buffer_180' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%frame_buffer_181 = alloca i64 1"   --->   Operation 219 'alloca' 'frame_buffer_181' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%frame_buffer_182 = alloca i64 1"   --->   Operation 220 'alloca' 'frame_buffer_182' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%frame_buffer_183 = alloca i64 1"   --->   Operation 221 'alloca' 'frame_buffer_183' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%frame_buffer_184 = alloca i64 1"   --->   Operation 222 'alloca' 'frame_buffer_184' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%frame_buffer_185 = alloca i64 1"   --->   Operation 223 'alloca' 'frame_buffer_185' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%frame_buffer_186 = alloca i64 1"   --->   Operation 224 'alloca' 'frame_buffer_186' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%frame_buffer_187 = alloca i64 1"   --->   Operation 225 'alloca' 'frame_buffer_187' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%frame_buffer_188 = alloca i64 1"   --->   Operation 226 'alloca' 'frame_buffer_188' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%frame_buffer_189 = alloca i64 1"   --->   Operation 227 'alloca' 'frame_buffer_189' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%frame_buffer_190 = alloca i64 1"   --->   Operation 228 'alloca' 'frame_buffer_190' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 229 [1/1] (0.00ns)   --->   "%frame_buffer_191 = alloca i64 1"   --->   Operation 229 'alloca' 'frame_buffer_191' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%frame_buffer_192 = alloca i64 1"   --->   Operation 230 'alloca' 'frame_buffer_192' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%frame_buffer_193 = alloca i64 1"   --->   Operation 231 'alloca' 'frame_buffer_193' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "%frame_buffer_194 = alloca i64 1"   --->   Operation 232 'alloca' 'frame_buffer_194' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%frame_buffer_195 = alloca i64 1"   --->   Operation 233 'alloca' 'frame_buffer_195' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%frame_buffer_196 = alloca i64 1"   --->   Operation 234 'alloca' 'frame_buffer_196' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%frame_buffer_197 = alloca i64 1"   --->   Operation 235 'alloca' 'frame_buffer_197' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%frame_buffer_198 = alloca i64 1"   --->   Operation 236 'alloca' 'frame_buffer_198' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%frame_buffer_199 = alloca i64 1"   --->   Operation 237 'alloca' 'frame_buffer_199' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%frame_buffer_200 = alloca i64 1"   --->   Operation 238 'alloca' 'frame_buffer_200' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%frame_buffer_201 = alloca i64 1"   --->   Operation 239 'alloca' 'frame_buffer_201' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "%frame_buffer_202 = alloca i64 1"   --->   Operation 240 'alloca' 'frame_buffer_202' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%frame_buffer_203 = alloca i64 1"   --->   Operation 241 'alloca' 'frame_buffer_203' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%frame_buffer_204 = alloca i64 1"   --->   Operation 242 'alloca' 'frame_buffer_204' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%frame_buffer_205 = alloca i64 1"   --->   Operation 243 'alloca' 'frame_buffer_205' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "%frame_buffer_206 = alloca i64 1"   --->   Operation 244 'alloca' 'frame_buffer_206' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%frame_buffer_207 = alloca i64 1"   --->   Operation 245 'alloca' 'frame_buffer_207' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "%frame_buffer_208 = alloca i64 1"   --->   Operation 246 'alloca' 'frame_buffer_208' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 247 [1/1] (0.00ns)   --->   "%frame_buffer_209 = alloca i64 1"   --->   Operation 247 'alloca' 'frame_buffer_209' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "%frame_buffer_210 = alloca i64 1"   --->   Operation 248 'alloca' 'frame_buffer_210' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%frame_buffer_211 = alloca i64 1"   --->   Operation 249 'alloca' 'frame_buffer_211' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "%frame_buffer_212 = alloca i64 1"   --->   Operation 250 'alloca' 'frame_buffer_212' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%frame_buffer_213 = alloca i64 1"   --->   Operation 251 'alloca' 'frame_buffer_213' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 252 [1/1] (0.00ns)   --->   "%frame_buffer_214 = alloca i64 1"   --->   Operation 252 'alloca' 'frame_buffer_214' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%frame_buffer_215 = alloca i64 1"   --->   Operation 253 'alloca' 'frame_buffer_215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "%frame_buffer_216 = alloca i64 1"   --->   Operation 254 'alloca' 'frame_buffer_216' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 255 [1/1] (0.00ns)   --->   "%frame_buffer_217 = alloca i64 1"   --->   Operation 255 'alloca' 'frame_buffer_217' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 256 [1/1] (0.00ns)   --->   "%frame_buffer_218 = alloca i64 1"   --->   Operation 256 'alloca' 'frame_buffer_218' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 257 [1/1] (0.00ns)   --->   "%frame_buffer_219 = alloca i64 1"   --->   Operation 257 'alloca' 'frame_buffer_219' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 258 [1/1] (0.00ns)   --->   "%frame_buffer_220 = alloca i64 1"   --->   Operation 258 'alloca' 'frame_buffer_220' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 259 [1/1] (0.00ns)   --->   "%frame_buffer_221 = alloca i64 1"   --->   Operation 259 'alloca' 'frame_buffer_221' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 260 [1/1] (0.00ns)   --->   "%frame_buffer_222 = alloca i64 1"   --->   Operation 260 'alloca' 'frame_buffer_222' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 261 [1/1] (0.00ns)   --->   "%frame_buffer_223 = alloca i64 1"   --->   Operation 261 'alloca' 'frame_buffer_223' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 262 [1/1] (0.00ns)   --->   "%frame_buffer_224 = alloca i64 1"   --->   Operation 262 'alloca' 'frame_buffer_224' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 263 [1/1] (0.00ns)   --->   "%frame_buffer_225 = alloca i64 1"   --->   Operation 263 'alloca' 'frame_buffer_225' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "%frame_buffer_226 = alloca i64 1"   --->   Operation 264 'alloca' 'frame_buffer_226' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 265 [1/1] (0.00ns)   --->   "%frame_buffer_227 = alloca i64 1"   --->   Operation 265 'alloca' 'frame_buffer_227' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "%frame_buffer_228 = alloca i64 1"   --->   Operation 266 'alloca' 'frame_buffer_228' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 267 [1/1] (0.00ns)   --->   "%frame_buffer_229 = alloca i64 1"   --->   Operation 267 'alloca' 'frame_buffer_229' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 268 [1/1] (0.00ns)   --->   "%frame_buffer_230 = alloca i64 1"   --->   Operation 268 'alloca' 'frame_buffer_230' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 269 [1/1] (0.00ns)   --->   "%frame_buffer_231 = alloca i64 1"   --->   Operation 269 'alloca' 'frame_buffer_231' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 270 [1/1] (0.00ns)   --->   "%frame_buffer_232 = alloca i64 1"   --->   Operation 270 'alloca' 'frame_buffer_232' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%frame_buffer_233 = alloca i64 1"   --->   Operation 271 'alloca' 'frame_buffer_233' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 272 [1/1] (0.00ns)   --->   "%frame_buffer_234 = alloca i64 1"   --->   Operation 272 'alloca' 'frame_buffer_234' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 273 [1/1] (0.00ns)   --->   "%frame_buffer_235 = alloca i64 1"   --->   Operation 273 'alloca' 'frame_buffer_235' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 274 [1/1] (0.00ns)   --->   "%frame_buffer_236 = alloca i64 1"   --->   Operation 274 'alloca' 'frame_buffer_236' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%frame_buffer_237 = alloca i64 1"   --->   Operation 275 'alloca' 'frame_buffer_237' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 276 [1/1] (0.00ns)   --->   "%frame_buffer_238 = alloca i64 1"   --->   Operation 276 'alloca' 'frame_buffer_238' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 277 [1/1] (0.00ns)   --->   "%frame_buffer_239 = alloca i64 1"   --->   Operation 277 'alloca' 'frame_buffer_239' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 278 [1/1] (0.00ns)   --->   "%frame_buffer_240 = alloca i64 1"   --->   Operation 278 'alloca' 'frame_buffer_240' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 279 [1/1] (0.00ns)   --->   "%frame_buffer_241 = alloca i64 1"   --->   Operation 279 'alloca' 'frame_buffer_241' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 280 [1/1] (0.00ns)   --->   "%frame_buffer_242 = alloca i64 1"   --->   Operation 280 'alloca' 'frame_buffer_242' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 281 [1/1] (0.00ns)   --->   "%frame_buffer_243 = alloca i64 1"   --->   Operation 281 'alloca' 'frame_buffer_243' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 282 [1/1] (0.00ns)   --->   "%frame_buffer_244 = alloca i64 1"   --->   Operation 282 'alloca' 'frame_buffer_244' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 283 [1/1] (0.00ns)   --->   "%frame_buffer_245 = alloca i64 1"   --->   Operation 283 'alloca' 'frame_buffer_245' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 284 [1/1] (0.00ns)   --->   "%frame_buffer_246 = alloca i64 1"   --->   Operation 284 'alloca' 'frame_buffer_246' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 285 [1/1] (0.00ns)   --->   "%frame_buffer_247 = alloca i64 1"   --->   Operation 285 'alloca' 'frame_buffer_247' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 286 [1/1] (0.00ns)   --->   "%frame_buffer_248 = alloca i64 1"   --->   Operation 286 'alloca' 'frame_buffer_248' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 287 [1/1] (0.00ns)   --->   "%frame_buffer_249 = alloca i64 1"   --->   Operation 287 'alloca' 'frame_buffer_249' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 288 [1/1] (0.00ns)   --->   "%frame_buffer_250 = alloca i64 1"   --->   Operation 288 'alloca' 'frame_buffer_250' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 289 [1/1] (0.00ns)   --->   "%frame_buffer_251 = alloca i64 1"   --->   Operation 289 'alloca' 'frame_buffer_251' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 290 [1/1] (0.00ns)   --->   "%frame_buffer_252 = alloca i64 1"   --->   Operation 290 'alloca' 'frame_buffer_252' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 291 [1/1] (0.00ns)   --->   "%frame_buffer_253 = alloca i64 1"   --->   Operation 291 'alloca' 'frame_buffer_253' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 292 [1/1] (0.00ns)   --->   "%frame_buffer_254 = alloca i64 1"   --->   Operation 292 'alloca' 'frame_buffer_254' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 293 [1/1] (0.00ns)   --->   "%frame_buffer_255 = alloca i64 1"   --->   Operation 293 'alloca' 'frame_buffer_255' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 294 [1/1] (0.38ns)   --->   "%store_ln316 = store i12 0, i12 %rhs" [rendering.cpp:316]   --->   Operation 294 'store' 'store_ln316' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 295 [1/1] (0.00ns)   --->   "%br_ln316 = br void %for.inc" [rendering.cpp:316]   --->   Operation 295 'br' 'br_ln316' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.01>
+ST_2 : Operation 296 [1/1] (0.00ns)   --->   "%i_V_1 = load i12 %rhs"   --->   Operation 296 'load' 'i_V_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 297 [1/1] (0.62ns)   --->   "%icmp_ln1027 = icmp_eq  i12 %i_V_1, i12 3192"   --->   Operation 297 'icmp' 'icmp_ln1027' <Predicate = true> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 298 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3192, i64 3192, i64 3192"   --->   Operation 298 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 299 [1/1] (0.74ns)   --->   "%i_V = add i12 %i_V_1, i12 1"   --->   Operation 299 'add' 'i_V' <Predicate = true> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 300 [1/1] (0.00ns)   --->   "%br_ln316 = br i1 %icmp_ln1027, void %for.inc.split, void %for.body4.i.preheader" [rendering.cpp:316]   --->   Operation 300 'br' 'br_ln316' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 301 [1/1] (0.00ns)   --->   "%zext_ln1494 = zext i12 %i_V_1"   --->   Operation 301 'zext' 'zext_ln1494' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 302 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i12.i2, i12 %i_V_1, i2 0"   --->   Operation 302 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 303 [1/1] (0.76ns)   --->   "%ret_V_3 = sub i14 %shl_ln, i14 %zext_ln1494"   --->   Operation 303 'sub' 'ret_V_3' <Predicate = (!icmp_ln1027)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 304 [1/1] (0.00ns)   --->   "%zext_ln541 = zext i14 %ret_V_3"   --->   Operation 304 'zext' 'zext_ln541' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 305 [1/1] (0.00ns)   --->   "%input_r_addr = getelementptr i32 %input_r, i64 0, i64 %zext_ln541" [rendering.cpp:318]   --->   Operation 305 'getelementptr' 'input_r_addr' <Predicate = (!icmp_ln1027)> <Delay = 0.00>
+ST_2 : Operation 306 [2/2] (1.24ns)   --->   "%input_lo_V = load i14 %input_r_addr" [rendering.cpp:318]   --->   Operation 306 'load' 'input_lo_V' <Predicate = (!icmp_ln1027)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9576> <RAM>
+ST_2 : Operation 307 [1/1] (0.38ns)   --->   "%store_ln316 = store i12 %i_V, i12 %rhs" [rendering.cpp:316]   --->   Operation 307 'store' 'store_ln316' <Predicate = (!icmp_ln1027)> <Delay = 0.38>
+ST_2 : Operation 308 [2/2] (0.00ns)   --->   "%call_ln0 = call void @rendering_Pipeline_OUTPUT_FB_ROW_OUTPUT_FB_COL, i6 %frame_buffer_0, i6 %frame_buffer_4, i6 %frame_buffer_8, i6 %frame_buffer_12, i6 %frame_buffer_16, i6 %frame_buffer_20, i6 %frame_buffer_24, i6 %frame_buffer_28, i6 %frame_buffer_32, i6 %frame_buffer_36, i6 %frame_buffer_40, i6 %frame_buffer_44, i6 %frame_buffer_48, i6 %frame_buffer_52, i6 %frame_buffer_56, i6 %frame_buffer_60, i6 %frame_buffer_64, i6 %frame_buffer_68, i6 %frame_buffer_72, i6 %frame_buffer_76, i6 %frame_buffer_80, i6 %frame_buffer_84, i6 %frame_buffer_88, i6 %frame_buffer_92, i6 %frame_buffer_96, i6 %frame_buffer_100, i6 %frame_buffer_104, i6 %frame_buffer_108, i6 %frame_buffer_112, i6 %frame_buffer_116, i6 %frame_buffer_120, i6 %frame_buffer_124, i6 %frame_buffer_128, i6 %frame_buffer_132, i6 %frame_buffer_136, i6 %frame_buffer_140, i6 %frame_buffer_144, i6 %frame_buffer_148, i6 %frame_buffer_152, i6 %frame_buffer_156, i6 %frame_buffer_160, i6 %frame_buffer_164, i6 %frame_buffer_168, i6 %frame_buffer_172, i6 %frame_buffer_176, i6 %frame_buffer_180, i6 %frame_buffer_184, i6 %frame_buffer_188, i6 %frame_buffer_192, i6 %frame_buffer_196, i6 %frame_buffer_200, i6 %frame_buffer_204, i6 %frame_buffer_208, i6 %frame_buffer_212, i6 %frame_buffer_216, i6 %frame_buffer_220, i6 %frame_buffer_224, i6 %frame_buffer_228, i6 %frame_buffer_232, i6 %frame_buffer_236, i6 %frame_buffer_240, i6 %frame_buffer_244, i6 %frame_buffer_248, i6 %frame_buffer_252, i6 %frame_buffer_1, i6 %frame_buffer_5, i6 %frame_buffer_9, i6 %frame_buffer_13, i6 %frame_buffer_17, i6 %frame_buffer_21, i6 %frame_buffer_25, i6 %frame_buffer_29, i6 %frame_buffer_33, i6 %frame_buffer_37, i6 %frame_buffer_41, i6 %frame_buffer_45, i6 %frame_buffer_49, i6 %frame_buffer_53, i6 %frame_buffer_57, i6 %frame_buffer_61, i6 %frame_buffer_65, i6 %frame_buffer_69, i6 %frame_buffer_73, i6 %frame_buffer_77, i6 %frame_buffer_81, i6 %frame_buffer_85, i6 %frame_buffer_89, i6 %frame_buffer_93, i6 %frame_buffer_97, i6 %frame_buffer_101, i6 %frame_buffer_105, i6 %frame_buffer_109, i6 %frame_buffer_113, i6 %frame_buffer_117, i6 %frame_buffer_121, i6 %frame_buffer_125, i6 %frame_buffer_129, i6 %frame_buffer_133, i6 %frame_buffer_137, i6 %frame_buffer_141, i6 %frame_buffer_145, i6 %frame_buffer_149, i6 %frame_buffer_153, i6 %frame_buffer_157, i6 %frame_buffer_161, i6 %frame_buffer_165, i6 %frame_buffer_169, i6 %frame_buffer_173, i6 %frame_buffer_177, i6 %frame_buffer_181, i6 %frame_buffer_185, i6 %frame_buffer_189, i6 %frame_buffer_193, i6 %frame_buffer_197, i6 %frame_buffer_201, i6 %frame_buffer_205, i6 %frame_buffer_209, i6 %frame_buffer_213, i6 %frame_buffer_217, i6 %frame_buffer_221, i6 %frame_buffer_225, i6 %frame_buffer_229, i6 %frame_buffer_233, i6 %frame_buffer_237, i6 %frame_buffer_241, i6 %frame_buffer_245, i6 %frame_buffer_249, i6 %frame_buffer_253, i6 %frame_buffer_2, i6 %frame_buffer_6, i6 %frame_buffer_10, i6 %frame_buffer_14, i6 %frame_buffer_18, i6 %frame_buffer_22, i6 %frame_buffer_26, i6 %frame_buffer_30, i6 %frame_buffer_34, i6 %frame_buffer_38, i6 %frame_buffer_42, i6 %frame_buffer_46, i6 %frame_buffer_50, i6 %frame_buffer_54, i6 %frame_buffer_58, i6 %frame_buffer_62, i6 %frame_buffer_66, i6 %frame_buffer_70, i6 %frame_buffer_74, i6 %frame_buffer_78, i6 %frame_buffer_82, i6 %frame_buffer_86, i6 %frame_buffer_90, i6 %frame_buffer_94, i6 %frame_buffer_98, i6 %frame_buffer_102, i6 %frame_buffer_106, i6 %frame_buffer_110, i6 %frame_buffer_114, i6 %frame_buffer_118, i6 %frame_buffer_122, i6 %frame_buffer_126, i6 %frame_buffer_130, i6 %frame_buffer_134, i6 %frame_buffer_138, i6 %frame_buffer_142, i6 %frame_buffer_146, i6 %frame_buffer_150, i6 %frame_buffer_154, i6 %frame_buffer_158, i6 %frame_buffer_162, i6 %frame_buffer_166, i6 %frame_buffer_170, i6 %frame_buffer_174, i6 %frame_buffer_178, i6 %frame_buffer_182, i6 %frame_buffer_186, i6 %frame_buffer_190, i6 %frame_buffer_194, i6 %frame_buffer_198, i6 %frame_buffer_202, i6 %frame_buffer_206, i6 %frame_buffer_210, i6 %frame_buffer_214, i6 %frame_buffer_218, i6 %frame_buffer_222, i6 %frame_buffer_226, i6 %frame_buffer_230, i6 %frame_buffer_234, i6 %frame_buffer_238, i6 %frame_buffer_242, i6 %frame_buffer_246, i6 %frame_buffer_250, i6 %frame_buffer_254, i6 %frame_buffer_3, i6 %frame_buffer_7, i6 %frame_buffer_11, i6 %frame_buffer_15, i6 %frame_buffer_19, i6 %frame_buffer_23, i6 %frame_buffer_27, i6 %frame_buffer_31, i6 %frame_buffer_35, i6 %frame_buffer_39, i6 %frame_buffer_43, i6 %frame_buffer_47, i6 %frame_buffer_51, i6 %frame_buffer_55, i6 %frame_buffer_59, i6 %frame_buffer_63, i6 %frame_buffer_67, i6 %frame_buffer_71, i6 %frame_buffer_75, i6 %frame_buffer_79, i6 %frame_buffer_83, i6 %frame_buffer_87, i6 %frame_buffer_91, i6 %frame_buffer_95, i6 %frame_buffer_99, i6 %frame_buffer_103, i6 %frame_buffer_107, i6 %frame_buffer_111, i6 %frame_buffer_115, i6 %frame_buffer_119, i6 %frame_buffer_123, i6 %frame_buffer_127, i6 %frame_buffer_131, i6 %frame_buffer_135, i6 %frame_buffer_139, i6 %frame_buffer_143, i6 %frame_buffer_147, i6 %frame_buffer_151, i6 %frame_buffer_155, i6 %frame_buffer_159, i6 %frame_buffer_163, i6 %frame_buffer_167, i6 %frame_buffer_171, i6 %frame_buffer_175, i6 %frame_buffer_179, i6 %frame_buffer_183, i6 %frame_buffer_187, i6 %frame_buffer_191, i6 %frame_buffer_195, i6 %frame_buffer_199, i6 %frame_buffer_203, i6 %frame_buffer_207, i6 %frame_buffer_211, i6 %frame_buffer_215, i6 %frame_buffer_219, i6 %frame_buffer_223, i6 %frame_buffer_227, i6 %frame_buffer_231, i6 %frame_buffer_235, i6 %frame_buffer_239, i6 %frame_buffer_243, i6 %frame_buffer_247, i6 %frame_buffer_251, i6 %frame_buffer_255, i32 %output_r"   --->   Operation 308 'call' 'call_ln0' <Predicate = (icmp_ln1027)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.01>
+ST_3 : Operation 309 [1/2] (1.24ns)   --->   "%input_lo_V = load i14 %input_r_addr" [rendering.cpp:318]   --->   Operation 309 'load' 'input_lo_V' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9576> <RAM>
+ST_3 : Operation 310 [1/1] (0.76ns)   --->   "%ret_V = add i14 %ret_V_3, i14 1"   --->   Operation 310 'add' 'ret_V' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 311 [1/1] (0.00ns)   --->   "%zext_ln541_1 = zext i14 %ret_V"   --->   Operation 311 'zext' 'zext_ln541_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 312 [1/1] (0.00ns)   --->   "%input_r_addr_1 = getelementptr i32 %input_r, i64 0, i64 %zext_ln541_1" [rendering.cpp:319]   --->   Operation 312 'getelementptr' 'input_r_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 313 [2/2] (1.24ns)   --->   "%input_mi_V = load i14 %input_r_addr_1" [rendering.cpp:319]   --->   Operation 313 'load' 'input_mi_V' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9576> <RAM>
+ST_3 : Operation 314 [1/1] (0.76ns)   --->   "%ret_V_2 = add i14 %ret_V_3, i14 2"   --->   Operation 314 'add' 'ret_V_2' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 315 [1/1] (0.00ns)   --->   "%zext_ln541_2 = zext i14 %ret_V_2"   --->   Operation 315 'zext' 'zext_ln541_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 316 [1/1] (0.00ns)   --->   "%input_r_addr_2 = getelementptr i32 %input_r, i64 0, i64 %zext_ln541_2" [rendering.cpp:320]   --->   Operation 316 'getelementptr' 'input_r_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 317 [2/2] (1.24ns)   --->   "%input_hi_V = load i14 %input_r_addr_2" [rendering.cpp:320]   --->   Operation 317 'load' 'input_hi_V' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9576> <RAM>
+ST_3 : Operation 318 [1/1] (0.00ns)   --->   "%triangle_3ds_x0_V = trunc i32 %input_lo_V"   --->   Operation 318 'trunc' 'triangle_3ds_x0_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 319 [1/1] (0.00ns)   --->   "%triangle_3ds_y0_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %input_lo_V, i32 8, i32 15"   --->   Operation 319 'partselect' 'triangle_3ds_y0_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 320 [1/1] (0.00ns)   --->   "%triangle_3ds_z0_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %input_lo_V, i32 16, i32 23"   --->   Operation 320 'partselect' 'triangle_3ds_z0_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 321 [1/1] (0.00ns)   --->   "%triangle_3ds_x1_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %input_lo_V, i32 24, i32 31"   --->   Operation 321 'partselect' 'triangle_3ds_x1_V' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.05>
+ST_4 : Operation 322 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x0_V_1_load = load i8 %triangle_2ds_same_x0_V_1" [rendering.cpp:338]   --->   Operation 322 'load' 'triangle_2ds_same_x0_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 323 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y0_V_1_load = load i8 %triangle_2ds_same_y0_V_1" [rendering.cpp:338]   --->   Operation 323 'load' 'triangle_2ds_same_y0_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 324 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x1_V_1_load = load i8 %triangle_2ds_same_x1_V_1" [rendering.cpp:338]   --->   Operation 324 'load' 'triangle_2ds_same_x1_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 325 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y1_V_1_load = load i8 %triangle_2ds_same_y1_V_1" [rendering.cpp:338]   --->   Operation 325 'load' 'triangle_2ds_same_y1_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 326 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x2_V_1_load = load i8 %triangle_2ds_same_x2_V_1" [rendering.cpp:338]   --->   Operation 326 'load' 'triangle_2ds_same_x2_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 327 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y2_V_1_load = load i8 %triangle_2ds_same_y2_V_1" [rendering.cpp:338]   --->   Operation 327 'load' 'triangle_2ds_same_y2_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 328 [1/1] (0.00ns)   --->   "%triangle_2ds_same_z_V_1_load = load i8 %triangle_2ds_same_z_V_1" [rendering.cpp:338]   --->   Operation 328 'load' 'triangle_2ds_same_z_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 329 [1/1] (0.00ns)   --->   "%max_min_V_0_1_load = load i8 %max_min_V_0_1" [rendering.cpp:338]   --->   Operation 329 'load' 'max_min_V_0_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 330 [1/1] (0.00ns)   --->   "%max_min_V_1_1_load = load i8 %max_min_V_1_1" [rendering.cpp:338]   --->   Operation 330 'load' 'max_min_V_1_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 331 [1/1] (0.00ns)   --->   "%max_min_V_2_1_load = load i8 %max_min_V_2_1" [rendering.cpp:338]   --->   Operation 331 'load' 'max_min_V_2_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 332 [1/1] (0.00ns)   --->   "%max_min_V_3_1_load = load i8 %max_min_V_3_1" [rendering.cpp:338]   --->   Operation 332 'load' 'max_min_V_3_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 333 [1/1] (0.00ns)   --->   "%max_min_V_4_1_load = load i8 %max_min_V_4_1" [rendering.cpp:338]   --->   Operation 333 'load' 'max_min_V_4_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 334 [1/1] (0.00ns)   --->   "%max_index_V_0_1_load = load i16 %max_index_V_0_1" [rendering.cpp:338]   --->   Operation 334 'load' 'max_index_V_0_1_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 335 [1/2] (1.24ns)   --->   "%input_mi_V = load i14 %input_r_addr_1" [rendering.cpp:319]   --->   Operation 335 'load' 'input_mi_V' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9576> <RAM>
+ST_4 : Operation 336 [1/2] (1.24ns)   --->   "%input_hi_V = load i14 %input_r_addr_2" [rendering.cpp:320]   --->   Operation 336 'load' 'input_hi_V' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9576> <RAM>
+ST_4 : Operation 337 [1/1] (0.00ns)   --->   "%triangle_3ds_y1_V = trunc i32 %input_mi_V"   --->   Operation 337 'trunc' 'triangle_3ds_y1_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 338 [1/1] (0.00ns)   --->   "%triangle_3ds_z1_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %input_mi_V, i32 8, i32 15"   --->   Operation 338 'partselect' 'triangle_3ds_z1_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 339 [1/1] (0.00ns)   --->   "%triangle_3ds_x2_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %input_mi_V, i32 16, i32 23"   --->   Operation 339 'partselect' 'triangle_3ds_x2_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 340 [1/1] (0.00ns)   --->   "%triangle_3ds_y2_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %input_mi_V, i32 24, i32 31"   --->   Operation 340 'partselect' 'triangle_3ds_y2_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 341 [1/1] (0.00ns)   --->   "%triangle_3ds_z2_V = trunc i32 %input_hi_V"   --->   Operation 341 'trunc' 'triangle_3ds_z2_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 342 [1/1] (2.53ns)   --->   "%call_ret = call i56 @projection, i8 %triangle_3ds_x0_V, i8 %triangle_3ds_y0_V, i8 %triangle_3ds_z0_V, i8 %triangle_3ds_x1_V, i8 %triangle_3ds_y1_V, i8 %triangle_3ds_z1_V, i8 %triangle_3ds_x2_V, i8 %triangle_3ds_y2_V, i8 %triangle_3ds_z2_V" [rendering.cpp:337]   --->   Operation 342 'call' 'call_ret' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 343 [1/1] (0.00ns)   --->   "%triangle_2ds_x0_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 343 'extractvalue' 'triangle_2ds_x0_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 344 [1/1] (0.00ns)   --->   "%triangle_2ds_y0_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 344 'extractvalue' 'triangle_2ds_y0_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 345 [1/1] (0.00ns)   --->   "%triangle_2ds_x1_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 345 'extractvalue' 'triangle_2ds_x1_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 346 [1/1] (0.00ns)   --->   "%triangle_2ds_y1_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 346 'extractvalue' 'triangle_2ds_y1_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 347 [1/1] (0.00ns)   --->   "%triangle_2ds_x2_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 347 'extractvalue' 'triangle_2ds_x2_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 348 [1/1] (0.00ns)   --->   "%triangle_2ds_y2_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 348 'extractvalue' 'triangle_2ds_y2_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 349 [1/1] (0.00ns)   --->   "%triangle_2ds_z_V = extractvalue i56 %call_ret" [rendering.cpp:337]   --->   Operation 349 'extractvalue' 'triangle_2ds_z_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 350 [2/2] (3.26ns)   --->   "%call_ret1 = call i114 @rasterization1, i8 %triangle_2ds_x0_V, i8 %triangle_2ds_y0_V, i8 %triangle_2ds_x1_V, i8 %triangle_2ds_y1_V, i8 %triangle_2ds_x2_V, i8 %triangle_2ds_y2_V, i8 %triangle_2ds_z_V, i8 %max_min_V_0_1_load, i8 %max_min_V_1_1_load, i8 %max_min_V_2_1_load, i8 %max_min_V_3_1_load, i8 %max_min_V_4_1_load, i8 %triangle_2ds_same_x0_V_1_load, i8 %triangle_2ds_same_y0_V_1_load, i8 %triangle_2ds_same_x1_V_1_load, i8 %triangle_2ds_same_y1_V_1_load, i8 %triangle_2ds_same_x2_V_1_load, i8 %triangle_2ds_same_y2_V_1_load, i8 %triangle_2ds_same_z_V_1_load, i16 %max_index_V_0_1_load" [rendering.cpp:338]   --->   Operation 350 'call' 'call_ret1' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 5.46>
+ST_5 : Operation 351 [1/2] (3.59ns)   --->   "%call_ret1 = call i114 @rasterization1, i8 %triangle_2ds_x0_V, i8 %triangle_2ds_y0_V, i8 %triangle_2ds_x1_V, i8 %triangle_2ds_y1_V, i8 %triangle_2ds_x2_V, i8 %triangle_2ds_y2_V, i8 %triangle_2ds_z_V, i8 %max_min_V_0_1_load, i8 %max_min_V_1_1_load, i8 %max_min_V_2_1_load, i8 %max_min_V_3_1_load, i8 %max_min_V_4_1_load, i8 %triangle_2ds_same_x0_V_1_load, i8 %triangle_2ds_same_y0_V_1_load, i8 %triangle_2ds_same_x1_V_1_load, i8 %triangle_2ds_same_y1_V_1_load, i8 %triangle_2ds_same_x2_V_1_load, i8 %triangle_2ds_same_y2_V_1_load, i8 %triangle_2ds_same_z_V_1_load, i16 %max_index_V_0_1_load" [rendering.cpp:338]   --->   Operation 351 'call' 'call_ret1' <Predicate = true> <Delay = 3.59> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 352 [1/1] (0.00ns)   --->   "%ref_tmp = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 352 'extractvalue' 'ref_tmp' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 353 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x0_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 353 'extractvalue' 'triangle_2ds_same_x0_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 354 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y0_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 354 'extractvalue' 'triangle_2ds_same_y0_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 355 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x1_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 355 'extractvalue' 'triangle_2ds_same_x1_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 356 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y1_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 356 'extractvalue' 'triangle_2ds_same_y1_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 357 [1/1] (0.00ns)   --->   "%triangle_2ds_same_x2_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 357 'extractvalue' 'triangle_2ds_same_x2_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 358 [1/1] (0.00ns)   --->   "%triangle_2ds_same_y2_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 358 'extractvalue' 'triangle_2ds_same_y2_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 359 [1/1] (0.00ns)   --->   "%triangle_2ds_same_z_V = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 359 'extractvalue' 'triangle_2ds_same_z_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 360 [1/1] (0.00ns)   --->   "%max_min_V_0 = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 360 'extractvalue' 'max_min_V_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 361 [1/1] (0.00ns)   --->   "%max_min_V_1 = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 361 'extractvalue' 'max_min_V_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 362 [1/1] (0.00ns)   --->   "%max_min_V_2 = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 362 'extractvalue' 'max_min_V_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 363 [1/1] (0.00ns)   --->   "%max_min_V_3 = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 363 'extractvalue' 'max_min_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 364 [1/1] (0.00ns)   --->   "%max_min_V_4 = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 364 'extractvalue' 'max_min_V_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 365 [1/1] (0.00ns)   --->   "%max_index_V_0 = extractvalue i114 %call_ret1" [rendering.cpp:338]   --->   Operation 365 'extractvalue' 'max_index_V_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 366 [2/2] (1.87ns)   --->   "%ref_tmp1 = call i16 @rasterization2, i2 %ref_tmp, i8 %max_min_V_0, i8 %max_min_V_2, i8 %max_min_V_4, i16 %max_index_V_0, i8 %triangle_2ds_same_x0_V, i8 %triangle_2ds_same_y0_V, i8 %triangle_2ds_same_x1_V, i8 %triangle_2ds_same_y1_V, i8 %triangle_2ds_same_x2_V, i8 %triangle_2ds_same_y2_V, i8 %triangle_2ds_same_z_V, i8 %fragment_x_V, i8 %fragment_y_V, i8 %fragment_z_V, i6 %fragment_color_V" [rendering.cpp:339]   --->   Operation 366 'call' 'ref_tmp1' <Predicate = true> <Delay = 1.87> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 367 [1/1] (0.00ns)   --->   "%store_ln316 = store i16 %max_index_V_0, i16 %max_index_V_0_1" [rendering.cpp:316]   --->   Operation 367 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 368 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %max_min_V_4, i8 %max_min_V_4_1" [rendering.cpp:316]   --->   Operation 368 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 369 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %max_min_V_3, i8 %max_min_V_3_1" [rendering.cpp:316]   --->   Operation 369 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 370 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %max_min_V_2, i8 %max_min_V_2_1" [rendering.cpp:316]   --->   Operation 370 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 371 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %max_min_V_1, i8 %max_min_V_1_1" [rendering.cpp:316]   --->   Operation 371 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 372 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %max_min_V_0, i8 %max_min_V_0_1" [rendering.cpp:316]   --->   Operation 372 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 373 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_z_V, i8 %triangle_2ds_same_z_V_1" [rendering.cpp:316]   --->   Operation 373 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 374 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_y2_V, i8 %triangle_2ds_same_y2_V_1" [rendering.cpp:316]   --->   Operation 374 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 375 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_x2_V, i8 %triangle_2ds_same_x2_V_1" [rendering.cpp:316]   --->   Operation 375 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 376 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_y1_V, i8 %triangle_2ds_same_y1_V_1" [rendering.cpp:316]   --->   Operation 376 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 377 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_x1_V, i8 %triangle_2ds_same_x1_V_1" [rendering.cpp:316]   --->   Operation 377 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 378 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_y0_V, i8 %triangle_2ds_same_y0_V_1" [rendering.cpp:316]   --->   Operation 378 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 379 [1/1] (0.00ns)   --->   "%store_ln316 = store i8 %triangle_2ds_same_x0_V, i8 %triangle_2ds_same_x0_V_1" [rendering.cpp:316]   --->   Operation 379 'store' 'store_ln316' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 0.38>
+ST_6 : Operation 380 [1/2] (0.38ns)   --->   "%ref_tmp1 = call i16 @rasterization2, i2 %ref_tmp, i8 %max_min_V_0, i8 %max_min_V_2, i8 %max_min_V_4, i16 %max_index_V_0, i8 %triangle_2ds_same_x0_V, i8 %triangle_2ds_same_y0_V, i8 %triangle_2ds_same_x1_V, i8 %triangle_2ds_same_y1_V, i8 %triangle_2ds_same_x2_V, i8 %triangle_2ds_same_y2_V, i8 %triangle_2ds_same_z_V, i8 %fragment_x_V, i8 %fragment_y_V, i8 %fragment_z_V, i6 %fragment_color_V" [rendering.cpp:339]   --->   Operation 380 'call' 'ref_tmp1' <Predicate = true> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.62>
+ST_7 : Operation 381 [2/2] (0.62ns)   --->   "%ref_tmp2 = call i16 @zculling, i12 %i_V_1, i8 %fragment_x_V, i8 %fragment_y_V, i8 %fragment_z_V, i6 %fragment_color_V, i16 %ref_tmp1, i8 %pixels_x_V, i8 %pixels_y_V, i6 %pixels_color_V, i8 %z_buffer_V" [rendering.cpp:340]   --->   Operation 381 'call' 'ref_tmp2' <Predicate = true> <Delay = 0.62> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 382 [1/2] (0.00ns)   --->   "%ref_tmp2 = call i16 @zculling, i12 %i_V_1, i8 %fragment_x_V, i8 %fragment_y_V, i8 %fragment_z_V, i6 %fragment_color_V, i16 %ref_tmp1, i8 %pixels_x_V, i8 %pixels_y_V, i6 %pixels_color_V, i8 %z_buffer_V" [rendering.cpp:340]   --->   Operation 382 'call' 'ref_tmp2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.62>
+ST_9 : Operation 383 [2/2] (0.62ns)   --->   "%call_ln341 = call void @coloringFB, i12 %i_V_1, i16 %ref_tmp2, i8 %pixels_x_V, i8 %pixels_y_V, i6 %pixels_color_V, i6 %frame_buffer_0, i6 %frame_buffer_1, i6 %frame_buffer_2, i6 %frame_buffer_3, i6 %frame_buffer_4, i6 %frame_buffer_5, i6 %frame_buffer_6, i6 %frame_buffer_7, i6 %frame_buffer_8, i6 %frame_buffer_9, i6 %frame_buffer_10, i6 %frame_buffer_11, i6 %frame_buffer_12, i6 %frame_buffer_13, i6 %frame_buffer_14, i6 %frame_buffer_15, i6 %frame_buffer_16, i6 %frame_buffer_17, i6 %frame_buffer_18, i6 %frame_buffer_19, i6 %frame_buffer_20, i6 %frame_buffer_21, i6 %frame_buffer_22, i6 %frame_buffer_23, i6 %frame_buffer_24, i6 %frame_buffer_25, i6 %frame_buffer_26, i6 %frame_buffer_27, i6 %frame_buffer_28, i6 %frame_buffer_29, i6 %frame_buffer_30, i6 %frame_buffer_31, i6 %frame_buffer_32, i6 %frame_buffer_33, i6 %frame_buffer_34, i6 %frame_buffer_35, i6 %frame_buffer_36, i6 %frame_buffer_37, i6 %frame_buffer_38, i6 %frame_buffer_39, i6 %frame_buffer_40, i6 %frame_buffer_41, i6 %frame_buffer_42, i6 %frame_buffer_43, i6 %frame_buffer_44, i6 %frame_buffer_45, i6 %frame_buffer_46, i6 %frame_buffer_47, i6 %frame_buffer_48, i6 %frame_buffer_49, i6 %frame_buffer_50, i6 %frame_buffer_51, i6 %frame_buffer_52, i6 %frame_buffer_53, i6 %frame_buffer_54, i6 %frame_buffer_55, i6 %frame_buffer_56, i6 %frame_buffer_57, i6 %frame_buffer_58, i6 %frame_buffer_59, i6 %frame_buffer_60, i6 %frame_buffer_61, i6 %frame_buffer_62, i6 %frame_buffer_63, i6 %frame_buffer_64, i6 %frame_buffer_65, i6 %frame_buffer_66, i6 %frame_buffer_67, i6 %frame_buffer_68, i6 %frame_buffer_69, i6 %frame_buffer_70, i6 %frame_buffer_71, i6 %frame_buffer_72, i6 %frame_buffer_73, i6 %frame_buffer_74, i6 %frame_buffer_75, i6 %frame_buffer_76, i6 %frame_buffer_77, i6 %frame_buffer_78, i6 %frame_buffer_79, i6 %frame_buffer_80, i6 %frame_buffer_81, i6 %frame_buffer_82, i6 %frame_buffer_83, i6 %frame_buffer_84, i6 %frame_buffer_85, i6 %frame_buffer_86, i6 %frame_buffer_87, i6 %frame_buffer_88, i6 %frame_buffer_89, i6 %frame_buffer_90, i6 %frame_buffer_91, i6 %frame_buffer_92, i6 %frame_buffer_93, i6 %frame_buffer_94, i6 %frame_buffer_95, i6 %frame_buffer_96, i6 %frame_buffer_97, i6 %frame_buffer_98, i6 %frame_buffer_99, i6 %frame_buffer_100, i6 %frame_buffer_101, i6 %frame_buffer_102, i6 %frame_buffer_103, i6 %frame_buffer_104, i6 %frame_buffer_105, i6 %frame_buffer_106, i6 %frame_buffer_107, i6 %frame_buffer_108, i6 %frame_buffer_109, i6 %frame_buffer_110, i6 %frame_buffer_111, i6 %frame_buffer_112, i6 %frame_buffer_113, i6 %frame_buffer_114, i6 %frame_buffer_115, i6 %frame_buffer_116, i6 %frame_buffer_117, i6 %frame_buffer_118, i6 %frame_buffer_119, i6 %frame_buffer_120, i6 %frame_buffer_121, i6 %frame_buffer_122, i6 %frame_buffer_123, i6 %frame_buffer_124, i6 %frame_buffer_125, i6 %frame_buffer_126, i6 %frame_buffer_127, i6 %frame_buffer_128, i6 %frame_buffer_129, i6 %frame_buffer_130, i6 %frame_buffer_131, i6 %frame_buffer_132, i6 %frame_buffer_133, i6 %frame_buffer_134, i6 %frame_buffer_135, i6 %frame_buffer_136, i6 %frame_buffer_137, i6 %frame_buffer_138, i6 %frame_buffer_139, i6 %frame_buffer_140, i6 %frame_buffer_141, i6 %frame_buffer_142, i6 %frame_buffer_143, i6 %frame_buffer_144, i6 %frame_buffer_145, i6 %frame_buffer_146, i6 %frame_buffer_147, i6 %frame_buffer_148, i6 %frame_buffer_149, i6 %frame_buffer_150, i6 %frame_buffer_151, i6 %frame_buffer_152, i6 %frame_buffer_153, i6 %frame_buffer_154, i6 %frame_buffer_155, i6 %frame_buffer_156, i6 %frame_buffer_157, i6 %frame_buffer_158, i6 %frame_buffer_159, i6 %frame_buffer_160, i6 %frame_buffer_161, i6 %frame_buffer_162, i6 %frame_buffer_163, i6 %frame_buffer_164, i6 %frame_buffer_165, i6 %frame_buffer_166, i6 %frame_buffer_167, i6 %frame_buffer_168, i6 %frame_buffer_169, i6 %frame_buffer_170, i6 %frame_buffer_171, i6 %frame_buffer_172, i6 %frame_buffer_173, i6 %frame_buffer_174, i6 %frame_buffer_175, i6 %frame_buffer_176, i6 %frame_buffer_177, i6 %frame_buffer_178, i6 %frame_buffer_179, i6 %frame_buffer_180, i6 %frame_buffer_181, i6 %frame_buffer_182, i6 %frame_buffer_183, i6 %frame_buffer_184, i6 %frame_buffer_185, i6 %frame_buffer_186, i6 %frame_buffer_187, i6 %frame_buffer_188, i6 %frame_buffer_189, i6 %frame_buffer_190, i6 %frame_buffer_191, i6 %frame_buffer_192, i6 %frame_buffer_193, i6 %frame_buffer_194, i6 %frame_buffer_195, i6 %frame_buffer_196, i6 %frame_buffer_197, i6 %frame_buffer_198, i6 %frame_buffer_199, i6 %frame_buffer_200, i6 %frame_buffer_201, i6 %frame_buffer_202, i6 %frame_buffer_203, i6 %frame_buffer_204, i6 %frame_buffer_205, i6 %frame_buffer_206, i6 %frame_buffer_207, i6 %frame_buffer_208, i6 %frame_buffer_209, i6 %frame_buffer_210, i6 %frame_buffer_211, i6 %frame_buffer_212, i6 %frame_buffer_213, i6 %frame_buffer_214, i6 %frame_buffer_215, i6 %frame_buffer_216, i6 %frame_buffer_217, i6 %frame_buffer_218, i6 %frame_buffer_219, i6 %frame_buffer_220, i6 %frame_buffer_221, i6 %frame_buffer_222, i6 %frame_buffer_223, i6 %frame_buffer_224, i6 %frame_buffer_225, i6 %frame_buffer_226, i6 %frame_buffer_227, i6 %frame_buffer_228, i6 %frame_buffer_229, i6 %frame_buffer_230, i6 %frame_buffer_231, i6 %frame_buffer_232, i6 %frame_buffer_233, i6 %frame_buffer_234, i6 %frame_buffer_235, i6 %frame_buffer_236, i6 %frame_buffer_237, i6 %frame_buffer_238, i6 %frame_buffer_239, i6 %frame_buffer_240, i6 %frame_buffer_241, i6 %frame_buffer_242, i6 %frame_buffer_243, i6 %frame_buffer_244, i6 %frame_buffer_245, i6 %frame_buffer_246, i6 %frame_buffer_247, i6 %frame_buffer_248, i6 %frame_buffer_249, i6 %frame_buffer_250, i6 %frame_buffer_251, i6 %frame_buffer_252, i6 %frame_buffer_253, i6 %frame_buffer_254, i6 %frame_buffer_255" [rendering.cpp:341]   --->   Operation 383 'call' 'call_ln341' <Predicate = true> <Delay = 0.62> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 384 [1/1] (0.00ns)   --->   "%specloopname_ln1633 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6"   --->   Operation 384 'specloopname' 'specloopname_ln1633' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 385 [1/2] (0.00ns)   --->   "%call_ln341 = call void @coloringFB, i12 %i_V_1, i16 %ref_tmp2, i8 %pixels_x_V, i8 %pixels_y_V, i6 %pixels_color_V, i6 %frame_buffer_0, i6 %frame_buffer_1, i6 %frame_buffer_2, i6 %frame_buffer_3, i6 %frame_buffer_4, i6 %frame_buffer_5, i6 %frame_buffer_6, i6 %frame_buffer_7, i6 %frame_buffer_8, i6 %frame_buffer_9, i6 %frame_buffer_10, i6 %frame_buffer_11, i6 %frame_buffer_12, i6 %frame_buffer_13, i6 %frame_buffer_14, i6 %frame_buffer_15, i6 %frame_buffer_16, i6 %frame_buffer_17, i6 %frame_buffer_18, i6 %frame_buffer_19, i6 %frame_buffer_20, i6 %frame_buffer_21, i6 %frame_buffer_22, i6 %frame_buffer_23, i6 %frame_buffer_24, i6 %frame_buffer_25, i6 %frame_buffer_26, i6 %frame_buffer_27, i6 %frame_buffer_28, i6 %frame_buffer_29, i6 %frame_buffer_30, i6 %frame_buffer_31, i6 %frame_buffer_32, i6 %frame_buffer_33, i6 %frame_buffer_34, i6 %frame_buffer_35, i6 %frame_buffer_36, i6 %frame_buffer_37, i6 %frame_buffer_38, i6 %frame_buffer_39, i6 %frame_buffer_40, i6 %frame_buffer_41, i6 %frame_buffer_42, i6 %frame_buffer_43, i6 %frame_buffer_44, i6 %frame_buffer_45, i6 %frame_buffer_46, i6 %frame_buffer_47, i6 %frame_buffer_48, i6 %frame_buffer_49, i6 %frame_buffer_50, i6 %frame_buffer_51, i6 %frame_buffer_52, i6 %frame_buffer_53, i6 %frame_buffer_54, i6 %frame_buffer_55, i6 %frame_buffer_56, i6 %frame_buffer_57, i6 %frame_buffer_58, i6 %frame_buffer_59, i6 %frame_buffer_60, i6 %frame_buffer_61, i6 %frame_buffer_62, i6 %frame_buffer_63, i6 %frame_buffer_64, i6 %frame_buffer_65, i6 %frame_buffer_66, i6 %frame_buffer_67, i6 %frame_buffer_68, i6 %frame_buffer_69, i6 %frame_buffer_70, i6 %frame_buffer_71, i6 %frame_buffer_72, i6 %frame_buffer_73, i6 %frame_buffer_74, i6 %frame_buffer_75, i6 %frame_buffer_76, i6 %frame_buffer_77, i6 %frame_buffer_78, i6 %frame_buffer_79, i6 %frame_buffer_80, i6 %frame_buffer_81, i6 %frame_buffer_82, i6 %frame_buffer_83, i6 %frame_buffer_84, i6 %frame_buffer_85, i6 %frame_buffer_86, i6 %frame_buffer_87, i6 %frame_buffer_88, i6 %frame_buffer_89, i6 %frame_buffer_90, i6 %frame_buffer_91, i6 %frame_buffer_92, i6 %frame_buffer_93, i6 %frame_buffer_94, i6 %frame_buffer_95, i6 %frame_buffer_96, i6 %frame_buffer_97, i6 %frame_buffer_98, i6 %frame_buffer_99, i6 %frame_buffer_100, i6 %frame_buffer_101, i6 %frame_buffer_102, i6 %frame_buffer_103, i6 %frame_buffer_104, i6 %frame_buffer_105, i6 %frame_buffer_106, i6 %frame_buffer_107, i6 %frame_buffer_108, i6 %frame_buffer_109, i6 %frame_buffer_110, i6 %frame_buffer_111, i6 %frame_buffer_112, i6 %frame_buffer_113, i6 %frame_buffer_114, i6 %frame_buffer_115, i6 %frame_buffer_116, i6 %frame_buffer_117, i6 %frame_buffer_118, i6 %frame_buffer_119, i6 %frame_buffer_120, i6 %frame_buffer_121, i6 %frame_buffer_122, i6 %frame_buffer_123, i6 %frame_buffer_124, i6 %frame_buffer_125, i6 %frame_buffer_126, i6 %frame_buffer_127, i6 %frame_buffer_128, i6 %frame_buffer_129, i6 %frame_buffer_130, i6 %frame_buffer_131, i6 %frame_buffer_132, i6 %frame_buffer_133, i6 %frame_buffer_134, i6 %frame_buffer_135, i6 %frame_buffer_136, i6 %frame_buffer_137, i6 %frame_buffer_138, i6 %frame_buffer_139, i6 %frame_buffer_140, i6 %frame_buffer_141, i6 %frame_buffer_142, i6 %frame_buffer_143, i6 %frame_buffer_144, i6 %frame_buffer_145, i6 %frame_buffer_146, i6 %frame_buffer_147, i6 %frame_buffer_148, i6 %frame_buffer_149, i6 %frame_buffer_150, i6 %frame_buffer_151, i6 %frame_buffer_152, i6 %frame_buffer_153, i6 %frame_buffer_154, i6 %frame_buffer_155, i6 %frame_buffer_156, i6 %frame_buffer_157, i6 %frame_buffer_158, i6 %frame_buffer_159, i6 %frame_buffer_160, i6 %frame_buffer_161, i6 %frame_buffer_162, i6 %frame_buffer_163, i6 %frame_buffer_164, i6 %frame_buffer_165, i6 %frame_buffer_166, i6 %frame_buffer_167, i6 %frame_buffer_168, i6 %frame_buffer_169, i6 %frame_buffer_170, i6 %frame_buffer_171, i6 %frame_buffer_172, i6 %frame_buffer_173, i6 %frame_buffer_174, i6 %frame_buffer_175, i6 %frame_buffer_176, i6 %frame_buffer_177, i6 %frame_buffer_178, i6 %frame_buffer_179, i6 %frame_buffer_180, i6 %frame_buffer_181, i6 %frame_buffer_182, i6 %frame_buffer_183, i6 %frame_buffer_184, i6 %frame_buffer_185, i6 %frame_buffer_186, i6 %frame_buffer_187, i6 %frame_buffer_188, i6 %frame_buffer_189, i6 %frame_buffer_190, i6 %frame_buffer_191, i6 %frame_buffer_192, i6 %frame_buffer_193, i6 %frame_buffer_194, i6 %frame_buffer_195, i6 %frame_buffer_196, i6 %frame_buffer_197, i6 %frame_buffer_198, i6 %frame_buffer_199, i6 %frame_buffer_200, i6 %frame_buffer_201, i6 %frame_buffer_202, i6 %frame_buffer_203, i6 %frame_buffer_204, i6 %frame_buffer_205, i6 %frame_buffer_206, i6 %frame_buffer_207, i6 %frame_buffer_208, i6 %frame_buffer_209, i6 %frame_buffer_210, i6 %frame_buffer_211, i6 %frame_buffer_212, i6 %frame_buffer_213, i6 %frame_buffer_214, i6 %frame_buffer_215, i6 %frame_buffer_216, i6 %frame_buffer_217, i6 %frame_buffer_218, i6 %frame_buffer_219, i6 %frame_buffer_220, i6 %frame_buffer_221, i6 %frame_buffer_222, i6 %frame_buffer_223, i6 %frame_buffer_224, i6 %frame_buffer_225, i6 %frame_buffer_226, i6 %frame_buffer_227, i6 %frame_buffer_228, i6 %frame_buffer_229, i6 %frame_buffer_230, i6 %frame_buffer_231, i6 %frame_buffer_232, i6 %frame_buffer_233, i6 %frame_buffer_234, i6 %frame_buffer_235, i6 %frame_buffer_236, i6 %frame_buffer_237, i6 %frame_buffer_238, i6 %frame_buffer_239, i6 %frame_buffer_240, i6 %frame_buffer_241, i6 %frame_buffer_242, i6 %frame_buffer_243, i6 %frame_buffer_244, i6 %frame_buffer_245, i6 %frame_buffer_246, i6 %frame_buffer_247, i6 %frame_buffer_248, i6 %frame_buffer_249, i6 %frame_buffer_250, i6 %frame_buffer_251, i6 %frame_buffer_252, i6 %frame_buffer_253, i6 %frame_buffer_254, i6 %frame_buffer_255" [rendering.cpp:341]   --->   Operation 385 'call' 'call_ln341' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 386 [1/1] (0.00ns)   --->   "%br_ln316 = br void %for.inc" [rendering.cpp:316]   --->   Operation 386 'br' 'br_ln316' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 2> <Delay = 0.00>
+ST_11 : Operation 387 [1/2] (0.00ns)   --->   "%call_ln0 = call void @rendering_Pipeline_OUTPUT_FB_ROW_OUTPUT_FB_COL, i6 %frame_buffer_0, i6 %frame_buffer_4, i6 %frame_buffer_8, i6 %frame_buffer_12, i6 %frame_buffer_16, i6 %frame_buffer_20, i6 %frame_buffer_24, i6 %frame_buffer_28, i6 %frame_buffer_32, i6 %frame_buffer_36, i6 %frame_buffer_40, i6 %frame_buffer_44, i6 %frame_buffer_48, i6 %frame_buffer_52, i6 %frame_buffer_56, i6 %frame_buffer_60, i6 %frame_buffer_64, i6 %frame_buffer_68, i6 %frame_buffer_72, i6 %frame_buffer_76, i6 %frame_buffer_80, i6 %frame_buffer_84, i6 %frame_buffer_88, i6 %frame_buffer_92, i6 %frame_buffer_96, i6 %frame_buffer_100, i6 %frame_buffer_104, i6 %frame_buffer_108, i6 %frame_buffer_112, i6 %frame_buffer_116, i6 %frame_buffer_120, i6 %frame_buffer_124, i6 %frame_buffer_128, i6 %frame_buffer_132, i6 %frame_buffer_136, i6 %frame_buffer_140, i6 %frame_buffer_144, i6 %frame_buffer_148, i6 %frame_buffer_152, i6 %frame_buffer_156, i6 %frame_buffer_160, i6 %frame_buffer_164, i6 %frame_buffer_168, i6 %frame_buffer_172, i6 %frame_buffer_176, i6 %frame_buffer_180, i6 %frame_buffer_184, i6 %frame_buffer_188, i6 %frame_buffer_192, i6 %frame_buffer_196, i6 %frame_buffer_200, i6 %frame_buffer_204, i6 %frame_buffer_208, i6 %frame_buffer_212, i6 %frame_buffer_216, i6 %frame_buffer_220, i6 %frame_buffer_224, i6 %frame_buffer_228, i6 %frame_buffer_232, i6 %frame_buffer_236, i6 %frame_buffer_240, i6 %frame_buffer_244, i6 %frame_buffer_248, i6 %frame_buffer_252, i6 %frame_buffer_1, i6 %frame_buffer_5, i6 %frame_buffer_9, i6 %frame_buffer_13, i6 %frame_buffer_17, i6 %frame_buffer_21, i6 %frame_buffer_25, i6 %frame_buffer_29, i6 %frame_buffer_33, i6 %frame_buffer_37, i6 %frame_buffer_41, i6 %frame_buffer_45, i6 %frame_buffer_49, i6 %frame_buffer_53, i6 %frame_buffer_57, i6 %frame_buffer_61, i6 %frame_buffer_65, i6 %frame_buffer_69, i6 %frame_buffer_73, i6 %frame_buffer_77, i6 %frame_buffer_81, i6 %frame_buffer_85, i6 %frame_buffer_89, i6 %frame_buffer_93, i6 %frame_buffer_97, i6 %frame_buffer_101, i6 %frame_buffer_105, i6 %frame_buffer_109, i6 %frame_buffer_113, i6 %frame_buffer_117, i6 %frame_buffer_121, i6 %frame_buffer_125, i6 %frame_buffer_129, i6 %frame_buffer_133, i6 %frame_buffer_137, i6 %frame_buffer_141, i6 %frame_buffer_145, i6 %frame_buffer_149, i6 %frame_buffer_153, i6 %frame_buffer_157, i6 %frame_buffer_161, i6 %frame_buffer_165, i6 %frame_buffer_169, i6 %frame_buffer_173, i6 %frame_buffer_177, i6 %frame_buffer_181, i6 %frame_buffer_185, i6 %frame_buffer_189, i6 %frame_buffer_193, i6 %frame_buffer_197, i6 %frame_buffer_201, i6 %frame_buffer_205, i6 %frame_buffer_209, i6 %frame_buffer_213, i6 %frame_buffer_217, i6 %frame_buffer_221, i6 %frame_buffer_225, i6 %frame_buffer_229, i6 %frame_buffer_233, i6 %frame_buffer_237, i6 %frame_buffer_241, i6 %frame_buffer_245, i6 %frame_buffer_249, i6 %frame_buffer_253, i6 %frame_buffer_2, i6 %frame_buffer_6, i6 %frame_buffer_10, i6 %frame_buffer_14, i6 %frame_buffer_18, i6 %frame_buffer_22, i6 %frame_buffer_26, i6 %frame_buffer_30, i6 %frame_buffer_34, i6 %frame_buffer_38, i6 %frame_buffer_42, i6 %frame_buffer_46, i6 %frame_buffer_50, i6 %frame_buffer_54, i6 %frame_buffer_58, i6 %frame_buffer_62, i6 %frame_buffer_66, i6 %frame_buffer_70, i6 %frame_buffer_74, i6 %frame_buffer_78, i6 %frame_buffer_82, i6 %frame_buffer_86, i6 %frame_buffer_90, i6 %frame_buffer_94, i6 %frame_buffer_98, i6 %frame_buffer_102, i6 %frame_buffer_106, i6 %frame_buffer_110, i6 %frame_buffer_114, i6 %frame_buffer_118, i6 %frame_buffer_122, i6 %frame_buffer_126, i6 %frame_buffer_130, i6 %frame_buffer_134, i6 %frame_buffer_138, i6 %frame_buffer_142, i6 %frame_buffer_146, i6 %frame_buffer_150, i6 %frame_buffer_154, i6 %frame_buffer_158, i6 %frame_buffer_162, i6 %frame_buffer_166, i6 %frame_buffer_170, i6 %frame_buffer_174, i6 %frame_buffer_178, i6 %frame_buffer_182, i6 %frame_buffer_186, i6 %frame_buffer_190, i6 %frame_buffer_194, i6 %frame_buffer_198, i6 %frame_buffer_202, i6 %frame_buffer_206, i6 %frame_buffer_210, i6 %frame_buffer_214, i6 %frame_buffer_218, i6 %frame_buffer_222, i6 %frame_buffer_226, i6 %frame_buffer_230, i6 %frame_buffer_234, i6 %frame_buffer_238, i6 %frame_buffer_242, i6 %frame_buffer_246, i6 %frame_buffer_250, i6 %frame_buffer_254, i6 %frame_buffer_3, i6 %frame_buffer_7, i6 %frame_buffer_11, i6 %frame_buffer_15, i6 %frame_buffer_19, i6 %frame_buffer_23, i6 %frame_buffer_27, i6 %frame_buffer_31, i6 %frame_buffer_35, i6 %frame_buffer_39, i6 %frame_buffer_43, i6 %frame_buffer_47, i6 %frame_buffer_51, i6 %frame_buffer_55, i6 %frame_buffer_59, i6 %frame_buffer_63, i6 %frame_buffer_67, i6 %frame_buffer_71, i6 %frame_buffer_75, i6 %frame_buffer_79, i6 %frame_buffer_83, i6 %frame_buffer_87, i6 %frame_buffer_91, i6 %frame_buffer_95, i6 %frame_buffer_99, i6 %frame_buffer_103, i6 %frame_buffer_107, i6 %frame_buffer_111, i6 %frame_buffer_115, i6 %frame_buffer_119, i6 %frame_buffer_123, i6 %frame_buffer_127, i6 %frame_buffer_131, i6 %frame_buffer_135, i6 %frame_buffer_139, i6 %frame_buffer_143, i6 %frame_buffer_147, i6 %frame_buffer_151, i6 %frame_buffer_155, i6 %frame_buffer_159, i6 %frame_buffer_163, i6 %frame_buffer_167, i6 %frame_buffer_171, i6 %frame_buffer_175, i6 %frame_buffer_179, i6 %frame_buffer_183, i6 %frame_buffer_187, i6 %frame_buffer_191, i6 %frame_buffer_195, i6 %frame_buffer_199, i6 %frame_buffer_203, i6 %frame_buffer_207, i6 %frame_buffer_211, i6 %frame_buffer_215, i6 %frame_buffer_219, i6 %frame_buffer_223, i6 %frame_buffer_227, i6 %frame_buffer_231, i6 %frame_buffer_235, i6 %frame_buffer_239, i6 %frame_buffer_243, i6 %frame_buffer_247, i6 %frame_buffer_251, i6 %frame_buffer_255, i32 %output_r"   --->   Operation 387 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 388 [1/1] (0.00ns)   --->   "%ret_ln346 = ret" [rendering.cpp:346]   --->   Operation 388 'ret' 'ret_ln346' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation ('rhs') [4]  (0 ns)
+	'store' operation ('store_ln316', rendering.cpp:316) of constant 0 on local variable 'rhs' [286]  (0.387 ns)
+
+ <State 2>: 2.01ns
+The critical path consists of the following:
+	'load' operation ('i.V') on local variable 'rhs' [289]  (0 ns)
+	'sub' operation ('ret.V') [311]  (0.765 ns)
+	'getelementptr' operation ('input_r_addr', rendering.cpp:318) [313]  (0 ns)
+	'load' operation ('input_lo.V', rendering.cpp:318) on array 'input_r' [314]  (1.25 ns)
+
+ <State 3>: 2.01ns
+The critical path consists of the following:
+	'add' operation ('ret.V') [315]  (0.765 ns)
+	'getelementptr' operation ('input_r_addr_1', rendering.cpp:319) [317]  (0 ns)
+	'load' operation ('input_mi.V', rendering.cpp:319) on array 'input_r' [318]  (1.25 ns)
+
+ <State 4>: 7.05ns
+The critical path consists of the following:
+	'load' operation ('input_mi.V', rendering.cpp:319) on array 'input_r' [318]  (1.25 ns)
+	'call' operation ('call_ret', rendering.cpp:337) to 'projection' [332]  (2.54 ns)
+	'call' operation ('call_ret1', rendering.cpp:338) to 'rasterization1' [340]  (3.26 ns)
+
+ <State 5>: 5.47ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', rendering.cpp:338) to 'rasterization1' [340]  (3.59 ns)
+	'call' operation ('ref_tmp1', rendering.cpp:339) to 'rasterization2' [355]  (1.87 ns)
+
+ <State 6>: 0.387ns
+The critical path consists of the following:
+	'call' operation ('ref_tmp1', rendering.cpp:339) to 'rasterization2' [355]  (0.387 ns)
+
+ <State 7>: 0.629ns
+The critical path consists of the following:
+	'call' operation ('ref_tmp2', rendering.cpp:340) to 'zculling' [356]  (0.629 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0.629ns
+The critical path consists of the following:
+	'call' operation ('call_ln341', rendering.cpp:341) to 'coloringFB' [357]  (0.629 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,1001 @@
+INFO-FLOW: Workspace /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1 opened at Tue Dec 17 15:06:46 CST 2024
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+Execute       config_interface -m_axi_latency=0 
+Execute     set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/zedongpeng/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command       create_platform done; 1.92 sec.
+Execute       source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.1 sec.
+Execute     create_clock -period 10 
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.07 seconds; current allocated memory: 754.242 MB.
+INFO: [HLS 200-10] Analyzing design file 'sgd.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling sgd.cpp as C++
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sgd.cpp -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.cpp.clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.cpp.clang.err.log 
+Command         ap_eval done; 0.17 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute         set_directive_top SgdLR -name=SgdLR 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.85 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp std=gnu++14 -target fpga  -directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/.systemc_flag -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.65 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp std=gnu++14 -target fpga  -directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/all.directive.json -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.86 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.82 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.7 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.clang-tidy.loop-label.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 1.38 sec.
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 1.43 sec.
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 0.94 sec.
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:280:15)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:280:66)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:282:13)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:282:42)
+Execute         send_msg_by_id WARNING @200-471@%s%s 4 sgd.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sgd.cpp
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.bc -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 1.19 sec.
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:12:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:13:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:14:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:15:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:16:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:17:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:18:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.29 seconds. CPU system time: 0.88 seconds. Elapsed time: 7.17 seconds; current allocated memory: 755.977 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc -args  "/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.g.bc"  
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.g.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.2.m1.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command           ap_eval done; 3.63 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 3.63 sec.
+Execute         run_link_or_opt -opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=SgdLR -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=SgdLR -reflow-float-conversion -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command           ap_eval done; 1.24 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.24 sec.
+Execute         run_link_or_opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.4.m2.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+Command           ap_eval done; 0.15 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.15 sec.
+Execute         run_link_or_opt -opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=SgdLR 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+Command           ap_eval done; 0.13 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.13 sec.
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=SgdLR -mllvm -hls-db-dir -mllvm /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command         ap_eval done; 1.41 sec.
+WARNING: [HLS 214-273] In function 'read_data(ap_uint<512>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (sgd.cpp:101:0)
+INFO: [HLS 214-131] Inlining function 'useLUT(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'Sigmoid(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' (sgd.cpp:163:12)
+INFO: [HLS 214-131] Inlining function 'updateParameter(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:238:3)
+INFO: [HLS 214-131] Inlining function 'computeGradient(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:236:3)
+INFO: [HLS 214-131] Inlining function 'Sigmoid(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:234:22)
+INFO: [HLS 214-131] Inlining function 'dotProduct(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:232:21)
+INFO: [HLS 214-131] Inlining function 'streamOut(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<512>*)' into 'SgdLR(ap_uint<512>*, ap_uint<32>*, ap_uint<512>*, bool, bool)' (sgd.cpp:286:5)
+INFO: [HLS 214-131] Inlining function 'read_data(ap_uint<512>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'SgdLR(ap_uint<512>*, ap_uint<32>*, ap_uint<512>*, bool, bool)' (sgd.cpp:280:5)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.01 seconds. CPU system time: 0.81 seconds. Elapsed time: 6.82 seconds; current allocated memory: 756.363 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 756.363 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top SgdLR -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.0.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.17 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 777.215 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.1.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command           transform done; 0.19 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.2.prechk.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:628: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command           transform done; 0.17 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.33 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.36 seconds; current allocated memory: 801.066 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.g.1.bc to /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.1.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'DOT_INNER' (sgd.cpp:123) in function 'compute' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'GRAD_INNER' (sgd.cpp:180) in function 'compute' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'UPDATE_INNER' (sgd.cpp:199) in function 'compute' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LABEL_CP' (sgd.cpp:263) in function 'SgdLR' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'STREAM_OUT' (sgd.cpp:212) in function 'SgdLR' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LABEL_CP' (sgd.cpp:263) in function 'SgdLR' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'STREAM_OUT' (sgd.cpp:212) in function 'SgdLR' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'LABEL_CP_INNER' (sgd.cpp:267) in function 'SgdLR' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'STREAM_OUT_INNER' (sgd.cpp:212) in function 'SgdLR' completely with a factor of 16.
+INFO: [XFORM 203-721] Changing loop 'READ_TRAINING_DATA' (sgd.cpp:107)  to a process function for dataflow in function 'SgdLR'.
+INFO: [XFORM 203-721] Extract dataflow region from loop TRAINING_INST (sgd.cpp:278)  of function 'SgdLR'.
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_TRAINING_INST' (sgd.cpp:276:5), detected/extracted 2 process function(s): 
+	 'READ_TRAINING_DATA_proc'
+	 'compute'.
+Command           transform done; 0.32 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.1.tmp.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sgd.cpp:124:26) to (sgd.cpp:177:9) in function 'compute'... converting 6 basic blocks.
+Command           transform done; 0.22 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.47 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.54 seconds; current allocated memory: 848.586 MB.
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.2.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'DOT' (sgd.cpp:127:24) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GRAD' (sgd.cpp:180:26) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'UPDATE' (sgd.cpp:199:28) in function 'compute'.
+INFO: [HLS 200-472] Inferring partial write operation for 'gradient.V' (sgd.cpp:181:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'theta_local.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'label_local.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'training_instance.V' 
+WARNING: [HLS 200-1449] Process compute has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+WARNING: [HLS 200-1449] Process dataflow_in_loop_TRAINING_INST has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+Command           transform done; 0.35 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.31 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.36 seconds; current allocated memory: 932.512 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 1.43 sec.
+Command       elaborate done; 15.43 sec.
+Execute       ap_eval exec zip -j /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command       ap_eval done; error code: 1; 
+INFO-FLOW: exec zip -j /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app
+INFO-FLOW: couldn't execute "zip": no such file or directory
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'SgdLR' ...
+Execute         ap_set_top_model SgdLR 
+Execute         get_model_list SgdLR -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model SgdLR 
+Execute         preproc_iomode -model SgdLR_Pipeline_STREAM_OUT 
+Execute         preproc_iomode -model dataflow_parent_loop_proc 
+Execute         preproc_iomode -model dataflow_in_loop_TRAINING_INST 
+Execute         preproc_iomode -model compute 
+Execute         preproc_iomode -model compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         preproc_iomode -model compute_Pipeline_GRAD_GRAD_INNER 
+Execute         preproc_iomode -model compute_Pipeline_DOT_DOT_INNER 
+Execute         preproc_iomode -model READ_TRAINING_DATA_proc 
+Execute         preproc_iomode -model SgdLR_Pipeline_LABEL_CP 
+Execute         get_model_list SgdLR -filter all-wo-channel 
+INFO-FLOW: Model list for configure: SgdLR_Pipeline_LABEL_CP READ_TRAINING_DATA_proc compute_Pipeline_DOT_DOT_INNER compute_Pipeline_GRAD_GRAD_INNER compute_Pipeline_UPDATE_UPDATE_INNER compute dataflow_in_loop_TRAINING_INST dataflow_parent_loop_proc SgdLR_Pipeline_STREAM_OUT SgdLR
+INFO-FLOW: Configuring Module : SgdLR_Pipeline_LABEL_CP ...
+Execute         set_default_model SgdLR_Pipeline_LABEL_CP 
+Execute         apply_spec_resource_limit SgdLR_Pipeline_LABEL_CP 
+INFO-FLOW: Configuring Module : READ_TRAINING_DATA_proc ...
+Execute         set_default_model READ_TRAINING_DATA_proc 
+Execute         apply_spec_resource_limit READ_TRAINING_DATA_proc 
+INFO-FLOW: Configuring Module : compute_Pipeline_DOT_DOT_INNER ...
+Execute         set_default_model compute_Pipeline_DOT_DOT_INNER 
+Execute         apply_spec_resource_limit compute_Pipeline_DOT_DOT_INNER 
+INFO-FLOW: Configuring Module : compute_Pipeline_GRAD_GRAD_INNER ...
+Execute         set_default_model compute_Pipeline_GRAD_GRAD_INNER 
+Execute         apply_spec_resource_limit compute_Pipeline_GRAD_GRAD_INNER 
+INFO-FLOW: Configuring Module : compute_Pipeline_UPDATE_UPDATE_INNER ...
+Execute         set_default_model compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         apply_spec_resource_limit compute_Pipeline_UPDATE_UPDATE_INNER 
+INFO-FLOW: Configuring Module : compute ...
+Execute         set_default_model compute 
+Execute         apply_spec_resource_limit compute 
+INFO-FLOW: Configuring Module : dataflow_in_loop_TRAINING_INST ...
+Execute         set_default_model dataflow_in_loop_TRAINING_INST 
+Execute         apply_spec_resource_limit dataflow_in_loop_TRAINING_INST 
+INFO-FLOW: Configuring Module : dataflow_parent_loop_proc ...
+Execute         set_default_model dataflow_parent_loop_proc 
+Execute         apply_spec_resource_limit dataflow_parent_loop_proc 
+INFO-FLOW: Configuring Module : SgdLR_Pipeline_STREAM_OUT ...
+Execute         set_default_model SgdLR_Pipeline_STREAM_OUT 
+Execute         apply_spec_resource_limit SgdLR_Pipeline_STREAM_OUT 
+INFO-FLOW: Configuring Module : SgdLR ...
+Execute         set_default_model SgdLR 
+Execute         apply_spec_resource_limit SgdLR 
+INFO-FLOW: Model list for preprocess: SgdLR_Pipeline_LABEL_CP READ_TRAINING_DATA_proc compute_Pipeline_DOT_DOT_INNER compute_Pipeline_GRAD_GRAD_INNER compute_Pipeline_UPDATE_UPDATE_INNER compute dataflow_in_loop_TRAINING_INST dataflow_parent_loop_proc SgdLR_Pipeline_STREAM_OUT SgdLR
+INFO-FLOW: Preprocessing Module: SgdLR_Pipeline_LABEL_CP ...
+Execute         set_default_model SgdLR_Pipeline_LABEL_CP 
+Execute         cdfg_preprocess -model SgdLR_Pipeline_LABEL_CP 
+Execute         rtl_gen_preprocess SgdLR_Pipeline_LABEL_CP 
+INFO-FLOW: Preprocessing Module: READ_TRAINING_DATA_proc ...
+Execute         set_default_model READ_TRAINING_DATA_proc 
+Execute         cdfg_preprocess -model READ_TRAINING_DATA_proc 
+Execute         rtl_gen_preprocess READ_TRAINING_DATA_proc 
+INFO-FLOW: Preprocessing Module: compute_Pipeline_DOT_DOT_INNER ...
+Execute         set_default_model compute_Pipeline_DOT_DOT_INNER 
+Execute         cdfg_preprocess -model compute_Pipeline_DOT_DOT_INNER 
+Execute         rtl_gen_preprocess compute_Pipeline_DOT_DOT_INNER 
+INFO-FLOW: Preprocessing Module: compute_Pipeline_GRAD_GRAD_INNER ...
+Execute         set_default_model compute_Pipeline_GRAD_GRAD_INNER 
+Execute         cdfg_preprocess -model compute_Pipeline_GRAD_GRAD_INNER 
+Execute         rtl_gen_preprocess compute_Pipeline_GRAD_GRAD_INNER 
+INFO-FLOW: Preprocessing Module: compute_Pipeline_UPDATE_UPDATE_INNER ...
+Execute         set_default_model compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         cdfg_preprocess -model compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         rtl_gen_preprocess compute_Pipeline_UPDATE_UPDATE_INNER 
+INFO-FLOW: Preprocessing Module: compute ...
+Execute         set_default_model compute 
+Execute         cdfg_preprocess -model compute 
+Execute         rtl_gen_preprocess compute 
+INFO-FLOW: Preprocessing Module: dataflow_in_loop_TRAINING_INST ...
+Execute         set_default_model dataflow_in_loop_TRAINING_INST 
+Execute         cdfg_preprocess -model dataflow_in_loop_TRAINING_INST 
+Execute         rtl_gen_preprocess dataflow_in_loop_TRAINING_INST 
+INFO-FLOW: Preprocessing Module: dataflow_parent_loop_proc ...
+Execute         set_default_model dataflow_parent_loop_proc 
+Execute         cdfg_preprocess -model dataflow_parent_loop_proc 
+Execute         rtl_gen_preprocess dataflow_parent_loop_proc 
+INFO-FLOW: Preprocessing Module: SgdLR_Pipeline_STREAM_OUT ...
+Execute         set_default_model SgdLR_Pipeline_STREAM_OUT 
+Execute         cdfg_preprocess -model SgdLR_Pipeline_STREAM_OUT 
+Execute         rtl_gen_preprocess SgdLR_Pipeline_STREAM_OUT 
+INFO-FLOW: Preprocessing Module: SgdLR ...
+Execute         set_default_model SgdLR 
+Execute         cdfg_preprocess -model SgdLR 
+Execute         rtl_gen_preprocess SgdLR 
+INFO-FLOW: Model list for synthesis: SgdLR_Pipeline_LABEL_CP READ_TRAINING_DATA_proc compute_Pipeline_DOT_DOT_INNER compute_Pipeline_GRAD_GRAD_INNER compute_Pipeline_UPDATE_UPDATE_INNER compute dataflow_in_loop_TRAINING_INST dataflow_parent_loop_proc SgdLR_Pipeline_STREAM_OUT SgdLR
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SgdLR_Pipeline_LABEL_CP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model SgdLR_Pipeline_LABEL_CP 
+Execute         schedule -model SgdLR_Pipeline_LABEL_CP 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LABEL_CP'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_LABEL_CP' (loop 'LABEL_CP'): Unable to schedule 'store' operation ('label_local_V_addr_1_write_ln368') of variable 'tmp_1' on array 'label_local_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'label_local_V'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'LABEL_CP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.14 seconds; current allocated memory: 933.750 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.sched.adb -f 
+INFO-FLOW: Finish scheduling SgdLR_Pipeline_LABEL_CP.
+Execute         set_default_model SgdLR_Pipeline_LABEL_CP 
+Execute         bind -model SgdLR_Pipeline_LABEL_CP 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 933.750 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.bind.adb -f 
+INFO-FLOW: Finish binding SgdLR_Pipeline_LABEL_CP.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'READ_TRAINING_DATA_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model READ_TRAINING_DATA_proc 
+Execute         schedule -model READ_TRAINING_DATA_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 934.078 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling READ_TRAINING_DATA_proc.
+Execute         set_default_model READ_TRAINING_DATA_proc 
+Execute         bind -model READ_TRAINING_DATA_proc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 934.078 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.bind.adb -f 
+INFO-FLOW: Finish binding READ_TRAINING_DATA_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_Pipeline_DOT_DOT_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model compute_Pipeline_DOT_DOT_INNER 
+Execute         schedule -model compute_Pipeline_DOT_DOT_INNER 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DOT_DOT_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'DOT_DOT_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 934.535 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.sched.adb -f 
+INFO-FLOW: Finish scheduling compute_Pipeline_DOT_DOT_INNER.
+Execute         set_default_model compute_Pipeline_DOT_DOT_INNER 
+Execute         bind -model compute_Pipeline_DOT_DOT_INNER 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 934.535 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.bind.adb -f 
+INFO-FLOW: Finish binding compute_Pipeline_DOT_DOT_INNER.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_Pipeline_GRAD_GRAD_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model compute_Pipeline_GRAD_GRAD_INNER 
+Execute         schedule -model compute_Pipeline_GRAD_GRAD_INNER 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'GRAD_GRAD_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'GRAD_GRAD_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 934.945 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.sched.adb -f 
+INFO-FLOW: Finish scheduling compute_Pipeline_GRAD_GRAD_INNER.
+Execute         set_default_model compute_Pipeline_GRAD_GRAD_INNER 
+Execute         bind -model compute_Pipeline_GRAD_GRAD_INNER 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 934.945 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.bind.adb -f 
+INFO-FLOW: Finish binding compute_Pipeline_GRAD_GRAD_INNER.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_Pipeline_UPDATE_UPDATE_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         schedule -model compute_Pipeline_UPDATE_UPDATE_INNER 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'UPDATE_UPDATE_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'UPDATE_UPDATE_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 935.273 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.sched.adb -f 
+INFO-FLOW: Finish scheduling compute_Pipeline_UPDATE_UPDATE_INNER.
+Execute         set_default_model compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         bind -model compute_Pipeline_UPDATE_UPDATE_INNER 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 935.273 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.bind.adb -f 
+INFO-FLOW: Finish binding compute_Pipeline_UPDATE_UPDATE_INNER.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model compute 
+Execute         schedule -model compute 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 935.547 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.sched.adb -f 
+INFO-FLOW: Finish scheduling compute.
+Execute         set_default_model compute 
+Execute         bind -model compute 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 935.547 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.11 sec.
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.bind.adb -f 
+INFO-FLOW: Finish binding compute.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_TRAINING_INST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dataflow_in_loop_TRAINING_INST 
+Execute         schedule -model dataflow_in_loop_TRAINING_INST 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 935.906 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.sched.adb -f 
+INFO-FLOW: Finish scheduling dataflow_in_loop_TRAINING_INST.
+Execute         set_default_model dataflow_in_loop_TRAINING_INST 
+Execute         bind -model dataflow_in_loop_TRAINING_INST 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 935.906 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.12 sec.
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.bind.adb -f 
+INFO-FLOW: Finish binding dataflow_in_loop_TRAINING_INST.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_parent_loop_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dataflow_parent_loop_proc 
+Execute         schedule -model dataflow_parent_loop_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 936.082 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling dataflow_parent_loop_proc.
+Execute         set_default_model dataflow_parent_loop_proc 
+Execute         bind -model dataflow_parent_loop_proc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 936.082 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.12 sec.
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.bind.adb -f 
+INFO-FLOW: Finish binding dataflow_parent_loop_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SgdLR_Pipeline_STREAM_OUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model SgdLR_Pipeline_STREAM_OUT 
+Execute         schedule -model SgdLR_Pipeline_STREAM_OUT 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STREAM_OUT'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_1') on array 'theta_local_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_3') on array 'theta_local_V' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_5') on array 'theta_local_V' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_7') on array 'theta_local_V' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_13') on array 'theta_local_V' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 9, loop 'STREAM_OUT'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.12 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 936.613 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.sched.adb -f 
+INFO-FLOW: Finish scheduling SgdLR_Pipeline_STREAM_OUT.
+Execute         set_default_model SgdLR_Pipeline_STREAM_OUT 
+Execute         bind -model SgdLR_Pipeline_STREAM_OUT 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 936.613 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.bind.adb -f 
+INFO-FLOW: Finish binding SgdLR_Pipeline_STREAM_OUT.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SgdLR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model SgdLR 
+Execute         schedule -model SgdLR 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 937.055 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.sched.adb -f 
+INFO-FLOW: Finish scheduling SgdLR.
+Execute         set_default_model SgdLR 
+Execute         bind -model SgdLR 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 937.055 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.14 sec.
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.bind.adb -f 
+INFO-FLOW: Finish binding SgdLR.
+Execute         get_model_list SgdLR -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess SgdLR_Pipeline_LABEL_CP 
+Execute         rtl_gen_preprocess READ_TRAINING_DATA_proc 
+Execute         rtl_gen_preprocess compute_Pipeline_DOT_DOT_INNER 
+Execute         rtl_gen_preprocess compute_Pipeline_GRAD_GRAD_INNER 
+Execute         rtl_gen_preprocess compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         rtl_gen_preprocess compute 
+Execute         rtl_gen_preprocess dataflow_in_loop_TRAINING_INST 
+Execute         rtl_gen_preprocess dataflow_parent_loop_proc 
+Execute         rtl_gen_preprocess SgdLR_Pipeline_STREAM_OUT 
+Execute         rtl_gen_preprocess SgdLR 
+INFO-FLOW: Model list for RTL generation: SgdLR_Pipeline_LABEL_CP READ_TRAINING_DATA_proc compute_Pipeline_DOT_DOT_INNER compute_Pipeline_GRAD_GRAD_INNER compute_Pipeline_UPDATE_UPDATE_INNER compute dataflow_in_loop_TRAINING_INST dataflow_parent_loop_proc SgdLR_Pipeline_STREAM_OUT SgdLR
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SgdLR_Pipeline_LABEL_CP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model SgdLR_Pipeline_LABEL_CP -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'SgdLR_Pipeline_LABEL_CP' pipeline 'LABEL_CP' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SgdLR_Pipeline_LABEL_CP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 937.055 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl SgdLR_Pipeline_LABEL_CP -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_SgdLR_Pipeline_LABEL_CP 
+Execute         gen_rtl SgdLR_Pipeline_LABEL_CP -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_SgdLR_Pipeline_LABEL_CP 
+Execute         syn_report -csynth -model SgdLR_Pipeline_LABEL_CP -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/SgdLR_Pipeline_LABEL_CP_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model SgdLR_Pipeline_LABEL_CP -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/SgdLR_Pipeline_LABEL_CP_csynth.xml 
+Execute         syn_report -verbosereport -model SgdLR_Pipeline_LABEL_CP -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model SgdLR_Pipeline_LABEL_CP -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.adb 
+Execute         db_write -model SgdLR_Pipeline_LABEL_CP -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info SgdLR_Pipeline_LABEL_CP -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'READ_TRAINING_DATA_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model READ_TRAINING_DATA_proc -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'READ_TRAINING_DATA_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 937.824 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl READ_TRAINING_DATA_proc -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_READ_TRAINING_DATA_proc 
+Execute         gen_rtl READ_TRAINING_DATA_proc -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_READ_TRAINING_DATA_proc 
+Execute         syn_report -csynth -model READ_TRAINING_DATA_proc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/READ_TRAINING_DATA_proc_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model READ_TRAINING_DATA_proc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/READ_TRAINING_DATA_proc_csynth.xml 
+Execute         syn_report -verbosereport -model READ_TRAINING_DATA_proc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model READ_TRAINING_DATA_proc -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.adb 
+Execute         db_write -model READ_TRAINING_DATA_proc -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info READ_TRAINING_DATA_proc -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_Pipeline_DOT_DOT_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model compute_Pipeline_DOT_DOT_INNER -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_Pipeline_DOT_DOT_INNER' pipeline 'DOT_DOT_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_16s_44_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_Pipeline_DOT_DOT_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 938.852 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl compute_Pipeline_DOT_DOT_INNER -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_compute_Pipeline_DOT_DOT_INNER 
+Execute         gen_rtl compute_Pipeline_DOT_DOT_INNER -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_compute_Pipeline_DOT_DOT_INNER 
+Execute         syn_report -csynth -model compute_Pipeline_DOT_DOT_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_Pipeline_DOT_DOT_INNER_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model compute_Pipeline_DOT_DOT_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_Pipeline_DOT_DOT_INNER_csynth.xml 
+Execute         syn_report -verbosereport -model compute_Pipeline_DOT_DOT_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model compute_Pipeline_DOT_DOT_INNER -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.adb 
+Execute         db_write -model compute_Pipeline_DOT_DOT_INNER -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info compute_Pipeline_DOT_DOT_INNER -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_Pipeline_GRAD_GRAD_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model compute_Pipeline_GRAD_GRAD_INNER -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_Pipeline_GRAD_GRAD_INNER' pipeline 'GRAD_GRAD_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_28s_16s_44_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_Pipeline_GRAD_GRAD_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 940.062 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl compute_Pipeline_GRAD_GRAD_INNER -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_compute_Pipeline_GRAD_GRAD_INNER 
+Execute         gen_rtl compute_Pipeline_GRAD_GRAD_INNER -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_compute_Pipeline_GRAD_GRAD_INNER 
+Execute         syn_report -csynth -model compute_Pipeline_GRAD_GRAD_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_Pipeline_GRAD_GRAD_INNER_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model compute_Pipeline_GRAD_GRAD_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_Pipeline_GRAD_GRAD_INNER_csynth.xml 
+Execute         syn_report -verbosereport -model compute_Pipeline_GRAD_GRAD_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model compute_Pipeline_GRAD_GRAD_INNER -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.adb 
+Execute         db_write -model compute_Pipeline_GRAD_GRAD_INNER -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info compute_Pipeline_GRAD_GRAD_INNER -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_Pipeline_UPDATE_UPDATE_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model compute_Pipeline_UPDATE_UPDATE_INNER -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_Pipeline_UPDATE_UPDATE_INNER' pipeline 'UPDATE_UPDATE_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_51_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_Pipeline_UPDATE_UPDATE_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 941.148 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl compute_Pipeline_UPDATE_UPDATE_INNER -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         gen_rtl compute_Pipeline_UPDATE_UPDATE_INNER -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_compute_Pipeline_UPDATE_UPDATE_INNER 
+Execute         syn_report -csynth -model compute_Pipeline_UPDATE_UPDATE_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_Pipeline_UPDATE_UPDATE_INNER_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model compute_Pipeline_UPDATE_UPDATE_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_Pipeline_UPDATE_UPDATE_INNER_csynth.xml 
+Execute         syn_report -verbosereport -model compute_Pipeline_UPDATE_UPDATE_INNER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model compute_Pipeline_UPDATE_UPDATE_INNER -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.adb 
+Execute         db_write -model compute_Pipeline_UPDATE_UPDATE_INNER -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info compute_Pipeline_UPDATE_UPDATE_INNER -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model compute -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute'.
+INFO: [RTMG 210-279] Implementing memory 'SgdLR_compute_lut_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'SgdLR_compute_gradient_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 942.664 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl compute -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_compute 
+Execute         gen_rtl compute -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_compute 
+Execute         syn_report -csynth -model compute -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model compute -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/compute_csynth.xml 
+Execute         syn_report -verbosereport -model compute -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.13 sec.
+Execute         db_write -model compute -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.adb 
+Execute         db_write -model compute -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info compute -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_TRAINING_INST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model dataflow_in_loop_TRAINING_INST -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_TRAINING_INST'.
+INFO: [HLS 200-741] Implementing PIPO SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 943.645 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dataflow_in_loop_TRAINING_INST -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_dataflow_in_loop_TRAINING_INST 
+Execute         gen_rtl dataflow_in_loop_TRAINING_INST -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_dataflow_in_loop_TRAINING_INST 
+Execute         syn_report -csynth -model dataflow_in_loop_TRAINING_INST -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/dataflow_in_loop_TRAINING_INST_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model dataflow_in_loop_TRAINING_INST -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/dataflow_in_loop_TRAINING_INST_csynth.xml 
+Execute         syn_report -verbosereport -model dataflow_in_loop_TRAINING_INST -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.13 sec.
+Execute         db_write -model dataflow_in_loop_TRAINING_INST -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.adb 
+Execute         db_write -model dataflow_in_loop_TRAINING_INST -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info dataflow_in_loop_TRAINING_INST -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_parent_loop_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model dataflow_parent_loop_proc -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_parent_loop_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 944.168 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dataflow_parent_loop_proc -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_dataflow_parent_loop_proc 
+Execute         gen_rtl dataflow_parent_loop_proc -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_dataflow_parent_loop_proc 
+Execute         syn_report -csynth -model dataflow_parent_loop_proc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/dataflow_parent_loop_proc_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model dataflow_parent_loop_proc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/dataflow_parent_loop_proc_csynth.xml 
+Execute         syn_report -verbosereport -model dataflow_parent_loop_proc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.13 sec.
+Execute         db_write -model dataflow_parent_loop_proc -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.adb 
+Execute         db_write -model dataflow_parent_loop_proc -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info dataflow_parent_loop_proc -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SgdLR_Pipeline_STREAM_OUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model SgdLR_Pipeline_STREAM_OUT -top_prefix SgdLR_ -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'SgdLR_Pipeline_STREAM_OUT' pipeline 'STREAM_OUT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SgdLR_Pipeline_STREAM_OUT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 945.301 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl SgdLR_Pipeline_STREAM_OUT -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR_SgdLR_Pipeline_STREAM_OUT 
+Execute         gen_rtl SgdLR_Pipeline_STREAM_OUT -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR_SgdLR_Pipeline_STREAM_OUT 
+Execute         syn_report -csynth -model SgdLR_Pipeline_STREAM_OUT -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/SgdLR_Pipeline_STREAM_OUT_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model SgdLR_Pipeline_STREAM_OUT -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/SgdLR_Pipeline_STREAM_OUT_csynth.xml 
+Execute         syn_report -verbosereport -model SgdLR_Pipeline_STREAM_OUT -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model SgdLR_Pipeline_STREAM_OUT -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.adb 
+Execute         db_write -model SgdLR_Pipeline_STREAM_OUT -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info SgdLR_Pipeline_STREAM_OUT -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SgdLR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model SgdLR -top_prefix  -sub_prefix SgdLR_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'SgdLR/data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SgdLR/label_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SgdLR/theta' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SgdLR/readLabels' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SgdLR/writeOutput' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'SgdLR' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SgdLR'.
+INFO: [RTMG 210-278] Implementing memory 'SgdLR_label_local_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'SgdLR_theta_local_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 947.262 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         gen_rtl SgdLR -istop -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/vhdl/SgdLR 
+Execute         gen_rtl SgdLR -istop -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/verilog/SgdLR 
+Execute         syn_report -csynth -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/SgdLR_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/SgdLR_csynth.xml 
+Execute         syn_report -verbosereport -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.16 sec.
+Execute         db_write -model SgdLR -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.adb 
+Execute         db_write -model SgdLR -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info SgdLR -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR 
+Execute         export_constraint_db -f -tool general -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.constraint.tcl 
+Execute         syn_report -designview -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.design.xml 
+Command         syn_report done; 0.18 sec.
+Execute         syn_report -csynthDesign -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -wcfg -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model SgdLR -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.protoinst 
+Execute         sc_get_clocks SgdLR 
+Execute         sc_get_portdomain SgdLR 
+INFO-FLOW: Model list for RTL component generation: SgdLR_Pipeline_LABEL_CP READ_TRAINING_DATA_proc compute_Pipeline_DOT_DOT_INNER compute_Pipeline_GRAD_GRAD_INNER compute_Pipeline_UPDATE_UPDATE_INNER compute dataflow_in_loop_TRAINING_INST dataflow_parent_loop_proc SgdLR_Pipeline_STREAM_OUT SgdLR
+INFO-FLOW: Handling components in module [SgdLR_Pipeline_LABEL_CP] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.compgen.tcl 
+INFO-FLOW: Found component SgdLR_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [READ_TRAINING_DATA_proc] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [compute_Pipeline_DOT_DOT_INNER] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.compgen.tcl 
+INFO-FLOW: Found component SgdLR_mul_32s_16s_44_1_1.
+INFO-FLOW: Append model SgdLR_mul_32s_16s_44_1_1
+INFO-FLOW: Found component SgdLR_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [compute_Pipeline_GRAD_GRAD_INNER] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.compgen.tcl 
+INFO-FLOW: Found component SgdLR_mul_mul_28s_16s_44_4_1.
+INFO-FLOW: Append model SgdLR_mul_mul_28s_16s_44_4_1
+INFO-FLOW: Found component SgdLR_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [compute_Pipeline_UPDATE_UPDATE_INNER] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.compgen.tcl 
+INFO-FLOW: Found component SgdLR_mul_32s_32s_51_1_1.
+INFO-FLOW: Append model SgdLR_mul_32s_32s_51_1_1
+INFO-FLOW: Found component SgdLR_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [compute] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.compgen.tcl 
+INFO-FLOW: Found component SgdLR_compute_lut_V_ROM_AUTO_1R.
+INFO-FLOW: Append model SgdLR_compute_lut_V_ROM_AUTO_1R
+INFO-FLOW: Found component SgdLR_compute_gradient_V_RAM_AUTO_1R1W.
+INFO-FLOW: Append model SgdLR_compute_gradient_V_RAM_AUTO_1R1W
+INFO-FLOW: Handling components in module [dataflow_in_loop_TRAINING_INST] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.compgen.tcl 
+INFO-FLOW: Found component SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore.
+INFO-FLOW: Append model SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore
+INFO-FLOW: Found component SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W.
+INFO-FLOW: Append model SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W
+INFO-FLOW: Handling components in module [dataflow_parent_loop_proc] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [SgdLR_Pipeline_STREAM_OUT] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.compgen.tcl 
+INFO-FLOW: Found component SgdLR_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [SgdLR] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.compgen.tcl 
+INFO-FLOW: Found component SgdLR_label_local_V_RAM_AUTO_1R1W.
+INFO-FLOW: Append model SgdLR_label_local_V_RAM_AUTO_1R1W
+INFO-FLOW: Found component SgdLR_theta_local_V_RAM_AUTO_1R1W.
+INFO-FLOW: Append model SgdLR_theta_local_V_RAM_AUTO_1R1W
+INFO-FLOW: Append model SgdLR_Pipeline_LABEL_CP
+INFO-FLOW: Append model READ_TRAINING_DATA_proc
+INFO-FLOW: Append model compute_Pipeline_DOT_DOT_INNER
+INFO-FLOW: Append model compute_Pipeline_GRAD_GRAD_INNER
+INFO-FLOW: Append model compute_Pipeline_UPDATE_UPDATE_INNER
+INFO-FLOW: Append model compute
+INFO-FLOW: Append model dataflow_in_loop_TRAINING_INST
+INFO-FLOW: Append model dataflow_parent_loop_proc
+INFO-FLOW: Append model SgdLR_Pipeline_STREAM_OUT
+INFO-FLOW: Append model SgdLR
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: SgdLR_flow_control_loop_pipe_sequential_init SgdLR_mul_32s_16s_44_1_1 SgdLR_flow_control_loop_pipe_sequential_init SgdLR_mul_mul_28s_16s_44_4_1 SgdLR_flow_control_loop_pipe_sequential_init SgdLR_mul_32s_32s_51_1_1 SgdLR_flow_control_loop_pipe_sequential_init SgdLR_compute_lut_V_ROM_AUTO_1R SgdLR_compute_gradient_V_RAM_AUTO_1R1W SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W SgdLR_flow_control_loop_pipe_sequential_init SgdLR_label_local_V_RAM_AUTO_1R1W SgdLR_theta_local_V_RAM_AUTO_1R1W SgdLR_Pipeline_LABEL_CP READ_TRAINING_DATA_proc compute_Pipeline_DOT_DOT_INNER compute_Pipeline_GRAD_GRAD_INNER compute_Pipeline_UPDATE_UPDATE_INNER compute dataflow_in_loop_TRAINING_INST dataflow_parent_loop_proc SgdLR_Pipeline_STREAM_OUT SgdLR
+INFO-FLOW: Generating /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model SgdLR_mul_32s_16s_44_1_1
+INFO-FLOW: To file: write model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model SgdLR_mul_mul_28s_16s_44_4_1
+INFO-FLOW: To file: write model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model SgdLR_mul_32s_32s_51_1_1
+INFO-FLOW: To file: write model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model SgdLR_compute_lut_V_ROM_AUTO_1R
+INFO-FLOW: To file: write model SgdLR_compute_gradient_V_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore
+INFO-FLOW: To file: write model SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model SgdLR_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model SgdLR_label_local_V_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model SgdLR_theta_local_V_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model SgdLR_Pipeline_LABEL_CP
+INFO-FLOW: To file: write model READ_TRAINING_DATA_proc
+INFO-FLOW: To file: write model compute_Pipeline_DOT_DOT_INNER
+INFO-FLOW: To file: write model compute_Pipeline_GRAD_GRAD_INNER
+INFO-FLOW: To file: write model compute_Pipeline_UPDATE_UPDATE_INNER
+INFO-FLOW: To file: write model compute
+INFO-FLOW: To file: write model dataflow_in_loop_TRAINING_INST
+INFO-FLOW: To file: write model dataflow_parent_loop_proc
+INFO-FLOW: To file: write model SgdLR_Pipeline_STREAM_OUT
+INFO-FLOW: To file: write model SgdLR
+INFO-FLOW: Generating /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/vhdl' dstVlogDir='/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/vlog' tclDir='/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db' modelList='SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_mul_32s_16s_44_1_1
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_mul_mul_28s_16s_44_4_1
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_mul_32s_32s_51_1_1
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_compute_lut_V_ROM_AUTO_1R
+SgdLR_compute_gradient_V_RAM_AUTO_1R1W
+SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore
+SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_label_local_V_RAM_AUTO_1R1W
+SgdLR_theta_local_V_RAM_AUTO_1R1W
+SgdLR_Pipeline_LABEL_CP
+READ_TRAINING_DATA_proc
+compute_Pipeline_DOT_DOT_INNER
+compute_Pipeline_GRAD_GRAD_INNER
+compute_Pipeline_UPDATE_UPDATE_INNER
+compute
+dataflow_in_loop_TRAINING_INST
+dataflow_parent_loop_proc
+SgdLR_Pipeline_STREAM_OUT
+SgdLR
+' expOnly='0'
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.compgen.tcl 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.61 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.66 seconds; current allocated memory: 950.535 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='SgdLR_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name dataflow_in_loop_TRAINING_INST
+INFO-FLOW: No bind nodes found for module_name dataflow_parent_loop_proc
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_mul_32s_16s_44_1_1
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_mul_mul_28s_16s_44_4_1
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_mul_32s_32s_51_1_1
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_compute_lut_V_ROM_AUTO_1R
+SgdLR_compute_gradient_V_RAM_AUTO_1R1W
+SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W_memcore
+SgdLR_dataflow_in_loop_TRAINING_INST_training_instance_V_RAM_AUTO_1R1W
+SgdLR_flow_control_loop_pipe_sequential_init
+SgdLR_label_local_V_RAM_AUTO_1R1W
+SgdLR_theta_local_V_RAM_AUTO_1R1W
+SgdLR_Pipeline_LABEL_CP
+READ_TRAINING_DATA_proc
+compute_Pipeline_DOT_DOT_INNER
+compute_Pipeline_GRAD_GRAD_INNER
+compute_Pipeline_UPDATE_UPDATE_INNER
+compute
+dataflow_in_loop_TRAINING_INST
+dataflow_parent_loop_proc
+SgdLR_Pipeline_STREAM_OUT
+SgdLR
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.rtl_wrap.cfg.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.compgen.dataonly.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_LABEL_CP.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/READ_TRAINING_DATA_proc.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_DOT_DOT_INNER.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_GRAD_GRAD_INNER.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute_Pipeline_UPDATE_UPDATE_INNER.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/compute.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_in_loop_TRAINING_INST.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/dataflow_parent_loop_proc.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR_Pipeline_STREAM_OUT.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/SgdLR.constraint.tcl 
+Execute         sc_get_clocks SgdLR 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST SgdLR MODULE2INSTS {SgdLR SgdLR SgdLR_Pipeline_LABEL_CP grp_SgdLR_Pipeline_LABEL_CP_fu_56 dataflow_parent_loop_proc grp_dataflow_parent_loop_proc_fu_64 dataflow_in_loop_TRAINING_INST dataflow_in_loop_TRAINING_INST_U0 READ_TRAINING_DATA_proc READ_TRAINING_DATA_proc_U0 compute compute_U0 compute_Pipeline_DOT_DOT_INNER grp_compute_Pipeline_DOT_DOT_INNER_fu_98 compute_Pipeline_GRAD_GRAD_INNER grp_compute_Pipeline_GRAD_GRAD_INNER_fu_107 compute_Pipeline_UPDATE_UPDATE_INNER grp_compute_Pipeline_UPDATE_UPDATE_INNER_fu_115 SgdLR_Pipeline_STREAM_OUT grp_SgdLR_Pipeline_STREAM_OUT_fu_78} INST2MODULE {SgdLR SgdLR grp_SgdLR_Pipeline_LABEL_CP_fu_56 SgdLR_Pipeline_LABEL_CP grp_dataflow_parent_loop_proc_fu_64 dataflow_parent_loop_proc dataflow_in_loop_TRAINING_INST_U0 dataflow_in_loop_TRAINING_INST READ_TRAINING_DATA_proc_U0 READ_TRAINING_DATA_proc compute_U0 compute grp_compute_Pipeline_DOT_DOT_INNER_fu_98 compute_Pipeline_DOT_DOT_INNER grp_compute_Pipeline_GRAD_GRAD_INNER_fu_107 compute_Pipeline_GRAD_GRAD_INNER grp_compute_Pipeline_UPDATE_UPDATE_INNER_fu_115 compute_Pipeline_UPDATE_UPDATE_INNER grp_SgdLR_Pipeline_STREAM_OUT_fu_78 SgdLR_Pipeline_STREAM_OUT} INSTDATA {SgdLR {DEPTH 1 CHILDREN {grp_SgdLR_Pipeline_LABEL_CP_fu_56 grp_dataflow_parent_loop_proc_fu_64 grp_SgdLR_Pipeline_STREAM_OUT_fu_78}} grp_SgdLR_Pipeline_LABEL_CP_fu_56 {DEPTH 2 CHILDREN {}} grp_dataflow_parent_loop_proc_fu_64 {DEPTH 2 CHILDREN dataflow_in_loop_TRAINING_INST_U0} dataflow_in_loop_TRAINING_INST_U0 {DEPTH 3 CHILDREN {READ_TRAINING_DATA_proc_U0 compute_U0}} READ_TRAINING_DATA_proc_U0 {DEPTH 4 CHILDREN {}} compute_U0 {DEPTH 4 CHILDREN {grp_compute_Pipeline_DOT_DOT_INNER_fu_98 grp_compute_Pipeline_GRAD_GRAD_INNER_fu_107 grp_compute_Pipeline_UPDATE_UPDATE_INNER_fu_115}} grp_compute_Pipeline_DOT_DOT_INNER_fu_98 {DEPTH 5 CHILDREN {}} grp_compute_Pipeline_GRAD_GRAD_INNER_fu_107 {DEPTH 5 CHILDREN {}} grp_compute_Pipeline_UPDATE_UPDATE_INNER_fu_115 {DEPTH 5 CHILDREN {}} grp_SgdLR_Pipeline_STREAM_OUT_fu_78 {DEPTH 2 CHILDREN {}}} MODULEDATA {SgdLR_Pipeline_LABEL_CP {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln263_fu_132_p2 SOURCE sgd.cpp:263 VARIABLE add_ln263 LOOP LABEL_CP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} READ_TRAINING_DATA_proc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_fu_109_p2 SOURCE sgd.cpp:104 VARIABLE add_ln104 LOOP READ_TRAINING_DATA BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_fu_148_p2 SOURCE sgd.cpp:108 VARIABLE add_ln108 LOOP READ_TRAINING_DATA_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln109_fu_154_p2 SOURCE sgd.cpp:109 VARIABLE add_ln109 LOOP READ_TRAINING_DATA_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} compute_Pipeline_DOT_DOT_INNER {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln124_fu_130_p2 SOURCE sgd.cpp:124 VARIABLE add_ln124 LOOP DOT_DOT_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln124_1_fu_156_p2 SOURCE sgd.cpp:124 VARIABLE add_ln124_1 LOOP DOT_DOT_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln129_fu_186_p2 SOURCE sgd.cpp:129 VARIABLE add_ln129 LOOP DOT_DOT_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_16s_44_1_1_U6 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1270 VARIABLE mul_ln1270 LOOP DOT_DOT_INNER BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME result_V_3_fu_246_p2 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813 VARIABLE result_V_3 LOOP DOT_DOT_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln127_fu_198_p2 SOURCE sgd.cpp:127 VARIABLE add_ln127 LOOP DOT_DOT_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} compute_Pipeline_GRAD_GRAD_INNER {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln177_fu_124_p2 SOURCE sgd.cpp:177 VARIABLE add_ln177 LOOP GRAD_GRAD_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln177_1_fu_150_p2 SOURCE sgd.cpp:177 VARIABLE add_ln177_1 LOOP GRAD_GRAD_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln181_fu_180_p2 SOURCE sgd.cpp:181 VARIABLE add_ln181 LOOP GRAD_GRAD_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_28s_16s_44_4_1_U11 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 VARIABLE r_V LOOP GRAD_GRAD_INNER BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln180_fu_191_p2 SOURCE sgd.cpp:180 VARIABLE add_ln180 LOOP GRAD_GRAD_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 1 BRAM 0 URAM 0}} compute_Pipeline_UPDATE_UPDATE_INNER {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln196_fu_120_p2 SOURCE sgd.cpp:196 VARIABLE add_ln196 LOOP UPDATE_UPDATE_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln196_1_fu_146_p2 SOURCE sgd.cpp:196 VARIABLE add_ln196_1 LOOP UPDATE_UPDATE_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln200_fu_176_p2 SOURCE sgd.cpp:200 VARIABLE add_ln200 LOOP UPDATE_UPDATE_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_51_1_1_U16 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1273 VARIABLE r_V LOOP UPDATE_UPDATE_INNER BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_fu_227_p2 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347 VARIABLE ret_V LOOP UPDATE_UPDATE_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln199_fu_188_p2 SOURCE sgd.cpp:199 VARIABLE add_ln199 LOOP UPDATE_UPDATE_INNER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 3 BRAM 0 URAM 0}} compute {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME gradient_V_U SOURCE sgd.cpp:226 VARIABLE gradient_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME in_V_1_fu_168_p2 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813 VARIABLE in_V_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME index_V_fu_184_p2 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186 VARIABLE index_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME scale_V_fu_262_p2 SOURCE /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:813 VARIABLE scale_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME lut_V_U SOURCE {} VARIABLE lut_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 6 BRAM 4 URAM 0}} SgdLR_Pipeline_STREAM_OUT {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_fu_240_p2 SOURCE sgd.cpp:209 VARIABLE add_ln209 LOOP STREAM_OUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} SgdLR {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME label_local_V_U SOURCE {} VARIABLE label_local_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME theta_local_V_U SOURCE {} VARIABLE theta_local_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage ram_s2p}}} AREA {DSP 6 BRAM 12 URAM 0}} dataflow_in_loop_TRAINING_INST {AREA {DSP 6 BRAM 6 URAM 0}} dataflow_parent_loop_proc {AREA {DSP 6 BRAM 6 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.32 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.34 seconds; current allocated memory: 954.039 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for SgdLR.
+INFO: [VLOG 209-307] Generating Verilog RTL for SgdLR.
+Execute         syn_report -model SgdLR -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 152.89 MHz
+Command       autosyn done; 4.31 sec.
+Command     csynth_design done; 19.79 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 17.69 seconds. CPU system time: 2.1 seconds. Elapsed time: 19.79 seconds; current allocated memory: 200.375 MB.
+Execute     close_solution 
+INFO: [HLS 200-1510] Running: close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

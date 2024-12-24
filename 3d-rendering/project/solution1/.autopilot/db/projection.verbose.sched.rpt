@@ -1,0 +1,138 @@
+
+
+================================================================
+== Vitis HLS Report for 'projection'
+================================================================
+* Date:           Tue Dec 17 15:06:51 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.538 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.53>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%triangle_3d_z2_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_3d_z2"   --->   Operation 2 'read' 'triangle_3d_z2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%triangle_2d_y2_V_write_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_y2_V_write"   --->   Operation 3 'read' 'triangle_2d_y2_V_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%triangle_2d_x2_V_write_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_x2_V_write"   --->   Operation 4 'read' 'triangle_2d_x2_V_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%triangle_3d_z1_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_3d_z1"   --->   Operation 5 'read' 'triangle_3d_z1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%triangle_2d_y1_V_write_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_y1_V_write"   --->   Operation 6 'read' 'triangle_2d_y1_V_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%triangle_2d_x1_V_write_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_x1_V_write"   --->   Operation 7 'read' 'triangle_2d_x1_V_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%triangle_3d_z0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_3d_z0"   --->   Operation 8 'read' 'triangle_3d_z0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%triangle_2d_y0_V_write_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_y0_V_write"   --->   Operation 9 'read' 'triangle_2d_y0_V_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%triangle_2d_x0_V_write_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %triangle_2d_x0_V_write"   --->   Operation 10 'read' 'triangle_2d_x0_V_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln1513 = zext i8 %triangle_3d_z0_read"   --->   Operation 11 'zext' 'zext_ln1513' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.70ns)   --->   "%mul_ln1513 = mul i17 %zext_ln1513, i17 342"   --->   Operation 12 'mul' 'mul_ln1513' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = partselect i7 @_ssdm_op_PartSelect.i7.i17.i32.i32, i17 %mul_ln1513, i32 10, i32 16"   --->   Operation 13 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln1513_1 = zext i7 %tmp"   --->   Operation 14 'zext' 'zext_ln1513_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln1513_2 = zext i8 %triangle_3d_z1_read"   --->   Operation 15 'zext' 'zext_ln1513_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.70ns)   --->   "%mul_ln1513_1 = mul i17 %zext_ln1513_2, i17 342"   --->   Operation 16 'mul' 'mul_ln1513_1' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i7 @_ssdm_op_PartSelect.i7.i17.i32.i32, i17 %mul_ln1513_1, i32 10, i32 16"   --->   Operation 17 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln1513_3 = zext i7 %tmp_2"   --->   Operation 18 'zext' 'zext_ln1513_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln1513_4 = zext i8 %triangle_3d_z2_read"   --->   Operation 19 'zext' 'zext_ln1513_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.70ns)   --->   "%mul_ln1513_2 = mul i17 %zext_ln1513_4, i17 342"   --->   Operation 20 'mul' 'mul_ln1513_2' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i7 @_ssdm_op_PartSelect.i7.i17.i32.i32, i17 %mul_ln1513_2, i32 10, i32 16"   --->   Operation 21 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln1513_5 = zext i7 %tmp_3"   --->   Operation 22 'zext' 'zext_ln1513_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln186 = add i8 %zext_ln1513_1, i8 %zext_ln1513_5"   --->   Operation 23 'add' 'add_ln186' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 24 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%add_ln186_1 = add i8 %add_ln186, i8 %zext_ln1513_3"   --->   Operation 24 'add' 'add_ln186_1' <Predicate = true> <Delay = 0.83> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%mrv = insertvalue i56 <undef>, i8 %triangle_2d_x0_V_write_read" [rendering.cpp:145]   --->   Operation 25 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i56 %mrv, i8 %triangle_2d_y0_V_write_read" [rendering.cpp:145]   --->   Operation 26 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i56 %mrv_1, i8 %triangle_2d_x1_V_write_read" [rendering.cpp:145]   --->   Operation 27 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i56 %mrv_2, i8 %triangle_2d_y1_V_write_read" [rendering.cpp:145]   --->   Operation 28 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i56 %mrv_3, i8 %triangle_2d_x2_V_write_read" [rendering.cpp:145]   --->   Operation 29 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i56 %mrv_4, i8 %triangle_2d_y2_V_write_read" [rendering.cpp:145]   --->   Operation 30 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i56 %mrv_5, i8 %add_ln186_1" [rendering.cpp:145]   --->   Operation 31 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln145 = ret i56 %mrv_6" [rendering.cpp:145]   --->   Operation 32 'ret' 'ret_ln145' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.54ns
+The critical path consists of the following:
+	wire read operation ('triangle_3d_z2_read') on port 'triangle_3d_z2' [10]  (0 ns)
+	'mul' operation ('mul_ln1513_2') [28]  (1.7 ns)
+	'add' operation ('add_ln186') [31]  (0 ns)
+	'add' operation ('triangle_2d.z.V') [32]  (0.838 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

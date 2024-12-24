@@ -1,0 +1,20 @@
+---
+MainSourceFile:  /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '280:15'
+    FilePath:        sgd.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '280:66'
+    FilePath:        sgd.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '282:13'
+    FilePath:        sgd.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '282:42'
+    FilePath:        sgd.cpp
+...

@@ -1,0 +1,987 @@
+INFO-FLOW: Workspace /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1 opened at Tue Dec 17 15:06:35 CST 2024
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+Execute       config_interface -m_axi_latency=0 
+Command     open_solution done; 0.11 sec.
+Execute     set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/zedongpeng/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command       create_platform done; 1.91 sec.
+Execute       source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.04 sec.
+Execute     create_clock -period 10 
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.05 seconds; current allocated memory: 754.277 MB.
+INFO: [HLS 200-10] Analyzing design file 'digitrec.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling digitrec.cpp as C++
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang digitrec.cpp -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.cpp.clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.cpp.clang.err.log 
+Command         ap_eval done; 0.23 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute         set_directive_top DigitRec -name=DigitRec 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.64 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++14 -target fpga  -directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/.systemc_flag -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.42 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++14 -target fpga  -directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/all.directive.json -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.86 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.36 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.clang-tidy.loop-label.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 0.72 sec.
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 0.78 sec.
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 0.39 sec.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.bc -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 0.45 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.47 seconds. CPU system time: 0.84 seconds. Elapsed time: 4.29 seconds; current allocated memory: 756.137 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc -args  "/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.g.bc"  
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/digitrec.g.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.2.m1.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command           ap_eval done; 2.76 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 2.77 sec.
+Execute         run_link_or_opt -opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=DigitRec -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=DigitRec -reflow-float-conversion -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command           ap_eval done; 0.91 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.91 sec.
+Execute         run_link_or_opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.4.m2.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+Command           ap_eval done; 0.12 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.12 sec.
+Execute         run_link_or_opt -opt -out /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=DigitRec 
+Execute           ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=DigitRec -mllvm -hls-db-dir -mllvm /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command         ap_eval done; 1.45 sec.
+INFO: [HLS 214-131] Inlining function 'update_knn(ap_uint<256>, ap_uint<256>, int*)' into 'DigitRec(ap_uint<256>*, ap_uint<256>*, unsigned char*, int)' (digitrec.cpp:244:9)
+INFO: [HLS 214-131] Inlining function 'knn_vote(int*)' into 'DigitRec(ap_uint<256>*, ap_uint<256>*, unsigned char*, int)' (digitrec.cpp:248:26)
+INFO: [HLS 214-291] Loop 'INSERTION_SORT_INNER' is marked as complete unroll implied by the pipeline pragma (digitrec.cpp:136:29)
+INFO: [HLS 214-291] Loop 'INSERT' is marked as complete unroll implied by the pipeline pragma (digitrec.cpp:142:15)
+INFO: [HLS 214-186] Unrolling loop 'SET_KNN_SET' (digitrec.cpp:227:18) in function 'DigitRec' completely with a factor of 120 (digitrec.cpp:187:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_1' (digitrec.cpp:115:11) in function 'DigitRec' completely with a factor of 3 (digitrec.cpp:187:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_2' (digitrec.cpp:122:11) in function 'DigitRec' completely with a factor of 10 (digitrec.cpp:187:0)
+INFO: [HLS 214-186] Unrolling loop 'INSERTION_SORT_INNER' (digitrec.cpp:136:29) in function 'DigitRec' completely with a factor of 3 (digitrec.cpp:187:0)
+INFO: [HLS 214-186] Unrolling loop 'INSERT' (digitrec.cpp:142:15) in function 'DigitRec' completely with a factor of 3 (digitrec.cpp:187:0)
+INFO: [HLS 214-186] Unrolling loop 'VOTE' (digitrec.cpp:170:9) in function 'DigitRec' completely with a factor of 10 (digitrec.cpp:187:0)
+INFO: [HLS 214-178] Inlining function 'popcount(ap_uint<256>)' into 'DigitRec(ap_uint<256>*, ap_uint<256>*, unsigned char*, int)' (digitrec.cpp:187:0)
+INFO: [HLS 214-248] Applying array_partition to 'label_list.i': Complete partitioning on dimension 1. (digitrec.cpp:106:6)
+INFO: [HLS 214-248] Applying array_partition to 'vote_list.i': Complete partitioning on dimension 1. (digitrec.cpp:109:6)
+INFO: [HLS 214-248] Applying array_partition to 'knn_set': Complete partitioning on dimension 1. (digitrec.cpp:190:7)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.85 seconds. CPU system time: 0.68 seconds. Elapsed time: 5.54 seconds; current allocated memory: 756.496 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 756.496 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top DigitRec -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.0.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.17 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 759.996 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.1.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command           transform done; 0.13 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.2.prechk.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:779: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 761.234 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.g.1.bc to /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.1.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_51_1' in function 'DigitRec' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'FIND_MAX_DIST' (digitrec.cpp:72) in function 'DigitRec' automatically.
+Command           transform done; 0.7 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.1.tmp.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (digitrec.cpp:134:9) to (digitrec.cpp:132:27) in function 'DigitRec'... converting 3 basic blocks.
+Command           transform done; 0.22 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.89 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.92 seconds; current allocated memory: 790.305 MB.
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.2.bc -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [HLS 200-960] Cannot flatten loop 'LANES' (digitrec.cpp:190:7) in function 'DigitRec' more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'TRAINING_LOOP' (digitrec.cpp:190:7) in function 'DigitRec'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LANES' (digitrec.cpp:132:36) in function 'DigitRec'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TEST_LOOP' (digitrec.cpp:221:23) in function 'DigitRec' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'training_set.V' (digitrec.cpp:207:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'training_set.V' (digitrec.cpp:214:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'test_set.V' (digitrec.cpp:218:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'results' (digitrec.cpp:249:16)
+Command           transform done; 0.89 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.82 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.89 seconds; current allocated memory: 884.754 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 2.13 sec.
+Command       elaborate done; 11.97 sec.
+Execute       ap_eval exec zip -j /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command       ap_eval done; error code: 1; 
+INFO-FLOW: exec zip -j /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app
+INFO-FLOW: couldn't execute "zip": no such file or directory
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'DigitRec' ...
+Execute         ap_set_top_model DigitRec 
+Execute         get_model_list DigitRec -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model DigitRec 
+Execute         preproc_iomode -model DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         preproc_iomode -model DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         preproc_iomode -model DigitRec_Pipeline_INCREMENT 
+Execute         preproc_iomode -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         preproc_iomode -model DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         preproc_iomode -model DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         preproc_iomode -model DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         preproc_iomode -model DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         get_model_list DigitRec -filter all-wo-channel 
+INFO-FLOW: Model list for configure: DigitRec_Pipeline_VITIS_LOOP_212_2 DigitRec_Pipeline_VITIS_LOOP_216_3 DigitRec_Pipeline_VITIS_LOOP_51_1 DigitRec_Pipeline_FIND_MAX_DIST DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER DigitRec_Pipeline_INCREMENT DigitRec_Pipeline_VITIS_LOOP_254_4 DigitRec_Pipeline_VITIS_LOOP_205_1 DigitRec
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_VITIS_LOOP_212_2 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_VITIS_LOOP_212_2 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_VITIS_LOOP_216_3 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_VITIS_LOOP_216_3 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_VITIS_LOOP_51_1 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_VITIS_LOOP_51_1 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_FIND_MAX_DIST ...
+Execute         set_default_model DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_FIND_MAX_DIST 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER ...
+Execute         set_default_model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_INCREMENT ...
+Execute         set_default_model DigitRec_Pipeline_INCREMENT 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_INCREMENT 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_VITIS_LOOP_254_4 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_VITIS_LOOP_254_4 
+INFO-FLOW: Configuring Module : DigitRec_Pipeline_VITIS_LOOP_205_1 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         apply_spec_resource_limit DigitRec_Pipeline_VITIS_LOOP_205_1 
+INFO-FLOW: Configuring Module : DigitRec ...
+Execute         set_default_model DigitRec 
+Execute         apply_spec_resource_limit DigitRec 
+INFO-FLOW: Model list for preprocess: DigitRec_Pipeline_VITIS_LOOP_212_2 DigitRec_Pipeline_VITIS_LOOP_216_3 DigitRec_Pipeline_VITIS_LOOP_51_1 DigitRec_Pipeline_FIND_MAX_DIST DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER DigitRec_Pipeline_INCREMENT DigitRec_Pipeline_VITIS_LOOP_254_4 DigitRec_Pipeline_VITIS_LOOP_205_1 DigitRec
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_VITIS_LOOP_212_2 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_212_2 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_VITIS_LOOP_216_3 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_216_3 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_VITIS_LOOP_51_1 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_51_1 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_FIND_MAX_DIST ...
+Execute         set_default_model DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_FIND_MAX_DIST 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER ...
+Execute         set_default_model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_INCREMENT ...
+Execute         set_default_model DigitRec_Pipeline_INCREMENT 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_INCREMENT 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_INCREMENT 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_VITIS_LOOP_254_4 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_254_4 
+INFO-FLOW: Preprocessing Module: DigitRec_Pipeline_VITIS_LOOP_205_1 ...
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         cdfg_preprocess -model DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_205_1 
+INFO-FLOW: Preprocessing Module: DigitRec ...
+Execute         set_default_model DigitRec 
+Execute         cdfg_preprocess -model DigitRec 
+Execute         rtl_gen_preprocess DigitRec 
+INFO-FLOW: Model list for synthesis: DigitRec_Pipeline_VITIS_LOOP_212_2 DigitRec_Pipeline_VITIS_LOOP_216_3 DigitRec_Pipeline_VITIS_LOOP_51_1 DigitRec_Pipeline_FIND_MAX_DIST DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER DigitRec_Pipeline_INCREMENT DigitRec_Pipeline_VITIS_LOOP_254_4 DigitRec_Pipeline_VITIS_LOOP_205_1 DigitRec
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_VITIS_LOOP_212_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         schedule -model DigitRec_Pipeline_VITIS_LOOP_212_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_212_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_212_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.1 seconds; current allocated memory: 888.230 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_VITIS_LOOP_212_2.
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         bind -model DigitRec_Pipeline_VITIS_LOOP_212_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 888.230 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_VITIS_LOOP_212_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_VITIS_LOOP_216_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         schedule -model DigitRec_Pipeline_VITIS_LOOP_216_3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_216_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_216_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 888.488 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_VITIS_LOOP_216_3.
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         bind -model DigitRec_Pipeline_VITIS_LOOP_216_3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 888.488 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_VITIS_LOOP_216_3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_VITIS_LOOP_51_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         schedule -model DigitRec_Pipeline_VITIS_LOOP_51_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_51_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 888.699 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_VITIS_LOOP_51_1.
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         bind -model DigitRec_Pipeline_VITIS_LOOP_51_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 888.699 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_VITIS_LOOP_51_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_FIND_MAX_DIST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         schedule -model DigitRec_Pipeline_FIND_MAX_DIST 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FIND_MAX_DIST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'FIND_MAX_DIST'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.11 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 890.336 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_FIND_MAX_DIST.
+Execute         set_default_model DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         bind -model DigitRec_Pipeline_FIND_MAX_DIST 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 890.336 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_FIND_MAX_DIST.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         schedule -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LANES_INSERTION_SORT_OUTER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'LANES_INSERTION_SORT_OUTER'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.17 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 892.625 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.
+Execute         set_default_model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         bind -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 892.625 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_INCREMENT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_INCREMENT 
+Execute         schedule -model DigitRec_Pipeline_INCREMENT 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'INCREMENT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'INCREMENT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 892.969 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_INCREMENT.
+Execute         set_default_model DigitRec_Pipeline_INCREMENT 
+Execute         bind -model DigitRec_Pipeline_INCREMENT 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 892.969 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_INCREMENT.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_VITIS_LOOP_254_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         schedule -model DigitRec_Pipeline_VITIS_LOOP_254_4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_254_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_254_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 892.969 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_VITIS_LOOP_254_4.
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         bind -model DigitRec_Pipeline_VITIS_LOOP_254_4 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 892.969 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_VITIS_LOOP_254_4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec_Pipeline_VITIS_LOOP_205_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         schedule -model DigitRec_Pipeline_VITIS_LOOP_205_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_205_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_205_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 893.074 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.sched.adb -f 
+INFO-FLOW: Finish scheduling DigitRec_Pipeline_VITIS_LOOP_205_1.
+Execute         set_default_model DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         bind -model DigitRec_Pipeline_VITIS_LOOP_205_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 893.074 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.bind.adb -f 
+INFO-FLOW: Finish binding DigitRec_Pipeline_VITIS_LOOP_205_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DigitRec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model DigitRec 
+Execute         schedule -model DigitRec 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=empty_34) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 14.35 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 14.29 seconds. CPU system time: 0.1 seconds. Elapsed time: 14.37 seconds; current allocated memory: 966.777 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 1.67 sec.
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.sched.adb -f 
+Command         db_write done; 0.12 sec.
+INFO-FLOW: Finish scheduling DigitRec.
+Execute         set_default_model DigitRec 
+Execute         bind -model DigitRec 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.32 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.12 seconds; current allocated memory: 966.777 MB.
+Execute         syn_report -verbosereport -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.62 sec.
+Execute         db_write -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.bind.adb -f 
+Command         db_write done; 0.38 sec.
+INFO-FLOW: Finish binding DigitRec.
+Execute         get_model_list DigitRec -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_INCREMENT 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         rtl_gen_preprocess DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         rtl_gen_preprocess DigitRec 
+INFO-FLOW: Model list for RTL generation: DigitRec_Pipeline_VITIS_LOOP_212_2 DigitRec_Pipeline_VITIS_LOOP_216_3 DigitRec_Pipeline_VITIS_LOOP_51_1 DigitRec_Pipeline_FIND_MAX_DIST DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER DigitRec_Pipeline_INCREMENT DigitRec_Pipeline_VITIS_LOOP_254_4 DigitRec_Pipeline_VITIS_LOOP_205_1 DigitRec
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_VITIS_LOOP_212_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_VITIS_LOOP_212_2 -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_VITIS_LOOP_212_2' pipeline 'VITIS_LOOP_212_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_VITIS_LOOP_212_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.98 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.02 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_212_2 -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_212_2 -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_VITIS_LOOP_212_2 
+Execute         syn_report -csynth -model DigitRec_Pipeline_VITIS_LOOP_212_2 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_212_2_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_VITIS_LOOP_212_2 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_212_2_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_VITIS_LOOP_212_2 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_212_2 -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.adb 
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_212_2 -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_VITIS_LOOP_212_2 -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_VITIS_LOOP_216_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_VITIS_LOOP_216_3 -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_VITIS_LOOP_216_3' pipeline 'VITIS_LOOP_216_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_VITIS_LOOP_216_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_216_3 -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_216_3 -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_VITIS_LOOP_216_3 
+Execute         syn_report -csynth -model DigitRec_Pipeline_VITIS_LOOP_216_3 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_216_3_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_VITIS_LOOP_216_3 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_216_3_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_VITIS_LOOP_216_3 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_216_3 -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.adb 
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_216_3 -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_VITIS_LOOP_216_3 -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_VITIS_LOOP_51_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_VITIS_LOOP_51_1 -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_VITIS_LOOP_51_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_51_1 -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_51_1 -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_VITIS_LOOP_51_1 
+Execute         syn_report -csynth -model DigitRec_Pipeline_VITIS_LOOP_51_1 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_51_1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_VITIS_LOOP_51_1 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_51_1_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_VITIS_LOOP_51_1 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_51_1 -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.adb 
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_51_1 -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_VITIS_LOOP_51_1 -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_FIND_MAX_DIST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_FIND_MAX_DIST -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_FIND_MAX_DIST' pipeline 'FIND_MAX_DIST' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1207_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_FIND_MAX_DIST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_FIND_MAX_DIST -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         gen_rtl DigitRec_Pipeline_FIND_MAX_DIST -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_FIND_MAX_DIST 
+Execute         syn_report -csynth -model DigitRec_Pipeline_FIND_MAX_DIST -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_FIND_MAX_DIST_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_FIND_MAX_DIST -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_FIND_MAX_DIST_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_FIND_MAX_DIST -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_FIND_MAX_DIST -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.adb 
+Execute         db_write -model DigitRec_Pipeline_FIND_MAX_DIST -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_FIND_MAX_DIST -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER' pipeline 'LANES_INSERTION_SORT_OUTER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1207_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         gen_rtl DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+Execute         syn_report -csynth -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.14 sec.
+Execute         db_write -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.adb 
+Execute         db_write -model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_INCREMENT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_INCREMENT -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_INCREMENT' pipeline 'INCREMENT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_104_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_INCREMENT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_INCREMENT -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_INCREMENT 
+Execute         gen_rtl DigitRec_Pipeline_INCREMENT -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_INCREMENT 
+Execute         syn_report -csynth -model DigitRec_Pipeline_INCREMENT -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_INCREMENT_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_INCREMENT -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_INCREMENT_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_INCREMENT -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_INCREMENT -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.adb 
+Execute         db_write -model DigitRec_Pipeline_INCREMENT -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_INCREMENT -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_VITIS_LOOP_254_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_VITIS_LOOP_254_4 -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_VITIS_LOOP_254_4' pipeline 'VITIS_LOOP_254_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_VITIS_LOOP_254_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_254_4 -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_254_4 -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_VITIS_LOOP_254_4 
+Execute         syn_report -csynth -model DigitRec_Pipeline_VITIS_LOOP_254_4 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_254_4_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_VITIS_LOOP_254_4 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_254_4_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_VITIS_LOOP_254_4 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_254_4 -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.adb 
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_254_4 -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_VITIS_LOOP_254_4 -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec_Pipeline_VITIS_LOOP_205_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec_Pipeline_VITIS_LOOP_205_1 -top_prefix DigitRec_ -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DigitRec_Pipeline_VITIS_LOOP_205_1' pipeline 'VITIS_LOOP_205_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec_Pipeline_VITIS_LOOP_205_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 966.777 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_205_1 -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec_DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         gen_rtl DigitRec_Pipeline_VITIS_LOOP_205_1 -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec_DigitRec_Pipeline_VITIS_LOOP_205_1 
+Execute         syn_report -csynth -model DigitRec_Pipeline_VITIS_LOOP_205_1 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_205_1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec_Pipeline_VITIS_LOOP_205_1 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_Pipeline_VITIS_LOOP_205_1_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec_Pipeline_VITIS_LOOP_205_1 -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_205_1 -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.adb 
+Execute         db_write -model DigitRec_Pipeline_VITIS_LOOP_205_1 -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec_Pipeline_VITIS_LOOP_205_1 -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DigitRec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model DigitRec -top_prefix  -sub_prefix DigitRec_ -mg_file /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'DigitRec/global_training_set' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'DigitRec/global_test_set' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'DigitRec/global_results' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'DigitRec/run' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'DigitRec' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6ns_9ns_9ns_15_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_104_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_21_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_53_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_63_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_73_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_83_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DigitRec'.
+INFO: [RTMG 210-278] Implementing memory 'DigitRec_training_set_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'DigitRec_test_set_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'DigitRec_results_RAM_AUTO_1R1W' using auto RAMs.
+Command         create_rtl_model done; 3.23 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.25 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.28 seconds; current allocated memory: 988.934 MB.
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         gen_rtl DigitRec -istop -style xilinx -f -lang vhdl -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/vhdl/DigitRec 
+Command         gen_rtl done; 0.2 sec.
+Execute         gen_rtl DigitRec -istop -style xilinx -f -lang vlog -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/verilog/DigitRec 
+Command         gen_rtl done; 0.16 sec.
+Execute         syn_report -csynth -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/DigitRec_csynth.xml 
+Execute         syn_report -verbosereport -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.78 sec.
+Execute         db_write -model DigitRec -f -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.adb 
+Command         db_write done; 0.48 sec.
+Execute         db_write -model DigitRec -bindview -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info DigitRec -p /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec 
+Execute         export_constraint_db -f -tool general -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.constraint.tcl 
+Execute         syn_report -designview -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.design.xml 
+Command         syn_report done; 0.26 sec.
+Execute         syn_report -csynthDesign -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -wcfg -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model DigitRec -o /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.protoinst 
+Execute         sc_get_clocks DigitRec 
+Execute         sc_get_portdomain DigitRec 
+INFO-FLOW: Model list for RTL component generation: DigitRec_Pipeline_VITIS_LOOP_212_2 DigitRec_Pipeline_VITIS_LOOP_216_3 DigitRec_Pipeline_VITIS_LOOP_51_1 DigitRec_Pipeline_FIND_MAX_DIST DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER DigitRec_Pipeline_INCREMENT DigitRec_Pipeline_VITIS_LOOP_254_4 DigitRec_Pipeline_VITIS_LOOP_205_1 DigitRec
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_VITIS_LOOP_212_2] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.compgen.tcl 
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_VITIS_LOOP_216_3] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.compgen.tcl 
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_VITIS_LOOP_51_1] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.compgen.tcl 
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_FIND_MAX_DIST] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.compgen.tcl 
+INFO-FLOW: Found component DigitRec_mux_1207_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_1207_32_1_1
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.compgen.tcl 
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_INCREMENT] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.compgen.tcl 
+INFO-FLOW: Found component DigitRec_mux_32_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_32_32_1_1
+INFO-FLOW: Found component DigitRec_mux_104_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_104_32_1_1
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_VITIS_LOOP_254_4] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.compgen.tcl 
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec_Pipeline_VITIS_LOOP_205_1] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.compgen.tcl 
+INFO-FLOW: Found component DigitRec_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [DigitRec] ... 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.compgen.tcl 
+INFO-FLOW: Found component DigitRec_mux_21_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_21_32_1_1
+INFO-FLOW: Found component DigitRec_mux_42_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_42_32_1_1
+INFO-FLOW: Found component DigitRec_mux_53_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_53_32_1_1
+INFO-FLOW: Found component DigitRec_mux_63_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_63_32_1_1
+INFO-FLOW: Found component DigitRec_mux_73_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_73_32_1_1
+INFO-FLOW: Found component DigitRec_mux_83_32_1_1.
+INFO-FLOW: Append model DigitRec_mux_83_32_1_1
+INFO-FLOW: Found component DigitRec_mac_muladd_6ns_9ns_9ns_15_4_1.
+INFO-FLOW: Append model DigitRec_mac_muladd_6ns_9ns_9ns_15_4_1
+INFO-FLOW: Found component DigitRec_training_set_V_RAM_AUTO_1R1W.
+INFO-FLOW: Append model DigitRec_training_set_V_RAM_AUTO_1R1W
+INFO-FLOW: Found component DigitRec_test_set_V_RAM_AUTO_1R1W.
+INFO-FLOW: Append model DigitRec_test_set_V_RAM_AUTO_1R1W
+INFO-FLOW: Found component DigitRec_results_RAM_AUTO_1R1W.
+INFO-FLOW: Append model DigitRec_results_RAM_AUTO_1R1W
+INFO-FLOW: Append model DigitRec_Pipeline_VITIS_LOOP_212_2
+INFO-FLOW: Append model DigitRec_Pipeline_VITIS_LOOP_216_3
+INFO-FLOW: Append model DigitRec_Pipeline_VITIS_LOOP_51_1
+INFO-FLOW: Append model DigitRec_Pipeline_FIND_MAX_DIST
+INFO-FLOW: Append model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER
+INFO-FLOW: Append model DigitRec_Pipeline_INCREMENT
+INFO-FLOW: Append model DigitRec_Pipeline_VITIS_LOOP_254_4
+INFO-FLOW: Append model DigitRec_Pipeline_VITIS_LOOP_205_1
+INFO-FLOW: Append model DigitRec
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: DigitRec_flow_control_loop_pipe_sequential_init DigitRec_flow_control_loop_pipe_sequential_init DigitRec_flow_control_loop_pipe_sequential_init DigitRec_mux_1207_32_1_1 DigitRec_flow_control_loop_pipe_sequential_init DigitRec_flow_control_loop_pipe_sequential_init DigitRec_mux_32_32_1_1 DigitRec_mux_104_32_1_1 DigitRec_flow_control_loop_pipe_sequential_init DigitRec_flow_control_loop_pipe_sequential_init DigitRec_flow_control_loop_pipe_sequential_init DigitRec_mux_21_32_1_1 DigitRec_mux_42_32_1_1 DigitRec_mux_53_32_1_1 DigitRec_mux_63_32_1_1 DigitRec_mux_73_32_1_1 DigitRec_mux_83_32_1_1 DigitRec_mac_muladd_6ns_9ns_9ns_15_4_1 DigitRec_training_set_V_RAM_AUTO_1R1W DigitRec_test_set_V_RAM_AUTO_1R1W DigitRec_results_RAM_AUTO_1R1W DigitRec_Pipeline_VITIS_LOOP_212_2 DigitRec_Pipeline_VITIS_LOOP_216_3 DigitRec_Pipeline_VITIS_LOOP_51_1 DigitRec_Pipeline_FIND_MAX_DIST DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER DigitRec_Pipeline_INCREMENT DigitRec_Pipeline_VITIS_LOOP_254_4 DigitRec_Pipeline_VITIS_LOOP_205_1 DigitRec
+INFO-FLOW: Generating /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_mux_1207_32_1_1
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_mux_32_32_1_1
+INFO-FLOW: To file: write model DigitRec_mux_104_32_1_1
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model DigitRec_mux_21_32_1_1
+INFO-FLOW: To file: write model DigitRec_mux_42_32_1_1
+INFO-FLOW: To file: write model DigitRec_mux_53_32_1_1
+INFO-FLOW: To file: write model DigitRec_mux_63_32_1_1
+INFO-FLOW: To file: write model DigitRec_mux_73_32_1_1
+INFO-FLOW: To file: write model DigitRec_mux_83_32_1_1
+INFO-FLOW: To file: write model DigitRec_mac_muladd_6ns_9ns_9ns_15_4_1
+INFO-FLOW: To file: write model DigitRec_training_set_V_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model DigitRec_test_set_V_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model DigitRec_results_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model DigitRec_Pipeline_VITIS_LOOP_212_2
+INFO-FLOW: To file: write model DigitRec_Pipeline_VITIS_LOOP_216_3
+INFO-FLOW: To file: write model DigitRec_Pipeline_VITIS_LOOP_51_1
+INFO-FLOW: To file: write model DigitRec_Pipeline_FIND_MAX_DIST
+INFO-FLOW: To file: write model DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER
+INFO-FLOW: To file: write model DigitRec_Pipeline_INCREMENT
+INFO-FLOW: To file: write model DigitRec_Pipeline_VITIS_LOOP_254_4
+INFO-FLOW: To file: write model DigitRec_Pipeline_VITIS_LOOP_205_1
+INFO-FLOW: To file: write model DigitRec
+INFO-FLOW: Generating /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/vhdl' dstVlogDir='/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/vlog' tclDir='/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db' modelList='DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_mux_1207_32_1_1
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_mux_32_32_1_1
+DigitRec_mux_104_32_1_1
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_mux_21_32_1_1
+DigitRec_mux_42_32_1_1
+DigitRec_mux_53_32_1_1
+DigitRec_mux_63_32_1_1
+DigitRec_mux_73_32_1_1
+DigitRec_mux_83_32_1_1
+DigitRec_mac_muladd_6ns_9ns_9ns_15_4_1
+DigitRec_training_set_V_RAM_AUTO_1R1W
+DigitRec_test_set_V_RAM_AUTO_1R1W
+DigitRec_results_RAM_AUTO_1R1W
+DigitRec_Pipeline_VITIS_LOOP_212_2
+DigitRec_Pipeline_VITIS_LOOP_216_3
+DigitRec_Pipeline_VITIS_LOOP_51_1
+DigitRec_Pipeline_FIND_MAX_DIST
+DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER
+DigitRec_Pipeline_INCREMENT
+DigitRec_Pipeline_VITIS_LOOP_254_4
+DigitRec_Pipeline_VITIS_LOOP_205_1
+DigitRec
+' expOnly='0'
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.compgen.tcl 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.compgen.tcl 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.compgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.compgen.tcl 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Command         ap_source done; 0.36 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.94 seconds. CPU system time: 0.11 seconds. Elapsed time: 3.06 seconds; current allocated memory: 1.021 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='DigitRec_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_mux_1207_32_1_1
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_mux_32_32_1_1
+DigitRec_mux_104_32_1_1
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_flow_control_loop_pipe_sequential_init
+DigitRec_mux_21_32_1_1
+DigitRec_mux_42_32_1_1
+DigitRec_mux_53_32_1_1
+DigitRec_mux_63_32_1_1
+DigitRec_mux_73_32_1_1
+DigitRec_mux_83_32_1_1
+DigitRec_mac_muladd_6ns_9ns_9ns_15_4_1
+DigitRec_training_set_V_RAM_AUTO_1R1W
+DigitRec_test_set_V_RAM_AUTO_1R1W
+DigitRec_results_RAM_AUTO_1R1W
+DigitRec_Pipeline_VITIS_LOOP_212_2
+DigitRec_Pipeline_VITIS_LOOP_216_3
+DigitRec_Pipeline_VITIS_LOOP_51_1
+DigitRec_Pipeline_FIND_MAX_DIST
+DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER
+DigitRec_Pipeline_INCREMENT
+DigitRec_Pipeline_VITIS_LOOP_254_4
+DigitRec_Pipeline_VITIS_LOOP_205_1
+DigitRec
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.rtl_wrap.cfg.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.compgen.dataonly.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_212_2.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_216_3.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_51_1.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_FIND_MAX_DIST.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_INCREMENT.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_254_4.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec_Pipeline_VITIS_LOOP_205_1.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.tbgen.tcl 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/DigitRec.constraint.tcl 
+Execute         sc_get_clocks DigitRec 
+Execute         source /data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/digit-recognition/project/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST DigitRec MODULE2INSTS {DigitRec DigitRec DigitRec_Pipeline_VITIS_LOOP_212_2 grp_DigitRec_Pipeline_VITIS_LOOP_212_2_fu_46240 DigitRec_Pipeline_VITIS_LOOP_216_3 grp_DigitRec_Pipeline_VITIS_LOOP_216_3_fu_46248 DigitRec_Pipeline_VITIS_LOOP_205_1 grp_DigitRec_Pipeline_VITIS_LOOP_205_1_fu_46256 DigitRec_Pipeline_VITIS_LOOP_254_4 grp_DigitRec_Pipeline_VITIS_LOOP_254_4_fu_46264 DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER grp_DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER_fu_46272 DigitRec_Pipeline_VITIS_LOOP_51_1 grp_DigitRec_Pipeline_VITIS_LOOP_51_1_fu_46519 DigitRec_Pipeline_FIND_MAX_DIST grp_DigitRec_Pipeline_FIND_MAX_DIST_fu_46525 DigitRec_Pipeline_INCREMENT grp_DigitRec_Pipeline_INCREMENT_fu_46772} INST2MODULE {DigitRec DigitRec grp_DigitRec_Pipeline_VITIS_LOOP_212_2_fu_46240 DigitRec_Pipeline_VITIS_LOOP_212_2 grp_DigitRec_Pipeline_VITIS_LOOP_216_3_fu_46248 DigitRec_Pipeline_VITIS_LOOP_216_3 grp_DigitRec_Pipeline_VITIS_LOOP_205_1_fu_46256 DigitRec_Pipeline_VITIS_LOOP_205_1 grp_DigitRec_Pipeline_VITIS_LOOP_254_4_fu_46264 DigitRec_Pipeline_VITIS_LOOP_254_4 grp_DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER_fu_46272 DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER grp_DigitRec_Pipeline_VITIS_LOOP_51_1_fu_46519 DigitRec_Pipeline_VITIS_LOOP_51_1 grp_DigitRec_Pipeline_FIND_MAX_DIST_fu_46525 DigitRec_Pipeline_FIND_MAX_DIST grp_DigitRec_Pipeline_INCREMENT_fu_46772 DigitRec_Pipeline_INCREMENT} INSTDATA {DigitRec {DEPTH 1 CHILDREN {grp_DigitRec_Pipeline_VITIS_LOOP_212_2_fu_46240 grp_DigitRec_Pipeline_VITIS_LOOP_216_3_fu_46248 grp_DigitRec_Pipeline_VITIS_LOOP_205_1_fu_46256 grp_DigitRec_Pipeline_VITIS_LOOP_254_4_fu_46264 grp_DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER_fu_46272 grp_DigitRec_Pipeline_VITIS_LOOP_51_1_fu_46519 grp_DigitRec_Pipeline_FIND_MAX_DIST_fu_46525 grp_DigitRec_Pipeline_INCREMENT_fu_46772}} grp_DigitRec_Pipeline_VITIS_LOOP_212_2_fu_46240 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_VITIS_LOOP_216_3_fu_46248 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_VITIS_LOOP_205_1_fu_46256 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_VITIS_LOOP_254_4_fu_46264 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER_fu_46272 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_VITIS_LOOP_51_1_fu_46519 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_FIND_MAX_DIST_fu_46525 {DEPTH 2 CHILDREN {}} grp_DigitRec_Pipeline_INCREMENT_fu_46772 {DEPTH 2 CHILDREN {}}} MODULEDATA {DigitRec_Pipeline_VITIS_LOOP_212_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln212_fu_81_p2 SOURCE digitrec.cpp:212 VARIABLE add_ln212 LOOP VITIS_LOOP_212_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_fu_100_p2 SOURCE digitrec.cpp:214 VARIABLE add_ln214 LOOP VITIS_LOOP_212_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_VITIS_LOOP_216_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln216_fu_79_p2 SOURCE digitrec.cpp:216 VARIABLE add_ln216 LOOP VITIS_LOOP_216_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_VITIS_LOOP_51_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_74_p2 SOURCE digitrec.cpp:51 VARIABLE i_2 LOOP VITIS_LOOP_51_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cnt_1_fu_99_p2 SOURCE digitrec.cpp:52 VARIABLE cnt_1 LOOP VITIS_LOOP_51_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_FIND_MAX_DIST {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln76_fu_1066_p2 SOURCE digitrec.cpp:76 VARIABLE add_ln76 LOOP FIND_MAX_DIST BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_s_fu_1084_p121 SOURCE digitrec.cpp:78 VARIABLE add_ln78 LOOP FIND_MAX_DIST BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_LANES_INSERTION_SORT_OUTER {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_29_fu_1156_p2 SOURCE digitrec.cpp:130 VARIABLE empty_29 LOOP LANES_INSERTION_SORT_OUTER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln130_fu_1168_p2 SOURCE digitrec.cpp:130 VARIABLE add_ln130 LOOP LANES_INSERTION_SORT_OUTER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln130_1_fu_1209_p2 SOURCE digitrec.cpp:130 VARIABLE add_ln130_1 LOOP LANES_INSERTION_SORT_OUTER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME p_mid1_fu_1231_p2 SOURCE digitrec.cpp:130 VARIABLE p_mid1 LOOP LANES_INSERTION_SORT_OUTER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_s_fu_1277_p121 SOURCE digitrec.cpp:139 VARIABLE add_ln139 LOOP LANES_INSERTION_SORT_OUTER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln132_fu_1589_p2 SOURCE digitrec.cpp:132 VARIABLE add_ln132 LOOP LANES_INSERTION_SORT_OUTER BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_INCREMENT {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln160_fu_272_p2 SOURCE digitrec.cpp:160 VARIABLE add_ln160 LOOP INCREMENT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME vote_list_10_fu_347_p2 SOURCE digitrec.cpp:163 VARIABLE vote_list_10 LOOP INCREMENT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_VITIS_LOOP_254_4 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln254_fu_78_p2 SOURCE digitrec.cpp:254 VARIABLE add_ln254 LOOP VITIS_LOOP_254_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec_Pipeline_VITIS_LOOP_205_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln205_fu_79_p2 SOURCE digitrec.cpp:205 VARIABLE add_ln205 LOOP VITIS_LOOP_205_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} DigitRec {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln221_fu_46809_p2 SOURCE digitrec.cpp:221 VARIABLE add_ln221 LOOP TEST_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln234_fu_46826_p2 SOURCE digitrec.cpp:234 VARIABLE add_ln234 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln234_1_fu_46846_p2 SOURCE digitrec.cpp:234 VARIABLE add_ln234_1 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_6ns_9ns_9ns_15_4_1_U285 SOURCE digitrec.cpp:237 VARIABLE empty_34 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_6ns_9ns_9ns_15_4_1_U285 SOURCE digitrec.cpp:241 VARIABLE add_ln241 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln78_fu_46895_p2 SOURCE digitrec.cpp:78 VARIABLE sub_ln78 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln87_fu_47041_p2 SOURCE digitrec.cpp:87 VARIABLE add_ln87 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln237_fu_47046_p2 SOURCE digitrec.cpp:237 VARIABLE add_ln237 LOOP TRAINING_LOOP_LANES BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME training_set_V_U SOURCE {} VARIABLE training_set_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 114 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME test_set_V_U SOURCE {} VARIABLE test_set_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 4 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME results_U SOURCE {} VARIABLE results LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 1 BRAM 115 URAM 4}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.021 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for DigitRec.
+INFO: [VLOG 209-307] Generating Verilog RTL for DigitRec.
+Execute         syn_report -model DigitRec -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.47 MHz
+Command       autosyn done; 27.11 sec.
+Command     csynth_design done; 39.11 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 37.06 seconds. CPU system time: 2.06 seconds. Elapsed time: 39.11 seconds; current allocated memory: 291.598 MB.
+Execute     close_solution 
+INFO: [HLS 200-1510] Running: close_solution 
+Execute       cleanup_all 
+Command       cleanup_all done; 0.11 sec.
+Execute       cleanup_all 

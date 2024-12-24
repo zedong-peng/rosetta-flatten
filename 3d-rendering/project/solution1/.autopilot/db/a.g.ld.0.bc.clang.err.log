@@ -1,0 +1,12 @@
+remark: rendering.cpp:345:3: Inlining function 'output_FB(ap_uint<8> (*) [256], ap_uint<32>*)' into 'rendering(ap_uint<32>*, ap_uint<32>*)'
+remark: rendering.cpp:260:24: Loop 'COLORING_FB_INIT_COL' is marked as complete unroll implied by the pipeline pragma
+remark: rendering.cpp:251:0: Unrolling loop 'COLORING_FB_INIT_COL' (rendering.cpp:260:24) in function 'coloringFB' completely with a factor of 256
+remark: rendering.cpp:149:0: Inlining function 'check_clockwise(Triangle_2D)' into 'rasterization1(Triangle_2D, ap_uint<8>*, Triangle_2D*, ap_uint<16>*)'
+remark: rendering.cpp:149:0: Inlining function 'clockwise_vertices(Triangle_2D*)' into 'rasterization1(Triangle_2D, ap_uint<8>*, Triangle_2D*, ap_uint<16>*)'
+remark: rendering.cpp:149:0: Inlining function 'find_min(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'rasterization1(Triangle_2D, ap_uint<8>*, Triangle_2D*, ap_uint<16>*)'
+remark: rendering.cpp:149:0: Inlining function 'find_max(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'rasterization1(Triangle_2D, ap_uint<8>*, Triangle_2D*, ap_uint<16>*)'
+remark: rendering.cpp:181:0: Inlining function 'pixel_in_triangle(ap_uint<8>, ap_uint<8>, Triangle_2D)' into 'rasterization2(ap_uint<2>, ap_uint<8>*, ap_uint<16>*, Triangle_2D, CandidatePixel*)'
+remark: rendering.cpp:0:1: array_partition dim=2 type=complete  variable=frame_buffer 1 rendering rendering.cpp:308:8 rendering.cpp:259:9frame_buffer 
+remark: rendering.cpp:259:9: Inferring pragma 'array_partition type=complete dim=2' for array 'frame_buffer' due to pipeline pragma
+remark: rendering.cpp:308:8: Applying array_partition to 'frame_buffer': Complete partitioning on dimension 2.
+warning: rendering.cpp:284:41: Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.

@@ -1,0 +1,187 @@
+
+
+================================================================
+== Synthesis Summary Report of 'SgdLR'
+================================================================
++ General Information: 
+    * Date:           Tue Dec 17 15:07:17 2024
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        project
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------+------+------+----------+-----------+----------+----------+------+----------+----------+---------+------------+------------+-----+
+    |                   Modules                   | Issue|      | Latency  |  Latency  | Iteration|          | Trip |          |          |         |            |            |     |
+    |                   & Loops                   | Type | Slack| (cycles) |    (ns)   |  Latency | Interval | Count| Pipelined|   BRAM   |   DSP   |     FF     |     LUT    | URAM|
+    +---------------------------------------------+------+------+----------+-----------+----------+----------+------+----------+----------+---------+------------+------------+-----+
+    |+ SgdLR                                      |     -|  0.76|  13899894|  1.390e+08|         -|  13899895|     -|        no|  12 (~0%)|  6 (~0%)|  1581 (~0%)|  4147 (~0%)|    -|
+    | + SgdLR_Pipeline_LABEL_CP                   |     -|  4.85|      2252|  2.252e+04|         -|      2252|     -|        no|         -|        -|    55 (~0%)|   194 (~0%)|    -|
+    |  o LABEL_CP                                 |    II|  7.30|      2250|  2.250e+04|         3|         2|  1125|       yes|         -|        -|           -|           -|    -|
+    | + dataflow_parent_loop_proc                 |     -|  0.76|  13897123|  1.390e+08|         -|  13897123|     -|        no|   6 (~0%)|  6 (~0%)|  1035 (~0%)|  3412 (~0%)|    -|
+    |  o TRAINING_INST                            |     -|  7.30|  13897122|  1.390e+08|      4211|         -|  4500|        no|         -|        -|           -|           -|    -|
+    |   + dataflow_in_loop_TRAINING_INST*         |     -|  0.76|      4209|  4.209e+04|         -|      3088|     -|  dataflow|   6 (~0%)|  6 (~0%)|   823 (~0%)|  3349 (~0%)|    -|
+    |    + READ_TRAINING_DATA_proc                |     -|  4.32|      1121|  1.121e+04|         -|      1121|     -|        no|         -|        -|   545 (~0%)|  2289 (~0%)|    -|
+    |     o READ_TRAINING_DATA                    |     -|  7.30|      1120|  1.120e+04|        35|         -|    32|        no|         -|        -|           -|           -|    -|
+    |      o READ_TRAINING_DATA_INNER             |     -|  7.30|        32|    320.000|         1|         -|    32|        no|         -|        -|           -|           -|    -|
+    |    + compute                                |     -|  0.76|      3087|  3.087e+04|         -|      3087|     -|        no|   4 (~0%)|  6 (~0%)|   276 (~0%)|  1030 (~0%)|    -|
+    |     + compute_Pipeline_DOT_DOT_INNER        |     -|  1.66|      1026|  1.026e+04|         -|      1026|     -|        no|         -|  2 (~0%)|    58 (~0%)|   237 (~0%)|    -|
+    |      o DOT_DOT_INNER                        |     -|  7.30|      1024|  1.024e+04|         2|         1|  1024|       yes|         -|        -|           -|           -|    -|
+    |     + compute_Pipeline_GRAD_GRAD_INNER      |     -|  4.40|      1029|  1.029e+04|         -|      1029|     -|        no|         -|  1 (~0%)|   150 (~0%)|   201 (~0%)|    -|
+    |      o GRAD_GRAD_INNER                      |     -|  7.30|      1027|  1.027e+04|         5|         1|  1024|       yes|         -|        -|           -|           -|    -|
+    |     + compute_Pipeline_UPDATE_UPDATE_INNER  |     -|  0.76|      1026|  1.026e+04|         -|      1026|     -|        no|         -|  3 (~0%)|    36 (~0%)|   247 (~0%)|    -|
+    |      o UPDATE_UPDATE_INNER                  |     -|  7.30|      1024|  1.024e+04|         2|         1|  1024|       yes|         -|        -|           -|           -|    -|
+    | + SgdLR_Pipeline_STREAM_OUT                 |     -|  4.90|       514|  5.140e+03|         -|       514|     -|        no|         -|        -|   480 (~0%)|   378 (~0%)|    -|
+    |  o STREAM_OUT                               |    II|  7.30|       512|  5.120e+03|         9|         8|    64|       yes|         -|        -|           -|           -|    -|
+    +---------------------------------------------+------+------+----------+-----------+----------+----------+------+----------+----------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+----------+
+| Interface        | Bitwidth |
++------------------+----------+
+| data_address0    | 18       |
+| data_q0          | 512      |
+| label_r_address0 | 11       |
+| label_r_q0       | 32       |
+| theta_address0   | 6        |
+| theta_d0         | 512      |
++------------------+----------+
+
+* Other Ports
++-------------+---------+----------+
+| Interface   | Mode    | Bitwidth |
++-------------+---------+----------+
+| readLabels  | ap_none | 1        |
+| writeOutput | ap_none | 1        |
++-------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| data        | in        | ap_uint<512>* |
+| label       | in        | ap_uint<32>*  |
+| theta       | out       | ap_uint<512>* |
+| readLabels  | in        | bool          |
+| writeOutput | in        | bool          |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+------------------+---------+----------+
+| Argument    | HW Interface     | HW Type | HW Usage |
++-------------+------------------+---------+----------+
+| data        | data_address0    | port    | offset   |
+| data        | data_ce0         | port    |          |
+| data        | data_q0          | port    |          |
+| label       | label_r_address0 | port    | offset   |
+| label       | label_r_ce0      | port    |          |
+| label       | label_r_q0       | port    |          |
+| theta       | theta_address0   | port    | offset   |
+| theta       | theta_ce0        | port    |          |
+| theta       | theta_we0        | port    |          |
+| theta       | theta_d0         | port    |          |
+| readLabels  | readLabels       | port    |          |
+| writeOutput | writeOutput      | port    |          |
++-------------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                       | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + SgdLR                                    | 6   |        |             |     |        |         |
+|  + SgdLR_Pipeline_LABEL_CP                 | 0   |        |             |     |        |         |
+|    add_ln263_fu_132_p2                     | -   |        | add_ln263   | add | fabric | 0       |
+|  + dataflow_parent_loop_proc               | 6   |        |             |     |        |         |
+|   + dataflow_in_loop_TRAINING_INST         | 6   |        |             |     |        |         |
+|    + READ_TRAINING_DATA_proc               | 0   |        |             |     |        |         |
+|      add_ln104_fu_109_p2                   | -   |        | add_ln104   | add | fabric | 0       |
+|      add_ln108_fu_148_p2                   | -   |        | add_ln108   | add | fabric | 0       |
+|      add_ln109_fu_154_p2                   | -   |        | add_ln109   | add | fabric | 0       |
+|    + compute                               | 6   |        |             |     |        |         |
+|      in_V_1_fu_168_p2                      | -   |        | in_V_1      | sub | fabric | 0       |
+|      index_V_fu_184_p2                     | -   |        | index_V     | sub | fabric | 0       |
+|      scale_V_fu_262_p2                     | -   |        | scale_V     | sub | fabric | 0       |
+|     + compute_Pipeline_DOT_DOT_INNER       | 2   |        |             |     |        |         |
+|       add_ln124_fu_130_p2                  | -   |        | add_ln124   | add | fabric | 0       |
+|       add_ln124_1_fu_156_p2                | -   |        | add_ln124_1 | add | fabric | 0       |
+|       add_ln129_fu_186_p2                  | -   |        | add_ln129   | add | fabric | 0       |
+|       mul_32s_16s_44_1_1_U6                | 2   |        | mul_ln1270  | mul | auto   | 0       |
+|       result_V_3_fu_246_p2                 | -   |        | result_V_3  | add | fabric | 0       |
+|       add_ln127_fu_198_p2                  | -   |        | add_ln127   | add | fabric | 0       |
+|     + compute_Pipeline_GRAD_GRAD_INNER     | 1   |        |             |     |        |         |
+|       add_ln177_fu_124_p2                  | -   |        | add_ln177   | add | fabric | 0       |
+|       add_ln177_1_fu_150_p2                | -   |        | add_ln177_1 | add | fabric | 0       |
+|       add_ln181_fu_180_p2                  | -   |        | add_ln181   | add | fabric | 0       |
+|       mul_mul_28s_16s_44_4_1_U11           | 1   |        | r_V         | mul | dsp48  | 3       |
+|       add_ln180_fu_191_p2                  | -   |        | add_ln180   | add | fabric | 0       |
+|     + compute_Pipeline_UPDATE_UPDATE_INNER | 3   |        |             |     |        |         |
+|       add_ln196_fu_120_p2                  | -   |        | add_ln196   | add | fabric | 0       |
+|       add_ln196_1_fu_146_p2                | -   |        | add_ln196_1 | add | fabric | 0       |
+|       add_ln200_fu_176_p2                  | -   |        | add_ln200   | add | fabric | 0       |
+|       mul_32s_32s_51_1_1_U16               | 3   |        | r_V         | mul | auto   | 0       |
+|       ret_V_fu_227_p2                      | -   |        | ret_V       | add | fabric | 0       |
+|       add_ln199_fu_188_p2                  | -   |        | add_ln199   | add | fabric | 0       |
+|  + SgdLR_Pipeline_STREAM_OUT               | 0   |        |             |     |        |         |
+|    add_ln209_fu_240_p2                     | -   |        | add_ln209   | add | fabric | 0       |
++--------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------------------------+------+------+--------+---------------+---------+------+---------+
+| Name                               | BRAM | URAM | Pragma | Variable      | Storage | Impl | Latency |
++------------------------------------+------+------+--------+---------------+---------+------+---------+
+| + SgdLR                            | 12   | 0    |        |               |         |      |         |
+|   label_local_V_U                  | 4    | -    |        | label_local_V | ram_t2p | auto | 1       |
+|   theta_local_V_U                  | 2    | -    |        | theta_local_V | ram_s2p | auto | 1       |
+|  + dataflow_parent_loop_proc       | 6    | 0    |        |               |         |      |         |
+|   + dataflow_in_loop_TRAINING_INST | 6    | 0    |        |               |         |      |         |
+|    + compute                       | 4    | 0    |        |               |         |      |         |
+|      gradient_V_U                  | 2    | -    |        | gradient_V    | ram_1p  | auto | 1       |
+|      lut_V_U                       | 2    | -    |        | lut_V         | rom_1p  | auto | 1       |
++------------------------------------+------+------+--------+---------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+---------+--------------------------------+
+| Type     | Options | Location                       |
++----------+---------+--------------------------------+
+| inline   |         | sgd.cpp:102 in read_data       |
+| inline   |         | sgd.cpp:117 in dotproduct      |
+| inline   |         | sgd.cpp:139 in uselut          |
+| inline   |         | sgd.cpp:155 in sigmoid         |
+| inline   |         | sgd.cpp:173 in computegradient |
+| inline   |         | sgd.cpp:191 in updateparameter |
+| inline   |         | sgd.cpp:207 in streamout       |
+| dataflow |         | sgd.cpp:276 in sgdlr           |
++----------+---------+--------------------------------+
+
+

@@ -1,0 +1,25 @@
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:1329:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:1329:7: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:2303:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:2303:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:2317:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:2317:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:2331:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:2331:5: note: FIX-IT applied suggested code changes
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:3942:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/project/solution1/.autopilot/db/sgd.pp.0.cpp:3942:7: note: FIX-IT applied suggested code changes

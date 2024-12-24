@@ -1,0 +1,252 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.07 seconds; current allocated memory: 754.242 MB.
+INFO: [HLS 200-10] Analyzing design file 'sgd.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:280:15)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:280:66)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:282:13)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sgd.cpp:282:42)
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sgd.cpp
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:12:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:13:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:14:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:15:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:16:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:17:9)
+WARNING: [HLS 207-1017] unknown pragma ignored (./sgd.h:18:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.29 seconds. CPU system time: 0.88 seconds. Elapsed time: 7.17 seconds; current allocated memory: 755.977 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 214-273] In function 'read_data(ap_uint<512>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (sgd.cpp:101:0)
+INFO: [HLS 214-131] Inlining function 'useLUT(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'Sigmoid(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' (sgd.cpp:163:12)
+INFO: [HLS 214-131] Inlining function 'updateParameter(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:238:3)
+INFO: [HLS 214-131] Inlining function 'computeGradient(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:236:3)
+INFO: [HLS 214-131] Inlining function 'Sigmoid(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:234:22)
+INFO: [HLS 214-131] Inlining function 'dotProduct(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'compute(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<8>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (sgd.cpp:232:21)
+INFO: [HLS 214-131] Inlining function 'streamOut(ap_fixed<32, 13, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_uint<512>*)' into 'SgdLR(ap_uint<512>*, ap_uint<32>*, ap_uint<512>*, bool, bool)' (sgd.cpp:286:5)
+INFO: [HLS 214-131] Inlining function 'read_data(ap_uint<512>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'SgdLR(ap_uint<512>*, ap_uint<32>*, ap_uint<512>*, bool, bool)' (sgd.cpp:280:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.01 seconds. CPU system time: 0.81 seconds. Elapsed time: 6.82 seconds; current allocated memory: 756.363 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 756.363 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 777.215 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:628: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.33 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.36 seconds; current allocated memory: 801.066 MB.
+INFO: [XFORM 203-510] Pipelining loop 'DOT_INNER' (sgd.cpp:123) in function 'compute' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'GRAD_INNER' (sgd.cpp:180) in function 'compute' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'UPDATE_INNER' (sgd.cpp:199) in function 'compute' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'LABEL_CP' (sgd.cpp:263) in function 'SgdLR' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'STREAM_OUT' (sgd.cpp:212) in function 'SgdLR' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LABEL_CP' (sgd.cpp:263) in function 'SgdLR' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'STREAM_OUT' (sgd.cpp:212) in function 'SgdLR' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'LABEL_CP_INNER' (sgd.cpp:267) in function 'SgdLR' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'STREAM_OUT_INNER' (sgd.cpp:212) in function 'SgdLR' completely with a factor of 16.
+INFO: [XFORM 203-721] Changing loop 'READ_TRAINING_DATA' (sgd.cpp:107)  to a process function for dataflow in function 'SgdLR'.
+INFO: [XFORM 203-721] Extract dataflow region from loop TRAINING_INST (sgd.cpp:278)  of function 'SgdLR'.
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_TRAINING_INST' (sgd.cpp:276:5), detected/extracted 2 process function(s): 
+	 'READ_TRAINING_DATA_proc'
+	 'compute'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sgd.cpp:124:26) to (sgd.cpp:177:9) in function 'compute'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.47 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.54 seconds; current allocated memory: 848.586 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'DOT' (sgd.cpp:127:24) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GRAD' (sgd.cpp:180:26) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'UPDATE' (sgd.cpp:199:28) in function 'compute'.
+INFO: [HLS 200-472] Inferring partial write operation for 'gradient.V' (sgd.cpp:181:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'theta_local.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'label_local.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'training_instance.V' 
+WARNING: [HLS 200-1449] Process compute has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+WARNING: [HLS 200-1449] Process dataflow_in_loop_TRAINING_INST has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.31 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.36 seconds; current allocated memory: 932.512 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'SgdLR' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SgdLR_Pipeline_LABEL_CP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LABEL_CP'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_LABEL_CP' (loop 'LABEL_CP'): Unable to schedule 'store' operation ('label_local_V_addr_1_write_ln368') of variable 'tmp_1' on array 'label_local_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'label_local_V'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'LABEL_CP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.14 seconds; current allocated memory: 933.750 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 933.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'READ_TRAINING_DATA_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 934.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 934.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_Pipeline_DOT_DOT_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DOT_DOT_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'DOT_DOT_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 934.535 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 934.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_Pipeline_GRAD_GRAD_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'GRAD_GRAD_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'GRAD_GRAD_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 934.945 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 934.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_Pipeline_UPDATE_UPDATE_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'UPDATE_UPDATE_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'UPDATE_UPDATE_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 935.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 935.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 935.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 935.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_TRAINING_INST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 935.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 935.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_parent_loop_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 936.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 936.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SgdLR_Pipeline_STREAM_OUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STREAM_OUT'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_1') on array 'theta_local_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_3') on array 'theta_local_V' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_5') on array 'theta_local_V' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_7') on array 'theta_local_V' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+WARNING: [HLS 200-885] The II Violation in module 'SgdLR_Pipeline_STREAM_OUT' (loop 'STREAM_OUT'): Unable to schedule 'load' operation ('theta_local_V_load_13') on array 'theta_local_V' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'theta_local_V'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 9, loop 'STREAM_OUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 936.613 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 936.613 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SgdLR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 937.055 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 937.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SgdLR_Pipeline_LABEL_CP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'SgdLR_Pipeline_LABEL_CP' pipeline 'LABEL_CP' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SgdLR_Pipeline_LABEL_CP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 937.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'READ_TRAINING_DATA_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'READ_TRAINING_DATA_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 937.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_Pipeline_DOT_DOT_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_Pipeline_DOT_DOT_INNER' pipeline 'DOT_DOT_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_16s_44_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_Pipeline_DOT_DOT_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 938.852 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_Pipeline_GRAD_GRAD_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_Pipeline_GRAD_GRAD_INNER' pipeline 'GRAD_GRAD_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_28s_16s_44_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_Pipeline_GRAD_GRAD_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 940.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_Pipeline_UPDATE_UPDATE_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_Pipeline_UPDATE_UPDATE_INNER' pipeline 'UPDATE_UPDATE_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_51_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_Pipeline_UPDATE_UPDATE_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 941.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute'.
+INFO: [RTMG 210-279] Implementing memory 'SgdLR_compute_lut_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'SgdLR_compute_gradient_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 942.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_TRAINING_INST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_TRAINING_INST'.

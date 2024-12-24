@@ -1,0 +1,61 @@
+In file included from sgd.cpp:43:
+In file included from /home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h:12:
+/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/home/zedongpeng/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+In file included from sgd.cpp:94:
+./sgd.h:12:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data mem_attribute(data:NON_CACHEABLE|PHYSICAL_CONTIGUOUS, label:CACHEABLE|PHYSICAL_CONTIGUOUS, theta:CACHEABLE|PHYSICAL_CONTIGUOUS)
+        ^
+./sgd.h:13:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data data_mover(data:AXIDMA_SG, label:AXIFIFO, theta:AXIDMA_SG)
+        ^
+./sgd.h:14:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data sys_port(data:AFI, label:AFI, theta:AFI)
+        ^
+./sgd.h:15:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data zero_copy(theta[0:NUM_FEATURES / F_VECTOR_SIZE])
+        ^
+./sgd.h:16:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data copy(data[0:NUM_FEATURES * NUM_TRAINING/D_VECTOR_SIZE])
+        ^
+./sgd.h:17:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data zero_copy(label[0:NUM_TRAINING/L_VECTOR_SIZE])
+        ^
+./sgd.h:18:9: warning: unknown pragma ignored [-Winvalid-hls-pragmas]
+#pragma SDS data access_pattern(data:SEQUENTIAL, label:SEQUENTIAL, theta:SEQUENTIAL)
+        ^
+sgd.cpp:102:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+sgd.cpp:117:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dotProduct_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+sgd.cpp:139:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=useLUT_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+sgd.cpp:155:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Sigmoid_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+sgd.cpp:173:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=computeGradient_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+sgd.cpp:191:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=updateParameter_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+sgd.cpp:207:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=streamOut_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/data/zedongpeng/HLSBatchProcessor/data/kernels/rosetta_flatten/spam-filter/run_hls.tcl:8:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=SgdLR_XLX_SEP_ PragmaOptions=name=SgdLR_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=SgdLR
+        ^
+sgd.cpp:276:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=SgdLR_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+19 warnings generated.
