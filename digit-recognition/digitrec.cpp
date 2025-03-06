@@ -114,14 +114,14 @@ LabelType knn_vote( int knn_set[PAR_FACTOR * K_CONST] )
   // initialize
   INIT_1: for (int i = 0;i < K_CONST; i ++ )
   {
-    #pragma HLS unroll
+    
     min_distance_list[i] = 256;
     label_list[i] = 9;
   }
 
   INIT_2: for (int i = 0;i < 10; i ++ )
   {
-    #pragma HLS unroll
+    
     vote_list[i] = 0;
   }
 
@@ -131,17 +131,17 @@ LabelType knn_vote( int knn_set[PAR_FACTOR * K_CONST] )
   {
     INSERTION_SORT_OUTER: for (int j = 0; j < K_CONST; j ++ )
     {
-      #pragma HLS pipeline
+      
       pos = 1000;
       INSERTION_SORT_INNER: for (int r = 0; r < K_CONST; r ++ )
       {
-        #pragma HLS unroll
+        
         pos = ((knn_set[i*K_CONST+j] < min_distance_list[r]) && (pos > K_CONST)) ? r : pos;
       }
 
       INSERT: for (int r = K_CONST ;r > 0; r -- )
       {
-        #pragma HLS unroll
+        
         if(r-1 > pos)
         {
           min_distance_list[r-1] = min_distance_list[r-2];
@@ -159,7 +159,7 @@ LabelType knn_vote( int knn_set[PAR_FACTOR * K_CONST] )
   // vote
   INCREMENT: for (int i = 0;i < K_CONST; i ++ )
   {
-    #pragma HLS pipeline
+    
     vote_list[label_list[i]] += 1;
   }
 
@@ -169,7 +169,7 @@ LabelType knn_vote( int knn_set[PAR_FACTOR * K_CONST] )
   // find the maximum value
   VOTE: for (int i = 0;i < 10; i ++ )
   {
-    #pragma HLS unroll
+    
     if(vote_list[i] >= vote_list[max_vote])
     {
       max_vote = i;
@@ -203,18 +203,18 @@ void DigitRec(WholeDigitType global_training_set[NUM_TRAINING / 2], WholeDigitTy
   {
     // copy the training set for the first time
     for (int i = 0; i < NUM_TRAINING / 2; i ++ )
-      #pragma HLS pipeline
+      
       training_set[i] = global_training_set[i];
     return;
   }
 
   // for the second time
   for (int i = 0; i < NUM_TRAINING / 2; i ++ )
-    #pragma HLS pipeline
+    
     training_set[i + NUM_TRAINING / 2] = global_training_set[i];
   // copy the test set
   for (int i = 0; i < NUM_TEST; i ++ )
-    #pragma HLS pipeline
+    
     test_set[i] = global_test_set[i];
 
   // loop through test set
@@ -226,7 +226,7 @@ void DigitRec(WholeDigitType global_training_set[NUM_TRAINING / 2], WholeDigitTy
     // Initialize the knn set
     SET_KNN_SET: for ( int i = 0; i < K_CONST * PAR_FACTOR ; ++i ) 
     {
-      #pragma HLS unroll
+      
       // Note that the max distance is 256
       knn_set[i] = 256;
     }
@@ -252,7 +252,7 @@ void DigitRec(WholeDigitType global_training_set[NUM_TRAINING / 2], WholeDigitTy
 
   // copy the results out
   for (int i = 0; i < NUM_TEST; i ++ )
-    #pragma HLS pipeline
+    
     global_results[i] = results[i];
 
 }

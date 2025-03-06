@@ -1,0 +1,98 @@
+{
+    "name": "Translation Unit (/home/user/zedongpeng/workspace/benchmark/rosetta-flatten/digit-recognition/digitrec.cpp)",
+    "children": [
+        {
+            "line": 77,
+            "tripcount": 16,
+            "name": "for_loop Line:77"
+        },
+        {
+            "line": 116,
+            "tripcount": 16,
+            "name": "for_loop Line:116"
+        },
+        {
+            "line": 123,
+            "tripcount": 16,
+            "name": "for_loop Line:123"
+        },
+        {
+            "line": 131,
+            "tripcount": 16,
+            "name": "for_loop Line:131",
+            "children": [
+                {
+                    "line": 133,
+                    "tripcount": 16,
+                    "name": "for_loop Line:133",
+                    "children": [
+                        {
+                            "line": 137,
+                            "tripcount": 16,
+                            "name": "for_loop Line:137"
+                        },
+                        {
+                            "line": 143,
+                            "tripcount": 16,
+                            "name": "for_loop Line:143"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "line": 161,
+            "tripcount": 16,
+            "name": "for_loop Line:161"
+        },
+        {
+            "line": 171,
+            "tripcount": 16,
+            "name": "for_loop Line:171"
+        },
+        {
+            "line": 205,
+            "tripcount": 16,
+            "name": "for_loop Line:205"
+        },
+        {
+            "line": 212,
+            "tripcount": 16,
+            "name": "for_loop Line:212"
+        },
+        {
+            "line": 216,
+            "tripcount": 16,
+            "name": "for_loop Line:216"
+        },
+        {
+            "line": 222,
+            "tripcount": 16,
+            "name": "for_loop Line:222",
+            "children": [
+                {
+                    "line": 228,
+                    "tripcount": 16,
+                    "name": "for_loop Line:228"
+                },
+                {
+                    "line": 235,
+                    "tripcount": 16,
+                    "name": "for_loop Line:235",
+                    "children": [
+                        {
+                            "line": 238,
+                            "tripcount": 16,
+                            "name": "for_loop Line:238"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "line": 254,
+            "tripcount": 16,
+            "name": "for_loop Line:254"
+        }
+    ]
+}

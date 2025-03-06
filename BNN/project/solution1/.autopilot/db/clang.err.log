@@ -1,7 +1,0 @@
-In file included from Accel.cpp:4:
-In file included from ./Accel.h:5:
-In file included from ./xf_utility.hpp:23:
-./xf_video_mem.hpp:795:47: warning: 'factor' in '#pragma HLS array_reshape' is ignored [-Wextra-tokens]
-#pragma HLS ARRAY_RESHAPE variable=val factor=RESHAPE_FACTOR dim=1
-                                              ^
-1 warning generated.

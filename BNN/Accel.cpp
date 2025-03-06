@@ -229,7 +229,7 @@ void bin_conv(
   ap_uint<4> mask = ~ap_uint<4>(0);   // set mask to all 1s
   mask = mask >> (4-log_slice);
   for (ap_uint<4> bank = 0; bank < CONV_BANKS; ++bank) {
-    #pragma HLS unroll
+    
     const ap_uint<4> x = bank & mask;
     lb[bank] = (x == 0);          // (bank % w_div_8) == 0
     rb[bank] = (x+1 == w_div_8);  // (bank % w_div_8) == w_div_8-1
@@ -239,7 +239,7 @@ void bin_conv(
   // Reset conv buffer
   for (IdxType i = 0; i < WORDS_PER_PHASE; ++i) {
     for (IdxType j = 0; j < WORD_SIZE; ++j) {
-      #pragma HLS UNROLL
+      
       fixed_buffer[i][j] = 0;
     }
   }
@@ -371,7 +371,7 @@ void bin_conv(
   LOOP_ACC_PHASES:
   for (ap_uint<5> w = 0; w < words_per_image; ++w) {
     for (IdxType b = 0; b < WORD_SIZE; ++b) {
-      #pragma HLS unroll
+      
       fixed_temp[b] = fixed_buffer[w][b];
     }
 
@@ -383,7 +383,7 @@ void bin_conv(
     } }
 
     for (IdxType b = 0; b < WORD_SIZE; ++b) {
-      #pragma HLS unroll
+      
       fixed_buffer[w][b] = fixed_temp[b];
     }
   }

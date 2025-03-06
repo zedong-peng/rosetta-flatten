@@ -996,7 +996,7 @@ void get_all_data(uint18_t output[12], uint10_t addr_list[12], uint18_t aa[ROWS*
 COMPUTE_BANK_AND_OFFSET:
   for (int i = 0; i < 12; i ++ )
   {
-    #pragma HLS unroll   
+       
     bank[i] = get_bank(addr_list[i]);
     offset[i] = get_offset(addr_list[i]);
   }
@@ -1004,7 +1004,7 @@ COMPUTE_BANK_AND_OFFSET:
 ASSIGN_OFFSET_FOR_BANKS:
   for (int i = 0; i < 28; i ++ )
   {
-    #pragma HLS unroll
+    
     offset_for_banks[i] = (bank[ 0] == i) ? offset[ 0] :
                           (bank[ 1] == i) ? offset[ 1] :
                           (bank[ 2] == i) ? offset[ 2] :
@@ -1054,7 +1054,7 @@ READ_ALL_BANKS:
 CHOOSE_DATA:
   for (int i = 0; i < 12; i ++ )
   {
-    #pragma HLS unroll
+    
     output[i] = data_from_banks[bank[i]];
   }
 
@@ -2923,10 +2923,10 @@ void processImage
   
   Initialize0u : 
   for ( u = 0; u < WINDOW_SIZE; u++ ){
-  #pragma HLS unroll
+  
     Initailize0v:
     for ( v = 0; v < WINDOW_SIZE; v++ ){
-    #pragma HLS unroll
+    
       II[u][v] = 0;
     }
   }
@@ -2939,10 +2939,10 @@ void processImage
 
   Initialize1i:
   for ( i = 0; i < WINDOW_SIZE ; i++ ){
-  #pragma HLS unroll
+  
     Initialize1j:
     for ( j = 0; j < 2*WINDOW_SIZE; j++ ){
-    #pragma HLS unroll
+    
       I[i][j] = 0;
       SI[i][j] = 0;
     }
@@ -2951,7 +2951,7 @@ void processImage
   
   Initialize2y :
   for ( y = 0; y < WINDOW_SIZE-1; y++ ){
-  #pragma HLS unroll
+  
     Initialize2x :
     for ( x = 0; x < IMAGE_WIDTH ; x++){//IMAGE_WIDTH; x++ ){
       L[y][x] = 0;
@@ -2987,9 +2987,9 @@ void processImage
       
       /* Updates for Image Window Buffer (I) and Square Image Window Bufer (SI) */
       SetIj: for( j = 0; j < 2*WINDOW_SIZE-1; j++){
-      #pragma HLS unroll
+      
         SetIi: for( i = 0; i < WINDOW_SIZE; i++ ){
-        #pragma HLS unroll
+        
           if( i+j != 2*WINDOW_SIZE-1 ){
             I[i][j] = I[i][j+1];
             SI[i][j] = SI[i][j+1];
@@ -3002,7 +3002,7 @@ void processImage
       }
       /** Last column of the I[][] matrix **/
       Ilast: for( i = 0; i < WINDOW_SIZE-1; i++ ){
-      #pragma HLS unroll
+      
         I[i][2*WINDOW_SIZE-1] = L[i][x];
         SI[i][2*WINDOW_SIZE-1] = L[i][x]*L[i][x];
       }
@@ -3011,7 +3011,7 @@ void processImage
 
       /** Updates for Image Line Buffer (L) **/
       LineBuf: for( k = 0; k < WINDOW_SIZE-2; k++ ){
-      #pragma HLS unroll
+      
         L[k][x] = L[k+1][x];
       }
       L[WINDOW_SIZE-2][x] = IMG1_data[y][x];
@@ -3105,9 +3105,9 @@ int cascadeClassifier
   #pragma HLS array_partition variable=_II complete dim=0
 
   COPY_LOOP1: for (int i = 0; i < WINDOW_SIZE; i ++ ){
-    #pragma HLS unroll
+    
     COPY_LOOP2: for (int j = 0; j < WINDOW_SIZE; j ++ ){
-      #pragma HLS unroll
+      
       _II[i*25+j] = II[i][j];
     }
   }
@@ -3382,7 +3382,7 @@ void imageScaler
 
   imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i++ ){ 
     imageScalerL1_1: for (j=0;j < IMAGE_WIDTH ;j++){
-      #pragma HLS pipeline
+      
       if ( j < w2 && i < h2 ) 
         IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16];
        
@@ -3400,7 +3400,7 @@ unsigned int int_sqrt
 
   for ( i = 0 ; i < (32 >> 1) ; i++ )
   {
-    #pragma HLS unroll
+    
     c<<= 2;   
     #define UPPERBITS(value) (value>>30)
     c += UPPERBITS(value);

@@ -1,0 +1,61 @@
+{
+    "name": "Translation Unit (/home/user/zedongpeng/workspace/benchmark/rosetta-flatten/3d-rendering/rendering.cpp)",
+    "children": [
+        {
+            "line": 192,
+            "tripcount": 16,
+            "name": "for_loop Line:192"
+        },
+        {
+            "line": 220,
+            "tripcount": 16,
+            "name": "for_loop Line:220",
+            "children": [
+                {
+                    "line": 223,
+                    "tripcount": 16,
+                    "name": "for_loop Line:223"
+                }
+            ]
+        },
+        {
+            "line": 234,
+            "tripcount": 16,
+            "name": "for_loop Line:234"
+        },
+        {
+            "line": 258,
+            "tripcount": 16,
+            "name": "for_loop Line:258",
+            "children": [
+                {
+                    "line": 260,
+                    "tripcount": 16,
+                    "name": "for_loop Line:260"
+                }
+            ]
+        },
+        {
+            "line": 267,
+            "tripcount": 16,
+            "name": "for_loop Line:267"
+        },
+        {
+            "line": 280,
+            "tripcount": 16,
+            "name": "for_loop Line:280",
+            "children": [
+                {
+                    "line": 283,
+                    "tripcount": 16,
+                    "name": "for_loop Line:283"
+                }
+            ]
+        },
+        {
+            "line": 317,
+            "tripcount": 16,
+            "name": "for_loop Line:317"
+        }
+    ]
+}

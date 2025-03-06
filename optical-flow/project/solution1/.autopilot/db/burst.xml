@@ -1,4 +1,0 @@
-<VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="InsufficientAlignmentMissed" src_info="optical_flow.cpp:397:23" msg_id="214-228" msg_severity="INFO" msg_body="Alignment is insufficient, current alignment is 4 byte(s) but 8 is required" resolution="214-228" ID="if.end42.store.21" VarName="outputs" ParentFunc="flow_calc(tensor_t (*) [1024], velocity_t (*) [1024])"/>
-</VitisHLS:BurstInfo>
-

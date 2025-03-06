@@ -190,7 +190,7 @@ bit16 rasterization2 ( bit2 flag, bit8 max_min[], bit16 max_index[], Triangle_2D
 
   RAST2: for ( bit16 k = 0; k < max_index[0]; k++ )
   {
-    #pragma HLS PIPELINE II=1
+    
     bit8 x = max_min[0] + k%max_min[4];
     bit8 y = max_min[2] + k/max_min[4];
 
@@ -232,7 +232,7 @@ bit16 zculling ( bit16 counter, CandidatePixel fragments[], bit16 size, Pixel pi
   // update z-buffer and pixels
   ZCULLING: for ( bit16 n = 0; n < size; n++ ) 
   {
-    #pragma HLS PIPELINE II=1
+    
     if( fragments[n].z < z_buffer[fragments[n].y][fragments[n].x] )
     {
       pixels[pixel_cntr].x     = fragments[n].x;
@@ -256,7 +256,7 @@ void coloringFB(bit16 counter,  bit16 size_pixels, Pixel pixels[], bit8 frame_bu
     // initilize the framebuffer for a new image
     COLORING_FB_INIT_ROW: for ( bit16 i = 0; i < MAX_X; i++)
     {
-      #pragma HLS PIPELINE II=1
+      
       COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)
         frame_buffer[i][j] = 0;
     }
@@ -265,7 +265,7 @@ void coloringFB(bit16 counter,  bit16 size_pixels, Pixel pixels[], bit8 frame_bu
   // update the framebuffer
   COLORING_FB: for ( bit16 i = 0; i < size_pixels; i++)
   {
-    #pragma HLS PIPELINE II=1
+    
     frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;
   }
 

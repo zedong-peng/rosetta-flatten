@@ -41,7 +41,7 @@ void gradient_xy_calc(input_t frame[MAX_HEIGHT][MAX_WIDTH],
   {
     GRAD_XY_INNER: for(int c=0; c<MAX_WIDTH+2; c++)
     {
-      #pragma HLS pipeline II=1
+      
       // read out values from current line buffer
       for (int i = 0; i < 4; i ++ )
         smallbuf[i] = buf[i+1][c];
@@ -117,7 +117,7 @@ void gradient_z_calc(input_t frame1[MAX_HEIGHT][MAX_WIDTH],
   {
     GRAD_Z_INNER: for(int c=0; c<MAX_WIDTH; c++)
     {
-      #pragma HLS pipeline II=1
+      
       gradient_z[r][c] =((pixel_t)(frame1[r][c]*GRAD_WEIGHTS[0] 
                         + frame2[r][c]*GRAD_WEIGHTS[1]
                         + frame3[r][c]*GRAD_WEIGHTS[2]
@@ -140,7 +140,7 @@ void gradient_weight_y(pixel_t gradient_x[MAX_HEIGHT][MAX_WIDTH],
   {
     GRAD_WEIGHT_Y_INNER: for(int c=0; c<MAX_WIDTH; c++)
     {
-      #pragma HLS pipeline II=1
+      
       #pragma HLS dependence variable=buf inter false
 
       if(r<MAX_HEIGHT)
@@ -194,7 +194,7 @@ void gradient_weight_x(gradient_t y_filt[MAX_HEIGHT][MAX_WIDTH],
   {
     GRAD_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH+3; c++)
     {
-      #pragma HLS pipeline II=1
+      
       buf.shift_pixels_left();
       gradient_t tmp;
       if(c<MAX_WIDTH)
@@ -239,7 +239,7 @@ void outer_product(gradient_t gradient[MAX_HEIGHT][MAX_WIDTH],
   {
     OUTER_INNER: for(int c=0; c<MAX_WIDTH; c++)
     {
-      #pragma HLS pipeline II=1
+      
       gradient_t grad = gradient[r][c];
       outer_pixel_t x = (outer_pixel_t) grad.x;
       outer_pixel_t y = (outer_pixel_t) grad.y;
@@ -266,7 +266,7 @@ void tensor_weight_y(outer_t outer[MAX_HEIGHT][MAX_WIDTH],
   {
     TENSOR_WEIGHT_Y_INNER: for(int c=0; c<MAX_WIDTH; c++)
     {
-      #pragma HLS pipeline II=1
+      
       
       outer_t tmp;
       #pragma HLS data_pack variable=tmp
@@ -317,7 +317,7 @@ void tensor_weight_x(tensor_t tensor_y[MAX_HEIGHT][MAX_WIDTH],
   {
     TENSOR_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH+1; c++)
     {
-      #pragma HLS pipeline II=1
+      
       buf.shift_pixels_left();
       tensor_t tmp;
       if(c<MAX_WIDTH)
@@ -362,7 +362,7 @@ void flow_calc(tensor_t tensors[MAX_HEIGHT][MAX_WIDTH],
   {
     FLOW_INNER: for(int c=0; c<MAX_WIDTH; c++)
     {
-      #pragma HLS pipeline II=1
+      
       tensor_t tmp_tensor = tensors[r][c];
       if(r>=2 && r<MAX_HEIGHT-2 && c>=2 && c<MAX_WIDTH-2)
       {
@@ -452,7 +452,7 @@ void optical_flow(frames_t   frames[MAX_HEIGHT][MAX_WIDTH],
   {
     FRAMES_CP_INNER: for (int c=0; c<MAX_WIDTH; c++) 
     {
-      #pragma HLS pipeline II=1
+      
 
       // one wide read
       buf = frames[r][c];

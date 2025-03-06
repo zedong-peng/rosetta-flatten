@@ -1,4 +1,0 @@
-face_detect.cpp:985:23: warning: 'Ap_stable' in '#pragma HLS INTERFACE' is deprecated, use 'Stable Pragma' instead [-Wignored-hls-pragmas]
-#pragma HLS interface ap_stable port=aa
-                      ^
-1 warning generated.
